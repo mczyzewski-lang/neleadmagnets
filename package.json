@@ -1,0 +1,32 @@
+{
+  "name": "nowy-etap-narzedzia",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Nowy Etap — centrum bezpłatnych narzędzi przed rozstaniem i rozwodem",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "tsc --noEmit",
+    "test": "vitest run",
+    "e2e": "node scripts/e2e-smoke.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.2.8",
+    "@fontsource/oswald": "^5.2.8",
+    "next": "^15.5.29",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "server-only": "^0.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.18.0",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}

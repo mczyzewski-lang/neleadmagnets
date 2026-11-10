@@ -1,0 +1,10 @@
+.bc { width: 100%; height: auto; overflow: visible; }
+.bc text { font-family: var(--font-sans); }
+.bc__axis { stroke: var(--line-strong); stroke-width: 1; }
+.bc__grid { stroke: var(--line); stroke-width: 1; stroke-dasharray: 3 3; }
+.donut-wrap { display: grid; gap: 16px; align-items: center; }
+@media (min-width: 560px) { .donut-wrap { grid-template-columns: 200px 1fr; } }
+.donut-wrap svg { width: 200px; height: 200px; margin: 0 auto; }
+.legend--col { flex-direction: column; gap: 6px; }
+.legend--col li { justify-content: space-between; display: flex; gap: 12px; font-size: var(--fs-sm); }
+.legend--col li span:last-child { font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; }

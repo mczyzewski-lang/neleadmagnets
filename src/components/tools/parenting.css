@@ -1,0 +1,13 @@
+.pp-toggle { border: 0; font: inherit; font-size: var(--fs-xs); font-weight: 600; cursor: pointer; }
+.pp-toggle:focus-visible { box-shadow: var(--focus); }
+.pp-who { font-size: 10px; font-weight: 600; line-height: 1.1; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 0 2px; }
+.pp-visit { font-size: 10px; background: var(--gold-500); color: var(--green-900); border-radius: 999px; padding: 0 5px; line-height: 1.5; }
+.month__d { position: relative; }
+.pp-dot { position: absolute; bottom: 3px; width: 5px; height: 5px; border-radius: 50%; background: var(--gold-500); }
+.legend i.parent-a { background: var(--green-700); }
+.legend i.parent-b { background: var(--gold-200); }
+@media (min-width: 640px) { .pp-who { font-size: 12px; } }
+@media print {
+  .week__day, .month__d, .legend i { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+.pp-month { max-width: 440px; }
