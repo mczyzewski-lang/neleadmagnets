@@ -6,7 +6,8 @@ const { chromium } = createRequire(import.meta.url)("playwright");
 const BASE = process.env.BASE || "http://localhost:3000";
 const WIZARDS = ["mieszkanie-i-kredyt", "plan-opieki-nad-dzieckiem", "konsekwencje-rozstania", "przed-pozwem", "separacja-czy-rozwod", "pierwsze-30-dni"];
 const CALCS = ["budzet-po-rozstaniu", "koszty-utrzymania-dziecka"];
-const PAGES = ["/narzedzia", "/materialy", "/materialy/rozwod-krok-po-kroku", "/materialy/rozwod-krok-po-kroku/czytaj", "/plan-rozwodu", "/pomoc", "/polityka-prywatnosci", "/zastrzezenia"];
+const DECISION = ["koszt-rozwodu", "rozmowa-o-rozstaniu", "kompas-decyzji", "majatek-wspolny-czy-osobisty", "wina-czy-bez-winy", "porozumienie-przejsciowe", "koszty-wyprowadzki", "plan-wsparcia", "mity-o-rozwodzie", "pozew-rozwodowy-checklista"];
+const PAGES = ["/narzedzia", "/przed-decyzja", "/demo", ...DECISION.map((d) => `/przed-decyzja/${d}`), "/materialy", "/materialy/rozwod-krok-po-kroku", "/materialy/rozwod-krok-po-kroku/czytaj", "/plan-rozwodu", "/pomoc", "/polityka-prywatnosci", "/zastrzezenia"];
 
 const browser = await chromium.launch();
 const ctx = await browser.newContext({ viewport: { width: 390, height: 844 } });
@@ -71,6 +72,23 @@ for (const slug of CALCS) {
   if (!hasResult) fail(`${slug}: brak wyników kalkulatora`);
   else if (errs.length) fail(`${slug}: błędy JS: ${errs.join(" | ")}`);
   else console.log("✓ kalkulator:", slug);
+  await p.close();
+}
+
+// Strony /demo: dymek z propozycjami reklam i noindex
+const demos = [...WIZARDS, ...CALCS].map((s) => `/narzedzia/${s}/demo`).concat(DECISION.map((d) => `/przed-decyzja/${d}/demo`), ["/materialy/rozwod-krok-po-kroku/demo"]);
+for (const path of demos) {
+  const p = await ctx.newPage();
+  const errs = [];
+  p.on("pageerror", (e) => errs.push(e.message));
+  const res = await p.goto(BASE + path, { waitUntil: "networkidle" });
+  const robots = await p.locator('meta[name="robots"]').getAttribute("content").catch(() => null);
+  const bubble = await p.locator('[aria-label="Propozycje treści reklam"]').count();
+  if (!res || res.status() !== 200) fail(`${path} status ${res?.status()}`);
+  else if (!bubble) fail(`${path}: brak dymka z reklamami`);
+  else if (!robots?.includes("noindex")) fail(`${path}: brak noindex`);
+  else if (errs.length) fail(`${path}: błędy JS: ${errs.join(" | ")}`);
+  else console.log("✓ demo", path);
   await p.close();
 }
 

@@ -2,7 +2,7 @@
 
 > „Najpierw plan i ustalenia. Dopiero potem pozew.”
 
-Aplikacja Next.js (App Router, TypeScript) z **8 interaktywnymi narzędziami** (lead magnetami) z osobnymi landing page'ami i **10 materiałami do pobrania** (przewodniki, checklisty, planery) z landingami i okładkami 3D. Strony są przygotowane pod kampanie Google Ads (Search, Demand Gen, PMax), Meta Ads i reklamy natywne.
+Aplikacja Next.js (App Router, TypeScript) z **18 interaktywnymi narzędziami** (8 w dziale „Co jeśli się rozstaniemy?” i 10 w dziale „Przed decyzją”) z osobnymi landing page'ami oraz **10 materiałami do pobrania** (przewodniki, checklisty, planery) z landingami i okładkami 3D. Każdy z 28 landingów ma wersję **`/demo`** z dymkiem zawierającym propozycje reklam Meta, Google Demand Gen i Google Search. Strony są przygotowane pod kampanie Google Ads (Search, Demand Gen, PMax), Meta Ads i reklamy natywne.
 
 | Ścieżka | Zawartość |
 |---|---|
@@ -15,6 +15,18 @@ Aplikacja Next.js (App Router, TypeScript) z **8 interaktywnymi narzędziami** (
 | `/narzedzia/koszty-utrzymania-dziecka` | Koszty miesięczne/roczne, kategorie, porównanie scenariuszy (to **nie** kalkulator alimentów) |
 | `/narzedzia/separacja-czy-rozwod` | Indywidualna tabela porównawcza, bez podpowiadania decyzji |
 | `/narzedzia/pierwsze-30-dni` | Checklista na 4 okresy, odhaczanie, edycja, PDF, opcjonalny zapis lokalny |
+| `/przed-decyzja` | **Dział „Zanim podejmiesz decyzję”** — 10 narzędzi dla osób rozważających rozstanie: |
+| `/przed-decyzja/koszt-rozwodu` | Kalkulator kosztów rozwodu: opłaty, mediacja, podział majątku, pełnomocnik; porównanie 2 ścieżek |
+| `/przed-decyzja/rozmowa-o-rozstaniu` | Plan trudnej rozmowy (z blokadą bezpieczeństwa na początku) |
+| `/przed-decyzja/kompas-decyzji` | Refleksja bez rekomendacji: obraz sytuacji, 6 możliwych dróg, plan na 7 dni |
+| `/przed-decyzja/majatek-wspolny-czy-osobisty` | Klasyfikator składników majątku: wspólny / osobisty / mieszany / do analizy |
+| `/przed-decyzja/wina-czy-bez-winy` | Porównanie rozwodu z orzekaniem o winie i bez — dopasowane do odpowiedzi |
+| `/przed-decyzja/porozumienie-przejsciowe` | Generator propozycji zasad na czas przejściowy, z podziałem rachunków |
+| `/przed-decyzja/koszty-wyprowadzki` | Kalkulator kosztów wyprowadzki: kwota na start, koszt miesięczny, ile pokryją oszczędności |
+| `/przed-decyzja/plan-wsparcia` | Plan wsparcia na czas rozstania (kto, w czym, gdy… to…) |
+| `/przed-decyzja/mity-o-rozwodzie` | Quiz „Mity i fakty” z wyjaśnieniami i źródłami |
+| `/przed-decyzja/pozew-rozwodowy-checklista` | Który sąd (art. 41 KPC) + lista kontrolna elementów pozwu |
+| `<dowolny landing>/demo` | Ten sam landing + dymek z propozycjami reklam (noindex). Spis wszystkich: **`/demo`** |
 | `/materialy`, `/materialy/<slug>`, `/materialy/<slug>/czytaj` | 10 materiałów: landing + wersja do czytania/druku |
 | `/plan-rozwodu` | Docelowa strona usługi: Plan Rozwodu, wycena, mediacja, DUO, kontakt |
 | `/pomoc` | Numery pomocowe (112, Niebieska Linia, 116 123, 116 111, 800 70 2222) |
@@ -25,6 +37,7 @@ Dokumentacja projektowa:
 - `RESEARCH.md` — research rynku PL i zagranicznego, ocena pomysłów, rekomendacje
 - `LEGAL_VERIFICATION.md` — weryfikacja stanu prawnego na 10.11.2026 (obowiązujące przepisy vs projekty)
 - `MARKETING/ADS.md` — hooki, nagłówki, H1, CTA, scenariusze wideo, briefy grafik dla każdego narzędzia i materiału
+- `MARKETING/ADS-DEMO.md` — propozycje reklam dla wszystkich 28 landingów (eksport z `src/content/ads/*.ts`: `node scripts/export-ads.mjs`)
 - `MARKETING/COVERS.md` — prompty do okładek 3D (OpenAI) i instrukcja podpięcia
 - `DESIGN_SYSTEM.md` — tokeny, komponenty, zasady
 
@@ -65,6 +78,12 @@ src/
 ```
 
 **Zasada:** wyniki są liczone lub składane deterministycznie z odpowiedzi (reguły w `src/lib/tools`). Aplikacja nie używa AI — jeśli w przyszłości dodacie objaśnienia AI, trzymajcie je oddzielnie od obliczeń, a brak klucza nie może wyłączać narzędzi.
+
+## Strony demo z propozycjami reklam
+
+- Treści reklam: `src/content/ads/<slug>.ts` (typ `AdSet`, limity znaków w `src/content/ads/types.ts`), rejestr `src/content/ads/index.ts`.
+- `tests/ads.test.ts` pilnuje limitów znaków (Meta, Demand Gen, Search RSA) i blokuje sformułowania sugerujące znajomość sytuacji odbiorcy.
+- Dymek: `src/components/demo/AdDemoBubble.tsx` — podgląd reklamy, warianty, kopiowanie, linki z UTM. Strony `/demo` mają `noindex` i są wyłączone w robots.txt i sitemapie.
 
 ## Integracje
 

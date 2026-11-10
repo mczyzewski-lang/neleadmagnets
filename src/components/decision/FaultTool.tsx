@@ -1,5 +1,5 @@
 "use client";
-import "./decision.css";
+import "./decision-legal.css";
 import { useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { Wizard, AnswersSummary, labelOf, type WizardStep } from "@/components/tool/Wizard";

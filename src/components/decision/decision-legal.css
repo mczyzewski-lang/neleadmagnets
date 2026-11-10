@@ -1,0 +1,25 @@
+/* Style narzędzi: wina-czy-bez-winy, porozumienie-przejsciowe, pozew-rozwodowy-checklista */
+.cmp-row--hl { background: var(--green-50); }
+.cmp-row--hl > th:first-child { box-shadow: inset 3px 0 0 var(--gold-500); }
+.cmp-cards { display: grid; gap: 12px; }
+.cmp-card { border: 1px solid var(--line); border-radius: var(--r-md); padding: 14px; background: #fff; }
+.cmp-card--hl { border-color: var(--green-500); background: linear-gradient(180deg, var(--green-50), #fff 70%); }
+.cmp-card h4 { margin: 0 0 8px; font-size: var(--fs-md); }
+.cmp-card dl { margin: 0; display: grid; gap: 8px; font-size: var(--fs-sm); }
+.cmp-card dt { font-size: var(--fs-xs); font-weight: 700; color: var(--gold-text); text-transform: uppercase; letter-spacing: .04em; }
+.cmp-card dd { margin: 0; }
+.cmp-desktop { display: none; }
+@media (min-width: 900px) { .cmp-desktop { display: block; } .cmp-mobile { display: none; } }
+@media print { .cmp-desktop { display: block !important; } .cmp-mobile { display: none !important; } }
+.doc-sheet { border: 1px solid var(--line-strong); border-radius: var(--r-md); background: #fff; padding: 20px; }
+.doc-sheet h4 { margin: 18px 0 6px; font-size: var(--fs-md); color: var(--green-800); }
+.doc-sheet h4:first-child { margin-top: 0; }
+.doc-sheet p, .doc-sheet li { font-size: var(--fs-sm); }
+.court-rule { display: grid; gap: 8px; counter-reset: r; list-style: none; padding: 0; margin: 0; }
+.court-rule li { border: 1px solid var(--line); border-radius: var(--r-md); padding: 12px 14px 12px 46px; position: relative; font-size: var(--fs-sm); color: var(--ink-3); background: #fff; }
+.court-rule li::before { counter-increment: r; content: counter(r); position: absolute; left: 12px; top: 12px; width: 24px; height: 24px; border-radius: 50%; background: var(--sand-2); color: var(--ink-2); display: grid; place-items: center; font-weight: 700; font-size: 13px; }
+.court-rule li.is-active { border-color: var(--green-700); background: var(--green-50); color: var(--ink); }
+.court-rule li.is-active::before { background: var(--green-700); color: #fff; }
+.court-rule li.is-skip { opacity: .6; text-decoration: line-through; }
+.bill-row { display: grid; grid-template-columns: 1fr 130px 40px; gap: 8px; align-items: end; }
+@media (max-width: 480px) { .bill-row { grid-template-columns: 1fr 110px 40px; } }
