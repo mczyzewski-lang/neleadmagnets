@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { TOOLS } from "@/lib/tools";
+import { DECISION_TOOLS } from "@/lib/decisionTools";
 import { MATERIALS } from "@/content/materials";
 import { Cover3D } from "@/components/landing/Cover3D";
 import { Icon } from "@/components/ui/Icon";
@@ -18,9 +19,9 @@ export default async function OgCard({ params }: P) {
         <Cover3D m={m} />
       </div>
     );
-  const t = TOOLS.find((x) => x.slug === slug);
-  const title = t ? t.h1 : slug === "narzedzia" ? "Co jeśli się rozstaniemy?" : m?.h1;
-  const sub = t ? t.outcome : slug === "narzedzia" ? "8 bezpłatnych narzędzi: mieszkanie i kredyt, budżet, opieka nad dzieckiem, separacja czy rozwód" : m?.promise;
+  const t = [...TOOLS, ...DECISION_TOOLS].find((x) => x.slug === slug);
+  const title = t ? t.h1 : slug === "narzedzia" ? "Co jeśli się rozstaniemy?" : slug === "przed-decyzja" ? "Zanim podejmiesz decyzję" : m?.h1;
+  const sub = t ? t.outcome : slug === "przed-decyzja" ? "10 bezpłatnych narzędzi: koszt rozwodu, rozmowa o rozstaniu, majątek, wina czy bez winy, plan wsparcia" : slug === "narzedzia" ? "8 bezpłatnych narzędzi: mieszkanie i kredyt, budżet, opieka nad dzieckiem, separacja czy rozwód" : m?.promise;
   if (!title) notFound();
   return (
     <div id="og" style={{ width: 1200, height: 630, background: "#263D3A", color: "#fff", padding: "64px 72px", display: "flex", flexDirection: "column", position: "relative", overflow: "hidden" }}>

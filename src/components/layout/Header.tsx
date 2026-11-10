@@ -10,6 +10,7 @@ export function Header() {
         </Link>
         <nav className="site-header__nav" aria-label="Główna">
           <Link href="/narzedzia">Narzędzia</Link>
+          <Link href="/przed-decyzja">Przed decyzją</Link>
           <Link href="/materialy">Bezpłatne materiały</Link>
           <Link href="/plan-rozwodu">Plan Rozwodu</Link>
         </nav>

@@ -23,6 +23,7 @@ export function Footer() {
           <div>
             <h2>Informacje</h2>
             <ul>
+              <li><Link href="/przed-decyzja">Przed decyzją — 10 narzędzi</Link></li>
               <li><Link href="/materialy">Bezpłatne materiały</Link></li>
               <li><Link href="/plan-rozwodu">Plan Rozwodu</Link></li>
               <li><Link href="/polityka-prywatnosci">Polityka prywatności i cookies</Link></li>

@@ -14,8 +14,16 @@ import { StickyCta } from "./StickyCta";
  * 1 Hero (z zapowiedzią prawdziwego wyniku) · 2 Jak to działa · 3–5 Narzędzie + wynik + kolejny krok
  * 6 FAQ · 7 Wiarygodność i źródła
  */
-export function ToolLanding({ tool, preview, children, extra }: { tool: ToolMeta; preview: ReactNode; children: ReactNode; extra?: ReactNode }) {
-  const related = TOOLS.filter((t) => t.slug !== tool.slug).slice(0, 3);
+export type RelatedItem = { href: string; title: string; desc: string; icon: ToolMeta["icon"] };
+
+export function ToolLanding({ tool, preview, children, extra, hub = { href: "/narzedzia", label: "Narzędzia" }, related: relatedProp }: {
+  tool: ToolMeta; preview: ReactNode; children: ReactNode; extra?: ReactNode;
+  /** Dział, do którego należy narzędzie (okruszki, canonical, wydruk) */
+  hub?: { href: string; label: string };
+  related?: RelatedItem[];
+}) {
+  const base = `${hub.href}/${tool.slug}`;
+  const related: RelatedItem[] = relatedProp ?? TOOLS.filter((t) => t.slug !== tool.slug).slice(0, 3).map((t) => ({ href: `/narzedzia/${t.slug}`, title: t.cardTitle, desc: t.cardDesc, icon: t.icon }));
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -25,8 +33,8 @@ export function ToolLanding({ tool, preview, children, extra }: { tool: ToolMeta
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Narzędzia", item: absoluteUrl("/narzedzia") },
-      { "@type": "ListItem", position: 2, name: tool.cardTitle, item: absoluteUrl(`/narzedzia/${tool.slug}`) },
+      { "@type": "ListItem", position: 1, name: hub.label, item: absoluteUrl(hub.href) },
+      { "@type": "ListItem", position: 2, name: tool.cardTitle, item: absoluteUrl(base) },
     ],
   };
   return (
@@ -35,7 +43,7 @@ export function ToolLanding({ tool, preview, children, extra }: { tool: ToolMeta
         <div className="container hero__grid">
           <div>
             <nav aria-label="Ścieżka" className="small muted" style={{ marginBottom: 14 }}>
-              <Link href="/narzedzia">Narzędzia</Link> <span aria-hidden="true">/</span> <span>{tool.short}</span>
+              <Link href={hub.href}>{hub.label}</Link> <span aria-hidden="true">/</span> <span>{tool.short}</span>
             </nav>
             <span className="eyebrow">Bezpłatne narzędzie · {tool.time}</span>
             <h1>{tool.h1}</h1>
@@ -76,7 +84,7 @@ export function ToolLanding({ tool, preview, children, extra }: { tool: ToolMeta
           <h2 className="visually-hidden">Narzędzie</h2>
           {children}
           <p className="print-only xsmall" style={{ marginTop: 16 }}>
-            {SITE.name} — {SITE.tagline}. Wygenerowano na {SITE.url.replace("https://", "")}/narzedzia/{tool.slug}. Materiał informacyjny, nie stanowi porady prawnej.
+            {SITE.name} — {SITE.tagline}. Wygenerowano na {SITE.url.replace("https://", "")}{base}. Materiał informacyjny, nie stanowi porady prawnej.
           </p>
         </div>
       </section>
@@ -119,10 +127,10 @@ export function ToolLanding({ tool, preview, children, extra }: { tool: ToolMeta
           <h2 style={{ fontSize: "var(--fs-xl)" }}>Inne bezpłatne narzędzia</h2>
           <div className="grid grid--3" style={{ marginTop: 16 }}>
             {related.map((t) => (
-              <Link key={t.slug} href={`/narzedzia/${t.slug}`} className="card card-link">
+              <Link key={t.href} href={t.href} className="card card-link">
                 <span className="icon-badge"><Icon name={t.icon} /></span>
-                <h3 className="card__title">{t.cardTitle}</h3>
-                <p className="small muted" style={{ margin: 0 }}>{t.cardDesc}</p>
+                <h3 className="card__title">{t.title}</h3>
+                <p className="small muted" style={{ margin: 0 }}>{t.desc}</p>
                 <span className="card-link__more">Otwórz <Icon name="arrowRight" width={16} /></span>
               </Link>
             ))}

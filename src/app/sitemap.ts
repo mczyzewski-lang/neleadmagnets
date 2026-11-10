@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { TOOLS } from "@/lib/tools";
+import { DECISION_TOOLS } from "@/lib/decisionTools";
 import { MATERIALS } from "@/content/materials";
 import { absoluteUrl, SITE } from "@/lib/site";
 
@@ -8,6 +9,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: absoluteUrl("/narzedzia"), lastModified, priority: 1 },
     ...TOOLS.map((t) => ({ url: absoluteUrl(`/narzedzia/${t.slug}`), lastModified, priority: 0.9 })),
+    { url: absoluteUrl("/przed-decyzja"), lastModified, priority: 0.9 },
+    ...DECISION_TOOLS.map((t) => ({ url: absoluteUrl(`/przed-decyzja/${t.slug}`), lastModified, priority: 0.8 })),
     { url: absoluteUrl("/materialy"), lastModified, priority: 0.8 },
     ...MATERIALS.flatMap((m) => [
       { url: absoluteUrl(`/materialy/${m.slug}`), lastModified, priority: 0.7 },

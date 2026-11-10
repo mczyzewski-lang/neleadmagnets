@@ -5,7 +5,7 @@ const { chromium } = createRequire(import.meta.url)("playwright"); // preinstalo
 import fs from "node:fs";
 
 const BASE = process.env.BASE || "http://localhost:3000";
-const tools = ["narzedzia", "mieszkanie-i-kredyt", "budzet-po-rozstaniu", "plan-opieki-nad-dzieckiem", "konsekwencje-rozstania", "przed-pozwem", "koszty-utrzymania-dziecka", "separacja-czy-rozwod", "pierwsze-30-dni"];
+const tools = ["narzedzia", "mieszkanie-i-kredyt", "budzet-po-rozstaniu", "plan-opieki-nad-dzieckiem", "konsekwencje-rozstania", "przed-pozwem", "koszty-utrzymania-dziecka", "separacja-czy-rozwod", "pierwsze-30-dni", "przed-decyzja", "koszt-rozwodu", "rozmowa-o-rozstaniu", "kompas-decyzji", "majatek-wspolny-czy-osobisty", "wina-czy-bez-winy", "porozumienie-przejsciowe", "koszty-wyprowadzki", "plan-wsparcia", "mity-o-rozwodzie", "pozew-rozwodowy-checklista"];
 const materials = fs.readdirSync("src/content/materials").filter((f) => f !== "index.ts").map((f) => f.replace(/\.ts$/, ""));
 
 const browser = await chromium.launch();

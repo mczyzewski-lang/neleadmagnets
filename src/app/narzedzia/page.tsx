@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { TOOLS } from "@/lib/tools";
+import { DECISION_TOOLS } from "@/lib/decisionTools";
 import { MATERIALS } from "@/content/materials";
 import { Icon } from "@/components/ui/Icon";
 import { Cover3D } from "@/components/landing/Cover3D";
@@ -46,6 +47,24 @@ export default function ToolsHub() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="section section--sand" aria-labelledby="pd-h">
+        <div className="container">
+          <span className="eyebrow">Nowy dział</span>
+          <h2 id="pd-h">Zanim podejmiesz decyzję</h2>
+          <p className="lead" style={{ maxWidth: 680 }}>Narzędzia dla osób, które dopiero rozważają rozstanie: koszty, prawa, możliwe drogi i przygotowanie do rozmowy — bez presji.</p>
+          <div className="grid grid--2 grid--4-wide" style={{ marginTop: 20 }}>
+            {DECISION_TOOLS.slice(0, 8).map((t) => (
+              <Link key={t.slug} href={`/przed-decyzja/${t.slug}`} className="card card-link" style={{ padding: 18 }}>
+                <span className="icon-badge"><Icon name={t.icon} /></span>
+                <h3 className="card__title" style={{ fontSize: "var(--fs-md)" }}>{t.cardTitle}</h3>
+                <p className="xsmall muted" style={{ margin: 0 }}>{t.cardDesc}</p>
+              </Link>
+            ))}
+          </div>
+          <p style={{ marginTop: 20 }}><Link href="/przed-decyzja" className="btn btn--ghost">Wszystkie narzędzia „Przed decyzją” <Icon name="arrowRight" width={16} /></Link></p>
         </div>
       </section>
 
