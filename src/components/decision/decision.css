@@ -1,0 +1,25 @@
+.dc-seg { display: flex; width: 100%; border-radius: 14px; }
+.dc-seg button { flex: 1 1 auto; border-radius: 10px; min-height: 44px; line-height: 1.2; }
+.dc-card { padding: 18px; margin-bottom: 14px; }
+.dc-card h3 { font-size: var(--fs-md); margin-bottom: 12px; display: flex; gap: 8px; align-items: center; }
+.dc-grid2 { display: grid; gap: 0 12px; }
+@media (min-width: 640px) { .dc-grid2 { grid-template-columns: 1fr 1fr; } }
+.dc-total { display: flex; justify-content: space-between; align-items: center; gap: 12px; position: sticky; bottom: 0; z-index: 5; background: rgba(255,255,255,.97); border-top: 1px solid var(--line); padding: 12px 20px calc(12px + env(safe-area-inset-bottom)); margin: 0 -20px; }
+.dc-total__v { font-weight: 700; font-size: var(--fs-lg); color: var(--green-800); font-variant-numeric: tabular-nums; }
+.dc-verify { display: inline-block; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--warn); background: var(--warn-bg); border-radius: 999px; padding: 1px 7px; margin-left: 6px; vertical-align: 1px; }
+.dc-paths { display: grid; gap: 12px; }
+@media (min-width: 640px) { .dc-paths { grid-template-columns: 1fr 1fr; } }
+.dc-item { border: 1.5px solid var(--line); border-radius: var(--r-lg); padding: 14px; margin-bottom: 12px; background: #fff; }
+.dc-item__head { display: flex; justify-content: space-between; gap: 8px; align-items: center; margin-bottom: 8px; }
+.dc-status { font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 999px; white-space: nowrap; }
+.dc-status--wspolny { background: var(--green-50); color: var(--green-700); }
+.dc-status--osobisty { background: var(--gold-100); color: var(--gold-text); }
+.dc-status--mieszany { background: var(--warn-bg); color: var(--warn); }
+.dc-status--analiza { background: #eceff1; color: var(--ink-2); }
+.dc-status--wspolwlasnosc { background: var(--green-50); color: var(--green-700); }
+.dc-chk { display: grid; grid-template-columns: auto 1fr 120px; gap: 8px 10px; align-items: center; padding: 8px 0; border-top: 1px solid var(--line); font-size: var(--fs-sm); }
+.dc-chk:first-of-type { border-top: 0; }
+.dc-chk input[type=checkbox] { width: 22px; height: 22px; accent-color: var(--green-700); }
+.dc-chk--off span { color: var(--ink-3); text-decoration: line-through; }
+.dc-chk .input-group .input { min-height: 40px; padding: 6px 30px 6px 8px; }
+.dc-chk .input-group__suffix { right: 8px; font-size: 12px; }

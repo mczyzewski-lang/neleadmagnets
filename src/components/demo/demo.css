@@ -38,3 +38,13 @@
 .ad-copy:hover{border-color:var(--green-700)}
 .ad-h{font-size:var(--fs-xs);text-transform:uppercase;letter-spacing:.06em;color:var(--gold-text);font-weight:700;margin:14px 0 2px}
 @media print{.demo-banner,.demo-launch,.demo-panel{display:none!important}}
+/* Mobile: dymek jako arkusz od dołu, zakładki w jednym wierszu */
+@media (max-width:899px){
+  .demo-panel{bottom:calc(10px + env(safe-area-inset-bottom));left:8px;right:8px;max-height:80vh;border-radius:22px}
+  .demo-panel::after{display:none}
+  .demo-panel .segmented{flex-wrap:nowrap;width:100%}
+  .demo-panel .segmented button{flex:1;padding:8px 6px;font-size:13px}
+  .ad-mock__img--sq{aspect-ratio:4/3}
+  .demo-banner{font-size:11px;padding:6px 8px}
+  .demo-launch{bottom:calc(84px + env(safe-area-inset-bottom))}
+}
