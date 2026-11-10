@@ -17,6 +17,7 @@ import {
 
 const TOOL = "majatek-wspolny-czy-osobisty";
 const STATUS_COLOR: Record<Status, string> = { wspolny: "#295550", osobisty: "#C79B59", mieszany: "#8a5a12", analiza: "#9fb5b1", wspolwlasnosc: "#4a6d68" };
+const SHORT: Record<Status, string> = { wspolny: "Wspólne", osobisty: "Osobiste", mieszany: "Mieszane (nakłady)", analiza: "Do analizy", wspolwlasnosc: "Współwłasność" };
 const TYPES = Object.keys(TYPE_LABEL) as AssetType[];
 
 export function AssetsTool() {
@@ -129,7 +130,7 @@ export function AssetsTool() {
             <p>Statusy są prawdopodobne, nie przesądzone. Zmieniaj odpowiedzi powyżej — wynik zaktualizuje się od razu.</p>
             <div className="kpis kpis--4">
               {(isMarriage ? (["wspolny", "osobisty", "mieszany", "analiza"] as Status[]) : (["wspolwlasnosc", "osobisty", "analiza"] as Status[])).map((s) => (
-                <div key={s} className="kpi"><span className="kpi__label">{STATUS_LABEL[s].replace("Prawdopodobnie ", "")}</span><span className="kpi__value">{res.counts[s]}</span><span className="kpi__note">{res.totals[s] ? formatPLN(res.totals[s]) : "—"}</span></div>
+                <div key={s} className="kpi"><span className="kpi__label">{SHORT[s]}</span><span className="kpi__value">{res.counts[s]}</span><span className="kpi__note">{res.totals[s] ? formatPLN(res.totals[s]) : "—"}</span></div>
               ))}
             </div>
           </div>
