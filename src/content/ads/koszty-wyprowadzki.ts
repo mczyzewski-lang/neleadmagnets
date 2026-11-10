@@ -6,7 +6,7 @@ export const ads: AdSet = {
   targeting: "Search: frazy o kosztach wyprowadzki i najmu. Demand Gen/Meta: zainteresowania mieszkanie/najem, finanse osobiste, przeprowadzki; dorośli 25–55; bez remarketingu i podobnych odbiorców.",
   meta: {
     primaryTexts: [
-      "Kaucja, przeprowadzka, łóżko, internet… Ile naprawdę kosztuje start w nowym mieszkaniu? Policz to w 4 minuty na własnych kwotach.",
+      "Kaucja, przeprowadzka, łóżko, internet… Ile naprawdę kosztuje start w nowym mieszkaniu? Policz to na własnych kwotach.",
       "Wyprowadzka to nie tylko czynsz. Bezpłatny kalkulator pokaże kwotę na start i co możesz odłożyć na później.",
       "Sprawdź, na ile miesięcy wystarczą oszczędności po przeprowadzce. Bez rejestracji, wynik do pobrania.",
     ],

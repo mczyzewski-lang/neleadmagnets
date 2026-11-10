@@ -6,7 +6,7 @@ export const ads: AdSet = {
   targeting: "Search: frazy kosztowe (wysoka intencja). Demand Gen/Meta: zainteresowania ogólne (finanse osobiste, prawo, poradniki rodzinne), dorośli 28–60, bez list remarketingowych i podobnych odbiorców.",
   meta: {
     primaryTexts: [
-      "Opłata od pozwu to tylko początek. Policz w 3 minuty pełne koszty rozwodu: mediację, podział majątku i pomoc prawną — na własnych założeniach.",
+      "Opłata od pozwu to tylko początek. Policz koszty rozwodu: mediację, podział majątku i pomoc prawną — na swoich liczbach.",
       "Porozumienie czy spór — ile to kosztuje? Bezpłatny kalkulator Nowego Etapu porównuje obie ścieżki na Twoich kwotach.",
       "Ile kosztuje rozwód w Polsce? Sprawdź opłaty sądowe, możliwy zwrot połowy opłaty i koszty, o których łatwo zapomnieć.",
     ],
