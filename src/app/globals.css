@@ -1689,3 +1689,6 @@ body:has(#og) .site-header,
 body:has(#og) .site-footer,
 body:has(#og) .cookie { display: none !important; }
 body:has(#og) main { padding: 0; }
+/* Ikony w nagłówkach sekcji wyniku nie kurczą się przy długich tytułach */
+.result-section > h3 > svg,
+.result-section h3 > svg { flex: none; }

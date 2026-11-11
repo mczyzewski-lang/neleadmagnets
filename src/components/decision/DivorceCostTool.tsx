@@ -166,10 +166,16 @@ export function DivorceCostTool() {
                   <h4>{p.title}</h4>
                   <p className="small muted">{p.desc}</p>
                   <p style={{ fontSize: "var(--fs-xl)", fontWeight: 700, color: "var(--green-800)", margin: "8px 0" }}>{range(p.summary.min, p.summary.max)}</p>
+                  {p.summary.refund > 0 && (
+                    <p className="xsmall muted" style={{ margin: "0 0 8px" }}>Po możliwym zwrocie połowy opłaty: <strong>{range(p.summary.minAfterRefund, p.summary.maxAfterRefund)}</strong> <span className="dc-verify">do weryfikacji</span></p>
+                  )}
                   <ul>{p.lines.map((l) => <li key={l.id}>{l.label}: {range(l.min, l.max)}</li>)}</ul>
                 </div>
               ))}
             </div>
+            {paths[0].summary.min === paths[1].summary.min && paths[0].summary.max === paths[1].summary.max && (
+              <p className="small mt"><strong>Przy obecnych założeniach obie ścieżki mają te same pozycje.</strong> Różnice pojawiają się zwykle przy podziale majątku, mediacji i pomocy pełnomocnika — dodaj je powyżej, aby zobaczyć porównanie.</p>
+            )}
             <p className="xsmall muted mt">To ilustracja zbudowana z Twoich założeń. Wybór drogi zależy od Waszej sytuacji, a nie tylko od kosztów — porozumienie nie zawsze jest możliwe ani bezpieczne.</p>
           </div>
 

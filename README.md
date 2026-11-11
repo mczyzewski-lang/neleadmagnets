@@ -163,4 +163,5 @@ Pomiar „aż do sprzedaży”: każde zgłoszenie ma `id`, `sourceId` (narzędz
 ## Testy
 
 - `npm test` — testy jednostkowe logiki narzędzi (scenariusze, kalkulacje, logika bezpieczeństwa).
+- `npm run a11y` — audyt dostępności axe-core (WCAG 2.2 AA) i kontrola poziomego przewijania na mobile dla wszystkich stron z sitemapy (`BASE=http://localhost:3000`).
 - `npm run e2e` — test dymny (Playwright) przechodzący przez wszystkie narzędzia na uruchomionym serwerze (`BASE=http://localhost:3000`).

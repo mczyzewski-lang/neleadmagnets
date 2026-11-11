@@ -67,8 +67,9 @@ export function ToolLanding({ tool, preview, children, extra, hub = { href: "/na
               <li><Icon name="doc" /> Wynik do pobrania</li>
             </ul>
           </div>
-          <div aria-label="Przykład wyniku" role="img" className="preview-wrap">
-            <div className="preview" aria-hidden="true">
+          <div className="preview-wrap">
+            {/* Ilustracja przykładowego wyniku: ukryta przed czytnikami i wyłączona z interakcji (inert) */}
+            <div className="preview" aria-hidden="true" inert>
               <span className="preview__badge">Przykładowy wynik</span>
               {preview}
             </div>
