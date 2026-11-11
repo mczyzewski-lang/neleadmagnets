@@ -23,7 +23,7 @@ function Block({ b }: { b: MaterialBlock }) {
       );
     case "table":
       return (
-        <div className="table-wrap" style={{ margin: "16px 0" }}>
+        <div tabIndex={0} role="region" aria-label="Tabela — przewiń w poziomie, jeśli nie mieści się na ekranie" className="table-wrap" style={{ margin: "16px 0" }}>
           <table className="table">
             {b.caption && <caption className="visually-hidden">{b.caption}</caption>}
             <thead><tr>{b.head.map((h) => <th key={h} scope="col">{h}</th>)}</tr></thead>

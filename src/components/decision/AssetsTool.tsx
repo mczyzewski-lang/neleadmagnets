@@ -137,7 +137,7 @@ export function AssetsTool() {
 
           <div className="result-section">
             <h3><Icon name="doc" width={22} /> Składniki i ich prawdopodobny status</h3>
-            <div className="table-wrap">
+            <div tabIndex={0} role="region" aria-label="Tabela — przewiń w poziomie, jeśli nie mieści się na ekranie" className="table-wrap">
               <table className="table">
                 <thead><tr><th>Składnik</th><th>Status</th><th>Dlaczego</th><th className="num">Wartość</th></tr></thead>
                 <tbody>

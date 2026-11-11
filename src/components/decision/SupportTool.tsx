@@ -138,7 +138,7 @@ export function SupportTool() {
 
       <div className="result-section pw-card">
         <h3><Icon name="user" width={22} /> Kto może mi pomóc</h3>
-        <div className="table-wrap">
+        <div tabIndex={0} role="region" aria-label="Tabela — przewiń w poziomie, jeśli nie mieści się na ekranie" className="table-wrap">
           <table className="table">
             <thead><tr><th scope="col">W czym</th><th scope="col">Kto</th></tr></thead>
             <tbody>{matrix.map((r) => <tr key={r.help}><th scope="row">{r.help}</th><td>{r.who.length ? r.who.join(", ") : <span className="muted">— do znalezienia</span>}</td></tr>)}</tbody>
@@ -158,7 +158,7 @@ export function SupportTool() {
       {ifThen.length > 0 && (
         <div className="result-section">
           <h3><Icon name="split" width={22} /> Gdy… to…</h3>
-          <div className="table-wrap">
+          <div tabIndex={0} role="region" aria-label="Tabela — przewiń w poziomie, jeśli nie mieści się na ekranie" className="table-wrap">
             <table className="table">
               <thead><tr><th scope="col">Gdy</th><th scope="col">To</th></tr></thead>
               <tbody>{ifThen.map((r) => <tr key={r.when}><th scope="row" style={{ fontWeight: 600 }}>{r.when}</th><td>{r.then}</td></tr>)}</tbody>

@@ -226,7 +226,7 @@ export function BudgetTool() {
               series={[{ key: "inc", label: "Dochody", color: "var(--green-700)" }, { key: "exp", label: "Wydatki", color: "var(--gold-500)" }]}
               groups={[{ label: "Teraz", values: { inc: now.income, exp: now.expenses } }, ...variants.map((v) => ({ label: v.label, values: { inc: v.income, exp: v.expenses } }))]}
             />
-            <div className="table-wrap mt">
+            <div tabIndex={0} role="region" aria-label="Tabela — przewiń w poziomie, jeśli nie mieści się na ekranie" className="table-wrap mt">
               <table className="table">
                 <thead><tr><th scope="col">Miesięcznie</th><th className="num" scope="col">Teraz</th>{variants.map((v) => <th key={v.key} className="num" scope="col">{v.label}</th>)}</tr></thead>
                 <tbody>
@@ -243,7 +243,7 @@ export function BudgetTool() {
           <div className="result-section">
             <h3><Icon name="edit" width={22} /> Założenia wariantów</h3>
             <p className="small muted">Wariant bazowy to dokładnie Twoje kwoty „po rozstaniu”. Pozostałe to Twoje kwoty zmienione o poniższe procenty — to przykładowe założenia, nie prognozy. Dopasuj je do swojej sytuacji.</p>
-            <div className="table-wrap">
+            <div tabIndex={0} role="region" aria-label="Tabela — przewiń w poziomie, jeśli nie mieści się na ekranie" className="table-wrap">
               <table className="table calc-assump">
                 <thead><tr><th scope="col">Zmiana względem Twoich kwot</th>{(Object.keys(VARIANT_LABELS) as VariantKey[]).map((k) => <th key={k} className="num" scope="col">{VARIANT_LABELS[k]}</th>)}</tr></thead>
                 <tbody>
@@ -283,7 +283,7 @@ export function BudgetTool() {
               </div>
               <div>
                 <h3><Icon name="split" width={22} /> Jak zmienią się koszty</h3>
-                <div className="table-wrap">
+                <div tabIndex={0} role="region" aria-label="Tabela — przewiń w poziomie, jeśli nie mieści się na ekranie" className="table-wrap">
                   <table className="table">
                     <thead><tr><th scope="col">Kategoria</th><th className="num" scope="col">Teraz</th><th className="num" scope="col">Po</th><th className="num" scope="col">Zmiana</th></tr></thead>
                     <tbody>{changes.map((r) => (

@@ -9,7 +9,7 @@ export function Seg<T extends string>({ label, value, options, onChange, hint }:
       <span id={id} className="field__label">{label}</span>
       <div className="segmented dc-seg">
         {options.map((o) => (
-          <button key={o.value} type="button" role="radio" aria-checked={value === o.value} aria-pressed={value === o.value} onClick={() => onChange(o.value)}>{o.label}</button>
+          <button key={o.value} type="button" role="radio" aria-checked={value === o.value} onClick={() => onChange(o.value)}>{o.label}</button>
         ))}
       </div>
       {hint && <span className="field__hint">{hint}</span>}

@@ -16,7 +16,7 @@ function Preview() {
   return (
     <div>
       <p className="xsmall muted" style={{ margin: "6px 0 10px", fontWeight: 600 }}>TWOJA TABELA PORÓWNAWCZA</p>
-      <div className="table-wrap">
+      <div tabIndex={0} role="region" aria-label="Tabela — przewiń w poziomie, jeśli nie mieści się na ekranie" className="table-wrap">
         <table className="table" style={{ fontSize: 13 }}>
           <thead><tr><th></th><th>Separacja</th><th>Rozwód</th></tr></thead>
           <tbody>{rows.map(([a, b, c]) => <tr key={a}><th scope="row">{a}</th><td>{b}</td><td>{c}</td></tr>)}</tbody>

@@ -232,7 +232,7 @@ export function ChildCostsTool() {
 
           <div className="result-section">
             <h3><Icon name="doc" width={22} /> Lista wydatków</h3>
-            <div className="table-wrap">
+            <div tabIndex={0} role="region" aria-label="Tabela — przewiń w poziomie, jeśli nie mieści się na ekranie" className="table-wrap">
               <table className="table">
                 <thead><tr><th scope="col">Wydatek</th><th className="num" scope="col">Mies.</th><th className="num" scope="col">Rocznie</th></tr></thead>
                 <tbody>
@@ -259,7 +259,7 @@ export function ChildCostsTool() {
                 groups={scenarios.map((s, i) => ({ label: s.name || `Scenariusz ${i + 1}`, values: { m: comparison.totals[i].monthly } }))}
                 height={200}
               />
-              <div className="table-wrap mt">
+              <div tabIndex={0} role="region" aria-label="Tabela — przewiń w poziomie, jeśli nie mieści się na ekranie" className="table-wrap mt">
                 <table className="table">
                   <thead><tr><th scope="col">Kategoria (mies.)</th>{scenarios.map((s) => <th key={s.id} className="num" scope="col">{s.name}</th>)}<th className="num" scope="col">Różnica</th></tr></thead>
                   <tbody>

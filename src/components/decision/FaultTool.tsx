@@ -109,7 +109,7 @@ export function FaultTool() {
 
       <div className="result-section">
         <h3><Icon name="scale" width={22} /> Tabela różnic</h3>
-        <div className="cmp-desktop table-wrap">
+        <div tabIndex={0} role="region" aria-label="Tabela porównawcza" className="cmp-desktop table-wrap">
           <table className="table">
             <caption className="visually-hidden">Porównanie rozwodu bez orzekania o winie i z orzekaniem o winie</caption>
             <thead><tr><th scope="col" style={{ width: "20%" }}>Kwestia</th><th scope="col">Bez orzekania o winie</th><th scope="col">Z orzekaniem o winie</th></tr></thead>

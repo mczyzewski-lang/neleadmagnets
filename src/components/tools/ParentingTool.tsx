@@ -245,7 +245,7 @@ export function ParentingTool() {
 
       <div className="result-section">
         <h3><Icon name="checklist" width={22} /> Podsumowanie ustaleń</h3>
-        <div className="table-wrap">
+        <div tabIndex={0} role="region" aria-label="Tabela — przewiń w poziomie, jeśli nie mieści się na ekranie" className="table-wrap">
           <table className="table">
             <tbody>
               {summary.map((s) => (

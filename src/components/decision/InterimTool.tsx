@@ -179,7 +179,7 @@ export function InterimTool() {
           <h3><Icon name="coins" width={22} /> Podział rachunków</h3>
           {bills.note && <Alert tone="warn"><p>{bills.note}</p></Alert>}
           {bills.rows.length ? (
-            <div className="table-wrap mt">
+            <div tabIndex={0} role="region" aria-label="Tabela — przewiń w poziomie, jeśli nie mieści się na ekranie" className="table-wrap mt">
               <table className="table">
                 <caption className="visually-hidden">Podział wspólnych rachunków</caption>
                 <thead><tr><th scope="col">Wydatek</th><th scope="col" className="num">Kwota</th><th scope="col" className="num">Ja ({bills.pctMe}%)</th><th scope="col" className="num">Druga osoba ({bills.pctPartner}%)</th></tr></thead>

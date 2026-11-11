@@ -24,7 +24,7 @@ export default function DemoIndex() {
         <span className="eyebrow">Wewnętrzne · nieindeksowane</span>
         <h1 style={{ fontSize: "var(--fs-2xl)" }}>Strony demo z propozycjami reklam</h1>
         <p className="lead">Każdy landing ma wersję <code>/demo</code> z dymkiem: propozycje treści Meta, Google Demand Gen i Google Search (z limitami znaków, podglądem i linkami UTM).</p>
-        <div className="table-wrap">
+        <div tabIndex={0} role="region" aria-label="Tabela — przewiń w poziomie, jeśli nie mieści się na ekranie" className="table-wrap">
           <table className="table">
             <thead><tr><th>Lead magnet</th><th>Typ</th><th>Landing</th><th>Demo</th></tr></thead>
             <tbody>

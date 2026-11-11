@@ -141,7 +141,7 @@ export function DivorceCostTool() {
             <h3><Icon name="coins" width={22} /> Struktura kosztów</h3>
             <Donut title="Struktura kosztów (wartości maksymalne)" centerLabel="łącznie do" centerValue={formatPLN(sum.max)}
               slices={lines.map((l, k) => ({ label: l.label, value: l.max, color: ["#295550", "#C79B59", "#4a6d68", "#ead9bb", "#7E5B26", "#9fb5b1", "#263D3A", "#c9a96e"][k % 8] }))} />
-            <div className="table-wrap mt">
+            <div tabIndex={0} role="region" aria-label="Tabela — przewiń w poziomie, jeśli nie mieści się na ekranie" className="table-wrap mt">
               <table className="table">
                 <thead><tr><th>Pozycja</th><th className="num">Kwota</th></tr></thead>
                 <tbody>
