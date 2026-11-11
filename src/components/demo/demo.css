@@ -15,7 +15,7 @@
 .ad-mock__name{font-weight:700;font-size:13px;line-height:1.2}
 .ad-mock__sp{font-size:11px;color:var(--ink-3)}
 .ad-mock__text{padding:0 12px 10px;font-size:13px;line-height:1.45;white-space:pre-line}
-.ad-mock__img{aspect-ratio:1.91/1;background:radial-gradient(400px 200px at 80% 0,#c9a96e55,transparent),linear-gradient(135deg,var(--green-800),var(--green-700));color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:14px;gap:4px}
+.ad-mock__img{aspect-ratio:1.91/1;background:radial-gradient(400px 200px at 80% 0,#c9a96e55,transparent),linear-gradient(135deg,var(--green-800),var(--green-700));color:#fff;display:flex;flex-direction:column;justify-content:center;padding:18px;gap:6px}
 .ad-mock__img--sq{aspect-ratio:1/1}
 .ad-mock__img b{font-size:17px;line-height:1.2}
 .ad-mock__img small{color:var(--gold-400);font-family:var(--font-display);letter-spacing:.14em;text-transform:uppercase;font-size:10px}

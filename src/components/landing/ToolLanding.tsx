@@ -5,6 +5,7 @@ import { Alert } from "@/components/ui/Alert";
 import { SITE, absoluteUrl } from "@/lib/site";
 import type { ToolMeta } from "@/lib/tools";
 import { TOOLS } from "@/lib/tools";
+import { DECISION_TOOLS } from "@/lib/decisionTools";
 import { Faq } from "./Faq";
 import { Sources } from "./Sources";
 import { StickyCta } from "./StickyCta";
@@ -23,7 +24,15 @@ export function ToolLanding({ tool, preview, children, extra, hub = { href: "/na
   related?: RelatedItem[];
 }) {
   const base = `${hub.href}/${tool.slug}`;
-  const related: RelatedItem[] = relatedProp ?? TOOLS.filter((t) => t.slug !== tool.slug).slice(0, 3).map((t) => ({ href: `/narzedzia/${t.slug}`, title: t.cardTitle, desc: t.cardDesc, icon: t.icon }));
+  const toItem = (prefix: string) => (t: ToolMeta): RelatedItem => ({ href: `${prefix}/${t.slug}`, title: t.cardTitle, desc: t.cardDesc, icon: t.icon });
+  const isDecision = hub.href === "/przed-decyzja";
+  // W dziale „Przed decyzją”: dwa sąsiednie narzędzia z działu + pomost do narzędzi z konkretnymi ustaleniami
+  const di = DECISION_TOOLS.findIndex((t) => t.slug === tool.slug);
+  const related: RelatedItem[] =
+    relatedProp ??
+    (isDecision
+      ? [1, 2].map((o) => DECISION_TOOLS[(di + o) % DECISION_TOOLS.length]).map(toItem("/przed-decyzja")).concat(toItem("/narzedzia")(TOOLS.find((t) => t.slug === "przed-pozwem")!))
+      : TOOLS.filter((t) => t.slug !== tool.slug).slice(0, 3).map(toItem("/narzedzia")));
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
