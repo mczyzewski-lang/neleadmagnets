@@ -1374,10 +1374,10 @@ Landing: `/materialy/rozwod-krok-po-kroku` · Demo: `/materialy/rozwod-krok-po-k
 
 **Kierowanie:** Kontekstowe i tematyczne: treści o finansach osobistych, prawie, rodzinie i poradnikach; Search: frazy informacyjne. Demografia szeroka (25–60). Bez remarketingu, list klientów, podobnych odbiorców i segmentów opartych na wnioskowaniu o kryzysie w związku.
 
-### Meta (CTA: Pobierz)
+### Meta (CTA: Dowiedz się więcej)
 
 **Tekst główny**
-- Rozwód w Polsce krok po kroku: od pierwszych ustaleń do wyroku. Poradnik PDF za darmo. _(86/125)_
+- Rozwód w Polsce krok po kroku: od pierwszych ustaleń do wyroku. Poradnik online za darmo. _(89/125)_
 - Kolejne etapy, dokumenty i decyzje w jednym przejrzystym poradniku. Bezpłatnie. _(79/125)_
 - Najpierw plan i ustalenia, potem pozew. Zobacz całą drogę rozpisaną na etapy. _(77/125)_
 
@@ -1389,30 +1389,30 @@ Landing: `/materialy/rozwod-krok-po-kroku` · Demo: `/materialy/rozwod-krok-po-k
 
 **Opisy**
 - Bezpłatnie, od razu _(19/30)_
-- Do druku i jako PDF _(19/30)_
+- Wypełniasz online, bez konta _(28/30)_
 
-**Kreacja:** Okładka poradnika i rozłożona strona z osią etapów: „Ustalenia → Dokumenty → Pozew → Rozprawa → Po wyroku”, złota linia łącząca punkty.
+**Kreacja:** Ekran materiału na telefonie z osią etapów: „Ustalenia → Dokumenty → Pozew → Rozprawa → Po wyroku”, złota linia łącząca punkty.
 
-### Google Demand Gen (CTA: Pobierz)
+### Google Demand Gen (CTA: Dowiedz się więcej)
 
 **Nagłówki**
 - Rozwód krok po kroku — poradnik _(31/40)_
 - Cała droga na jednej mapie _(26/40)_
 - Etapy, dokumenty, koszty _(24/40)_
 - Od ustaleń do wyroku _(20/40)_
-- Poradnik PDF za darmo _(21/40)_
+- Odhaczaj etapy online _(21/40)_
 
 **Długie nagłówki**
-- Rozwód w Polsce krok po kroku: od pierwszych ustaleń do wyroku. Poradnik PDF za darmo. _(86/90)_
+- Rozwód w Polsce krok po kroku: od pierwszych ustaleń do wyroku. Poradnik online za darmo. _(89/90)_
 - Kolejne etapy, dokumenty i decyzje w jednym przejrzystym poradniku. Bezpłatnie. _(79/90)_
 - Najpierw plan i ustalenia, potem pozew. Zobacz całą drogę rozpisaną na etapy. _(77/90)_
 
 **Teksty**
 - Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych. _(76/90)_
-- Możesz go wydrukować lub zapisać jako PDF. Informacyjnie — nie porada prawna. _(77/90)_
+- Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna. _(82/90)_
 - Cały proces rozwodowy rozpisany na etapy: dokumenty, sąd, opłaty, wyrok i życie po nim. _(87/90)_
 
-**Kreacja:** Okładka poradnika i rozłożona strona z osią etapów: „Ustalenia → Dokumenty → Pozew → Rozprawa → Po wyroku”, złota linia łącząca punkty.
+**Kreacja:** Ekran materiału na telefonie z osią etapów: „Ustalenia → Dokumenty → Pozew → Rozprawa → Po wyroku”, złota linia łącząca punkty.
 
 ### Google Search
 
@@ -1422,7 +1422,7 @@ Landing: `/materialy/rozwod-krok-po-kroku` · Demo: `/materialy/rozwod-krok-po-k
 
 **Nagłówki**
 - Rozwód krok po kroku _(20/30)_
-- Poradnik PDF za darmo _(21/30)_
+- Odhaczaj etapy online _(21/30)_
 - Etapy, dokumenty, koszty _(24/30)_
 - Gdzie złożyć pozew? _(19/30)_
 - Co jest w wyroku? _(17/30)_
@@ -1435,7 +1435,7 @@ Landing: `/materialy/rozwod-krok-po-kroku` · Demo: `/materialy/rozwod-krok-po-k
 **Teksty**
 - Cały proces rozwodowy rozpisany na etapy: dokumenty, sąd, opłaty, wyrok i życie po nim. _(87/90)_
 - Bezpłatny przewodnik Nowego Etapu. Otworzysz go od razu, bez podawania danych. _(78/90)_
-- Stan prawny na listopad 2026. Do druku i jako PDF. _(50/90)_
+- Stan prawny na listopad 2026. Wypełniasz online, bez pobierania. _(64/90)_
 - Rozwód a separacja w tabeli i checklista spraw po wyroku. _(57/90)_
 
 ---
@@ -1448,10 +1448,10 @@ Landing: `/materialy/checklista-dokumentow` · Demo: `/materialy/checklista-doku
 
 **Kierowanie:** Kontekstowe i tematyczne: treści o finansach osobistych, prawie, rodzinie i poradnikach; Search: frazy informacyjne. Demografia szeroka (25–60). Bez remarketingu, list klientów, podobnych odbiorców i segmentów opartych na wnioskowaniu o kryzysie w związku.
 
-### Meta (CTA: Pobierz)
+### Meta (CTA: Dowiedz się więcej)
 
 **Tekst główny**
-- Akt małżeństwa, akty urodzenia, umowy, wyciągi. Checklista dokumentów w jednym PDF. _(83/125)_
+- Akt małżeństwa, akty urodzenia, umowy, wyciągi. Odhaczaj je online, na jednej liście. _(85/125)_
 - Dokumenty do rozwodu i podziału majątku: odhaczaj, co już masz. Bezpłatna checklista. _(85/125)_
 - Zanim zaczną się formalności, zbierz dokumenty według prostej listy. _(68/125)_
 
@@ -1463,30 +1463,30 @@ Landing: `/materialy/checklista-dokumentow` · Demo: `/materialy/checklista-doku
 
 **Opisy**
 - Bezpłatnie, od razu _(19/30)_
-- Do druku i jako PDF _(19/30)_
+- Wypełniasz online, bez konta _(28/30)_
 
-**Kreacja:** Wydruk checklisty na stole, segregator w kolorze #295550, trzy pozycje odhaczone złotym ptaszkiem.
+**Kreacja:** Checklista na ekranie telefonu, obok segregator w kolorze #295550; trzy pozycje odhaczone złotym ptaszkiem.
 
-### Google Demand Gen (CTA: Pobierz)
+### Google Demand Gen (CTA: Dowiedz się więcej)
 
 **Nagłówki**
 - Checklista dokumentów do rozwodu _(32/40)_
 - Odhaczaj, co już masz _(21/40)_
 - Dokumenty w jednym miejscu _(26/40)_
 - Lista na podział majątku _(24/40)_
-- Checklista PDF za darmo _(23/40)_
+- Checklista online za darmo _(26/40)_
 
 **Długie nagłówki**
-- Akt małżeństwa, akty urodzenia, umowy, wyciągi. Checklista dokumentów w jednym PDF. _(83/90)_
+- Akt małżeństwa, akty urodzenia, umowy, wyciągi. Odhaczaj je online, na jednej liście. _(85/90)_
 - Dokumenty do rozwodu i podziału majątku: odhaczaj, co już masz. Bezpłatna checklista. _(85/90)_
 - Zanim zaczną się formalności, zbierz dokumenty według prostej listy. _(68/90)_
 
 **Teksty**
 - Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych. _(76/90)_
-- Możesz go wydrukować lub zapisać jako PDF. Informacyjnie — nie porada prawna. _(77/90)_
+- Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna. _(82/90)_
 - Lista dokumentów do rozwodu, podziału majątku, spraw dzieci i kredytu — do odhaczania. _(86/90)_
 
-**Kreacja:** Wydruk checklisty na stole, segregator w kolorze #295550, trzy pozycje odhaczone złotym ptaszkiem.
+**Kreacja:** Checklista na ekranie telefonu, obok segregator w kolorze #295550; trzy pozycje odhaczone złotym ptaszkiem.
 
 ### Google Search
 
@@ -1496,7 +1496,7 @@ Landing: `/materialy/checklista-dokumentow` · Demo: `/materialy/checklista-doku
 
 **Nagłówki**
 - Dokumenty do rozwodu _(20/30)_
-- Checklista PDF za darmo _(23/30)_
+- Checklista online za darmo _(26/30)_
 - Co dołączyć do pozwu? _(21/30)_
 - Podział majątku — dokumenty _(27/30)_
 - Odhaczaj, co już masz _(21/30)_
@@ -1509,7 +1509,7 @@ Landing: `/materialy/checklista-dokumentow` · Demo: `/materialy/checklista-doku
 **Teksty**
 - Lista dokumentów do rozwodu, podziału majątku, spraw dzieci i kredytu — do odhaczania. _(86/90)_
 - Co zwykle jest potrzebne zawsze, a co zależy od sytuacji, i gdzie to uzyskać. _(77/90)_
-- Bezpłatna checklista Nowego Etapu. Do druku i jako PDF. _(55/90)_
+- Bezpłatna checklista Nowego Etapu. Odhaczasz online, bez pobierania. _(68/90)_
 - Odpisy aktów stanu cywilnego zamówisz online — podpowiadamy jak. _(64/90)_
 
 ---
@@ -1522,11 +1522,11 @@ Landing: `/materialy/jak-powiedziec-dzieciom` · Demo: `/materialy/jak-powiedzie
 
 **Kierowanie:** Kontekstowe i tematyczne: treści o finansach osobistych, prawie, rodzinie i poradnikach; Search: frazy informacyjne. Demografia szeroka (25–60). Bez remarketingu, list klientów, podobnych odbiorców i segmentów opartych na wnioskowaniu o kryzysie w związku.
 
-### Meta (CTA: Pobierz)
+### Meta (CTA: Dowiedz się więcej)
 
 **Tekst główny**
 - Jak rozmawiać z dziećmi o rozstaniu rodziców? Spokojny poradnik z przykładami zdań. _(83/125)_
-- Co powiedzieć, czego unikać i jak dopasować rozmowę do wieku dziecka. Poradnik PDF. _(83/125)_
+- Co powiedzieć, czego unikać i jak dopasować rozmowę do wieku dziecka. Poradnik online. _(86/125)_
 - Jedna z najtrudniejszych rozmów. Warto się do niej przygotować. Bezpłatny poradnik. _(83/125)_
 
 **Nagłówki**
@@ -1537,11 +1537,11 @@ Landing: `/materialy/jak-powiedziec-dzieciom` · Demo: `/materialy/jak-powiedzie
 
 **Opisy**
 - Bezpłatnie, od razu _(19/30)_
-- Do druku i jako PDF _(19/30)_
+- Wypełniasz online, bez konta _(28/30)_
 
-**Kreacja:** Dwa kubki (duży i mały) na parapecie, bez twarzy; obok okładka poradnika i strona „Przykładowe zdania według wieku”.
+**Kreacja:** Dwa kubki (duży i mały) na parapecie, bez twarzy; obok telefon z ekranem materiału „Przykładowe zdania według wieku”.
 
-### Google Demand Gen (CTA: Pobierz)
+### Google Demand Gen (CTA: Dowiedz się więcej)
 
 **Nagłówki**
 - Jak powiedzieć dzieciom o rozstaniu _(35/40)_
@@ -1552,15 +1552,15 @@ Landing: `/materialy/jak-powiedziec-dzieciom` · Demo: `/materialy/jak-powiedzie
 
 **Długie nagłówki**
 - Jak rozmawiać z dziećmi o rozstaniu rodziców? Spokojny poradnik z przykładami zdań. _(83/90)_
-- Co powiedzieć, czego unikać i jak dopasować rozmowę do wieku dziecka. Poradnik PDF. _(83/90)_
+- Co powiedzieć, czego unikać i jak dopasować rozmowę do wieku dziecka. Poradnik online. _(86/90)_
 - Jedna z najtrudniejszych rozmów. Warto się do niej przygotować. Bezpłatny poradnik. _(83/90)_
 
 **Teksty**
 - Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych. _(76/90)_
-- Możesz go wydrukować lub zapisać jako PDF. Informacyjnie — nie porada prawna. _(77/90)_
+- Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna. _(82/90)_
 - Jak powiedzieć dziecku o rozstaniu: przykładowe zdania dla każdego wieku i czego unikać. _(88/90)_
 
-**Kreacja:** Dwa kubki (duży i mały) na parapecie, bez twarzy; obok okładka poradnika i strona „Przykładowe zdania według wieku”.
+**Kreacja:** Dwa kubki (duży i mały) na parapecie, bez twarzy; obok telefon z ekranem materiału „Przykładowe zdania według wieku”.
 
 ### Google Search
 
@@ -1574,7 +1574,7 @@ Landing: `/materialy/jak-powiedziec-dzieciom` · Demo: `/materialy/jak-powiedzie
 - Przykładowe zdania _(18/30)_
 - Czego unikać w rozmowie _(23/30)_
 - Poradnik dla rodziców _(21/30)_
-- Bezpłatny poradnik PDF _(22/30)_
+- Bezpłatny poradnik online _(25/30)_
 - Nowy Etap — poradnia _(20/30)_
 - Materiał od Nowego Etapu _(24/30)_
 - Otwórz od razu _(14/30)_
@@ -1584,7 +1584,7 @@ Landing: `/materialy/jak-powiedziec-dzieciom` · Demo: `/materialy/jak-powiedzie
 - Jak powiedzieć dziecku o rozstaniu: przykładowe zdania dla każdego wieku i czego unikać. _(88/90)_
 - Sygnały, przy których warto skonsultować się z psychologiem dziecięcym. _(71/90)_
 - Bezpłatny poradnik Nowego Etapu. Otworzysz go od razu, bez podawania danych. _(76/90)_
-- Do druku i jako PDF. Informacyjnie, nie zastępuje porady specjalisty. _(69/90)_
+- Notatki wpiszesz online, bez pobierania. Informacyjnie, nie zastępuje porady specjalisty. _(89/90)_
 
 ---
 
@@ -1596,7 +1596,7 @@ Landing: `/materialy/przygotowanie-do-mediacji` · Demo: `/materialy/przygotowan
 
 **Kierowanie:** Kontekstowe i tematyczne: treści o finansach osobistych, prawie, rodzinie i poradnikach; Search: frazy informacyjne. Demografia szeroka (25–60). Bez remarketingu, list klientów, podobnych odbiorców i segmentów opartych na wnioskowaniu o kryzysie w związku.
 
-### Meta (CTA: Pobierz)
+### Meta (CTA: Dowiedz się więcej)
 
 **Tekst główny**
 - Zeszyt przygotowania do mediacji: tematy, priorytety i pytania zapisane przed spotkaniem. _(89/125)_
@@ -1607,21 +1607,21 @@ Landing: `/materialy/przygotowanie-do-mediacji` · Demo: `/materialy/przygotowan
 - Zeszyt przygotowania do mediacji _(32/40)_
 - Na mediację z notatkami _(23/40)_
 - Priorytety i pytania do mediatora _(33/40)_
-- Ćwiczenia do wydruku za darmo _(29/40)_
+- Ćwiczenia online za darmo _(25/40)_
 
 **Opisy**
 - Bezpłatnie, od razu _(19/30)_
-- Do druku i jako PDF _(19/30)_
+- Wypełniasz online, bez konta _(28/30)_
 
-**Kreacja:** Zeszyt w okładce #295550 ze złotym tytułem, otwarty na stronie z tabelą „Ważne dla mnie / Mogę omówić / Pytania”.
+**Kreacja:** Ekran laptopa z zeszytem online w kolorze #295550 i złotym tytułem; widoczna tabela „Ważne dla mnie / Mogę omówić / Pytania”.
 
-### Google Demand Gen (CTA: Pobierz)
+### Google Demand Gen (CTA: Dowiedz się więcej)
 
 **Nagłówki**
 - Zeszyt przygotowania do mediacji _(32/40)_
 - Na mediację z notatkami _(23/40)_
 - Priorytety i pytania do mediatora _(33/40)_
-- Ćwiczenia do wydruku za darmo _(29/40)_
+- Ćwiczenia online za darmo _(25/40)_
 - Mediacja: przygotuj się _(23/40)_
 
 **Długie nagłówki**
@@ -1631,10 +1631,10 @@ Landing: `/materialy/przygotowanie-do-mediacji` · Demo: `/materialy/przygotowan
 
 **Teksty**
 - Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych. _(76/90)_
-- Możesz go wydrukować lub zapisać jako PDF. Informacyjnie — nie porada prawna. _(77/90)_
+- Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna. _(82/90)_
 - Zeszyt ćwiczeń przed mediacją: priorytety, potrzeby dzieci, fakty finansowe, pytania. _(85/90)_
 
-**Kreacja:** Zeszyt w okładce #295550 ze złotym tytułem, otwarty na stronie z tabelą „Ważne dla mnie / Mogę omówić / Pytania”.
+**Kreacja:** Ekran laptopa z zeszytem online w kolorze #295550 i złotym tytułem; widoczna tabela „Ważne dla mnie / Mogę omówić / Pytania”.
 
 ### Google Search
 
@@ -1648,16 +1648,16 @@ Landing: `/materialy/przygotowanie-do-mediacji` · Demo: `/materialy/przygotowan
 - Pytania do mediatora _(20/30)_
 - Priorytety przed spotkaniem _(27/30)_
 - Mediacja jest dobrowolna _(24/30)_
-- Ćwiczenia do wydruku _(20/30)_
+- Wypełnij zeszyt online _(22/30)_
 - Nowy Etap — poradnia _(20/30)_
 - Materiał od Nowego Etapu _(24/30)_
 - Otwórz od razu _(14/30)_
-- Bezpłatny zeszyt PDF _(20/30)_
+- Bezpłatny zeszyt online _(23/30)_
 
 **Teksty**
 - Zeszyt ćwiczeń przed mediacją: priorytety, potrzeby dzieci, fakty finansowe, pytania. _(85/90)_
 - Mediacja jest dobrowolna. Wyjaśniamy też, kiedy może nie być bezpieczna. _(72/90)_
-- Bezpłatny materiał Nowego Etapu do druku i wypełnienia. _(55/90)_
+- Bezpłatny materiał Nowego Etapu do wypełnienia online, z podsumowaniem na końcu. _(80/90)_
 - Otworzysz go od razu, bez podawania danych. _(43/90)_
 
 ---
@@ -1670,7 +1670,7 @@ Landing: `/materialy/inwentaryzacja-majatku` · Demo: `/materialy/inwentaryzacja
 
 **Kierowanie:** Kontekstowe i tematyczne: treści o finansach osobistych, prawie, rodzinie i poradnikach; Search: frazy informacyjne. Demografia szeroka (25–60). Bez remarketingu, list klientów, podobnych odbiorców i segmentów opartych na wnioskowaniu o kryzysie w związku.
 
-### Meta (CTA: Pobierz)
+### Meta (CTA: Dowiedz się więcej)
 
 **Tekst główny**
 - Mieszkanie, auto, oszczędności, kredyty. Spisz majątek i zobowiązania w jednym arkuszu. _(87/125)_
@@ -1685,18 +1685,18 @@ Landing: `/materialy/inwentaryzacja-majatku` · Demo: `/materialy/inwentaryzacja
 
 **Opisy**
 - Bezpłatnie, od razu _(19/30)_
-- Do druku i jako PDF _(19/30)_
+- Wypełniasz online, bez konta _(28/30)_
 
-**Kreacja:** Arkusz w formie tabeli (Składnik, Wartość, Zobowiązanie, Uwagi) z przykładowymi wierszami; złota linia podsumowania.
+**Kreacja:** Arkusz online na ekranie laptopa w formie tabeli (Składnik, Wartość, Zobowiązanie, Uwagi) z przykładowymi wierszami; złota linia podsumowania.
 
-### Google Demand Gen (CTA: Pobierz)
+### Google Demand Gen (CTA: Dowiedz się więcej)
 
 **Nagłówki**
 - Arkusz: majątek i długi _(23/40)_
 - Spisz majątek w jednym miejscu _(30/40)_
 - Wspólne czy osobiste? Oznacz _(28/40)_
 - Punkt wyjścia do podziału _(25/40)_
-- Arkusz do wydruku za darmo _(26/40)_
+- Arkusz online za darmo _(22/40)_
 
 **Długie nagłówki**
 - Mieszkanie, auto, oszczędności, kredyty. Spisz majątek i zobowiązania w jednym arkuszu. _(87/90)_
@@ -1705,10 +1705,10 @@ Landing: `/materialy/inwentaryzacja-majatku` · Demo: `/materialy/inwentaryzacja
 
 **Teksty**
 - Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych. _(76/90)_
-- Możesz go wydrukować lub zapisać jako PDF. Informacyjnie — nie porada prawna. _(77/90)_
+- Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna. _(82/90)_
 - Spisz nieruchomości, pojazdy, konta, oszczędności, firmę i długi w jednym arkuszu. _(82/90)_
 
-**Kreacja:** Arkusz w formie tabeli (Składnik, Wartość, Zobowiązanie, Uwagi) z przykładowymi wierszami; złota linia podsumowania.
+**Kreacja:** Arkusz online na ekranie laptopa w formie tabeli (Składnik, Wartość, Zobowiązanie, Uwagi) z przykładowymi wierszami; złota linia podsumowania.
 
 ### Google Search
 
@@ -1722,7 +1722,7 @@ Landing: `/materialy/inwentaryzacja-majatku` · Demo: `/materialy/inwentaryzacja
 - Spis przed podziałem _(20/30)_
 - Nieruchomości, auta, konta _(26/30)_
 - Długi i kredyty _(15/30)_
-- Arkusz do wydruku _(17/30)_
+- Arkusz do wypełnienia online _(28/30)_
 - Nowy Etap — poradnia _(20/30)_
 - Materiał od Nowego Etapu _(24/30)_
 - Otwórz od razu _(14/30)_
@@ -1731,7 +1731,7 @@ Landing: `/materialy/inwentaryzacja-majatku` · Demo: `/materialy/inwentaryzacja
 **Teksty**
 - Spisz nieruchomości, pojazdy, konta, oszczędności, firmę i długi w jednym arkuszu. _(82/90)_
 - Oznacz, co przed ślubem, w trakcie, z darowizny lub spadku. Wyjaśniamy podstawy. _(80/90)_
-- Bezpłatny arkusz Nowego Etapu do druku. Informacyjnie, nie porada prawna. _(73/90)_
+- Bezpłatny arkusz Nowego Etapu do wypełnienia online. Informacyjnie, nie porada prawna. _(86/90)_
 - Związek nieformalny? Wyjaśniamy różnicę — współwłasność według Kodeksu cywilnego. _(81/90)_
 
 ---
@@ -1744,11 +1744,11 @@ Landing: `/materialy/rozmowa-z-bankiem` · Demo: `/materialy/rozmowa-z-bankiem/d
 
 **Kierowanie:** Kontekstowe i tematyczne: treści o finansach osobistych, prawie, rodzinie i poradnikach; Search: frazy informacyjne. Demografia szeroka (25–60). Bez remarketingu, list klientów, podobnych odbiorców i segmentów opartych na wnioskowaniu o kryzysie w związku.
 
-### Meta (CTA: Pobierz)
+### Meta (CTA: Dowiedz się więcej)
 
 **Tekst główny**
 - Rozwód nie zwalnia współkredytobiorcy z umowy. Przygotuj rozmowę z bankiem krok po kroku. _(89/125)_
-- Pytania do banku, potrzebne dokumenty, możliwe rozwiązania. Bezpłatny poradnik PDF. _(83/125)_
+- Pytania do banku, potrzebne dokumenty, możliwe rozwiązania. Bezpłatnie, online. _(79/125)_
 - Wspólny kredyt po rozstaniu: idź do banku z planem, a nie tylko z pytaniami. _(76/125)_
 
 **Nagłówki**
@@ -1759,11 +1759,11 @@ Landing: `/materialy/rozmowa-z-bankiem` · Demo: `/materialy/rozmowa-z-bankiem/d
 
 **Opisy**
 - Bezpłatnie, od razu _(19/30)_
-- Do druku i jako PDF _(19/30)_
+- Wypełniasz online, bez konta _(28/30)_
 
-**Kreacja:** Okładka i strona z listą „Pytania do banku” (5 pozycji); obok klucze i kalkulator na stole.
+**Kreacja:** Ekran telefonu z listą „Pytania do banku” (5 pozycji); obok klucze i kalkulator na stole.
 
-### Google Demand Gen (CTA: Pobierz)
+### Google Demand Gen (CTA: Dowiedz się więcej)
 
 **Nagłówki**
 - Kredyt po rozstaniu: rozmowa z bankiem _(38/40)_
@@ -1774,15 +1774,15 @@ Landing: `/materialy/rozmowa-z-bankiem` · Demo: `/materialy/rozmowa-z-bankiem/d
 
 **Długie nagłówki**
 - Rozwód nie zwalnia współkredytobiorcy z umowy. Przygotuj rozmowę z bankiem krok po kroku. _(89/90)_
-- Pytania do banku, potrzebne dokumenty, możliwe rozwiązania. Bezpłatny poradnik PDF. _(83/90)_
+- Pytania do banku, potrzebne dokumenty, możliwe rozwiązania. Bezpłatnie, online. _(79/90)_
 - Wspólny kredyt po rozstaniu: idź do banku z planem, a nie tylko z pytaniami. _(76/90)_
 
 **Teksty**
 - Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych. _(76/90)_
-- Możesz go wydrukować lub zapisać jako PDF. Informacyjnie — nie porada prawna. _(77/90)_
+- Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna. _(82/90)_
 - Rozwód nie zwalnia z kredytu. Skrypt rozmowy z bankiem, lista pytań i dokumentów. _(81/90)_
 
-**Kreacja:** Okładka i strona z listą „Pytania do banku” (5 pozycji); obok klucze i kalkulator na stole.
+**Kreacja:** Ekran telefonu z listą „Pytania do banku” (5 pozycji); obok klucze i kalkulator na stole.
 
 ### Google Search
 
@@ -1796,7 +1796,7 @@ Landing: `/materialy/rozmowa-z-bankiem` · Demo: `/materialy/rozmowa-z-bankiem/d
 - Rozwód a wspólny kredyt _(23/30)_
 - Pytania do banku _(16/30)_
 - Dokumenty dla banku _(19/30)_
-- Skrypt rozmowy PDF _(18/30)_
+- Skrypt rozmowy online _(21/30)_
 - Nowy Etap — poradnia _(20/30)_
 - Materiał od Nowego Etapu _(24/30)_
 - Otwórz od razu _(14/30)_
@@ -1805,7 +1805,7 @@ Landing: `/materialy/rozmowa-z-bankiem` · Demo: `/materialy/rozmowa-z-bankiem/d
 **Teksty**
 - Rozwód nie zwalnia z kredytu. Skrypt rozmowy z bankiem, lista pytań i dokumentów. _(81/90)_
 - Opcje, o które warto zapytać: zwolnienie z długu, refinansowanie, sprzedaż i spłata. _(84/90)_
-- Arkusz z najważniejszymi liczbami: saldo, rata, LTV. Do druku i jako PDF. _(73/90)_
+- Arkusz z najważniejszymi liczbami: saldo, rata, LTV. Wypełniasz online. _(71/90)_
 - Bezpłatny materiał Nowego Etapu. Informacyjnie, nie porada prawna ani finansowa. _(80/90)_
 
 ---
@@ -1818,45 +1818,45 @@ Landing: `/materialy/bezpieczenstwo-cyfrowe-i-finansowe` · Demo: `/materialy/be
 
 **Kierowanie:** Kontekstowe i tematyczne: treści o finansach osobistych, prawie, rodzinie i poradnikach; Search: frazy informacyjne. Demografia szeroka (25–60). Bez remarketingu, list klientów, podobnych odbiorców i segmentów opartych na wnioskowaniu o kryzysie w związku.
 
-### Meta (CTA: Pobierz)
+### Meta (CTA: Dowiedz się więcej)
 
 **Tekst główny**
 - Hasła, wspólne konta, dostęp do aplikacji. Spokojne kroki porządkujące sprawy cyfrowe. _(86/125)_
-- Wspólne subskrypcje, karty i konta: co przejrzeć na początku rozstania. Poradnik PDF. _(85/125)_
+- Wspólne subskrypcje, karty i konta: co przejrzeć na początku rozstania. Odhacz online. _(86/125)_
 - Bezpieczeństwo cyfrowe i finansowe w czasie rozstania: praktyczna checklista, bezpłatnie. _(89/125)_
 
 **Nagłówki**
 - Bezpieczeństwo cyfrowe i finansowe _(34/40)_
 - Hasła, konta, subskrypcje _(25/40)_
 - Uporządkuj sprawy cyfrowe _(25/40)_
-- Checklista PDF za darmo _(23/40)_
+- Checklista online za darmo _(26/40)_
 
 **Opisy**
 - Bezpłatnie, od razu _(19/30)_
-- Do druku i jako PDF _(19/30)_
+- Wypełniasz online, bez konta _(28/30)_
 
-**Kreacja:** Płaska ilustracja liniowa: kłódka, karta płatnicza, telefon połączone złotą linią na tle #295550; obok okładka poradnika.
+**Kreacja:** Płaska ilustracja liniowa: kłódka, karta płatnicza, telefon połączone złotą linią na tle #295550; obok ekran checklisty z odhaczonymi pozycjami.
 
-### Google Demand Gen (CTA: Pobierz)
+### Google Demand Gen (CTA: Dowiedz się więcej)
 
 **Nagłówki**
 - Bezpieczeństwo cyfrowe i finansowe _(34/40)_
 - Hasła, konta, subskrypcje _(25/40)_
 - Uporządkuj sprawy cyfrowe _(25/40)_
-- Checklista PDF za darmo _(23/40)_
+- Checklista online za darmo _(26/40)_
 - Wspólne konta: co przejrzeć _(27/40)_
 
 **Długie nagłówki**
 - Hasła, wspólne konta, dostęp do aplikacji. Spokojne kroki porządkujące sprawy cyfrowe. _(86/90)_
-- Wspólne subskrypcje, karty i konta: co przejrzeć na początku rozstania. Poradnik PDF. _(85/90)_
+- Wspólne subskrypcje, karty i konta: co przejrzeć na początku rozstania. Odhacz online. _(86/90)_
 - Bezpieczeństwo cyfrowe i finansowe w czasie rozstania: praktyczna checklista, bezpłatnie. _(89/90)_
 
 **Teksty**
 - Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych. _(76/90)_
-- Możesz go wydrukować lub zapisać jako PDF. Informacyjnie — nie porada prawna. _(77/90)_
+- Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna. _(82/90)_
 - Hasła, weryfikacja dwuetapowa, wspólne konta, subskrypcje i lokalizacja — krok po kroku. _(88/90)_
 
-**Kreacja:** Płaska ilustracja liniowa: kłódka, karta płatnicza, telefon połączone złotą linią na tle #295550; obok okładka poradnika.
+**Kreacja:** Płaska ilustracja liniowa: kłódka, karta płatnicza, telefon połączone złotą linią na tle #295550; obok ekran checklisty z odhaczonymi pozycjami.
 
 ### Google Search
 
@@ -1870,7 +1870,7 @@ Landing: `/materialy/bezpieczenstwo-cyfrowe-i-finansowe` · Demo: `/materialy/be
 - Wspólne konta i karty _(21/30)_
 - Zastrzeżenie PESEL _(18/30)_
 - Subskrypcje i chmura _(20/30)_
-- Checklista PDF _(14/30)_
+- Checklista online _(17/30)_
 - Nowy Etap — poradnia _(20/30)_
 - Materiał od Nowego Etapu _(24/30)_
 - Otwórz od razu _(14/30)_
@@ -1880,7 +1880,7 @@ Landing: `/materialy/bezpieczenstwo-cyfrowe-i-finansowe` · Demo: `/materialy/be
 - Hasła, weryfikacja dwuetapowa, wspólne konta, subskrypcje i lokalizacja — krok po kroku. _(88/90)_
 - Co zrobić ze wspólnym kontem i kartą, a czego unikać. Raport BIK i zastrzeżenie PESEL. _(86/90)_
 - Bezpłatny poradnik Nowego Etapu. Otworzysz go od razu, bez podawania danych. _(76/90)_
-- Do druku i jako PDF. Informacyjnie, nie porada prawna. _(54/90)_
+- Odhaczasz online, podsumowanie od razu. Informacyjnie, nie porada prawna. _(73/90)_
 
 **Uwagi:** Nie sugeruj w reklamach, że ktoś śledzi odbiorcę ani nie obiecuj „pełnej ochrony”.
 
@@ -1894,7 +1894,7 @@ Landing: `/materialy/komunikacja-z-drugim-rodzicem` · Demo: `/materialy/komunik
 
 **Kierowanie:** Kontekstowe i tematyczne: treści o finansach osobistych, prawie, rodzinie i poradnikach; Search: frazy informacyjne. Demografia szeroka (25–60). Bez remarketingu, list klientów, podobnych odbiorców i segmentów opartych na wnioskowaniu o kryzysie w związku.
 
-### Meta (CTA: Pobierz)
+### Meta (CTA: Dowiedz się więcej)
 
 **Tekst główny**
 - Krótko, rzeczowo, o dziecku. Szablony wiadomości do drugiego rodzica do skopiowania. _(84/125)_
@@ -1909,11 +1909,11 @@ Landing: `/materialy/komunikacja-z-drugim-rodzicem` · Demo: `/materialy/komunik
 
 **Opisy**
 - Bezpłatnie, od razu _(19/30)_
-- Do druku i jako PDF _(19/30)_
+- Wypełniasz online, bez konta _(28/30)_
 
 **Kreacja:** Telefon z neutralnym komunikatorem i dymkiem z przykładową wiadomością o zmianie godziny odbioru dziecka; nad telefonem tytuł.
 
-### Google Demand Gen (CTA: Pobierz)
+### Google Demand Gen (CTA: Dowiedz się więcej)
 
 **Nagłówki**
 - Szablony wiadomości dla rodziców _(32/40)_
@@ -1929,7 +1929,7 @@ Landing: `/materialy/komunikacja-z-drugim-rodzicem` · Demo: `/materialy/komunik
 
 **Teksty**
 - Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych. _(76/90)_
-- Możesz go wydrukować lub zapisać jako PDF. Informacyjnie — nie porada prawna. _(77/90)_
+- Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna. _(82/90)_
 - 24 szablony wiadomości: odbiór dziecka, wakacje, święta, wydatki, szkoła, choroba. _(82/90)_
 
 **Kreacja:** Telefon z neutralnym komunikatorem i dymkiem z przykładową wiadomością o zmianie godziny odbioru dziecka; nad telefonem tytuł.
@@ -1968,7 +1968,7 @@ Landing: `/materialy/pierwsze-swieta-po-rozstaniu` · Demo: `/materialy/pierwsze
 
 **Kierowanie:** Kontekstowe i tematyczne: treści o finansach osobistych, prawie, rodzinie i poradnikach; Search: frazy informacyjne. Demografia szeroka (25–60). Bez remarketingu, list klientów, podobnych odbiorców i segmentów opartych na wnioskowaniu o kryzysie w związku.
 
-### Meta (CTA: Pobierz)
+### Meta (CTA: Dowiedz się więcej)
 
 **Tekst główny**
 - Wigilia, pierwszy dzień świąt, Sylwester. Planer pomaga rozpisać, kto, gdzie i kiedy. _(85/125)_
@@ -1983,18 +1983,18 @@ Landing: `/materialy/pierwsze-swieta-po-rozstaniu` · Demo: `/materialy/pierwsze
 
 **Opisy**
 - Bezpłatnie, od razu _(19/30)_
-- Do druku i jako PDF _(19/30)_
+- Wypełniasz online, bez konta _(28/30)_
 
-**Kreacja:** Planer na stole przy oknie z zimowym światłem, gałązka świerku, kubek; kalendarz 24–26 grudnia w dwóch kolorach (zieleń/złoto).
+**Kreacja:** Planer online na ekranie laptopa przy oknie z zimowym światłem, gałązka świerku, kubek; kalendarz 24–26 grudnia w dwóch kolorach (zieleń/złoto).
 
-### Google Demand Gen (CTA: Pobierz)
+### Google Demand Gen (CTA: Dowiedz się więcej)
 
 **Nagłówki**
 - Planer świąt dla rodziców _(25/40)_
 - Wigilia: kto, gdzie i kiedy _(27/40)_
 - Zaplanujcie święta wcześniej _(28/40)_
 - Święta w dwóch domach _(21/40)_
-- Planer do wydruku za darmo _(26/40)_
+- Planer online za darmo _(22/40)_
 
 **Długie nagłówki**
 - Wigilia, pierwszy dzień świąt, Sylwester. Planer pomaga rozpisać, kto, gdzie i kiedy. _(85/90)_
@@ -2003,10 +2003,10 @@ Landing: `/materialy/pierwsze-swieta-po-rozstaniu` · Demo: `/materialy/pierwsze
 
 **Teksty**
 - Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych. _(76/90)_
-- Możesz go wydrukować lub zapisać jako PDF. Informacyjnie — nie porada prawna. _(77/90)_
+- Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna. _(82/90)_
 - Trzy modele podziału świąt, arkusz ustaleń, logistyka dojazdów i prezentów. _(75/90)_
 
-**Kreacja:** Planer na stole przy oknie z zimowym światłem, gałązka świerku, kubek; kalendarz 24–26 grudnia w dwóch kolorach (zieleń/złoto).
+**Kreacja:** Planer online na ekranie laptopa przy oknie z zimowym światłem, gałązka świerku, kubek; kalendarz 24–26 grudnia w dwóch kolorach (zieleń/złoto).
 
 ### Google Search
 
@@ -2020,7 +2020,7 @@ Landing: `/materialy/pierwsze-swieta-po-rozstaniu` · Demo: `/materialy/pierwsze
 - Święta w dwóch domach _(21/30)_
 - Zaplanujcie wcześniej _(21/30)_
 - Modele podziału świąt _(21/30)_
-- Planer do wydruku _(17/30)_
+- Planer do wypełnienia online _(28/30)_
 - Nowy Etap — poradnia _(20/30)_
 - Materiał od Nowego Etapu _(24/30)_
 - Otwórz od razu _(14/30)_
@@ -2029,7 +2029,7 @@ Landing: `/materialy/pierwsze-swieta-po-rozstaniu` · Demo: `/materialy/pierwsze
 **Teksty**
 - Trzy modele podziału świąt, arkusz ustaleń, logistyka dojazdów i prezentów. _(75/90)_
 - Jak wspierać dzieci w różnym wieku i zadbać o siebie, gdy są w drugim domu. _(75/90)_
-- Bezpłatny planer Nowego Etapu. Do druku i jako PDF. _(51/90)_
+- Bezpłatny planer Nowego Etapu. Wypełniasz online, bez pobierania. _(65/90)_
 - Gotowa wiadomość z propozycją planu świąt do drugiego rodzica. _(62/90)_
 
 **Uwagi:** Sezonowo: start w listopadzie, główny budżet do ok. 20 grudnia, wygaszenie po 6 stycznia.
@@ -2044,10 +2044,10 @@ Landing: `/materialy/przygotowanie-do-konsultacji` · Demo: `/materialy/przygoto
 
 **Kierowanie:** Kontekstowe i tematyczne: treści o finansach osobistych, prawie, rodzinie i poradnikach; Search: frazy informacyjne. Demografia szeroka (25–60). Bez remarketingu, list klientów, podobnych odbiorców i segmentów opartych na wnioskowaniu o kryzysie w związku.
 
-### Meta (CTA: Pobierz)
+### Meta (CTA: Dowiedz się więcej)
 
 **Tekst główny**
-- Pierwsza konsultacja z prawnikiem: jakie dokumenty zabrać i o co zapytać. Lista PDF. _(84/125)_
+- Pierwsza konsultacja z prawnikiem: jakie dokumenty zabrać i o co zapytać. Lista online. _(87/125)_
 - Dobrze przygotowana konsultacja to więcej konkretów w krótszym czasie. Bezpłatny poradnik. _(90/125)_
 - Spisz pytania, zbierz dokumenty, określ cele. Przygotuj się do pierwszej rozmowy. _(81/125)_
 
@@ -2059,11 +2059,11 @@ Landing: `/materialy/przygotowanie-do-konsultacji` · Demo: `/materialy/przygoto
 
 **Opisy**
 - Bezpłatnie, od razu _(19/30)_
-- Do druku i jako PDF _(19/30)_
+- Wypełniasz online, bez konta _(28/30)_
 
-**Kreacja:** Notes z listą „Pytania na konsultację”, obok teczka z dokumentami i okładka poradnika. Bez togi i kodeksów.
+**Kreacja:** Notes z listą „Pytania na konsultację”, obok teczka z dokumentami i telefon z ekranem materiału. Bez togi i kodeksów.
 
-### Google Demand Gen (CTA: Pobierz)
+### Google Demand Gen (CTA: Dowiedz się więcej)
 
 **Nagłówki**
 - Przygotuj się do konsultacji _(28/40)_
@@ -2073,16 +2073,16 @@ Landing: `/materialy/przygotowanie-do-konsultacji` · Demo: `/materialy/przygoto
 - Więcej konkretów z konsultacji _(30/40)_
 
 **Długie nagłówki**
-- Pierwsza konsultacja z prawnikiem: jakie dokumenty zabrać i o co zapytać. Lista PDF. _(84/90)_
+- Pierwsza konsultacja z prawnikiem: jakie dokumenty zabrać i o co zapytać. Lista online. _(87/90)_
 - Dobrze przygotowana konsultacja to więcej konkretów w krótszym czasie. Bezpłatny poradnik. _(90/90)_
 - Spisz pytania, zbierz dokumenty, określ cele. Przygotuj się do pierwszej rozmowy. _(81/90)_
 
 **Teksty**
 - Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych. _(76/90)_
-- Możesz go wydrukować lub zapisać jako PDF. Informacyjnie — nie porada prawna. _(77/90)_
+- Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna. _(82/90)_
 - Co zabrać, jak spisać oś czasu, jakie pytania zadać — także o koszty i sposób pracy. _(84/90)_
 
-**Kreacja:** Notes z listą „Pytania na konsultację”, obok teczka z dokumentami i okładka poradnika. Bez togi i kodeksów.
+**Kreacja:** Notes z listą „Pytania na konsultację”, obok teczka z dokumentami i telefon z ekranem materiału. Bez togi i kodeksów.
 
 ### Google Search
 
@@ -2096,7 +2096,7 @@ Landing: `/materialy/przygotowanie-do-konsultacji` · Demo: `/materialy/przygoto
 - Pytania na konsultację _(22/30)_
 - Oś czasu i fakty _(16/30)_
 - Jak porównać specjalistów _(25/30)_
-- Checklista PDF _(14/30)_
+- Checklista online _(17/30)_
 - Nowy Etap — poradnia _(20/30)_
 - Materiał od Nowego Etapu _(24/30)_
 - Otwórz od razu _(14/30)_
@@ -2106,5 +2106,5 @@ Landing: `/materialy/przygotowanie-do-konsultacji` · Demo: `/materialy/przygoto
 - Co zabrać, jak spisać oś czasu, jakie pytania zadać — także o koszty i sposób pracy. _(84/90)_
 - Różnice: adwokat, radca prawny, mediator, psycholog. Jak wybrać specjalistę. _(76/90)_
 - Bezpłatna checklista Nowego Etapu. Otworzysz ją od razu, bez podawania danych. _(78/90)_
-- Do druku i jako PDF. _(20/90)_
+- Wypełniasz online, a na końcu masz podsumowanie i swoje notatki. _(64/90)_
 

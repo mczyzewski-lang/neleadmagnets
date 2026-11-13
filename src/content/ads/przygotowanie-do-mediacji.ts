@@ -15,21 +15,21 @@ export const ads: AdSet = {
       "Zeszyt przygotowania do mediacji",
       "Na mediację z notatkami",
       "Priorytety i pytania do mediatora",
-      "Ćwiczenia do wydruku za darmo"
+      "Ćwiczenia online za darmo"
     ],
     "descriptions": [
       "Bezpłatnie, od razu",
-      "Do druku i jako PDF"
+      "Wypełniasz online, bez konta"
     ],
-    "cta": "Pobierz",
-    "creative": "Zeszyt w okładce #295550 ze złotym tytułem, otwarty na stronie z tabelą „Ważne dla mnie / Mogę omówić / Pytania”."
+    "cta": "Dowiedz się więcej",
+    "creative": "Ekran laptopa z zeszytem online w kolorze #295550 i złotym tytułem; widoczna tabela „Ważne dla mnie / Mogę omówić / Pytania”."
   },
   "demandGen": {
     "headlines": [
       "Zeszyt przygotowania do mediacji",
       "Na mediację z notatkami",
       "Priorytety i pytania do mediatora",
-      "Ćwiczenia do wydruku za darmo",
+      "Ćwiczenia online za darmo",
       "Mediacja: przygotuj się"
     ],
     "longHeadlines": [
@@ -39,11 +39,11 @@ export const ads: AdSet = {
     ],
     "descriptions": [
       "Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych.",
-      "Możesz go wydrukować lub zapisać jako PDF. Informacyjnie — nie porada prawna.",
+      "Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna.",
       "Zeszyt ćwiczeń przed mediacją: priorytety, potrzeby dzieci, fakty finansowe, pytania."
     ],
-    "cta": "Pobierz",
-    "creative": "Zeszyt w okładce #295550 ze złotym tytułem, otwarty na stronie z tabelą „Ważne dla mnie / Mogę omówić / Pytania”."
+    "cta": "Dowiedz się więcej",
+    "creative": "Ekran laptopa z zeszytem online w kolorze #295550 i złotym tytułem; widoczna tabela „Ważne dla mnie / Mogę omówić / Pytania”."
   },
   "search": {
     "keywords": [
@@ -62,16 +62,16 @@ export const ads: AdSet = {
       "Pytania do mediatora",
       "Priorytety przed spotkaniem",
       "Mediacja jest dobrowolna",
-      "Ćwiczenia do wydruku",
+      "Wypełnij zeszyt online",
       "Nowy Etap — poradnia",
       "Materiał od Nowego Etapu",
       "Otwórz od razu",
-      "Bezpłatny zeszyt PDF"
+      "Bezpłatny zeszyt online"
     ],
     "descriptions": [
       "Zeszyt ćwiczeń przed mediacją: priorytety, potrzeby dzieci, fakty finansowe, pytania.",
       "Mediacja jest dobrowolna. Wyjaśniamy też, kiedy może nie być bezpieczna.",
-      "Bezpłatny materiał Nowego Etapu do druku i wypełnienia.",
+      "Bezpłatny materiał Nowego Etapu do wypełnienia online, z podsumowaniem na końcu.",
       "Otworzysz go od razu, bez podawania danych."
     ],
     "paths": [

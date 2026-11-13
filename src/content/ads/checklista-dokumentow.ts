@@ -7,7 +7,7 @@ export const ads: AdSet = {
   "targeting": "Kontekstowe i tematyczne: treści o finansach osobistych, prawie, rodzinie i poradnikach; Search: frazy informacyjne. Demografia szeroka (25–60). Bez remarketingu, list klientów, podobnych odbiorców i segmentów opartych na wnioskowaniu o kryzysie w związku.",
   "meta": {
     "primaryTexts": [
-      "Akt małżeństwa, akty urodzenia, umowy, wyciągi. Checklista dokumentów w jednym PDF.",
+      "Akt małżeństwa, akty urodzenia, umowy, wyciągi. Odhaczaj je online, na jednej liście.",
       "Dokumenty do rozwodu i podziału majątku: odhaczaj, co już masz. Bezpłatna checklista.",
       "Zanim zaczną się formalności, zbierz dokumenty według prostej listy."
     ],
@@ -19,10 +19,10 @@ export const ads: AdSet = {
     ],
     "descriptions": [
       "Bezpłatnie, od razu",
-      "Do druku i jako PDF"
+      "Wypełniasz online, bez konta"
     ],
-    "cta": "Pobierz",
-    "creative": "Wydruk checklisty na stole, segregator w kolorze #295550, trzy pozycje odhaczone złotym ptaszkiem."
+    "cta": "Dowiedz się więcej",
+    "creative": "Checklista na ekranie telefonu, obok segregator w kolorze #295550; trzy pozycje odhaczone złotym ptaszkiem."
   },
   "demandGen": {
     "headlines": [
@@ -30,20 +30,20 @@ export const ads: AdSet = {
       "Odhaczaj, co już masz",
       "Dokumenty w jednym miejscu",
       "Lista na podział majątku",
-      "Checklista PDF za darmo"
+      "Checklista online za darmo"
     ],
     "longHeadlines": [
-      "Akt małżeństwa, akty urodzenia, umowy, wyciągi. Checklista dokumentów w jednym PDF.",
+      "Akt małżeństwa, akty urodzenia, umowy, wyciągi. Odhaczaj je online, na jednej liście.",
       "Dokumenty do rozwodu i podziału majątku: odhaczaj, co już masz. Bezpłatna checklista.",
       "Zanim zaczną się formalności, zbierz dokumenty według prostej listy."
     ],
     "descriptions": [
       "Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych.",
-      "Możesz go wydrukować lub zapisać jako PDF. Informacyjnie — nie porada prawna.",
+      "Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna.",
       "Lista dokumentów do rozwodu, podziału majątku, spraw dzieci i kredytu — do odhaczania."
     ],
-    "cta": "Pobierz",
-    "creative": "Wydruk checklisty na stole, segregator w kolorze #295550, trzy pozycje odhaczone złotym ptaszkiem."
+    "cta": "Dowiedz się więcej",
+    "creative": "Checklista na ekranie telefonu, obok segregator w kolorze #295550; trzy pozycje odhaczone złotym ptaszkiem."
   },
   "search": {
     "keywords": [
@@ -58,7 +58,7 @@ export const ads: AdSet = {
     ],
     "headlines": [
       "Dokumenty do rozwodu",
-      "Checklista PDF za darmo",
+      "Checklista online za darmo",
       "Co dołączyć do pozwu?",
       "Podział majątku — dokumenty",
       "Odhaczaj, co już masz",
@@ -71,7 +71,7 @@ export const ads: AdSet = {
     "descriptions": [
       "Lista dokumentów do rozwodu, podziału majątku, spraw dzieci i kredytu — do odhaczania.",
       "Co zwykle jest potrzebne zawsze, a co zależy od sytuacji, i gdzie to uzyskać.",
-      "Bezpłatna checklista Nowego Etapu. Do druku i jako PDF.",
+      "Bezpłatna checklista Nowego Etapu. Odhaczasz online, bez pobierania.",
       "Odpisy aktów stanu cywilnego zamówisz online — podpowiadamy jak."
     ],
     "paths": [

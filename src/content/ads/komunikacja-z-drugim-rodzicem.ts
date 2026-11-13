@@ -19,9 +19,9 @@ export const ads: AdSet = {
     ],
     "descriptions": [
       "Bezpłatnie, od razu",
-      "Do druku i jako PDF"
+      "Wypełniasz online, bez konta"
     ],
-    "cta": "Pobierz",
+    "cta": "Dowiedz się więcej",
     "creative": "Telefon z neutralnym komunikatorem i dymkiem z przykładową wiadomością o zmianie godziny odbioru dziecka; nad telefonem tytuł."
   },
   "demandGen": {
@@ -39,10 +39,10 @@ export const ads: AdSet = {
     ],
     "descriptions": [
       "Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych.",
-      "Możesz go wydrukować lub zapisać jako PDF. Informacyjnie — nie porada prawna.",
+      "Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna.",
       "24 szablony wiadomości: odbiór dziecka, wakacje, święta, wydatki, szkoła, choroba."
     ],
-    "cta": "Pobierz",
+    "cta": "Dowiedz się więcej",
     "creative": "Telefon z neutralnym komunikatorem i dymkiem z przykładową wiadomością o zmianie godziny odbioru dziecka; nad telefonem tytuł."
   },
   "search": {

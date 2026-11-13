@@ -59,7 +59,7 @@ export const material: Material = {
   seo: {
     title: "Przygotowanie do mediacji rozwodowej | Nowy Etap",
     description:
-      "Zeszyt ćwiczeń przed mediacją rozwodową: priorytety, potrzeby dzieci, finanse, pytania do mediatora i plan B. Bezpłatny PDF do wydruku.",
+      "Zeszyt ćwiczeń przed mediacją rozwodową: priorytety, potrzeby dzieci, finanse, pytania do mediatora i plan B. Bezpłatnie, do wypełnienia online.",
   },
   coverPrompt:
     "Photorealistic 3D render of a standing spiral-bound workbook at a slight angle on a warm off-white (#FCF9F8) background with a soft natural shadow. The cover is dark green (#263D3A) with a deep green (#295550) inner panel and gold (#C79B59) typography and accents. Minimalist premium typography. Render this exact text, spelled exactly, and keep all text minimal: small wordmark at the top \"NOWY ETAP · PORADNIA ROZWODOWA\"; main title \"Przygotowanie do mediacji\"; subtitle \"Zeszyt ćwiczeń przed pierwszym spotkaniem\". A subtle thin gold staircase line motif (a stylised ascending step line) across the lower third. No gavels, no paragraph symbols, no people, no handshakes, no wedding rings, no other text. Square 1:1 composition, high detail, elegant studio lighting.",

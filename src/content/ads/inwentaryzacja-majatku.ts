@@ -19,10 +19,10 @@ export const ads: AdSet = {
     ],
     "descriptions": [
       "Bezpłatnie, od razu",
-      "Do druku i jako PDF"
+      "Wypełniasz online, bez konta"
     ],
-    "cta": "Pobierz",
-    "creative": "Arkusz w formie tabeli (Składnik, Wartość, Zobowiązanie, Uwagi) z przykładowymi wierszami; złota linia podsumowania."
+    "cta": "Dowiedz się więcej",
+    "creative": "Arkusz online na ekranie laptopa w formie tabeli (Składnik, Wartość, Zobowiązanie, Uwagi) z przykładowymi wierszami; złota linia podsumowania."
   },
   "demandGen": {
     "headlines": [
@@ -30,7 +30,7 @@ export const ads: AdSet = {
       "Spisz majątek w jednym miejscu",
       "Wspólne czy osobiste? Oznacz",
       "Punkt wyjścia do podziału",
-      "Arkusz do wydruku za darmo"
+      "Arkusz online za darmo"
     ],
     "longHeadlines": [
       "Mieszkanie, auto, oszczędności, kredyty. Spisz majątek i zobowiązania w jednym arkuszu.",
@@ -39,11 +39,11 @@ export const ads: AdSet = {
     ],
     "descriptions": [
       "Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych.",
-      "Możesz go wydrukować lub zapisać jako PDF. Informacyjnie — nie porada prawna.",
+      "Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna.",
       "Spisz nieruchomości, pojazdy, konta, oszczędności, firmę i długi w jednym arkuszu."
     ],
-    "cta": "Pobierz",
-    "creative": "Arkusz w formie tabeli (Składnik, Wartość, Zobowiązanie, Uwagi) z przykładowymi wierszami; złota linia podsumowania."
+    "cta": "Dowiedz się więcej",
+    "creative": "Arkusz online na ekranie laptopa w formie tabeli (Składnik, Wartość, Zobowiązanie, Uwagi) z przykładowymi wierszami; złota linia podsumowania."
   },
   "search": {
     "keywords": [
@@ -62,7 +62,7 @@ export const ads: AdSet = {
       "Spis przed podziałem",
       "Nieruchomości, auta, konta",
       "Długi i kredyty",
-      "Arkusz do wydruku",
+      "Arkusz do wypełnienia online",
       "Nowy Etap — poradnia",
       "Materiał od Nowego Etapu",
       "Otwórz od razu",
@@ -71,7 +71,7 @@ export const ads: AdSet = {
     "descriptions": [
       "Spisz nieruchomości, pojazdy, konta, oszczędności, firmę i długi w jednym arkuszu.",
       "Oznacz, co przed ślubem, w trakcie, z darowizny lub spadku. Wyjaśniamy podstawy.",
-      "Bezpłatny arkusz Nowego Etapu do druku. Informacyjnie, nie porada prawna.",
+      "Bezpłatny arkusz Nowego Etapu do wypełnienia online. Informacyjnie, nie porada prawna.",
       "Związek nieformalny? Wyjaśniamy różnicę — współwłasność według Kodeksu cywilnego."
     ],
     "paths": [

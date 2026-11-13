@@ -578,41 +578,42 @@ Pod każdym H1 obowiązkowo: *„Narzędzie pomaga zestawić rzeczywiste wydatki
 
 ---
 
-## 9. Poradniki do pobrania
+## 9. Materiały do wypełnienia online
 
 Format skrócony: 3 hooki, 1 CTA, 1 koncepcja grafiki 1:1. Hooki ≤90 znaków, wspólne dla Google i Meta.
-Wspólny motyw wizualny poradników: **okładka poradnika (PDF) + 2–3 rozłożone strony** w realistycznym, płaskim mockupie (jak papier na stole, z lekkim cieniem). Tło `#FCF9F8` lub `#263D3A`, akcent złoty. Bez renderów 3D „książki w powietrzu”.
+Materiały wypełnia się **online** na ich stronie (`/materialy/<slug>`): checklisty do odhaczania, pola do wpisania i automatyczne podsumowanie na końcu (co zrobione, co zostało, notatki). Odpowiedzi zostają tylko w karcie przeglądarki. Bez pobierania i drukowania, bez konta i bez e-maila — nie obiecujemy PDF ani wydruku.
+Wspólny motyw wizualny: **ekran materiału na telefonie lub laptopie** (odhaczone pozycje, wypełnione pola, fragment podsumowania) w realistycznym, płaskim mockupie z lekkim cieniem. Tło `#FCF9F8` lub `#263D3A`, akcent złoty. Bez renderów 3D „książki w powietrzu”.
 `utm_campaign`: `ne_guide_{slug}_{rrrrmm}`.
 
 ### 9.1. Rozwód w Polsce krok po kroku · `rozwod-krok-po-kroku`
 
 **Hooki**
-1. Rozwód w Polsce krok po kroku: od pierwszych ustaleń do wyroku. Poradnik PDF za darmo.
+1. Rozwód w Polsce krok po kroku: od pierwszych ustaleń do wyroku. Poradnik online za darmo.
 2. Kolejne etapy, dokumenty i decyzje w jednym przejrzystym poradniku. Bezpłatnie.
 3. Najpierw plan i ustalenia, potem pozew. Zobacz całą drogę rozpisaną na etapy.
 
-**CTA:** Pobierz poradnik krok po kroku
-**Grafika 1:1:** okładka z tytułem i pod nią rozłożona strona z osią etapów (5 punktów połączonych złotą linią: „Ustalenia → Dokumenty → Pozew → Rozprawa → Po wyroku”). Tekst: „Rozwód w Polsce krok po kroku” · „Bezpłatny poradnik PDF”. Tło `#FCF9F8`, oś w `#295550`.
+**CTA:** Zobacz etapy krok po kroku
+**Grafika 1:1:** ekran materiału na telefonie z osią etapów (5 punktów połączonych złotą linią: „Ustalenia → Dokumenty → Pozew → Rozprawa → Po wyroku”). Tekst: „Rozwód w Polsce krok po kroku” · „Bezpłatnie, online”. Tło `#FCF9F8`, oś w `#295550`.
 
 ### 9.2. Checklista dokumentów do rozwodu i podziału majątku · `checklista-dokumentow`
 
 **Hooki**
-1. Akt małżeństwa, akty urodzenia, umowy, wyciągi. Checklista dokumentów w jednym PDF.
+1. Akt małżeństwa, akty urodzenia, umowy, wyciągi. Odhaczaj je online, na jednej liście.
 2. Dokumenty do rozwodu i podziału majątku: odhaczaj, co już masz. Bezpłatna checklista.
 3. Zanim zaczną się formalności, zbierz dokumenty według prostej listy.
 
-**CTA:** Pobierz checklistę dokumentów
-**Grafika 1:1:** wydruk checklisty na stole, obok segregator w kolorze `#295550` i długopis. Na liście 3 pozycje odhaczone złotym ptaszkiem. Tekst: „Checklista dokumentów” · „do rozwodu i podziału majątku”.
+**CTA:** Odhacz dokumenty online
+**Grafika 1:1:** checklista na ekranie telefonu, obok segregator w kolorze `#295550`. Na liście 3 pozycje odhaczone złotym ptaszkiem. Tekst: „Checklista dokumentów” · „do rozwodu i podziału majątku”.
 
 ### 9.3. Jak powiedzieć dzieciom o rozstaniu · `jak-powiedziec-dzieciom`
 
 **Hooki**
 1. Jak rozmawiać z dziećmi o rozstaniu rodziców? Spokojny poradnik z przykładami zdań.
-2. Co powiedzieć, czego unikać i jak dopasować rozmowę do wieku dziecka. Poradnik PDF.
+2. Co powiedzieć, czego unikać i jak dopasować rozmowę do wieku dziecka. Poradnik online.
 3. Jedna z najtrudniejszych rozmów. Warto się do niej przygotować. Bezpłatny poradnik.
 
-**CTA:** Pobierz poradnik o rozmowie z dziećmi
-**Grafika 1:1:** ciepła, dokumentalna fotografia: dwa kubki (duży i mały) na parapecie, bez twarzy. Po prawej okładka poradnika i rozłożona strona „Przykładowe zdania według wieku”. Tekst: „Jak powiedzieć dzieciom o rozstaniu”. Tło `#FCF9F8`, tytuł `#263D3A`.
+**CTA:** Przygotuj rozmowę z dziećmi
+**Grafika 1:1:** ciepła, dokumentalna fotografia: dwa kubki (duży i mały) na parapecie, bez twarzy. Po prawej telefon z ekranem materiału „Przykładowe zdania według wieku”. Tekst: „Jak powiedzieć dzieciom o rozstaniu”. Tło `#FCF9F8`, tytuł `#263D3A`.
 
 ### 9.4. Zeszyt przygotowania do mediacji · `przygotowanie-do-mediacji`
 
@@ -621,8 +622,8 @@ Wspólny motyw wizualny poradników: **okładka poradnika (PDF) + 2–3 rozłoż
 2. Na mediację lepiej przyjść z notatkami. Bezpłatny zeszyt do wypełnienia.
 3. Co jest dla mnie najważniejsze, co mogę elastycznie omówić? Uporządkuj to przed mediacją.
 
-**CTA:** Pobierz zeszyt do mediacji
-**Grafika 1:1:** zeszyt w okładce `#295550` ze złotym tytułem, otwarty na stronie z tabelą „Ważne dla mnie / Mogę omówić / Pytania”. Tekst: „Zeszyt przygotowania do mediacji” · „Do wydruku i wypełnienia”.
+**CTA:** Wypełnij zeszyt online
+**Grafika 1:1:** ekran laptopa z zeszytem online w kolorze `#295550` i złotym tytułem; widoczna tabela „Ważne dla mnie / Mogę omówić / Pytania”. Tekst: „Zeszyt przygotowania do mediacji” · „Do wypełnienia online”.
 
 ### 9.5. Arkusz: majątek i długi przed rozstaniem · `inwentaryzacja-majatku`
 
@@ -631,30 +632,30 @@ Wspólny motyw wizualny poradników: **okładka poradnika (PDF) + 2–3 rozłoż
 2. Arkusz majątku i długów: przejrzysty punkt wyjścia do rozmowy o podziale.
 3. Pełny obraz aktywów i zobowiązań, zanim zacznie się rozmowa o podziale. Bezpłatnie.
 
-**CTA:** Pobierz arkusz majątku i długów
-**Grafika 1:1:** arkusz w formie tabeli (kolumny: „Składnik”, „Wartość”, „Zobowiązanie”, „Uwagi”) z przykładowymi wierszami oznaczonymi „przykład”. Na górze tytuł, na dole złota linia podsumowania „Razem”. Tło `#FCF9F8`, nagłówki tabeli `#263D3A`.
+**CTA:** Wypełnij arkusz online
+**Grafika 1:1:** arkusz online na ekranie laptopa w formie tabeli (kolumny: „Składnik”, „Wartość”, „Zobowiązanie”, „Uwagi”) z przykładowymi wierszami oznaczonymi „przykład”. Na górze tytuł, na dole złota linia podsumowania „Razem”. Tło `#FCF9F8`, nagłówki tabeli `#263D3A`.
 
 ### 9.6. Kredyt po rozstaniu: jak przygotować rozmowę z bankiem · `rozmowa-z-bankiem`
 
 **Hooki**
 1. Rozwód nie zwalnia współkredytobiorcy z umowy. Przygotuj rozmowę z bankiem krok po kroku.
-2. Pytania do banku, potrzebne dokumenty, możliwe rozwiązania. Bezpłatny poradnik PDF.
+2. Pytania do banku, potrzebne dokumenty, możliwe rozwiązania. Bezpłatnie, online.
 3. Wspólny kredyt po rozstaniu: idź do banku z planem, a nie tylko z pytaniami.
 
-**CTA:** Pobierz poradnik o rozmowie z bankiem
-**Grafika 1:1:** okładka i strona z listą „Pytania do banku” (5 pozycji). Obok klucze i kalkulator na stole (dokumentalne zdjęcie). Tekst: „Kredyt po rozstaniu” · „Jak przygotować rozmowę z bankiem”. Tło `#263D3A`, tytuł `#FCF9F8`, akcent złoty.
+**CTA:** Przygotuj rozmowę z bankiem
+**Grafika 1:1:** ekran telefonu z listą „Pytania do banku” (5 pozycji). Obok klucze i kalkulator na stole (dokumentalne zdjęcie). Tekst: „Kredyt po rozstaniu” · „Jak przygotować rozmowę z bankiem”. Tło `#263D3A`, tytuł `#FCF9F8`, akcent złoty.
 
 ### 9.7. Bezpieczeństwo cyfrowe i finansowe w czasie rozstania · `bezpieczenstwo-cyfrowe-i-finansowe`
 
-**Uwaga:** komunikujemy higienę cyfrową i porządek finansowy. **Nie** sugerujemy inwigilacji drugiej osoby ani zagrożenia („ktoś czyta Twoje wiadomości”). Nie obiecujemy ochrony. Na landingu i w PDF warto dodać spokojną informację: *„Jeśli czujesz się zagrożona lub zagrożony — zadzwoń pod 112. Wsparcie oferuje też Niebieska Linia: 800 120 002.”*
+**Uwaga:** komunikujemy higienę cyfrową i porządek finansowy. **Nie** sugerujemy inwigilacji drugiej osoby ani zagrożenia („ktoś czyta Twoje wiadomości”). Nie obiecujemy ochrony. Na landingu i w materiale warto dodać spokojną informację: *„Jeśli czujesz się zagrożona lub zagrożony — zadzwoń pod 112. Wsparcie oferuje też Niebieska Linia: 800 120 002.”*
 
 **Hooki**
 1. Hasła, wspólne konta, dostęp do aplikacji. Spokojne kroki porządkujące sprawy cyfrowe.
-2. Wspólne subskrypcje, karty i konta: co przejrzeć na początku rozstania. Poradnik PDF.
+2. Wspólne subskrypcje, karty i konta: co przejrzeć na początku rozstania. Odhacz online.
 3. Bezpieczeństwo cyfrowe i finansowe w czasie rozstania: praktyczna checklista, bezpłatnie.
 
-**CTA:** Pobierz checklistę bezpieczeństwa
-**Grafika 1:1:** płaska ilustracja liniowa (nie AI, prosta ikonografia): kłódka, karta płatnicza, telefon, połączone cienką złotą linią na tle `#295550`. Obok okładka poradnika. Tekst: „Bezpieczeństwo cyfrowe i finansowe” · „Praktyczna checklista”.
+**CTA:** Odhacz checklistę online
+**Grafika 1:1:** płaska ilustracja liniowa (nie AI, prosta ikonografia): kłódka, karta płatnicza, telefon, połączone cienką złotą linią na tle `#295550`. Obok ekran checklisty z odhaczonymi pozycjami. Tekst: „Bezpieczeństwo cyfrowe i finansowe” · „Praktyczna checklista”.
 
 ### 9.8. Rzeczowe wiadomości do drugiego rodzica — szablony · `komunikacja-z-drugim-rodzicem`
 
@@ -663,7 +664,7 @@ Wspólny motyw wizualny poradników: **okładka poradnika (PDF) + 2–3 rozłoż
 2. Zmiana odbioru, wydatki szkolne, wakacje. Gotowe szablony spokojnych wiadomości.
 3. Mniej emocji w wiadomościach, więcej konkretu. Bezpłatne szablony dla rodziców.
 
-**CTA:** Pobierz szablony wiadomości
+**CTA:** Zobacz szablony wiadomości
 **Grafika 1:1:** telefon z ekranem komunikatora (neutralny, bez marek), dymek z przykładową wiadomością: „Cześć, w piątek odbiorę Zosię o 16:00 zamiast 17:00. Daj znać, czy pasuje.” Tekst nad telefonem: „Rzeczowe wiadomości do drugiego rodzica” · „Szablony do skopiowania”. Tło `#FCF9F8`, dymek `#295550` z tekstem w złamanej bieli.
 
 ### 9.9. Pierwsze święta po rozstaniu — planer rodzica · `pierwsze-swieta-po-rozstaniu`
@@ -675,18 +676,18 @@ Wspólny motyw wizualny poradników: **okładka poradnika (PDF) + 2–3 rozłoż
 2. Wigilia, pierwszy dzień świąt, Sylwester. Planer pomaga rozpisać, kto, gdzie i kiedy.
 3. Planer pierwszych świąt po rozstaniu: kalendarz, ustalenia i pomysły na nowe tradycje.
 
-**CTA:** Pobierz planer świąteczny
-**Grafika 1:1:** planer na stole przy oknie z zimowym światłem, gałązka świerku, kubek. Na stronie planera kalendarz 24–26 grudnia z dwoma kolorami (zieleń / złoto). Tekst: „Pierwsze święta po rozstaniu” · „Planer rodzica — bezpłatnie”. Tło `#263D3A`, tytuł `#FCF9F8`, akcent złoty.
+**CTA:** Wypełnij planer online
+**Grafika 1:1:** planer online na ekranie laptopa przy oknie z zimowym światłem, gałązka świerku, kubek. Na ekranie kalendarz 24–26 grudnia z dwoma kolorami (zieleń / złoto). Tekst: „Pierwsze święta po rozstaniu” · „Planer rodzica — bezpłatnie”. Tło `#263D3A`, tytuł `#FCF9F8`, akcent złoty.
 
 ### 9.10. Jak przygotować się do pierwszej konsultacji z prawnikiem · `przygotowanie-do-konsultacji`
 
 **Hooki**
-1. Pierwsza konsultacja z prawnikiem: jakie dokumenty zabrać i o co zapytać. Lista PDF.
+1. Pierwsza konsultacja z prawnikiem: jakie dokumenty zabrać i o co zapytać. Lista online.
 2. Dobrze przygotowana konsultacja to więcej konkretów w krótszym czasie. Bezpłatny poradnik.
 3. Spisz pytania, zbierz dokumenty, określ cele. Przygotuj się do pierwszej rozmowy.
 
-**CTA:** Pobierz listę przygotowań
-**Grafika 1:1:** notes z listą „Pytania na konsultację” (3 pozycje ręcznym pismem), obok teczka z dokumentami i okładka poradnika. Bez togi i kodeksów. Tekst: „Jak przygotować się do pierwszej konsultacji” · „Dokumenty, pytania, cele”. Tło `#FCF9F8`, akcenty `#C79B59`.
+**CTA:** Przygotuj się online
+**Grafika 1:1:** telefon z listą „Pytania na konsultację” (3 pozycje odhaczone), obok teczka z dokumentami. Bez togi i kodeksów. Tekst: „Jak przygotować się do pierwszej konsultacji” · „Dokumenty, pytania, cele”. Tło `#FCF9F8`, akcenty `#C79B59`.
 
 ---
 

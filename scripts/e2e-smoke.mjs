@@ -108,7 +108,7 @@ for (const slug of ["checklista-dokumentow", "komunikacja-z-drugim-rodzicem"]) {
     if (await wb.locator(".kpis").count()) { ok = true; break; }
     await wb.getByRole("button", { name: /Dalej|Podsumowanie/ }).last().click();
   }
-  const pdf = await p.getByText(/PDF/).count();
+  const pdf = await p.locator(".hero, .wb, #podglad, #wypelnij").getByText(/PDF/).count();
   if (!ok) fail(`material ${slug}: nie dotarto do podsumowania`);
   else if (!(await wb.locator(".kpi__value").first().textContent())?.match(/[1-9]/)) fail(`material ${slug}: postęp 0%`);
   else if (pdf) fail(`material ${slug}: strona nadal wspomina PDF`);

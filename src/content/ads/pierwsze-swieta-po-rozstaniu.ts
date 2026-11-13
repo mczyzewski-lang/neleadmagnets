@@ -19,10 +19,10 @@ export const ads: AdSet = {
     ],
     "descriptions": [
       "Bezpłatnie, od razu",
-      "Do druku i jako PDF"
+      "Wypełniasz online, bez konta"
     ],
-    "cta": "Pobierz",
-    "creative": "Planer na stole przy oknie z zimowym światłem, gałązka świerku, kubek; kalendarz 24–26 grudnia w dwóch kolorach (zieleń/złoto)."
+    "cta": "Dowiedz się więcej",
+    "creative": "Planer online na ekranie laptopa przy oknie z zimowym światłem, gałązka świerku, kubek; kalendarz 24–26 grudnia w dwóch kolorach (zieleń/złoto)."
   },
   "demandGen": {
     "headlines": [
@@ -30,7 +30,7 @@ export const ads: AdSet = {
       "Wigilia: kto, gdzie i kiedy",
       "Zaplanujcie święta wcześniej",
       "Święta w dwóch domach",
-      "Planer do wydruku za darmo"
+      "Planer online za darmo"
     ],
     "longHeadlines": [
       "Wigilia, pierwszy dzień świąt, Sylwester. Planer pomaga rozpisać, kto, gdzie i kiedy.",
@@ -39,11 +39,11 @@ export const ads: AdSet = {
     ],
     "descriptions": [
       "Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych.",
-      "Możesz go wydrukować lub zapisać jako PDF. Informacyjnie — nie porada prawna.",
+      "Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna.",
       "Trzy modele podziału świąt, arkusz ustaleń, logistyka dojazdów i prezentów."
     ],
-    "cta": "Pobierz",
-    "creative": "Planer na stole przy oknie z zimowym światłem, gałązka świerku, kubek; kalendarz 24–26 grudnia w dwóch kolorach (zieleń/złoto)."
+    "cta": "Dowiedz się więcej",
+    "creative": "Planer online na ekranie laptopa przy oknie z zimowym światłem, gałązka świerku, kubek; kalendarz 24–26 grudnia w dwóch kolorach (zieleń/złoto)."
   },
   "search": {
     "keywords": [
@@ -62,7 +62,7 @@ export const ads: AdSet = {
       "Święta w dwóch domach",
       "Zaplanujcie wcześniej",
       "Modele podziału świąt",
-      "Planer do wydruku",
+      "Planer do wypełnienia online",
       "Nowy Etap — poradnia",
       "Materiał od Nowego Etapu",
       "Otwórz od razu",
@@ -71,7 +71,7 @@ export const ads: AdSet = {
     "descriptions": [
       "Trzy modele podziału świąt, arkusz ustaleń, logistyka dojazdów i prezentów.",
       "Jak wspierać dzieci w różnym wieku i zadbać o siebie, gdy są w drugim domu.",
-      "Bezpłatny planer Nowego Etapu. Do druku i jako PDF.",
+      "Bezpłatny planer Nowego Etapu. Wypełniasz online, bez pobierania.",
       "Gotowa wiadomość z propozycją planu świąt do drugiego rodzica."
     ],
     "paths": [

@@ -57,7 +57,7 @@ export const material: Material = {
   seo: {
     title: "Inwentaryzacja majątku przed rozwodem | Nowy Etap",
     description:
-      "Arkusz do spisania majątku i długów przed rozwodem: wspólny czy osobisty, nakłady, kredyty, PPK, firma. Bezpłatny PDF do wypełnienia.",
+      "Arkusz do spisania majątku i długów przed rozwodem: wspólny czy osobisty, nakłady, kredyty, PPK, firma. Bezpłatnie, do wypełnienia online.",
   },
   coverPrompt:
     "Photorealistic 3D render of a standing A4 spiral-bound worksheet planner at a slight angle on a warm off-white (#FCF9F8) background with a soft natural shadow. The cover is deep green (#295550) with a dark green (#263D3A) frame and gold (#C79B59) typography and fine ruled-line details suggesting a ledger. Minimalist premium typography. Render this exact text, spelled exactly, and keep all text minimal: small wordmark at the top \"NOWY ETAP · PORADNIA ROZWODOWA\"; main title \"Inwentaryzacja majątku i długów\"; subtitle \"Arkusz do podziału majątku po rozstaniu\". A subtle thin gold staircase line motif (a stylised ascending step line) near the bottom. No gavels, no paragraph symbols, no people, no money bills, no house icons, no wedding rings, no other text. Square 1:1 composition, high detail, elegant studio lighting.",

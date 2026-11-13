@@ -7,7 +7,7 @@ export const ads: AdSet = {
   "targeting": "Kontekstowe i tematyczne: treści o finansach osobistych, prawie, rodzinie i poradnikach; Search: frazy informacyjne. Demografia szeroka (25–60). Bez remarketingu, list klientów, podobnych odbiorców i segmentów opartych na wnioskowaniu o kryzysie w związku.",
   "meta": {
     "primaryTexts": [
-      "Pierwsza konsultacja z prawnikiem: jakie dokumenty zabrać i o co zapytać. Lista PDF.",
+      "Pierwsza konsultacja z prawnikiem: jakie dokumenty zabrać i o co zapytać. Lista online.",
       "Dobrze przygotowana konsultacja to więcej konkretów w krótszym czasie. Bezpłatny poradnik.",
       "Spisz pytania, zbierz dokumenty, określ cele. Przygotuj się do pierwszej rozmowy."
     ],
@@ -19,10 +19,10 @@ export const ads: AdSet = {
     ],
     "descriptions": [
       "Bezpłatnie, od razu",
-      "Do druku i jako PDF"
+      "Wypełniasz online, bez konta"
     ],
-    "cta": "Pobierz",
-    "creative": "Notes z listą „Pytania na konsultację”, obok teczka z dokumentami i okładka poradnika. Bez togi i kodeksów."
+    "cta": "Dowiedz się więcej",
+    "creative": "Notes z listą „Pytania na konsultację”, obok teczka z dokumentami i telefon z ekranem materiału. Bez togi i kodeksów."
   },
   "demandGen": {
     "headlines": [
@@ -33,17 +33,17 @@ export const ads: AdSet = {
       "Więcej konkretów z konsultacji"
     ],
     "longHeadlines": [
-      "Pierwsza konsultacja z prawnikiem: jakie dokumenty zabrać i o co zapytać. Lista PDF.",
+      "Pierwsza konsultacja z prawnikiem: jakie dokumenty zabrać i o co zapytać. Lista online.",
       "Dobrze przygotowana konsultacja to więcej konkretów w krótszym czasie. Bezpłatny poradnik.",
       "Spisz pytania, zbierz dokumenty, określ cele. Przygotuj się do pierwszej rozmowy."
     ],
     "descriptions": [
       "Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych.",
-      "Możesz go wydrukować lub zapisać jako PDF. Informacyjnie — nie porada prawna.",
+      "Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna.",
       "Co zabrać, jak spisać oś czasu, jakie pytania zadać — także o koszty i sposób pracy."
     ],
-    "cta": "Pobierz",
-    "creative": "Notes z listą „Pytania na konsultację”, obok teczka z dokumentami i okładka poradnika. Bez togi i kodeksów."
+    "cta": "Dowiedz się więcej",
+    "creative": "Notes z listą „Pytania na konsultację”, obok teczka z dokumentami i telefon z ekranem materiału. Bez togi i kodeksów."
   },
   "search": {
     "keywords": [
@@ -62,7 +62,7 @@ export const ads: AdSet = {
       "Pytania na konsultację",
       "Oś czasu i fakty",
       "Jak porównać specjalistów",
-      "Checklista PDF",
+      "Checklista online",
       "Nowy Etap — poradnia",
       "Materiał od Nowego Etapu",
       "Otwórz od razu",
@@ -72,7 +72,7 @@ export const ads: AdSet = {
       "Co zabrać, jak spisać oś czasu, jakie pytania zadać — także o koszty i sposób pracy.",
       "Różnice: adwokat, radca prawny, mediator, psycholog. Jak wybrać specjalistę.",
       "Bezpłatna checklista Nowego Etapu. Otworzysz ją od razu, bez podawania danych.",
-      "Do druku i jako PDF."
+      "Wypełniasz online, a na końcu masz podsumowanie i swoje notatki."
     ],
     "paths": [
       "konsultacja",

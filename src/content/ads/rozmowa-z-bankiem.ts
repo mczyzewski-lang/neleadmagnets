@@ -8,7 +8,7 @@ export const ads: AdSet = {
   "meta": {
     "primaryTexts": [
       "Rozwód nie zwalnia współkredytobiorcy z umowy. Przygotuj rozmowę z bankiem krok po kroku.",
-      "Pytania do banku, potrzebne dokumenty, możliwe rozwiązania. Bezpłatny poradnik PDF.",
+      "Pytania do banku, potrzebne dokumenty, możliwe rozwiązania. Bezpłatnie, online.",
       "Wspólny kredyt po rozstaniu: idź do banku z planem, a nie tylko z pytaniami."
     ],
     "headlines": [
@@ -19,10 +19,10 @@ export const ads: AdSet = {
     ],
     "descriptions": [
       "Bezpłatnie, od razu",
-      "Do druku i jako PDF"
+      "Wypełniasz online, bez konta"
     ],
-    "cta": "Pobierz",
-    "creative": "Okładka i strona z listą „Pytania do banku” (5 pozycji); obok klucze i kalkulator na stole."
+    "cta": "Dowiedz się więcej",
+    "creative": "Ekran telefonu z listą „Pytania do banku” (5 pozycji); obok klucze i kalkulator na stole."
   },
   "demandGen": {
     "headlines": [
@@ -34,16 +34,16 @@ export const ads: AdSet = {
     ],
     "longHeadlines": [
       "Rozwód nie zwalnia współkredytobiorcy z umowy. Przygotuj rozmowę z bankiem krok po kroku.",
-      "Pytania do banku, potrzebne dokumenty, możliwe rozwiązania. Bezpłatny poradnik PDF.",
+      "Pytania do banku, potrzebne dokumenty, możliwe rozwiązania. Bezpłatnie, online.",
       "Wspólny kredyt po rozstaniu: idź do banku z planem, a nie tylko z pytaniami."
     ],
     "descriptions": [
       "Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych.",
-      "Możesz go wydrukować lub zapisać jako PDF. Informacyjnie — nie porada prawna.",
+      "Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna.",
       "Rozwód nie zwalnia z kredytu. Skrypt rozmowy z bankiem, lista pytań i dokumentów."
     ],
-    "cta": "Pobierz",
-    "creative": "Okładka i strona z listą „Pytania do banku” (5 pozycji); obok klucze i kalkulator na stole."
+    "cta": "Dowiedz się więcej",
+    "creative": "Ekran telefonu z listą „Pytania do banku” (5 pozycji); obok klucze i kalkulator na stole."
   },
   "search": {
     "keywords": [
@@ -62,7 +62,7 @@ export const ads: AdSet = {
       "Rozwód a wspólny kredyt",
       "Pytania do banku",
       "Dokumenty dla banku",
-      "Skrypt rozmowy PDF",
+      "Skrypt rozmowy online",
       "Nowy Etap — poradnia",
       "Materiał od Nowego Etapu",
       "Otwórz od razu",
@@ -71,7 +71,7 @@ export const ads: AdSet = {
     "descriptions": [
       "Rozwód nie zwalnia z kredytu. Skrypt rozmowy z bankiem, lista pytań i dokumentów.",
       "Opcje, o które warto zapytać: zwolnienie z długu, refinansowanie, sprzedaż i spłata.",
-      "Arkusz z najważniejszymi liczbami: saldo, rata, LTV. Do druku i jako PDF.",
+      "Arkusz z najważniejszymi liczbami: saldo, rata, LTV. Wypełniasz online.",
       "Bezpłatny materiał Nowego Etapu. Informacyjnie, nie porada prawna ani finansowa."
     ],
     "paths": [

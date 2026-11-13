@@ -57,7 +57,7 @@ export const material: Material = {
   seo: {
     title: "Jak powiedzieć dzieciom o rozstaniu | Nowy Etap",
     description:
-      "Jak powiedzieć dziecku o rozwodzie? Przykładowe zdania dla dzieci 0–18 lat, czego unikać i kiedy warto skonsultować się z psychologiem. PDF.",
+      "Jak powiedzieć dziecku o rozwodzie? Przykładowe zdania dla dzieci 0–18 lat, czego unikać i kiedy warto skonsultować się z psychologiem. Bezpłatnie, online.",
   },
   coverPrompt:
     "Photorealistic 3D render of a single standing softcover booklet at a slight angle on a warm off-white (#FCF9F8) background with a soft natural shadow. The cover is a light warm cream tone with a deep green (#295550) title, a dark green (#263D3A) spine and delicate gold (#C79B59) accents. Minimalist premium, gentle and calm typography. Render this exact text, spelled exactly, and keep all text minimal: small wordmark at the top \"NOWY ETAP · PORADNIA ROZWODOWA\"; main title \"Jak powiedzieć dzieciom o rozstaniu\"; subtitle \"Rozmowa dopasowana do wieku dziecka\". A subtle thin gold staircase line motif (a stylised ascending step line) at the bottom of the cover. No gavels, no paragraph symbols, no people, no children, no wedding rings, no other text. Square 1:1 composition, high detail, soft studio lighting.",

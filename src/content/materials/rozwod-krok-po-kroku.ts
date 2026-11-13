@@ -61,7 +61,7 @@ export const material: Material = {
   seo: {
     title: "Rozwód w Polsce krok po kroku | Nowy Etap",
     description:
-      "Rozwód krok po kroku: dokumenty, opłata 600 zł, właściwy sąd, mediacja, treść wyroku i sprawy po rozwodzie. Bezpłatny przewodnik PDF.",
+      "Rozwód krok po kroku: dokumenty, opłata 600 zł, właściwy sąd, mediacja, treść wyroku i sprawy po rozwodzie. Bezpłatny przewodnik online.",
   },
   coverPrompt:
     "Photorealistic 3D render of a single standing hardcover book at a slight angle on a warm off-white (#FCF9F8) background with a soft natural shadow. The cover is deep green (#295550) with a slightly darker green (#263D3A) spine and subtle gold (#C79B59) accents. Minimalist premium typography. Render this exact text, spelled exactly, and keep all text minimal: small wordmark at the top \"NOWY ETAP · PORADNIA ROZWODOWA\"; main title \"Rozwód w Polsce krok po kroku\"; subtitle \"Od decyzji do życia po wyroku\". A subtle thin gold staircase line motif (a stylised ascending step line) across the lower part of the cover. No gavels, no paragraph symbols, no people, no wedding rings, no other text. Square 1:1 composition, high detail, elegant studio lighting.",

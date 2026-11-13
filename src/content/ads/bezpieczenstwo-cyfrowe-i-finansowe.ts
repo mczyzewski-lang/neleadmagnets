@@ -8,42 +8,42 @@ export const ads: AdSet = {
   "meta": {
     "primaryTexts": [
       "Hasła, wspólne konta, dostęp do aplikacji. Spokojne kroki porządkujące sprawy cyfrowe.",
-      "Wspólne subskrypcje, karty i konta: co przejrzeć na początku rozstania. Poradnik PDF.",
+      "Wspólne subskrypcje, karty i konta: co przejrzeć na początku rozstania. Odhacz online.",
       "Bezpieczeństwo cyfrowe i finansowe w czasie rozstania: praktyczna checklista, bezpłatnie."
     ],
     "headlines": [
       "Bezpieczeństwo cyfrowe i finansowe",
       "Hasła, konta, subskrypcje",
       "Uporządkuj sprawy cyfrowe",
-      "Checklista PDF za darmo"
+      "Checklista online za darmo"
     ],
     "descriptions": [
       "Bezpłatnie, od razu",
-      "Do druku i jako PDF"
+      "Wypełniasz online, bez konta"
     ],
-    "cta": "Pobierz",
-    "creative": "Płaska ilustracja liniowa: kłódka, karta płatnicza, telefon połączone złotą linią na tle #295550; obok okładka poradnika."
+    "cta": "Dowiedz się więcej",
+    "creative": "Płaska ilustracja liniowa: kłódka, karta płatnicza, telefon połączone złotą linią na tle #295550; obok ekran checklisty z odhaczonymi pozycjami."
   },
   "demandGen": {
     "headlines": [
       "Bezpieczeństwo cyfrowe i finansowe",
       "Hasła, konta, subskrypcje",
       "Uporządkuj sprawy cyfrowe",
-      "Checklista PDF za darmo",
+      "Checklista online za darmo",
       "Wspólne konta: co przejrzeć"
     ],
     "longHeadlines": [
       "Hasła, wspólne konta, dostęp do aplikacji. Spokojne kroki porządkujące sprawy cyfrowe.",
-      "Wspólne subskrypcje, karty i konta: co przejrzeć na początku rozstania. Poradnik PDF.",
+      "Wspólne subskrypcje, karty i konta: co przejrzeć na początku rozstania. Odhacz online.",
       "Bezpieczeństwo cyfrowe i finansowe w czasie rozstania: praktyczna checklista, bezpłatnie."
     ],
     "descriptions": [
       "Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych.",
-      "Możesz go wydrukować lub zapisać jako PDF. Informacyjnie — nie porada prawna.",
+      "Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna.",
       "Hasła, weryfikacja dwuetapowa, wspólne konta, subskrypcje i lokalizacja — krok po kroku."
     ],
-    "cta": "Pobierz",
-    "creative": "Płaska ilustracja liniowa: kłódka, karta płatnicza, telefon połączone złotą linią na tle #295550; obok okładka poradnika."
+    "cta": "Dowiedz się więcej",
+    "creative": "Płaska ilustracja liniowa: kłódka, karta płatnicza, telefon połączone złotą linią na tle #295550; obok ekran checklisty z odhaczonymi pozycjami."
   },
   "search": {
     "keywords": [
@@ -62,7 +62,7 @@ export const ads: AdSet = {
       "Wspólne konta i karty",
       "Zastrzeżenie PESEL",
       "Subskrypcje i chmura",
-      "Checklista PDF",
+      "Checklista online",
       "Nowy Etap — poradnia",
       "Materiał od Nowego Etapu",
       "Otwórz od razu",
@@ -72,7 +72,7 @@ export const ads: AdSet = {
       "Hasła, weryfikacja dwuetapowa, wspólne konta, subskrypcje i lokalizacja — krok po kroku.",
       "Co zrobić ze wspólnym kontem i kartą, a czego unikać. Raport BIK i zastrzeżenie PESEL.",
       "Bezpłatny poradnik Nowego Etapu. Otworzysz go od razu, bez podawania danych.",
-      "Do druku i jako PDF. Informacyjnie, nie porada prawna."
+      "Odhaczasz online, podsumowanie od razu. Informacyjnie, nie porada prawna."
     ],
     "paths": [
       "bezpieczenstwo",

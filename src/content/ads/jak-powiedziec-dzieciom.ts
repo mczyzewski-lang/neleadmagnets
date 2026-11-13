@@ -8,7 +8,7 @@ export const ads: AdSet = {
   "meta": {
     "primaryTexts": [
       "Jak rozmawiać z dziećmi o rozstaniu rodziców? Spokojny poradnik z przykładami zdań.",
-      "Co powiedzieć, czego unikać i jak dopasować rozmowę do wieku dziecka. Poradnik PDF.",
+      "Co powiedzieć, czego unikać i jak dopasować rozmowę do wieku dziecka. Poradnik online.",
       "Jedna z najtrudniejszych rozmów. Warto się do niej przygotować. Bezpłatny poradnik."
     ],
     "headlines": [
@@ -19,10 +19,10 @@ export const ads: AdSet = {
     ],
     "descriptions": [
       "Bezpłatnie, od razu",
-      "Do druku i jako PDF"
+      "Wypełniasz online, bez konta"
     ],
-    "cta": "Pobierz",
-    "creative": "Dwa kubki (duży i mały) na parapecie, bez twarzy; obok okładka poradnika i strona „Przykładowe zdania według wieku”."
+    "cta": "Dowiedz się więcej",
+    "creative": "Dwa kubki (duży i mały) na parapecie, bez twarzy; obok telefon z ekranem materiału „Przykładowe zdania według wieku”."
   },
   "demandGen": {
     "headlines": [
@@ -34,16 +34,16 @@ export const ads: AdSet = {
     ],
     "longHeadlines": [
       "Jak rozmawiać z dziećmi o rozstaniu rodziców? Spokojny poradnik z przykładami zdań.",
-      "Co powiedzieć, czego unikać i jak dopasować rozmowę do wieku dziecka. Poradnik PDF.",
+      "Co powiedzieć, czego unikać i jak dopasować rozmowę do wieku dziecka. Poradnik online.",
       "Jedna z najtrudniejszych rozmów. Warto się do niej przygotować. Bezpłatny poradnik."
     ],
     "descriptions": [
       "Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych.",
-      "Możesz go wydrukować lub zapisać jako PDF. Informacyjnie — nie porada prawna.",
+      "Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna.",
       "Jak powiedzieć dziecku o rozstaniu: przykładowe zdania dla każdego wieku i czego unikać."
     ],
-    "cta": "Pobierz",
-    "creative": "Dwa kubki (duży i mały) na parapecie, bez twarzy; obok okładka poradnika i strona „Przykładowe zdania według wieku”."
+    "cta": "Dowiedz się więcej",
+    "creative": "Dwa kubki (duży i mały) na parapecie, bez twarzy; obok telefon z ekranem materiału „Przykładowe zdania według wieku”."
   },
   "search": {
     "keywords": [
@@ -62,7 +62,7 @@ export const ads: AdSet = {
       "Przykładowe zdania",
       "Czego unikać w rozmowie",
       "Poradnik dla rodziców",
-      "Bezpłatny poradnik PDF",
+      "Bezpłatny poradnik online",
       "Nowy Etap — poradnia",
       "Materiał od Nowego Etapu",
       "Otwórz od razu",
@@ -72,7 +72,7 @@ export const ads: AdSet = {
       "Jak powiedzieć dziecku o rozstaniu: przykładowe zdania dla każdego wieku i czego unikać.",
       "Sygnały, przy których warto skonsultować się z psychologiem dziecięcym.",
       "Bezpłatny poradnik Nowego Etapu. Otworzysz go od razu, bez podawania danych.",
-      "Do druku i jako PDF. Informacyjnie, nie zastępuje porady specjalisty."
+      "Notatki wpiszesz online, bez pobierania. Informacyjnie, nie zastępuje porady specjalisty."
     ],
     "paths": [
       "dzieci",

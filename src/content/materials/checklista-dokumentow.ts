@@ -55,7 +55,7 @@ export const material: Material = {
   seo: {
     title: "Checklista dokumentów do rozwodu | Nowy Etap",
     description:
-      "Jakie dokumenty do rozwodu, podziału majątku, alimentów i kredytu? Lista: co zawsze, co zależnie od sytuacji i skąd to wziąć. Bezpłatny PDF.",
+      "Jakie dokumenty do rozwodu, podziału majątku, alimentów i kredytu? Lista: co zawsze, co zależnie od sytuacji i skąd to wziąć. Odhaczasz online, za darmo.",
   },
   coverPrompt:
     "Photorealistic 3D render of a standing spiral-bound checklist booklet at a slight angle on a warm off-white (#FCF9F8) background with a soft natural shadow. The cover is warm gold (#C79B59) with deep green (#295550) typography and a thin dark green (#263D3A) border. Minimalist premium typography. Render this exact text, spelled exactly, and keep all text minimal: small wordmark at the top \"NOWY ETAP · PORADNIA ROZWODOWA\"; main title \"Checklista dokumentów do rozwodu\"; subtitle \"Rozwód · dzieci · majątek · kredyt\". A subtle thin staircase line motif (a stylised ascending step line) in deep green near the bottom, with three small elegant check marks. No gavels, no paragraph symbols, no people, no wedding rings, no other text. Square 1:1 composition, high detail, elegant studio lighting.",

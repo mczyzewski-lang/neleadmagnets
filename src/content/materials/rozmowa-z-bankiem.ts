@@ -70,7 +70,7 @@ export const material: Material = {
   seo: {
     title: "Kredyt po rozstaniu: rozmowa z bankiem | Nowy Etap",
     description:
-      "Wspólny kredyt hipoteczny a rozwód. Skrypt rozmowy z bankiem, lista dokumentów, pytania i arkusz liczb. Bezpłatny materiał do pobrania.",
+      "Wspólny kredyt hipoteczny a rozwód. Skrypt rozmowy z bankiem, lista dokumentów, pytania i arkusz liczb. Bezpłatnie, do wypełnienia online.",
   },
   coverPrompt:
     "Photorealistic 3D render of a standing hardcover booklet at a slight angle on a warm off-white (#FCF9F8) background with a soft natural shadow. The cover is dark green (#263D3A) with deep green (#295550) panel and fine gold (#C79B59) accents. Minimalist premium typography. Small wordmark text at the top: \"NOWY ETAP · PORADNIA ROZWODOWA\". Exact cover title: \"Kredyt po rozstaniu\". Exact subtitle: \"Jak przygotować rozmowę z bankiem\". Small label \"SKRYPT ROZMOWY\". A subtle thin gold staircase line motif rising across the lower part of the cover. No gavels, no paragraph symbols, no people, no wedding rings, no house icons with hearts. Square 1:1 composition, high detail, keep text minimal and exactly as written.",
