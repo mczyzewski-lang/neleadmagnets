@@ -7,7 +7,7 @@ const BASE = process.env.BASE || "http://localhost:3000";
 const WIZARDS = ["mieszkanie-i-kredyt", "plan-opieki-nad-dzieckiem", "konsekwencje-rozstania", "przed-pozwem", "separacja-czy-rozwod", "pierwsze-30-dni"];
 const CALCS = ["budzet-po-rozstaniu", "koszty-utrzymania-dziecka"];
 const DECISION = ["koszt-rozwodu", "rozmowa-o-rozstaniu", "kompas-decyzji", "majatek-wspolny-czy-osobisty", "wina-czy-bez-winy", "porozumienie-przejsciowe", "koszty-wyprowadzki", "plan-wsparcia", "mity-o-rozwodzie", "pozew-rozwodowy-checklista"];
-const PAGES = ["/narzedzia", "/przed-decyzja", "/demo", ...DECISION.map((d) => `/przed-decyzja/${d}`), "/materialy", "/materialy/rozwod-krok-po-kroku", "/materialy/rozwod-krok-po-kroku/czytaj", "/plan-rozwodu", "/pomoc", "/polityka-prywatnosci", "/zastrzezenia"];
+const PAGES = ["/narzedzia", "/przed-decyzja", "/demo", ...DECISION.map((d) => `/przed-decyzja/${d}`), "/materialy", "/materialy/rozwod-krok-po-kroku", "/plan-rozwodu", "/pomoc", "/polityka-prywatnosci", "/zastrzezenia"];
 
 const browser = await chromium.launch();
 const ctx = await browser.newContext({ viewport: { width: 390, height: 844 } });
@@ -89,6 +89,31 @@ for (const path of demos) {
   else if (!robots?.includes("noindex")) fail(`${path}: brak noindex`);
   else if (errs.length) fail(`${path}: błędy JS: ${errs.join(" | ")}`);
   else console.log("✓ demo", path);
+  await p.close();
+}
+
+// Materiały: wersja online na landingu — odhaczenie, wpis, podsumowanie; bez PDF
+for (const slug of ["checklista-dokumentow", "komunikacja-z-drugim-rodzicem"]) {
+  const p = await ctx.newPage();
+  const errs = [];
+  p.on("pageerror", (e) => errs.push(e.message));
+  await p.goto(`${BASE}/materialy/${slug}`, { waitUntil: "networkidle" });
+  const wb = p.locator(".wb");
+  let ok = false;
+  for (let i = 0; i < 12; i++) {
+    const cb = wb.locator('.wb__check input:not(:checked)').first();
+    if (await cb.count()) await cb.check();
+    const ta = wb.locator("textarea").first();
+    if (await ta.count()) await ta.fill("test");
+    if (await wb.locator(".kpis").count()) { ok = true; break; }
+    await wb.getByRole("button", { name: /Dalej|Podsumowanie/ }).last().click();
+  }
+  const pdf = await p.getByText(/PDF/).count();
+  if (!ok) fail(`material ${slug}: nie dotarto do podsumowania`);
+  else if (!(await wb.locator(".kpi__value").first().textContent())?.match(/[1-9]/)) fail(`material ${slug}: postęp 0%`);
+  else if (pdf) fail(`material ${slug}: strona nadal wspomina PDF`);
+  else if (errs.length) fail(`material ${slug}: błędy JS: ${errs.join(" | ")}`);
+  else console.log("✓ materiał online", slug);
   await p.close();
 }
 

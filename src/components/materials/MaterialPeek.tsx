@@ -1,4 +1,3 @@
-import Link from "next/link";
 import type { Material, MaterialBlock } from "@/content/types";
 import { MATERIAL_SAMPLES } from "@/content/materialSamples";
 
@@ -79,7 +78,7 @@ export function MaterialPeek({ m, fillHref }: { m: Material; fillHref: string })
           </div>
         ))}
         <div className="peek__fade">
-          <Link href={fillHref} className="btn btn--gold">Zobacz całość</Link>
+          <a href={fillHref} className="btn btn--gold">Wypełnij online</a>
         </div>
       </div>
       </div>

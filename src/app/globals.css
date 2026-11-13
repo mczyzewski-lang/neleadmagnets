@@ -1809,3 +1809,4 @@ body:has(#og) main { padding: 0; }
 .wb__notes dt { font-size: var(--fs-xs); color: var(--ink-3); }
 .wb__notes dd { margin: 0; }
 @media print { .wb__top { position: static; } }
+.wb__remember { margin: 20px 0 8px; padding: 12px 14px; border: 1px dashed var(--line-strong); border-radius: var(--r-md); background: var(--cream); }

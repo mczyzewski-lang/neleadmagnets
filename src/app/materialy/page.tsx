@@ -16,7 +16,7 @@ export default function MaterialsHub() {
         <div className="container" style={{ maxWidth: 820 }}>
           <span className="eyebrow">Bezpłatne materiały</span>
           <h1>Przewodniki, checklisty i planery na czas rozstania</h1>
-          <p className="hero__sub">Konkretne materiały do przeczytania, wydrukowania i wypełnienia we własnym tempie. Otworzysz je od razu — bez podawania danych.</p>
+          <p className="hero__sub">Konkretne checklisty i arkusze, które wypełniasz online we własnym tempie — z podsumowaniem na końcu. Bez pobierania, bez podawania danych.</p>
         </div>
       </section>
       <section className="section" style={{ paddingTop: 8 }}>

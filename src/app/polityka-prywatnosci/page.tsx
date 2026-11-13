@@ -27,6 +27,7 @@ export default function Privacy() {
           <li>Odpowiedzi i obliczenia w narzędziach są przetwarzane <strong>w Twojej przeglądarce</strong>. Nie wysyłamy ich na nasz serwer i nie zapisujemy w bazie danych.</li>
           <li>Odpowiedzi znikają po odświeżeniu lub zamknięciu strony, chyba że sam(a) pobierzesz wynik, wydrukujesz go albo poprosisz o wysłanie na e-mail.</li>
           <li>Narzędzie „Pierwsze 30 dni” pozwala — wyłącznie na Twoje wyraźne kliknięcie — zapisać plan w pamięci tej przeglądarki (localStorage). Możesz go usunąć przyciskiem „Usuń zapisany plan”. Nie zapisuj planu na urządzeniu współdzielonym z inną osobą.</li>
+          <li>Materiały wypełniane online (checklisty i arkusze) domyślnie nie zapisują odpowiedzi — znikają po zamknięciu karty. Jeśli sam(a) zaznaczysz „Zapamiętaj moje odpowiedzi na tym urządzeniu”, zostaną zapisane w pamięci tej przeglądarki (localStorage); odznaczenie pola lub „Wyczyść moje odpowiedzi” je usuwa. Odpowiedzi nie są wysyłane na nasz serwer.</li>
           <li>Nie pytamy o imiona i inne dane identyfikujące dzieci.</li>
           <li>Pamiętaj: historia przeglądarki pokazuje odwiedzane adresy. Przycisk „Szybkie wyjście” przenosi na neutralną stronę, ale nie czyści historii. Nie obiecujemy anonimowości, której nie możemy technicznie zapewnić.</li>
         </ul>

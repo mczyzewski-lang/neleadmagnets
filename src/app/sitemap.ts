@@ -14,7 +14,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: absoluteUrl("/materialy"), lastModified, priority: 0.8 },
     ...MATERIALS.flatMap((m) => [
       { url: absoluteUrl(`/materialy/${m.slug}`), lastModified, priority: 0.7 },
-      { url: absoluteUrl(`/materialy/${m.slug}/czytaj`), lastModified, priority: 0.5 },
     ]),
     { url: absoluteUrl("/plan-rozwodu"), lastModified, priority: 0.8 },
     { url: absoluteUrl("/pomoc"), lastModified, priority: 0.4 },

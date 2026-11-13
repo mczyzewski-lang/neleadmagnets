@@ -1,11 +1,11 @@
 "use client";
-import { useId, useMemo, useRef, useState } from "react";
+import { useEffect, useId, useMemo, useRef, useState } from "react";
+import Link from "next/link";
 import type { Material, MaterialBlock } from "@/content/types";
 import { Block } from "./MaterialBlocks";
-import { ResultActions } from "@/components/tool/ResultActions";
+import { OFFERS } from "@/lib/offers";
 import { Icon } from "@/components/ui/Icon";
 import { track } from "@/lib/analytics";
-import type { Report } from "@/lib/report";
 
 type Key = string;
 const k = (s: number, b: number, i: number): Key => `${s}.${b}.${i}`;
@@ -15,8 +15,9 @@ const countOf = (b: MaterialBlock) => (b.type === "checklist" ? b.items.length :
 
 /**
  * Wersja online materiału: checklisty do odhaczania, arkusze do wpisywania,
- * na końcu podsumowanie (postęp, lista „do zrobienia”, notatki) z drukiem/PDF.
- * Odpowiedzi żyją wyłącznie w pamięci tej karty — nic nie jest zapisywane ani wysyłane automatycznie.
+ * na końcu podsumowanie (postęp, lista „do zrobienia”, notatki).
+ * Domyślnie odpowiedzi żyją tylko w pamięci karty. Zapamiętanie na urządzeniu (localStorage)
+ * włącza się wyłącznie świadomie — przełącznikiem; nic nie jest wysyłane na serwer.
  */
 export function Workbook({ m }: { m: Material }) {
   const [step, setStep] = useState(0);
@@ -25,7 +26,28 @@ export function Workbook({ m }: { m: Material }) {
   const [started, setStarted] = useState(false);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const uid = useId();
+  const [remember, setRemember] = useState(false);
+  const storeKey = `ne-material-${m.slug}`;
   const total = m.sections.length;
+
+  // Wczytaj tylko, jeśli użytkownik wcześniej sam włączył zapamiętywanie
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem(storeKey);
+      if (!raw) return;
+      const d = JSON.parse(raw) as { checks?: Record<Key, boolean>; fields?: Record<Key, string> };
+      setChecks(d.checks || {});
+      setFields(d.fields || {});
+      setRemember(true);
+    } catch { /* brak dostępu do pamięci — działamy bez niej */ }
+  }, [storeKey]);
+  useEffect(() => {
+    try {
+      if (remember) localStorage.setItem(storeKey, JSON.stringify({ checks, fields }));
+      else localStorage.removeItem(storeKey);
+    } catch { /* ignoruj */ }
+  }, [remember, checks, fields, storeKey]);
+  const offer = OFFERS[m.nextOffer];
   const isSummary = step === total;
 
   const stats = useMemo(() => {
@@ -60,17 +82,17 @@ export function Workbook({ m }: { m: Material }) {
     notes: s.blocks.flatMap((b, bi) => (b.type === "worksheet" ? b.fields.map((f, ii) => ({ f, v: fields[k(si, bi, ii)]?.trim() || "" })).filter((x) => x.v) : [])),
   }));
 
-  const report = (): Report => ({
-    title: m.coverTitle,
-    intro: `Wersja wypełniona online · postęp ${stats.done}/${stats.all} (${stats.pct}%).`,
-    sections: [
-      ...todo.filter((t) => t.notes.length).map((t) => ({ heading: `Moje notatki — ${t.heading}`, items: t.notes.map((n) => `${n.f.replace(/:$/, "")}: ${n.v}`) })),
-      { heading: "Do zrobienia", items: todo.flatMap((t) => t.items) },
-      { heading: "Zrobione", items: todo.flatMap((t) => t.done) },
-    ],
-  });
+  const reset = () => {
+    if (!window.confirm("Wyczyścić wszystkie odpowiedzi w tym materiale?")) return;
+    setChecks({}); setFields({}); setRemember(false); go(0);
+  };
 
-  const reset = () => { setChecks({}); setFields({}); go(0); };
+  const rememberToggle = (
+    <label className="check wb__remember no-print">
+      <input type="checkbox" checked={remember} onChange={(e) => setRemember(e.target.checked)} />
+      <span><strong>Zapamiętaj moje odpowiedzi na tym urządzeniu</strong> — wrócisz do nich później. Zapisują się tylko w tej przeglądarce, nie u nas. Nie włączaj na wspólnym lub cudzym komputerze.</span>
+    </label>
+  );
 
   return (
     <div className="tool-frame wb" aria-labelledby={`${uid}-t`}>
@@ -134,6 +156,7 @@ export function Workbook({ m }: { m: Material }) {
               );
             return <Block key={bi} b={b} />;
           })}
+          {step === 0 && rememberToggle}
           <div className="wizard-nav no-print">
             <button type="button" className="btn btn--ghost" onClick={() => go(step - 1)} disabled={step === 0}><Icon name="arrowLeft" width={18} /> Wstecz</button>
             <button type="button" className="btn" onClick={() => go(step + 1)}>{step === total - 1 ? "Podsumowanie" : "Dalej"} <Icon name="arrowRight" width={18} /></button>
@@ -171,8 +194,14 @@ export function Workbook({ m }: { m: Material }) {
               ))}
             </section>
           )}
-          <p className="xsmall muted">Odpowiedzi są przechowywane tylko w tej karcie przeglądarki. Po jej zamknięciu znikną — zapisz PDF lub plik tekstowy, jeśli chcesz do nich wrócić.</p>
-          <ResultActions toolId={m.slug} report={report} filename={m.slug} onReset={reset} />
+          {rememberToggle}
+          {!remember && <p className="xsmall muted">Bez zaznaczenia powyżej odpowiedzi znikną po zamknięciu karty.</p>}
+          <p className="small"><button type="button" className="btn btn--link btn--sm" onClick={reset}><Icon name="trash" width={16} /> Wyczyść moje odpowiedzi</button></p>
+          <div className="card card--green" style={{ marginTop: 20 }}>
+            <h4 style={{ color: "inherit" }}>{offer.title}</h4>
+            <p>{offer.description}</p>
+            <Link className="btn btn--gold" href={offer.href}>{m.ctaLabel}</Link>
+          </div>
           <div className="wizard-nav no-print">
             <button type="button" className="btn btn--ghost" onClick={() => go(total - 1)}><Icon name="arrowLeft" width={18} /> Wróć do materiału</button>
           </div>

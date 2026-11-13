@@ -90,7 +90,7 @@ export async function POST(req: NextRequest) {
     if (consents.delivery !== true) return bad("Brak zgody na wysłanie materiału.");
     if (!emailEnabled()) return bad("Wysyłka e-mail nie jest skonfigurowana.", 503);
     try {
-      const link = `${SITE.url}/materialy/${m.slug}/czytaj`;
+      const link = `${SITE.url}/materialy/${m.slug}#wypelnij`;
       const { html, text } = renderSimpleEmail(`${m.format}: ${m.coverTitle}`, [
         "Dziękujemy za zainteresowanie materiałem Nowego Etapu.",
         "Materiał otworzysz pod poniższym linkiem. Możesz go wydrukować lub zapisać jako PDF (opcja „Drukuj” → „Zapisz jako PDF”).",
