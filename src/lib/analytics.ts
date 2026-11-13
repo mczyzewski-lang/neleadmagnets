@@ -17,6 +17,8 @@ export type SafeEvent =
   | "offer_click"
   | "material_view"
   | "material_open"
+  | "material_online_start"
+  | "material_online_summary"
   | "quick_exit";
 
 type SafeParams = { tool?: string; step?: number; offer?: string; material?: string };

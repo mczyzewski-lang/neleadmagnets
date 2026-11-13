@@ -27,6 +27,7 @@ Kolory semantyczne: `--ok` #2F6B4F, `--warn` #8A5A12, `--danger` #A3352B (+ jasn
 ## Typografia
 
 - **Inter Variable** (self-hosted, @fontsource) — cały tekst UI; nagłówki 650, letter-spacing ujemny.
+- **Caveat 500** — wyłącznie przykładowe wpisy „długopisem” w podglądach i polach arkuszy online.
 - **Oswald 500** — wyłącznie „eyebrow” (kapitaliki z odstępami), nawiązanie do kroju logo.
 - Skala płynna: `--fs-3xl` (H1, clamp 32→52 px), `--fs-2xl` (H2), `--fs-xl`, `--fs-lg`, `--fs-md` (17 px, tekst), `--fs-sm`, `--fs-xs`.
 - Inputy zawsze 16 px (brak auto-zoomu w iOS).
@@ -53,6 +54,9 @@ Kolory semantyczne: `--ok` #2F6B4F, `--warn` #8A5A12, `--danger` #A3352B (+ jasn
 | Kolejny krok | `NextStep` | maks. 2 oferty, dopasowane do sytuacji; pierwsza wyróżniona |
 | Landing | `ToolLanding` | Hero z zapowiedzią wyniku → Jak to działa → Narzędzie → FAQ → Wiarygodność i źródła → Inne narzędzia; `StickyCta` na mobile |
 | Okładki | `Cover3D` | makieta CSS 3D do czasu wygenerowania grafik (`src/content/covers.ts`) |
+| Ocena materiału | `ScoreBadge` (`.score`), dane: `src/content/materialScores.ts` | „Wartość X/10” + dymek (hover, fokus, dotyk, Esc); ocena robocza do weryfikacji danymi |
+| Podgląd materiału | `MaterialPeek` (`.peek`), wpisy: `src/content/materialSamples.ts` | fragment materiału z fikcyjnymi wpisami odręcznymi (Caveat, niebieski #1F4AA8), wygaszenie i CTA |
+| Wersja online materiału | `Workbook` (`.wb`) — tylko na `/materialy/<slug>/demo` | checklisty do odhaczania, arkusze do wpisywania, podsumowanie z PDF/.txt/e-mail; dane tylko w pamięci karty |
 | Nawigacja | `Header` (logo, menu, „Szybkie wyjście”), `Footer` | |
 
 ## Druk / PDF

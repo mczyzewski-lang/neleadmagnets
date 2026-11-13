@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { MATERIALS } from "@/content/materials";
-import { Cover3D } from "@/components/landing/Cover3D";
+import { MaterialCard } from "@/components/materials/MaterialCard";
 import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -23,15 +22,7 @@ export default function MaterialsHub() {
       <section className="section" style={{ paddingTop: 8 }}>
         <div className="container">
           <div className="grid grid--2 grid--3">
-            {MATERIALS.map((m) => (
-              <Link key={m.slug} href={`/materialy/${m.slug}`} className="card card-link">
-                <Cover3D m={m} size="sm" />
-                <div className="btn-row" style={{ gap: 6 }}><span className="tag tag--gold">{m.format}</span><span className="tag">{m.time}</span></div>
-                <h2 className="card__title" style={{ marginTop: 10 }}>{m.coverTitle}</h2>
-                <p className="small muted" style={{ margin: 0 }}>{m.promise}</p>
-                <span className="card-link__more">Zobacz, co zawiera →</span>
-              </Link>
-            ))}
+            {MATERIALS.map((m) => <MaterialCard key={m.slug} m={m} />)}
           </div>
         </div>
       </section>

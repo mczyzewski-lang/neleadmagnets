@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import MaterialLanding, { generateMetadata as baseMeta } from "../page";
+import { generateMetadata as baseMeta } from "../page";
+import { MaterialLandingView } from "@/components/materials/MaterialLandingView";
 import { MATERIALS, getMaterial } from "@/content/materials";
 import { AdDemoBubble } from "@/components/demo/AdDemoBubble";
 import { demoMetadata } from "@/lib/toolMetadata";
@@ -38,7 +39,7 @@ export default async function MaterialDemo({ params }: P) {
   return (
     <>
       <AdDemoBubble ads={ads} landingPath={`/materialy/${slug}`} title={m.coverTitle} />
-      <MaterialLanding params={params} />
+      <MaterialLandingView m={m} demo />
     </>
   );
 }

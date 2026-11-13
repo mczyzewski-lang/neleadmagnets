@@ -4,7 +4,7 @@ import { TOOLS } from "@/lib/tools";
 import { DECISION_TOOLS } from "@/lib/decisionTools";
 import { MATERIALS } from "@/content/materials";
 import { Icon } from "@/components/ui/Icon";
-import { Cover3D } from "@/components/landing/Cover3D";
+import { MaterialCard } from "@/components/materials/MaterialCard";
 import { Alert } from "@/components/ui/Alert";
 import { absoluteUrl, SITE } from "@/lib/site";
 
@@ -93,14 +93,7 @@ export default function ToolsHub() {
           <h2 id="materialy-h">Bezpłatne przewodniki, checklisty i planery</h2>
           <p className="lead" style={{ maxWidth: 680 }}>Praktyczne materiały do przeczytania, wydrukowania i wypełnienia — od dokumentów do rozwodu po plan pierwszych świąt po rozstaniu.</p>
           <div className="grid grid--2 grid--4-wide" style={{ marginTop: 24 }}>
-            {MATERIALS.map((m) => (
-              <Link key={m.slug} href={`/materialy/${m.slug}`} className="card card-link" style={{ padding: 16 }}>
-                <Cover3D m={m} size="sm" />
-                <span className="tag tag--gold" style={{ alignSelf: "flex-start" }}>{m.format}</span>
-                <h3 className="card__title" style={{ marginTop: 8, fontSize: "var(--fs-md)" }}>{m.coverTitle}</h3>
-                <p className="xsmall muted" style={{ margin: 0 }}>{m.promise}</p>
-              </Link>
-            ))}
+            {MATERIALS.map((m) => <MaterialCard key={m.slug} m={m} compact headingLevel={3} />)}
           </div>
         </div>
       </section>

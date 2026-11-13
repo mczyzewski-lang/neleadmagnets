@@ -1,7 +1,7 @@
 import type { MaterialBlock, MaterialSection } from "@/content/types";
 import { Alert } from "@/components/ui/Alert";
 
-function Block({ b }: { b: MaterialBlock }) {
+export function Block({ b }: { b: MaterialBlock }) {
   switch (b.type) {
     case "p":
       return <p>{b.text}</p>;
