@@ -94,6 +94,7 @@ export function buildPreFiling(a: PreFilingAnswers): PreFilingResult {
       offers: [{ key: "konsultacja", cta: "Poproś o indywidualną rozmowę", why: "Rozmowa wyłącznie z Tobą — bez udziału drugiej strony. Pomożemy uporządkować dalsze kroki." }],
       notes: [
         "Mediacja i wspólne negocjacje nie są dobrym rozwiązaniem, gdy jedna osoba obawia się drugiej albo nie może swobodnie przedstawiać swojego zdania.",
+        "Mediacja jest dobrowolna — nie musisz jej proponować. Pozew zawiera informację, czy była próba mediacji, a jeśli nie — dlaczego (art. 187 § 1 pkt 3 KPC). Względy bezpieczeństwa możesz wskazać jako przyczynę; sformułowanie omów z prawnikiem.",
       ],
     };
   }
@@ -118,10 +119,12 @@ export function buildPreFiling(a: PreFilingAnswers): PreFilingResult {
         "Wspólne sesje: mediator jest bezstronny, nie rozstrzyga sporu ani nie doradza żadnej ze stron, pomaga rozmawiać o potrzebach.",
         "Spisanie ugody lub porozumienia. Ugoda zawarta przed mediatorem może zostać zatwierdzona przez sąd.",
         "Przed podpisaniem warto, by każde z Was skonsultowało treść porozumienia z własnym doradcą.",
+        "Zachowajcie dokumenty z mediacji (wniosek, informację od mediatora, ugodę lub porozumienie) — w pozwie podaje się informację o próbie mediacji (art. 187 § 1 pkt 3 KPC).",
         "Koszty: w mediacji prywatnej wynagrodzenie ustala mediator. W mediacji prowadzonej na skierowanie sądu wynagrodzenie mediatora określa rozporządzenie Ministra Sprawiedliwości (stawki do sprawdzenia w aktualnych przepisach).",
       ]
     : [
         "Mediacja wymaga zgody obu stron. Jeśli druga strona nie jest gotowa, możesz zaproponować spotkanie informacyjne z mediatorem bez zobowiązań.",
+        "Zaproponuj mediację na piśmie (np. wniosek o mediację skierowany do mediatora i doręczony drugiej stronie) i zachowaj dowody: kopię wniosku, dowód doręczenia, odpowiedź. Udokumentowana próba ma znaczenie nawet wtedy, gdy druga strona odmówi — pozew musi zawierać informację o próbie mediacji (art. 187 § 1 pkt 3 KPC), a sąd może obciążyć kosztami stronę, która w sposób oczywiście nieuzasadniony odmówiła mediacji (art. 103 KPC).",
         "Możesz przygotować własną propozycję ustaleń i skonsultować ją ze specjalistą, zanim ją przedstawisz.",
         "Mediacja jest możliwa także po złożeniu pozwu. Jeśli sąd skieruje Was do mediacji, każde z Was może się temu sprzeciwić w terminie tygodnia.",
       ];
@@ -146,7 +149,7 @@ export function buildPreFiling(a: PreFilingAnswers): PreFilingResult {
     sequence.push({ title: "Konsultacja i propozycja", text: "Skonsultuj swoją sytuację i przygotuj propozycję ustaleń, którą można przedstawić drugiej stronie." });
   }
   sequence.push({ title: "Spisanie ustaleń", text: "Ustalenia (np. porozumienie rodzicielskie, zasady dotyczące mieszkania) warto spisać i skonsultować." });
-  sequence.push({ title: "Pozew", text: a.decision === "taken" ? "Pozew przygotowany po ustaleniach może zawierać zgodne wnioski stron. Jeśli porozumienie nie jest możliwe, złożenie pozwu również jest właściwym krokiem." : "Gdy decyzja zapadnie, pozew może uwzględniać to, co udało się ustalić. Złożenie pozwu bez wcześniejszych ustaleń także bywa uzasadnione." });
+  sequence.push({ title: "Pozew", text: a.decision === "taken" ? "Pozew przygotowany po ustaleniach może zawierać zgodne wnioski stron. Jeśli porozumienie nie jest możliwe, złożenie pozwu również jest właściwym krokiem — w pozwie wskażesz podjętą próbę mediacji (art. 187 § 1 pkt 3 KPC)." : "Gdy decyzja zapadnie, pozew może uwzględniać to, co udało się ustalić. Jeśli ustalenia się nie udały, pozew i tak jest właściwym krokiem — wskażesz w nim podjętą próbę mediacji (art. 187 § 1 pkt 3 KPC)." });
 
   const offers: { key: OfferKey; why: string; cta?: string }[] = [
     { key: "plan-rozwodu", cta: "Sprawdź koszt i odbierz bezpłatny Plan Rozwodu", why: "Plan Rozwodu porządkuje wszystkie tematy do ustalenia przed pozwem. Dowiesz się też, ile kosztuje pomoc Nowego Etapu." },
@@ -158,6 +161,7 @@ export function buildPreFiling(a: PreFilingAnswers): PreFilingResult {
   const notes = [
     "Mediacja jest dobrowolna — jeśli sąd skieruje Was do mediacji, możesz się temu sprzeciwić w terminie tygodnia.",
     "Nie każda sprawa nadaje się do mediacji. Gdy porozumienie nie jest możliwe, przygotowanie pozwu nie jest błędem.",
+    "Dlaczego ta kolejność: sprawy uzgodnione przed pozwem sąd może uwzględnić w wyroku, więc zostaje mniej kwestii do udowadniania — sprawa jest zwykle krótsza i tańsza. Próba mediacji nie gwarantuje jednak konkretnego rozstrzygnięcia.",
   ];
   if (a.safety === "skip") notes.push("Jeśli w którymkolwiek momencie poczujesz się niebezpiecznie, wspólne rozmowy nie są wymagane — możesz skorzystać z indywidualnej pomocy.");
 

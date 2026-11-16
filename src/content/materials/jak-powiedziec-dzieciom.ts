@@ -22,7 +22,7 @@ export const material: Material = {
     "Odpowiedzi na trudne pytania dzieci",
     "Czego unikać: obwinianie, wciąganie w konflikt, dziecko jako posłaniec",
     "Sygnały, przy których warto porozmawiać z psychologiem dziecięcym",
-    "Głos dziecka w sprawach rodzinnych — co mówi prawo",
+    "Głos dziecka i porozumienie rodziców — co mówi prawo i dlaczego ustalenia warto zrobić przed sądem",
     "Arkusz do wspólnego przygotowania rozmowy z drugim rodzicem",
   ],
   time: "20 min",
@@ -34,6 +34,10 @@ export const material: Material = {
     {
       q: "Kiedy najlepiej powiedzieć dziecku o rozstaniu?",
       a: "Zwykle wtedy, gdy decyzja jest już podjęta i wiecie, co konkretnie zmieni się w codzienności dziecka. Dobrze, jeśli po rozmowie macie czas, by być z dzieckiem — np. nie tuż przed szkołą czy wyjazdem.",
+    },
+    {
+      q: "Czy z rozmową z dzieckiem i ustaleniami czekać do pozwu?",
+      a: "Nie trzeba — i zwykle lepiej nie. Najpierw plan (co zmieni się w codzienności dziecka), potem ustalenia między rodzicami — samodzielnie albo w mediacji — a dopiero na końcu pozew i sąd. Rodzice, którzy najpierw ustalają plan opieki, oszczędzają dzieciom bycia „przedmiotem sporu” na sali sądowej. Pisemne porozumienie o wykonywaniu władzy rodzicielskiej i kontaktach sąd uwzględnia, jeśli jest zgodne z dobrem dziecka (art. 58 § 1a KRO). Mediacja jest dobrowolna i nie jest wskazana, gdy w rodzinie występuje przemoc, groźby lub kontrola.",
     },
     {
       q: "Czy dziecko będzie musiało zeznawać w sądzie?",
@@ -50,9 +54,11 @@ export const material: Material = {
   ],
   sources: [
     { label: "Kodeks rodzinny i opiekuńczy (art. 58, art. 95 § 4, art. 113)", url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19640090059", verified: "2026-11-10" },
-    { label: "Kodeks postępowania cywilnego (wysłuchanie dziecka)", url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19640430296", verified: "2026-11-10" },
+    { label: "Kodeks rodzinny i opiekuńczy — art. 58 § 1a (porozumienie o wychowaniu dzieci)", url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19640090059", verified: "2026-11-16" },
+    { label: "Kodeks postępowania cywilnego (wysłuchanie dziecka; art. 103, art. 187 § 1 pkt 3 — próba mediacji)", url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19640430296", verified: "2026-11-10" },
   ],
   nextOffer: "mediacja",
+  stage: 2,
   ctaLabel: "Ustalcie plan wychowawczy w mediacji",
   seo: {
     title: "Jak powiedzieć dzieciom o rozstaniu | Nowy Etap",
@@ -67,6 +73,11 @@ export const material: Material = {
       intro:
         "Dzieci zwykle zapamiętują nie tyle konkretne słowa, ile atmosferę rozmowy: czy rodzice byli spokojni, czy mogły zadawać pytania, czy usłyszały, że nadal są kochane. Przygotowanie pomaga Ci zachować spokój, nawet jeśli w środku przeżywasz wiele emocji.",
       blocks: [
+        {
+          type: "path",
+          current: 2,
+          note: "Rozmowę z dzieckiem najlepiej przeprowadzić, gdy macie plan i choć wstępne ustalenia między rodzicami: gdzie dziecko będzie mieszkać i kiedy będzie z każdym z Was. Dziecko potrzebuje konkretów i spokoju, a nie sporu — dlatego sąd i formalności to dopiero kolejny krok.",
+        },
         {
           type: "checklist",
           items: [
@@ -234,7 +245,7 @@ export const material: Material = {
     {
       heading: "Głos dziecka w sprawach rodzinnych",
       intro:
-        "Dziecko ma prawo do tego, by jego zdanie było brane pod uwagę — ale nie powinno być obarczane decyzjami dorosłych.",
+        "Dziecko ma prawo do tego, by jego zdanie było brane pod uwagę — ale nie powinno być obarczane decyzjami dorosłych. Najlepiej służy mu porozumienie rodziców przygotowane, zanim sprawa trafi do sądu.",
       blocks: [
         {
           type: "list",
@@ -243,6 +254,12 @@ export const material: Material = {
             "W sprawach, które dotyczą dziecka, sąd może je wysłuchać — w sposób dostosowany do wieku i dojrzałości, zwykle poza salą rozpraw (przepisy KPC). O tym, czy i jak to nastąpi, decyduje sąd w konkretnej sprawie.",
             "W wyroku rozwodowym sąd rozstrzyga o władzy rodzicielskiej, kontaktach i kosztach utrzymania dziecka, biorąc pod uwagę jego dobro i porozumienie rodziców, jeśli je przedstawili (art. 58 KRO). Kontakty z dzieckiem są prawem i obowiązkiem zarówno rodziców, jak i dziecka (art. 113 KRO).",
           ],
+        },
+        {
+          type: "callout",
+          tone: "info",
+          title: "Dlaczego najpierw ustalenia, potem sąd",
+          text: "Pisemne porozumienie rodziców o wykonywaniu władzy rodzicielskiej i kontaktach z dzieckiem sąd uwzględnia, jeśli jest zgodne z dobrem dziecka (art. 58 § 1a KRO). Gdy plan opieki jest uzgodniony wcześniej, zostaje mniej kwestii do udowadniania, a dziecko nie staje się „przedmiotem sporu” na sali sądowej.",
         },
         {
           type: "worksheet",
@@ -266,6 +283,11 @@ export const material: Material = {
           type: "p",
           text: "Dzieci najlepiej odnajdują się w nowej sytuacji, gdy rodzice mają wspólny, jasny plan. Jeśli chcesz, w Nowym Etapie pomożemy Wam przygotować plan wychowawczy i ustalenia dotyczące opieki — w spokojnych rozmowach lub w mediacji — zanim sprawa trafi do sądu.",
         },
+        {
+          type: "p",
+          text: "Jeśli rozmowy z drugim rodzicem utknęły, mediacja bywa dobrym kolejnym krokiem. A gdy druga strona jej odmówi, Twoja udokumentowana próba nadal ma znaczenie:",
+        },
+        { type: "mediationAttempt" },
         {
           type: "p",
           text: "Możesz też zacząć od wypełnienia arkusza powyżej i wrócić do nas, kiedy uznasz, że to dobry moment. Materiał ma charakter informacyjny i nie zastępuje porady prawnika ani psychologa.",

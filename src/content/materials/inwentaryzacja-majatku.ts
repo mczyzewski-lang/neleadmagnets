@@ -23,9 +23,14 @@ export const material: Material = {
     "Tabela długów i kredytów — z uwagą o odpowiedzialności wobec banku",
     "Nakłady z majątku wspólnego i osobistego (art. 45 KRO)",
     "Pary niebędące małżeństwem — współwłasność według Kodeksu cywilnego",
+    "Dlaczego spis majątku to pierwszy krok — przed rozmową o podziale i długo przed sądem",
   ],
   time: "60–90 min",
   faq: [
+    {
+      q: "Po co spisywać majątek, zanim zaczniemy rozmawiać o podziale albo złożymy pozew?",
+      a: "Bo to część planu, od którego warto zacząć. Z rzetelnym spisem wiesz, na czym stoisz, i nie zgadzasz się na rozwiązania pod presją. Potem łatwiej o ustalenia — samodzielnie, w mediacji lub u notariusza — a każde uzgodnienie to jedna sprawa mniej dla sądu. Jeśli do sądu trafi tylko to, czego nie udało się ustalić, postępowanie jest prostsze. Warto też wiedzieć, że pozew musi zawierać informację, czy strony próbowały mediacji lub innego polubownego rozwiązania sporu, a jeśli nie — dlaczego (art. 187 § 1 pkt 3 KPC).",
+    },
     {
       q: "Co wchodzi do majątku wspólnego małżonków?",
       a: "Co do zasady przedmioty majątkowe nabyte w czasie trwania wspólności ustawowej przez oboje lub jedno z małżonków, m.in. pobrane wynagrodzenia i dochody z majątku (art. 31 KRO). Majątkiem osobistym są m.in. rzeczy nabyte przed ślubem oraz otrzymane w darowiźnie lub spadku, chyba że darczyńca lub spadkodawca postanowił inaczej (art. 33 KRO).",
@@ -50,9 +55,11 @@ export const material: Material = {
   sources: [
     { label: "Kodeks rodzinny i opiekuńczy (art. 31, 33, 43, 45, 58 § 3)", url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19640090059", verified: "2026-11-10" },
     { label: "Kodeks cywilny (art. 195 i nast., art. 210, art. 366, art. 519)", url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19640160093", verified: "2026-11-10" },
+    { label: "Kodeks postępowania cywilnego (art. 103, art. 183¹ i nast., art. 187 § 1 pkt 3)", url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19640430296", verified: "2026-11-16" },
     { label: "Elektroniczne Księgi Wieczyste — ekw.ms.gov.pl", url: "https://ekw.ms.gov.pl/", verified: "2026-11-10" },
   ],
   nextOffer: "plan-rozwodu",
+  stage: 1,
   ctaLabel: "Przygotuj podział majątku w Planie Rozwodu",
   seo: {
     title: "Inwentaryzacja majątku przed rozwodem | Nowy Etap",
@@ -65,8 +72,13 @@ export const material: Material = {
     {
       heading: "Zanim zaczniesz: wspólne czy osobiste?",
       intro:
-        "Rzetelny spis majątku to podstawa każdej rozmowy o podziale — w mediacji, u notariusza czy w sądzie. Pomaga też uniknąć sytuacji, w której o jakimś koncie lub długu dowiadujesz się na końcu.",
+        "Rzetelny spis majątku to podstawa każdej rozmowy o podziale — między Wami, w mediacji, u notariusza, a dopiero na końcu w sądzie. Pomaga też uniknąć sytuacji, w której o jakimś koncie lub długu dowiadujesz się na końcu.",
       blocks: [
+        {
+          type: "path",
+          current: 1,
+          note: "Spis majątku i długów to część planu. Najpierw fakty, potem rozmowa o podziale — samodzielnie, z mediatorem lub u notariusza — a sąd dopiero wtedy, gdy czegoś nie uda się ustalić. Kto zna liczby, negocjuje spokojniej i nie zgadza się na rozwiązania pod presją.",
+        },
         {
           type: "p",
           text: "Jeśli małżonkowie nie zawarli umowy majątkowej (intercyzy), z chwilą zawarcia małżeństwa powstaje między nimi wspólność ustawowa. Obejmuje ona przedmioty nabyte w czasie jej trwania przez oboje lub jedno z małżonków — m.in. pobrane wynagrodzenia i dochody z majątku wspólnego i osobistego (art. 31 KRO). Wspólność ustaje m.in. z uprawomocnieniem się wyroku rozwodowego lub orzeczeniem separacji.",
@@ -119,7 +131,7 @@ export const material: Material = {
         {
           type: "checklist",
           items: [
-            "Sprawdziłem/Sprawdziłam/am treść księgi wieczystej każdej nieruchomości.",
+            "Sprawdziłem/Sprawdziłam treść księgi wieczystej każdej nieruchomości.",
             "Mam akt notarialny lub inny dokument nabycia.",
             "Wiem, z jakich środków kupiono nieruchomość (wspólne, osobiste, pomoc rodziny).",
             "Mam orientacyjną wartość rynkową (lub planuję wycenę przez rzeczoznawcę).",
@@ -226,7 +238,7 @@ export const material: Material = {
             "Mam aktualne zaświadczenie o saldzie każdego kredytu.",
             "Wiem, kto jest kredytobiorcą, a kto np. poręczycielem.",
             "Zapisuję, kto i z jakich środków spłaca raty od dnia rozstania (zachowuję potwierdzenia przelewów).",
-            "Zapytałem/Zapytałam/am bank o warunki przejęcia kredytu przez jedną osobę.",
+            "Zapytałem/Zapytałam bank o warunki przejęcia kredytu przez jedną osobę.",
           ],
         },
       ],
@@ -257,7 +269,7 @@ export const material: Material = {
         {
           type: "callout",
           tone: "info",
-          text: "Podział majątku może nastąpić w wyroku rozwodowym (na wniosek, jeśli nie spowoduje nadmiernej zwłoki — art. 58 § 3 KRO), w osobnym postępowaniu sądowym albo umownie. Przy nieruchomościach umowa wymaga formy aktu notarialnego.",
+          text: "Podział majątku może nastąpić umownie (przy nieruchomościach umowa wymaga formy aktu notarialnego) albo w sądzie: w wyroku rozwodowym (na wniosek, jeśli nie spowoduje nadmiernej zwłoki — art. 58 § 3 KRO) lub w osobnym postępowaniu sądowym. Warto zacząć od próby porozumienia — do sądu trafia wtedy tylko to, czego nie udało się uzgodnić.",
         },
       ],
     },
@@ -299,7 +311,12 @@ export const material: Material = {
         },
         {
           type: "p",
-          text: "Możesz też wypełniać arkusz stopniowo i wrócić do nas, kiedy będziesz gotowy. Pamiętaj, że to materiał informacyjny — ostateczne decyzje majątkowe skonsultuj z prawnikiem.",
+          text: "Jeśli rozmowa o podziale utknie, rozważ mediację. Nawet gdy druga strona odmówi, Twoja udokumentowana próba ma znaczenie w późniejszej sprawie:",
+        },
+        { type: "mediationAttempt" },
+        {
+          type: "p",
+          text: "Możesz też wypełniać arkusz stopniowo i wrócić do nas, kiedy poczujesz, że to dobry moment. Pamiętaj, że to materiał informacyjny — ostateczne decyzje majątkowe skonsultuj z prawnikiem.",
         },
       ],
     },

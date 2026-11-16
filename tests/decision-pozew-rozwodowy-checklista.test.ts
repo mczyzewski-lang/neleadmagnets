@@ -27,4 +27,27 @@ describe("pozew-rozwodowy-checklista", () => {
     expect(txt).toMatch(/600 zł/);
     expect(txt).toMatch(/mediacji/);
   });
+  it("najpierw plan, ustalenia i próba mediacji — przed treścią pozwu", () => {
+    const g = buildChecklist({ children: "minor", agreement: "no" });
+    expect(g[0].id).toBe("before");
+    expect(g[0].items.map((i) => i.id)).toEqual(["b1", "b2", "b3", "b4"]);
+    const b4 = g[0].items.find((i) => i.id === "b4")!;
+    expect(b4.text).toMatch(/zaproponuj mediację na piśmie/i);
+    expect(b4.note).toMatch(/187 § 1 pkt 3 KPC/);
+    expect(b4.note).toMatch(/103 KPC/);
+    expect(b4.note).toMatch(/dobrowolna/);
+  });
+  it("odmowa drugiej strony: dokumenty próby jako załącznik i informacja w pozwie", () => {
+    const g = buildChecklist({ mediation: "refused" });
+    const items = g.flatMap((x) => x.items);
+    expect(items.find((i) => i.id === "u3")?.text).toMatch(/braku zgody drugiej strony/);
+    expect(items.some((i) => i.id === "a6")).toBe(true);
+    expect(items.find((i) => i.id === "b4")?.note).toMatch(/103 KPC/);
+  });
+  it("brak bezpieczeństwa: nie namawia do mediacji, wymaga wyjaśnienia w pozwie", () => {
+    const items = buildChecklist({ mediation: "unsafe" }).flatMap((x) => x.items);
+    expect(items.find((i) => i.id === "b4")?.text).toMatch(/nie musisz proponować mediacji/);
+    expect(items.find((i) => i.id === "u3")?.text).toMatch(/wyjaśnieniem przyczyn/);
+    expect(items.some((i) => i.id === "a6")).toBe(false);
+  });
 });

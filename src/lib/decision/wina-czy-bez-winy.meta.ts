@@ -29,5 +29,6 @@ export const meta: ToolMeta = {
     { ...SRC.kro, label: "Kodeks rodzinny i opiekuńczy — art. 56, 57, 58, 59, 60" },
     { ...SRC.kc, label: "Kodeks cywilny — art. 940 (wyłączenie małżonka od dziedziczenia)" },
     { ...SRC.uksc, label: "Ustawa o kosztach sądowych w sprawach cywilnych — art. 26, 79" },
+    { ...SRC.kpc, label: "Kodeks postępowania cywilnego — art. 103, art. 187 § 1 pkt 3 (próba mediacji)" },
   ],
 };

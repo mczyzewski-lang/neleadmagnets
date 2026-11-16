@@ -165,7 +165,8 @@ export function commonEffects(a: SeparationAnswers): string[] {
     "Możliwe są alimenty między małżonkami na zbliżonych zasadach (wymaga analizy).",
   ];
   if (a.children !== "none") out.splice(1, 0, "Sąd rozstrzyga o władzy rodzicielskiej, kontaktach i alimentach na wspólne małoletnie dzieci, uwzględniając porozumienie rodziców zgodne z dobrem dziecka.");
-  out.push("W obu przypadkach można skorzystać z mediacji. Jest dobrowolna — jeśli sąd skieruje Was do mediacji, możesz się temu sprzeciwić.");
+  out.push("W obu przypadkach warto najpierw zaplanować i spróbować uzgodnić sprawy (samodzielnie lub w mediacji), a dopiero potem składać pozew. Pozew musi zawierać informację o próbie mediacji, a jeśli jej nie było — wyjaśnienie dlaczego (art. 187 § 1 pkt 3 KPC).");
+  out.push("Mediacja jest dobrowolna — jeśli sąd skieruje Was do mediacji, możesz się temu sprzeciwić. Przy przemocy lub kontroli nie musisz jej proponować.");
   return out;
 }
 

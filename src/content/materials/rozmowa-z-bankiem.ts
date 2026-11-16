@@ -22,7 +22,7 @@ export const material: Material = {
     "Arkusz liczb: saldo, rata, okres, oprocentowanie, wartość nieruchomości, LTV.",
     "Listę dokumentów, o które bank może poprosić.",
     "Skrypt rozmowy telefonicznej i spotkania w oddziale.",
-    "Listę pytań do zadania doradcy i miejsce na notatki.",
+    "Listę pytań do doradcy, miejsce na notatki i arkusz opcji do uzgodnienia z drugim kredytobiorcą — zanim sprawa trafi do sądu.",
     "Ostrzeżenie przed wstrzymaniem spłat i jego możliwymi konsekwencjami.",
   ],
   time: "25 min",
@@ -44,6 +44,14 @@ export const material: Material = {
       a: "Nie przestawaj płacić bez rozmowy. Skontaktuj się z bankiem jak najwcześniej i zapytaj o dostępne rozwiązania. Zaległości mogą trafić do BIK i skutkować wypowiedzeniem umowy.",
     },
     {
+      q: "Dlaczego najpierw liczby i bank, potem ustalenia, a dopiero na końcu pozew?",
+      a: "Bo bank nie jest związany waszymi ustaleniami, dopóki się na nie nie zgodzi. Jeśli najpierw sprawdzisz liczby i to, co bank jest gotów rozważyć, możecie uzgodnić realne rozwiązanie — samodzielnie albo z mediatorem. Każde takie uzgodnienie to jedna sprawa mniej dla sądu, a pozew pisany na gotowych ustaleniach jest konkretny. Gdy nie ma sporu o mieszkanie (a także o winę i dzieci), sprawa rozwodowa często kończy się na jednej rozprawie.",
+    },
+    {
+      q: "Co, jeśli drugi kredytobiorca nie chce rozmawiać o kredycie?",
+      a: "Zaproponuj rozmowę na piśmie, a jeśli to nie pomoże — mediację. Jeśli sprawa trafi do sądu, pozew musi zawierać informację, czy strony próbowały mediacji lub innego polubownego rozwiązania sporu (art. 187 § 1 pkt 3 KPC). Udokumentowana próba pokazuje twoją dobrą wolę, a sąd może obciążyć kosztami stronę, która w sposób oczywiście nieuzasadniony odmówiła mediacji (art. 103 KPC). Nie ma tu gwarancji wyniku. Mediacja jest dobrowolna — przy przemocy, groźbach lub kontroli finansowej nie musisz jej proponować.",
+    },
+    {
       q: "Czy ten materiał zastępuje poradę prawną lub finansową?",
       a: "Nie. To materiał informacyjny, który pomaga przygotować się do rozmów. Decyzje zależą od twojej umowy, sytuacji i zasad konkretnego banku — warto skonsultować je z prawnikiem lub doradcą.",
     },
@@ -60,12 +68,18 @@ export const material: Material = {
       verified: "2026-11-10",
     },
     {
+      label: "Kodeks postępowania cywilnego — art. 103, art. 183¹ i nast. (mediacja), art. 187 § 1 pkt 3",
+      url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19640430296",
+      verified: "2026-11-16",
+    },
+    {
       label: "Mediacje — gov.pl",
       url: "https://www.gov.pl/web/gov/rozwiaz-spor-przez-mediacje",
       verified: "2026-11-10",
     },
   ],
   nextOffer: "plan-rozwodu",
+  stage: 1,
   ctaLabel: "Ułóż plan podziału majątku i kredytu przed pozwem",
   seo: {
     title: "Kredyt po rozstaniu: rozmowa z bankiem | Nowy Etap",
@@ -80,6 +94,11 @@ export const material: Material = {
       intro:
         "Wiele osób zakłada, że skoro sąd orzeknie rozwód albo podzielicie majątek, to kredyt „podzieli się” razem z nim. Tak nie jest.",
       blocks: [
+        {
+          type: "path",
+          current: 1,
+          note: "Ten materiał to część planu: zbierasz liczby i sprawdzasz, co bank jest gotów rozważyć. Z tą wiedzą łatwiej uzgodnić kredyt z drugą osobą (etap ustaleń), a pozew — jeśli będzie potrzebny — obejmie już tylko to, czego nie udało się ustalić.",
+        },
         {
           type: "p",
           text: "Umowa kredytu to umowa między wami a bankiem. Rozstanie, separacja ani rozwód jej nie zmieniają. Jeśli podpisaliście umowę jako współkredytobiorcy, zwykle odpowiadacie solidarnie. Oznacza to, że bank może żądać spłaty całej zaległości od każdego z was — od jednego, od drugiego albo od obojga (art. 366 Kodeksu cywilnego).",
@@ -101,6 +120,7 @@ export const material: Material = {
             "Wyprowadzka z mieszkania nie zwalnia z obowiązku spłaty.",
             "Hipoteka obciąża nieruchomość niezależnie od tego, kto w niej mieszka.",
             "Rozmowa z bankiem to rozpoznanie możliwości, a nie od razu decyzja.",
+            "Kolejność ma znaczenie: najpierw liczby i rozpoznanie w banku, potem ustalenia między wami, a dopiero na końcu pozew i ewentualny podział majątku w sądzie.",
           ],
         },
       ],
@@ -316,6 +336,36 @@ export const material: Material = {
       ],
     },
     {
+      heading: "Ustalcie kredyt między sobą — zanim zajmie się nim sąd",
+      intro:
+        "Gdy znasz już liczby i odpowiedź banku, czas na rozmowę z drugim kredytobiorcą. Nie musicie od razu zgodzić się co do wszystkiego — już wspólna lista realnych opcji porządkuje dalsze kroki. Dlaczego przed pozwem? Bo uzgodnione rozwiązanie bank może ocenić z wyprzedzeniem, a sąd rozstrzyga tylko to, czego nie udało się ustalić.",
+      blocks: [
+        {
+          type: "list",
+          ordered: true,
+          items: [
+            "Podzielcie się informacjami z banku — najlepiej tym samym podsumowaniem na piśmie.",
+            "Wypiszcie opcje, które są realne dla was obojga (np. zwolnienie jednej osoby, refinansowanie, sprzedaż).",
+            "Ustalcie, kto płaci ratę do czasu decyzji banku, i zapiszcie to.",
+            "Jeśli rozmowa utknie, zaproponujcie mediację — mediator pomoże rozmawiać o mieszkaniu i kredycie bez eskalacji.",
+            "Zanim podpiszecie ostateczne ustalenia majątkowe, pokażcie je prawnikowi i upewnijcie się, co bank jest gotów zaakceptować.",
+          ],
+        },
+        {
+          type: "worksheet",
+          title: "Opcje do omówienia z drugim kredytobiorcą",
+          fields: [
+            "Opcja, którą preferuję — i dlaczego",
+            "Opcja, którą mogę zaakceptować awaryjnie",
+            "Czego nie zaakceptuję (moja granica)",
+            "Co już uzgodniliśmy (i gdzie to zapisaliśmy)",
+            "Sprawy do omówienia z mediatorem lub prawnikiem",
+          ],
+        },
+        { type: "mediationAttempt" },
+      ],
+    },
+    {
       heading: "Zanim przestaniesz płacić — przeczytaj to",
       blocks: [
         {
@@ -340,7 +390,7 @@ export const material: Material = {
       blocks: [
         {
           type: "p",
-          text: "Rozmowa z bankiem to jeden z elementów większej układanki: mieszkania, podziału majątku, kosztów życia i — jeśli macie dzieci — ich codzienności. Najlepiej, gdy te elementy są ustalane razem i w odpowiedniej kolejności.",
+          text: "Rozmowa z bankiem to jeden z elementów większej układanki: mieszkania, podziału majątku, kosztów życia i — jeśli macie dzieci — ich codzienności. Najlepiej, gdy te elementy są ustalane razem i w odpowiedniej kolejności: najpierw plan (liczby, opcje, priorytety), potem ustalenia z drugą stroną, a dopiero na końcu pozew.",
         },
         {
           type: "p",

@@ -27,7 +27,7 @@ export const meta: ToolMeta = {
   sources: [
     { ...SRC.kro, label: "Kodeks rodzinny i opiekuńczy — art. 56–61⁴, 95" },
     { ...SRC.kc, label: "Kodeks cywilny — art. 195, 366, 519" },
-    { ...SRC.kpc, label: "Kodeks postępowania cywilnego — art. 17, 183¹, 183⁸" },
+    { ...SRC.kpc, label: "Kodeks postępowania cywilnego — art. 17, 103, 183¹, 183⁸, 187 § 1 pkt 3" },
     { ...SRC.uksc, label: "Ustawa o kosztach sądowych w sprawach cywilnych — art. 26" },
   ],
 };

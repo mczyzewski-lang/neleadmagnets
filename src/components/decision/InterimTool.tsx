@@ -206,7 +206,7 @@ export function InterimTool() {
         <p className="small mt">Jak rozmawiać o tych zasadach rzeczowo? Zobacz <Link href="/materialy/komunikacja-z-drugim-rodzicem">szablony wiadomości do drugiego rodzica</Link>.</p>
       </div>
       <div className="result-section" style={{ background: "var(--cream)" }}>
-        <NextStep toolId={TOOL} offers={[
+        <NextStep toolId={TOOL} intro="Zasady przejściowe to już etap ustaleń. Jeśli zdecydujecie się na rozwód, kolejne sprawy (dzieci, mieszkanie, majątek) warto uzgodnić — samodzielnie lub z mediatorem — zanim ktoś złoży pozew. Każde uzgodnienie to jedna sprawa mniej dla sądu." offers={[
           { key: "mediacja", cta: "Dowiedz się, jak może pomóc mediacja", why: "Jeśli rozmowa o zasadach jest trudna, neutralny mediator może pomóc je wspólnie ustalić. Mediacja jest dobrowolna." },
           { key: "plan-rozwodu", cta: "Odbierz bezpłatny Plan Rozwodu", why: "Zasady przejściowe to pierwszy krok. Plan Rozwodu porządkuje sprawy do ustalenia przed pozwem." },
         ]} />

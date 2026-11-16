@@ -11,6 +11,7 @@ import type { Material } from "@/content/types";
 import { ScoreBadge } from "./ScoreBadge";
 import { MaterialPeek } from "./MaterialPeek";
 import { Workbook } from "./Workbook";
+import { WhyOrderSection } from "@/components/landing/PathOrder";
 
 /** Dopasowanie materiału do powiązanego narzędzia (cross-sell wartości, nie sprzedaży) */
 const RELATED_TOOL: Record<string, string> = {
@@ -104,6 +105,8 @@ export function MaterialLandingView({ m }: { m: Material; demo?: boolean }) {
           </div>
         </div>
       </section>
+
+      <WhyOrderSection current={m.stage} what="Ten materiał" />
 
       <section className="section section--sand">
         <div className="container container--narrow">

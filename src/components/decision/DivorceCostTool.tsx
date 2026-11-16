@@ -94,6 +94,7 @@ export function DivorceCostTool() {
             {i.mediation === "prywatna" && (
               <div className="field"><span className="field__label">Koszt mediacji prywatnej (łącznie)</span><AmountInput label="Koszt mediacji prywatnej" value={i.mediationPrivate} onChange={(v) => set({ mediationPrivate: v })} /></div>
             )}
+            <p className="xsmall muted" style={{ marginBottom: 0 }}>Mediację prywatną możecie przeprowadzić jeszcze przed pozwem. Sprawy uzgodnione wcześniej sąd może uwzględnić w wyroku, a pozew musi zawierać informację o próbie mediacji (art. 187 § 1 pkt 3 KPC). Mediacja jest dobrowolna — przy przemocy lub kontroli nie musisz jej proponować.</p>
           </div>
 
           <div className="card card--sand dc-card">

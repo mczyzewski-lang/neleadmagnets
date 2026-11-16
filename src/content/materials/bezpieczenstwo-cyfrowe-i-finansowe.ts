@@ -44,6 +44,14 @@ export const material: Material = {
       a: "Zacznij od najważniejszych: poczta, telefon, bankowość, chmura. Poczta jest kluczem do resetowania innych haseł, więc warto zabezpieczyć ją jako pierwszą. Resztę możesz zrobić w kolejnych dniach.",
     },
     {
+      q: "Dlaczego bezpieczeństwo jest na samym początku, jeszcze przed ustaleniami i pozwem?",
+      a: "Bo to fundament planu. Zanim zaczniesz rozmawiać o mieszkaniu, kredycie czy dzieciach, warto wiedzieć, na czym stoisz finansowo, i mieć pewność, że twoje konta i dane są pod twoją kontrolą. Z takim planem łatwiej prowadzić ustalenia — albo, jeśli rozmowy nie są bezpieczne, przygotować kolejne kroki z prawnikiem. Pozew przychodzi dopiero na końcu i pisze się go na uporządkowanych faktach.",
+    },
+    {
+      q: "Czy muszę proponować mediację, jeśli boję się drugiej osoby?",
+      a: "Nie. Mediacja jest dobrowolna. Jeśli doświadczasz przemocy, gróźb lub kontroli, nie musisz jej proponować — najpierw zadbaj o bezpieczeństwo i skonsultuj się z prawnikiem lub ośrodkiem pomocy. Pozew musi zawierać informację, czy strony próbowały mediacji lub innego polubownego rozwiązania sporu, a jeśli nie — wyjaśnienie dlaczego (art. 187 § 1 pkt 3 KPC). Jak to opisać w twojej sytuacji, ustal z prawnikiem.",
+    },
+    {
       q: "Boję się reakcji drugiej osoby na zmianę haseł. Co robić?",
       a: "Twoje bezpieczeństwo jest najważniejsze. Jeśli obawiasz się przemocy, najpierw porozmawiaj ze specjalistą (np. Niebieska Linia 800 120 002) i zaplanuj kolejność działań. W sytuacji zagrożenia dzwoń pod 112.",
     },
@@ -65,12 +73,18 @@ export const material: Material = {
       verified: "2026-11-10",
     },
     {
+      label: "Kodeks postępowania cywilnego — art. 183¹ i nast. (mediacja), art. 187 § 1 pkt 3",
+      url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19640430296",
+      verified: "2026-11-16",
+    },
+    {
       label: "Niebieska Linia",
       url: "https://www.niebieskalinia.info/",
       verified: "2026-11-10",
     },
   ],
   nextOffer: "konsultacja",
+  stage: 1,
   ctaLabel: "Porozmawiaj o bezpiecznym planie na czas rozstania",
   seo: {
     title: "Bezpieczeństwo cyfrowe po rozstaniu | Nowy Etap",
@@ -85,6 +99,11 @@ export const material: Material = {
       intro:
         "Twoja skrzynka e-mail to klucz do większości innych kont — przez nią resetuje się hasła. Dlatego zabezpiecz ją jako pierwszą.",
       blocks: [
+        {
+          type: "path",
+          current: 1,
+          note: "Bezpieczeństwo to pierwszy element planu: zanim zaczniesz jakiekolwiek rozmowy czy formalności, upewnij się, że twoje konta, dane i finanse są pod twoją kontrolą i wiesz, na czym stoisz. Na takim fundamencie łatwiej o spokojne ustalenia — a jeśli rozmowy nie są bezpieczne, o rozsądne kolejne kroki z prawnikiem.",
+        },
         {
           type: "checklist",
           items: [
@@ -302,11 +321,17 @@ export const material: Material = {
       blocks: [
         {
           type: "p",
-          text: "Gdy twoje konta i finanse są zabezpieczone, łatwiej skupić się na tym, co dalej: podziale majątku, ustaleniach dotyczących dzieci i kolejności kroków przed złożeniem pozwu.",
+          text: "Gdy twoje konta i finanse są zabezpieczone, łatwiej skupić się na tym, co dalej: dokończeniu planu (budżet, majątek, potrzeby dzieci, twoje priorytety), a potem na ustaleniach dotyczących dzieci, mieszkania i majątku — zanim w ogóle pojawi się temat pozwu.",
         },
         {
           type: "p",
-          text: "Nowy Etap może pomóc ci przygotować Plan Rozwodu i ustalenia przed pozwem albo poprowadzić mediację, jeśli chcecie rozmawiać przy wsparciu neutralnej osoby. Najpierw plan i ustalenia — dopiero potem pozew. Bez pośpiechu, w twoim tempie.",
+          text: "Nowy Etap może pomóc ci przygotować Plan Rozwodu i ustalenia przed pozwem albo poprowadzić mediację, jeśli oboje chcecie rozmawiać przy wsparciu neutralnej osoby i jest to dla ciebie bezpieczne. Najpierw plan i ustalenia — dopiero potem pozew. Bez pośpiechu, w twoim tempie.",
+        },
+        {
+          type: "callout",
+          tone: "safety",
+          title: "Najpierw bezpieczeństwo",
+          text: "Mediacja jest dobrowolna. Jeśli doświadczasz przemocy, gróźb lub kontroli — także finansowej czy cyfrowej — nie musisz jej proponować. Zadbaj najpierw o bezpieczeństwo i skonsultuj kolejność kroków z prawnikiem lub ośrodkiem pomocy (Niebieska Linia: 800 120 002, w zagrożeniu 112).",
         },
       ],
     },

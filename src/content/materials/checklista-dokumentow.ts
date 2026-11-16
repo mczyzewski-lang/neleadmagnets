@@ -7,25 +7,30 @@ export const material: Material = {
   coverSubtitle: "Rozwód · dzieci · majątek · kredyt",
   coverTone: "gold",
   h1: "Checklista dokumentów do rozwodu, podziału majątku i spraw dzieci",
-  h2: "Zbierz wszystko w jednym miejscu: co jest potrzebne zawsze, co zależy od Twojej sytuacji i gdzie to uzyskać.",
+  h2: "Zbierz wszystko w jednym miejscu — najpierw do planu i rozmów o ustaleniach, potem do pozwu. Co jest potrzebne zawsze, co zależy od Twojej sytuacji i gdzie to uzyskać.",
   promise:
     "Jedna lista dokumentów do rozwodu, majątku, dzieci i kredytu — z informacją, skąd je wziąć.",
   forWho: [
-    "Dla osób, które przygotowują się do złożenia pozwu o rozwód lub separację.",
+    "Dla osób, które przygotowują się do rozwodu lub separacji i chcą zacząć od uporządkowanego planu, a nie od pozwu.",
     "Dla tych, którzy chcą uporządkować dokumenty majątkowe przed rozmową z prawnikiem lub mediatorem.",
     "Dla rodziców, którzy będą ustalać alimenty i kontakty z dziećmi.",
     "Dla osób ze wspólnym kredytem hipotecznym lub wspólną nieruchomością.",
   ],
   inside: [
-    "Dokumenty potrzebne zawsze — podstawa każdego pozwu",
     "Dokumenty dotyczące dzieci i alimentów",
     "Dokumenty majątkowe: nieruchomości, pojazdy, konta, firma",
     "Kredyt hipoteczny i inne zobowiązania — co zebrać z banku",
+    "Ustalenia i mediacja: porozumienia oraz dokumenty próby mediacji, które warto wskazać w pozwie",
+    "Dokumenty do pozwu — potrzebne zawsze, gdy przyjdzie czas na sąd",
     "Tabela „skąd to wziąć”: USC, gov.pl, ekw.ms.gov.pl, bank, pracodawca",
     "Arkusz kontrolny: co już mam, czego brakuje",
   ],
   time: "15 min",
   faq: [
+    {
+      q: "Po co zbierać dokumenty próby mediacji, skoro druga strona odmówiła?",
+      a: "Bo próba ma znaczenie także wtedy, gdy się nie powiodła. Pozew musi zawierać informację, czy strony próbowały mediacji lub innego polubownego rozwiązania sporu, a jeśli nie — wyjaśnienie, dlaczego (art. 187 § 1 pkt 3 KPC). Kopia wniosku o mediację, dowód jego doręczenia i informacja od mediatora pokazują sądowi Twoją dobrą wolę. Sąd może też obciążyć kosztami stronę, która w sposób oczywiście nieuzasadniony odmówiła mediacji (art. 103 KPC). Próba nie gwarantuje konkretnego rozstrzygnięcia, a mediacja jest dobrowolna — przy przemocy, groźbach lub kontroli nie musisz jej proponować.",
+    },
     {
       q: "Jaki odpis aktu małżeństwa dołączyć do pozwu?",
       a: "Najczęściej dołącza się odpis skrócony aktu małżeństwa. Możesz go zamówić w dowolnym urzędzie stanu cywilnego albo online przez gov.pl. Przed złożeniem pozwu warto sprawdzić, czy sąd w Twojej sprawie nie oczekuje odpisu zupełnego.",
@@ -45,12 +50,14 @@ export const material: Material = {
   ],
   sources: [
     { label: "Kodeks rodzinny i opiekuńczy (art. 31, 33, 58)", url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19640090059", verified: "2026-11-10" },
+    { label: "Kodeks postępowania cywilnego (art. 103, art. 183¹ i nast., art. 187 § 1 pkt 3)", url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19640430296", verified: "2026-11-16" },
     { label: "Kodeks cywilny (art. 366, art. 519)", url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19640160093", verified: "2026-11-10" },
     { label: "Ustawa o kosztach sądowych w sprawach cywilnych (art. 26)", url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20051671398", verified: "2026-11-10" },
     { label: "gov.pl — Uzyskaj odpis aktu stanu cywilnego", url: "https://www.gov.pl/web/gov/uzyskaj-odpis-aktu-stanu-cywilnego", verified: "2026-11-10" },
     { label: "Elektroniczne Księgi Wieczyste — ekw.ms.gov.pl", url: "https://ekw.ms.gov.pl/", verified: "2026-11-10" },
   ],
   nextOffer: "plan-rozwodu",
+  stage: 1,
   ctaLabel: "Uporządkuj dokumenty w Planie Rozwodu",
   seo: {
     title: "Checklista dokumentów do rozwodu | Nowy Etap",
@@ -66,9 +73,14 @@ export const material: Material = {
         "Dokumenty to fundament spokojnego przygotowania. Kiedy masz je w jednym miejscu, łatwiej rozmawiać o ustaleniach, a prawnik lub mediator szybciej zobaczy pełny obraz.",
       blocks: [
         {
+          type: "path",
+          current: 1,
+          note: "Dokumenty służą najpierw Twojemu planowi i rozmowom o ustaleniach — dopiero potem pozwowi. Kto zna liczby (dochody, koszty dzieci, kredyt, majątek), negocjuje spokojniej i nie zgadza się na rozwiązania pod presją, a pozew pisany na gotowych ustaleniach jest konkretny.",
+        },
+        {
           type: "list",
           items: [
-            "Lista jest podzielona na grupy: zawsze potrzebne, dzieci, majątek, kredyt i zobowiązania.",
+            "Lista jest podzielona na grupy w kolejności, w jakiej zwykle są potrzebne: dzieci, majątek, kredyt i zobowiązania (do planu i rozmów), ustalenia i mediacja, a na końcu dokumenty do pozwu.",
             "Przy każdej grupie zaznaczamy, kiedy dany dokument jest potrzebny — nie musisz zbierać wszystkiego, jeśli Twoja sytuacja tego nie wymaga.",
             "Zrób osobny folder (papierowy i/lub w chmurze) i skanuj dokumenty od razu po otrzymaniu.",
             "Zbieraj kopie dokumentów, do których masz legalny dostęp. Nie zabieraj i nie ukrywaj oryginałów należących do drugiej strony — to może zaostrzyć konflikt.",
@@ -82,32 +94,9 @@ export const material: Material = {
       ],
     },
     {
-      heading: "Dokumenty potrzebne zawsze",
-      intro: "To podstawa pozwu o rozwód (lub separację). Bez nich pozew może zostać zwrócony do uzupełnienia.",
-      blocks: [
-        {
-          type: "checklist",
-          items: [
-            "Odpis skrócony aktu małżeństwa — z USC lub online przez gov.pl.",
-            "Odpisy skrócone aktów urodzenia wspólnych małoletnich dzieci — j.w.",
-            "Dowód uiszczenia opłaty od pozwu: 600 zł (art. 26 ustawy o kosztach sądowych w sprawach cywilnych) albo wniosek o zwolnienie od kosztów z oświadczeniem o stanie rodzinnym, majątku i dochodach.",
-            "Pozew wraz z odpisem dla drugiej strony (i odpisami wszystkich załączników).",
-            "Pełnomocnictwo i dowód opłaty skarbowej od pełnomocnictwa — jeśli działa w Twoim imieniu pełnomocnik.",
-            "Twój numer PESEL i aktualne adresy obu stron (do wpisania w pozwie).",
-          ],
-        },
-        {
-          type: "callout",
-          tone: "info",
-          title: "Odpis online",
-          text: "Odpis aktu stanu cywilnego (małżeństwa, urodzenia) możesz zamówić przez internet na gov.pl — z profilem zaufanym lub e-dowodem. Możesz wybrać odbiór elektroniczny lub w urzędzie. Sprawdź aktualną opłatę skarbową w usłudze na gov.pl.",
-        },
-      ],
-    },
-    {
       heading: "Dzieci i alimenty",
       intro:
-        "Sąd w wyroku rozwodowym rozstrzyga o władzy rodzicielskiej, kontaktach i kosztach utrzymania dzieci (art. 58 § 1 KRO). Dokumenty pomagają pokazać realne potrzeby dziecka i możliwości rodziców.",
+        "Te dokumenty przydają się najpierw Wam — gdy liczycie budżet dziecka i ustalacie plan opieki oraz alimenty. Później pomagają sądowi, który w wyroku rozwodowym rozstrzyga o władzy rodzicielskiej, kontaktach i kosztach utrzymania dzieci (art. 58 § 1 KRO). Dokumenty pokazują realne potrzeby dziecka i możliwości rodziców.",
       blocks: [
         {
           type: "table",
@@ -125,10 +114,10 @@ export const material: Material = {
         {
           type: "checklist",
           items: [
-            "Zestawiłem/Zestawiłam/am koszty dziecka z ostatnich 3–6 miesięcy.",
+            "Zestawiłem/Zestawiłam koszty dziecka z ostatnich 3–6 miesięcy.",
             "Mam potwierdzenia płatności za stałe wydatki (przedszkole, zajęcia, leki).",
             "Mam dokumenty o swoich dochodach (PIT za ostatni rok, zaświadczenie z pracy).",
-            "Spisałem/Spisałam/am obecny rytm opieki: kto zawozi, kto odbiera, kto jest z dzieckiem w weekendy.",
+            "Spisałem/Spisałam obecny rytm opieki: kto zawozi, kto odbiera, kto jest z dzieckiem w weekendy.",
           ],
         },
       ],
@@ -136,7 +125,7 @@ export const material: Material = {
     {
       heading: "Majątek: nieruchomości, pojazdy, konta, firma",
       intro:
-        "Te dokumenty są potrzebne, jeśli chcesz dzielić majątek w wyroku, osobno w sądzie albo umownie — a także po to, by w ogóle wiedzieć, co wchodzi do majątku wspólnego (art. 31 KRO), a co jest Twoim majątkiem osobistym (art. 33 KRO).",
+        "Te dokumenty są potrzebne, jeśli chcesz dzielić majątek — umownie, w wyroku albo osobno w sądzie — a przede wszystkim po to, by w ogóle wiedzieć, co wchodzi do majątku wspólnego (art. 31 KRO), a co jest Twoim majątkiem osobistym (art. 33 KRO).",
       blocks: [
         {
           type: "table",
@@ -189,6 +178,49 @@ export const material: Material = {
       ],
     },
     {
+      heading: "Ustalenia i mediacja: porozumienia i próba mediacji",
+      intro:
+        "Zanim powstanie pozew, warto spróbować się porozumieć — samodzielnie albo z mediatorem. Każde uzgodnienie to jedna sprawa mniej dla sądu. Zachowaj dokumenty z tego etapu: zarówno spisane ustalenia, jak i ślad próby mediacji, nawet jeśli druga strona się nie zgodziła.",
+      blocks: [
+        {
+          type: "checklist",
+          items: [
+            "Spisane ustalenia z rozmów (np. notatka lub e-mail podsumowujący uzgodnienia) — także częściowe.",
+            "Porozumienie rodzicielskie / plan wychowawczy, jeśli je macie (art. 58 § 1a KRO).",
+            "Ugoda zawarta przed mediatorem, jeśli mediacja zakończyła się porozumieniem.",
+            "Kopia wniosku o mediację skierowanego do mediatora.",
+            "Dowód doręczenia wniosku o mediację drugiej stronie (np. potwierdzenie nadania i odbioru, e-mail).",
+            "Odpowiedź drugiej strony i korespondencja w sprawie mediacji.",
+            "Pisemna informacja od mediatora o przebiegu mediacji albo o braku zgody drugiej strony.",
+          ],
+        },
+        { type: "mediationAttempt" },
+      ],
+    },
+    {
+      heading: "Do pozwu: dokumenty potrzebne zawsze",
+      intro: "To podstawa pozwu o rozwód (lub separację) — potrzebna wtedy, gdy masz już plan i za sobą rozmowy o ustaleniach. Bez tych dokumentów pozew może zostać zwrócony do uzupełnienia. Odpisy aktów możesz zamówić wcześniej, ale sam pozew warto pisać dopiero na gotowych ustaleniach.",
+      blocks: [
+        {
+          type: "checklist",
+          items: [
+            "Odpis skrócony aktu małżeństwa — z USC lub online przez gov.pl.",
+            "Odpisy skrócone aktów urodzenia wspólnych małoletnich dzieci — j.w.",
+            "Dowód uiszczenia opłaty od pozwu: 600 zł (art. 26 ustawy o kosztach sądowych w sprawach cywilnych) albo wniosek o zwolnienie od kosztów z oświadczeniem o stanie rodzinnym, majątku i dochodach.",
+            "Pozew wraz z odpisem dla drugiej strony (i odpisami wszystkich załączników).",
+            "Pełnomocnictwo i dowód opłaty skarbowej od pełnomocnictwa — jeśli działa w Twoim imieniu pełnomocnik.",
+            "Twój numer PESEL i aktualne adresy obu stron (do wpisania w pozwie).",
+          ],
+        },
+        {
+          type: "callout",
+          tone: "info",
+          title: "Odpis online",
+          text: "Odpis aktu stanu cywilnego (małżeństwa, urodzenia) możesz zamówić przez internet na gov.pl — z profilem zaufanym lub e-dowodem. Możesz wybrać odbiór elektroniczny lub w urzędzie. Sprawdź aktualną opłatę skarbową w usłudze na gov.pl.",
+        },
+      ],
+    },
+    {
       heading: "Skąd wziąć dokumenty — ściąga",
       blocks: [
         {
@@ -218,6 +250,7 @@ export const material: Material = {
             "Dokumenty, które już mam (lista):",
             "Brakuje mi — do zamówienia online:",
             "Brakuje mi — do odebrania osobiście (gdzie, kiedy):",
+            "Dokumenty ustaleń i próby mediacji — co mam, czego brakuje:",
             "Pytania do banku:",
             "Pytania do prawnika:",
             "Termin, do którego chcę mieć komplet:",
@@ -230,11 +263,11 @@ export const material: Material = {
       blocks: [
         {
           type: "p",
-          text: "Komplet dokumentów to świetny punkt wyjścia do rozmowy o ustaleniach. Jeśli chcesz, w Nowym Etapie pomożemy Ci przełożyć je na Plan Rozwodu: kto zostaje w mieszkaniu, co z kredytem, jak podzielić majątek i jak zorganizować opiekę nad dziećmi — zanim powstanie pozew.",
+          text: "Komplet dokumentów to świetny punkt wyjścia do rozmowy o ustaleniach — a dopiero po niej do pozwu. Jeśli chcesz, w Nowym Etapie pomożemy Ci przełożyć je na Plan Rozwodu: kto zostaje w mieszkaniu, co z kredytem, jak podzielić majątek i jak zorganizować opiekę nad dziećmi — zanim powstanie pozew.",
         },
         {
           type: "p",
-          text: "Możesz też najpierw spokojnie zebrać wszystko z tej listy i wrócić do nas, kiedy będziesz gotowy. Pamiętaj, że to materiał informacyjny — ostateczne decyzje skonsultuj z prawnikiem.",
+          text: "Możesz też najpierw spokojnie zebrać wszystko z tej listy i wrócić do nas, kiedy poczujesz, że to dobry moment. Pamiętaj, że to materiał informacyjny — ostateczne decyzje skonsultuj z prawnikiem.",
         },
       ],
     },

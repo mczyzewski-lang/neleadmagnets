@@ -98,3 +98,12 @@ Rozporządzenie o wynagrodzeniu mediatora: **Dz.U. 2026 poz. 170** – https://e
 7. Mediacja: po nowelizacji KPC – domniemana zgoda (sprzeciw w tygodniu) przy skierowaniu przez sąd; przy przemocy – brak ogólnego zakazu w KPC, ale wyłączenie nieodpłatnej mediacji i art. 48 Konwencji stambulskiej.
 8. Wynagrodzenie mediatora – nowe stawki z Dz.U. 2026 poz. 170.
 9. Rozwód w USC – **zawetowany 30.04.2026, nie obowiązuje**; piecza współdzielona (UD349) – **projekt**.
+
+## Mediacja — próba i jej dokumentowanie (dodane 16.11.2026)
+
+| # | Teza w treściach | Status | Uwagi |
+|---|---|---|---|
+| M1 | Pozew zawiera informację, czy strony podjęły próbę mediacji lub innego pozasądowego sposobu rozwiązania sporu, a jeśli nie — wyjaśnienie przyczyn (art. 187 § 1 pkt 3 KPC) | potwierdzone (źródła wtórne, wyszukiwarka 16.11.2026) | Tekst jednolity ISAP niedostępny z sesji — **do potwierdzenia przez prawnika** w aktualnym t.j. KPC. |
+| M2 | Sąd może obciążyć kosztami stronę, która w sposób oczywiście nieuzasadniony odmówiła poddania się mediacji (art. 103 KPC) | potwierdzone co do istoty | Dokładne brzmienie (w tym ewentualny warunek wcześniejszej zgody) — **do weryfikacji** w t.j.; w treściach używamy sformułowania „może”. |
+| M3 | Udokumentowana próba mediacji pokazuje dobrą wolę i gotowość do porozumienia | ocena praktyczna, nie przepis | Formułowane bez gwarancji („bywa istotne”, „może działać na Twoją korzyść”); zawsze z zastrzeżeniem dobrowolności i bezpieczeństwa (przemoc). |
+| M4 | Mediację z inicjatywy strony wszczyna doręczenie mediatorowi wniosku z dowodem doręczenia odpisu drugiej stronie (art. 183⁶ § 1 KPC); brak zgody drugiej strony = mediacja nie dochodzi do skutku | potwierdzone co do § 1; skutek braku zgody — do weryfikacji brzmienia | W treściach: „poproś mediatora o pisemną informację”. |

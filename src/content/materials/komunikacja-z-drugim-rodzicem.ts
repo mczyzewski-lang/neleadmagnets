@@ -22,7 +22,7 @@ export const material: Material = {
     "Wzór odpowiedzi na wrogą lub prowokującą wiadomość.",
     "Propozycję zasad komunikacji do ustalenia z drugim rodzicem.",
     "Listę sformułowań, których lepiej unikać — z zamiennikami.",
-    "Wzór dziennika ustaleń.",
+    "Wzór dziennika ustaleń i szablon pisemnej propozycji mediacji — z informacją, jak udokumentować próbę, zanim sprawa trafi do sądu.",
     "Informację, kiedy przerwać bezpośredni kontakt i gdzie szukać pomocy.",
   ],
   time: "20 min",
@@ -33,7 +33,7 @@ export const material: Material = {
     },
     {
       q: "Co, jeśli drugi rodzic w ogóle nie odpowiada?",
-      a: "Wyślij jedną krótką przypominającą wiadomość z jasnym terminem odpowiedzi i zapisz to w dzienniku ustaleń. Jeśli brak kontaktu się powtarza i dotyczy ważnych spraw dziecka, warto porozmawiać z mediatorem lub prawnikiem.",
+      a: "Wyślij jedną krótką przypominającą wiadomość z jasnym terminem odpowiedzi i zapisz to w dzienniku ustaleń. Jeśli brak kontaktu się powtarza i dotyczy ważnych spraw dziecka, kolejnym krokiem może być pisemna propozycja mediacji (szablon 25) i rozmowa z mediatorem lub prawnikiem — zanim pomyślisz o wniosku do sądu.",
     },
     {
       q: "Czy wiadomości mogą być później użyte w sądzie?",
@@ -41,7 +41,11 @@ export const material: Material = {
     },
     {
       q: "O czym rodzice muszą decydować wspólnie?",
-      a: "Jeśli oboje macie władzę rodzicielską, o istotnych sprawach dziecka (np. wybór szkoły, poważne leczenie) co do zasady rozstrzygacie wspólnie (art. 97 § 2 KRO). W razie braku porozumienia rozstrzyga sąd.",
+      a: "Jeśli oboje macie władzę rodzicielską, o istotnych sprawach dziecka (np. wybór szkoły, poważne leczenie) co do zasady rozstrzygacie wspólnie (art. 97 § 2 KRO). Gdy nie możecie się porozumieć, warto najpierw spróbować rozmowy z pomocą mediatora. Jeśli i to nie pomoże, rozstrzyga sąd.",
+    },
+    {
+      q: "Dlaczego najpierw pisemne ustalenia i mediacja, a dopiero potem sąd?",
+      a: "Bo to, co uzgodnicie, zostaje w waszych rękach. Porozumienie o wychowaniu dzieci sąd może uwzględnić w wyroku, więc zostaje mniej kwestii do udowadniania, a dzieci nie stają się „przedmiotem sporu” na sali sądowej. A jeśli sprawa trafi do sądu, pozew musi zawierać informację, czy strony próbowały mediacji lub innego polubownego rozwiązania sporu (art. 187 § 1 pkt 3 KPC). Udokumentowana próba pokazuje twoją dobrą wolę — nawet jeśli druga strona odmówi. Nie gwarantuje to konkretnego rozstrzygnięcia, a przy przemocy, groźbach lub kontroli nie musisz proponować mediacji.",
     },
   ],
   sources: [
@@ -49,6 +53,16 @@ export const material: Material = {
       label: "Kodeks rodzinny i opiekuńczy, art. 97 § 2 i art. 113 i nast.",
       url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19640090059",
       verified: "2026-11-10",
+    },
+    {
+      label: "Kodeks postępowania cywilnego — art. 103, art. 183¹ i nast. (mediacja), art. 187 § 1 pkt 3",
+      url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19640430296",
+      verified: "2026-11-16",
+    },
+    {
+      label: "Kodeks rodzinny i opiekuńczy — art. 58 (porozumienie o wychowaniu dzieci)",
+      url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19640090059",
+      verified: "2026-11-16",
     },
     {
       label: "Mediacje — gov.pl",
@@ -62,6 +76,7 @@ export const material: Material = {
     },
   ],
   nextOffer: "mediacja",
+  stage: 2,
   ctaLabel: "Ustalcie zasady kontaktów w mediacji",
   seo: {
     title: "Wiadomości do drugiego rodzica — szablony | Nowy Etap",
@@ -76,6 +91,11 @@ export const material: Material = {
       intro:
         "Większość konfliktów w wiadomościach nie dotyczy samej sprawy, tylko tonu. Metoda 4K to prosta rama, którą sprawdzisz przed wysłaniem każdej wiadomości.",
       blocks: [
+        {
+          type: "path",
+          current: 2,
+          note: "Ten materiał służy etapowi ustaleń: rzeczowe wiadomości, pisemne potwierdzenia i — gdy rozmowa utknie — mediacja. Każda sprawa dziecka uzgodniona na tym etapie to jedna sprawa mniej do rozstrzygania przez sąd.",
+        },
         {
           type: "table",
           head: ["Zasada", "Co oznacza", "Pytanie kontrolne"],
@@ -310,7 +330,7 @@ export const material: Material = {
     {
       heading: "Dziennik ustaleń",
       intro:
-        "Krótki, regularnie prowadzony dziennik zmniejsza liczbę sporów o to, „kto co powiedział”. Pomaga też w mediacji i przy ewentualnych zmianach ustaleń.",
+        "Krótki, regularnie prowadzony dziennik zmniejsza liczbę sporów o to, „kto co powiedział”. Pomaga też w mediacji i przy ewentualnych zmianach ustaleń. Zapisuj w nim również propozycje mediacji i odpowiedzi na nie.",
       blocks: [
         {
           type: "table",
@@ -318,6 +338,7 @@ export const material: Material = {
           rows: [
             ["[data]", "Odbiór w weekend", "Sobota 10:00 zamiast piątku 16:00", "SMS z [data]", "Zrealizowane"],
             ["[data]", "Wydatek: wycieczka szkolna", "Po połowie, przelew do [data]", "E-mail z [data]", "Czeka na przelew"],
+            ["[data]", "Propozycja mediacji w sprawie kalendarza kontaktów", "Wysłana propozycja, termin odpowiedzi [data]", "E-mail z [data]", "Czeka na odpowiedź"],
             ["", "", "", "", ""],
             ["", "", "", "", ""],
           ],
@@ -358,8 +379,40 @@ export const material: Material = {
         },
         {
           type: "p",
-          text: "Gdy konflikt jest silny, ale bez przemocy, pomocne mogą być: komunikacja wyłącznie mailowa, przekazywanie dziecka w neutralnym miejscu albo mediacja, w której zasady kontaktów ustalacie przy wsparciu neutralnej osoby. W razie sporu o kontakty z dzieckiem rozstrzyga sąd (art. 113 i nast. KRO).",
+          text: "Gdy konflikt jest silny, ale bez przemocy, pomocne mogą być: komunikacja wyłącznie mailowa, przekazywanie dziecka w neutralnym miejscu albo mediacja, w której zasady kontaktów ustalacie przy wsparciu neutralnej osoby. Dopiero gdy te drogi nie przynoszą porozumienia, o kontaktach z dzieckiem rozstrzyga sąd (art. 113 i nast. KRO).",
         },
+      ],
+    },
+    {
+      heading: "Od wiadomości do porozumienia — zanim sprawa trafi do sądu",
+      intro:
+        "Gdy pojedyncze wiadomości nie wystarczają, nie zaczynaj od wniosku do sądu. Najpierw spróbujcie spisać ustalenia na dłużej, a jeśli rozmowa utknie — zaproponuj mediację. Dlaczego w tej kolejności? Uzgodnione sprawy zostają w waszych rękach, a sąd rozstrzyga tylko to, czego nie udało się ustalić.",
+      blocks: [
+        {
+          type: "list",
+          ordered: true,
+          items: [
+            "Rzeczowe wiadomości (Metoda 4K) i pisemne podsumowania ustaleń.",
+            "Spisanie zasad na dłużej: kalendarz kontaktów, wakacje, święta, wydatki, ważne decyzje.",
+            "Mediacja — gdy w jakiejś sprawie nie możecie się dogadać samodzielnie.",
+            "Sąd — dla spraw, których nie udało się ustalić; to, co uzgodniliście (np. porozumienie o wychowaniu dzieci), sąd może uwzględnić w wyroku.",
+          ],
+        },
+        {
+          type: "script",
+          title: "Propozycja mediacji na piśmie",
+          lines: [
+            {
+              label: "25. Propozycja mediacji",
+              text: "Widzę, że w sprawie [temat, np. kalendarza kontaktów] nie udaje nam się dojść do porozumienia. Proponuję mediację — spotkanie z neutralnym mediatorem, który pomoże nam ustalić zasady. Mogę przesłać kontakt do [mediator / ośrodek] lub rozważyć twoją propozycję. Daj znać do [data], czy się zgadzasz.",
+            },
+            {
+              label: "26. Odpowiedź na odmowę mediacji",
+              text: "Dziękuję za odpowiedź. Szkoda, bo zależy mi na tym, żebyśmy sprawy [imię dziecka] ustalili sami. Moja propozycja mediacji pozostaje aktualna — jeśli zmienisz zdanie, daj znać.",
+            },
+          ],
+        },
+        { type: "mediationAttempt" },
       ],
     },
     {
@@ -371,7 +424,7 @@ export const material: Material = {
         },
         {
           type: "p",
-          text: "Nowy Etap może pomóc wam w mediacji albo w przygotowaniu Planu Rozwodu i ustaleń dotyczących dzieci przed złożeniem pozwu. Najpierw plan i ustalenia — dopiero potem pozew. Możesz wrócić do nas, kiedy będziesz gotowy.",
+          text: "Nowy Etap może pomóc wam w mediacji albo w przygotowaniu Planu Rozwodu i ustaleń dotyczących dzieci przed złożeniem pozwu. Najpierw plan i ustalenia — dopiero potem pozew, który zbiera to, co już uzgodniliście. Możesz wrócić do nas, kiedy będziesz gotowy.",
         },
       ],
     },

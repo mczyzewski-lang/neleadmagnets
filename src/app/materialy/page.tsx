@@ -1,5 +1,7 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { MATERIALS } from "@/content/materials";
+import { PATH } from "@/content/philosophy";
 import { MaterialCard } from "@/components/materials/MaterialCard";
 import { absoluteUrl } from "@/lib/site";
 
@@ -21,9 +23,29 @@ export default function MaterialsHub() {
       </section>
       <section className="section" style={{ paddingTop: 8 }}>
         <div className="container">
-          <div className="grid grid--2 grid--3">
-            {MATERIALS.map((m) => <MaterialCard key={m.slug} m={m} />)}
-          </div>
+          <p className="muted" style={{ maxWidth: "70ch" }}>Materiały ułożyliśmy według naszej ścieżki: <strong>najpierw plan, potem ustalenia (rozmowa, mediacja), dopiero na końcu pozew i sąd</strong>. Zacznij od etapu, na którym jesteś.</p>
+          {PATH.map((p) => {
+            const items = MATERIALS.filter((m) => m.stage === p.stage);
+            if (!items.length && p.stage !== 3) return null;
+            return (
+              <div key={p.stage} className="stage-group">
+                <h2 className="stage-group__h"><span className="path__num" aria-hidden="true">{p.stage}</span> {p.name} <span className="stage-group__sub">— {p.short}</span></h2>
+                <p className="small muted" style={{ maxWidth: "70ch" }}>{p.text}</p>
+                {items.length > 0 && (
+                  <div className="grid grid--2 grid--3">
+                    {items.map((m) => <MaterialCard key={m.slug} m={m} />)}
+                  </div>
+                )}
+                {p.stage === 3 && (
+                  <Link href="/przed-decyzja/pozew-rozwodowy-checklista" className="card card-link card--sand" style={{ maxWidth: 560, marginTop: 12 }}>
+                    <strong>Checklista pozwu rozwodowego</strong>
+                    <span className="small muted">Gdy plan i ustalenia są gotowe: co powinien zawierać pozew, jakie załączniki i jak opisać próbę mediacji.</span>
+                    <span className="card-link__more">Przejdź do narzędzia →</span>
+                  </Link>
+                )}
+              </div>
+            );
+          })}
         </div>
       </section>
     </>

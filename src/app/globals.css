@@ -1810,3 +1810,40 @@ body:has(#og) main { padding: 0; }
 .wb__notes dd { margin: 0; }
 @media print { .wb__top { position: static; } }
 .wb__remember { margin: 20px 0 8px; padding: 12px 14px; border: 1px dashed var(--line-strong); border-radius: var(--r-md); background: var(--cream); }
+
+/* ---------- Ścieżka: Plan → Ustalenia → Pozew i sąd ---------- */
+.path { margin: 20px 0; }
+.path__steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+@media (min-width: 720px) { .path__steps { grid-template-columns: repeat(3, 1fr); } }
+.path__step {
+  position: relative; display: flex; gap: 12px; align-items: flex-start;
+  padding: 14px 16px; border: 1px solid var(--line); border-radius: var(--r-md); background: #fff;
+}
+@media (min-width: 720px) {
+  .path__step:not(:last-child)::after {
+    content: ""; position: absolute; right: -9px; top: 50%; width: 8px; height: 8px; z-index: 1;
+    border-top: 2px solid var(--line-strong); border-right: 2px solid var(--line-strong); transform: translateY(-50%) rotate(45deg);
+  }
+}
+.path__num {
+  flex: 0 0 30px; height: 30px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--sand-2); color: var(--green-800); font-weight: 700; font-size: var(--fs-sm);
+}
+.path__txt { display: flex; flex-direction: column; gap: 2px; font-size: var(--fs-sm); color: var(--ink-2); }
+.path__txt strong { color: var(--green-800); font-size: var(--fs-md); }
+.path__step.is-current { border-color: var(--green-700); background: var(--green-50); box-shadow: 0 0 0 1px var(--green-700) inset; }
+.path__step.is-current .path__num { background: var(--green-700); color: #fff; }
+.path__here {
+  position: absolute; top: -10px; right: 12px; padding: 2px 8px; border-radius: 999px;
+  background: var(--gold-500); color: var(--green-900); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em;
+}
+.path__note { margin: 10px 0 0; font-size: var(--fs-sm); color: var(--ink-2); }
+.why-list { margin: 0; display: flex; flex-direction: column; gap: 14px; }
+.why-list dt { font-weight: 700; color: var(--green-800); }
+.why-list dd { margin: 2px 0 0; color: var(--ink-2); }
+.med-attempt h4 { margin-top: 0; }
+.med-attempt .alert { margin-top: 12px; }
+@media print { .path__step { break-inside: avoid; } }
+.stage-group { margin-top: 40px; }
+.stage-group__h { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; font-size: var(--fs-xl); margin-bottom: 4px; }
+.stage-group__sub { font-weight: 500; color: var(--ink-3); font-size: var(--fs-md); }

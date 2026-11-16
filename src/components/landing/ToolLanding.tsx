@@ -9,6 +9,8 @@ import { DECISION_TOOLS } from "@/lib/decisionTools";
 import { Faq } from "./Faq";
 import { Sources } from "./Sources";
 import { StickyCta } from "./StickyCta";
+import { WhyOrderSection } from "./PathOrder";
+import { TOOL_STAGE } from "@/lib/toolStages";
 
 /**
  * Wspólna struktura landingu narzędzia:
@@ -100,6 +102,8 @@ export function ToolLanding({ tool, preview, children, extra, hub = { href: "/na
       </section>
 
       {extra}
+
+      {TOOL_STAGE[tool.slug] && <WhyOrderSection current={TOOL_STAGE[tool.slug]} />}
 
       <section className="section section--sand landing-only">
         <div className="container container--narrow">

@@ -36,6 +36,7 @@ export const MATERIAL_SAMPLES: Record<string, MaterialSample> = {
 
   "checklista-dokumentow": {
     fields: {
+      "Dokumenty ustaleń i próby mediacji — co mam, czego brakuje:": "mam wniosek do mediatora, brak potwierdzenia doręczenia",
       "Dokumenty, które już mam (lista):": "akt małżeństwa, PIT za 2025, umowa kredytu",
       "Brakuje mi — do zamówienia online:": "akty urodzenia Oli i Kuby (gov.pl)",
       "Brakuje mi — do odebrania osobiście (gdzie, kiedy):": "zaświadczenie o saldzie — oddział, pt 20.11",
@@ -72,7 +73,7 @@ export const MATERIAL_SAMPLES: Record<string, MaterialSample> = {
       "Pytania do prawnika / banku / notariusza:": "jak policzyć nakład na remont?",
     },
     ticks: {
-      "Sprawdziłem/Sprawdziłam/am treść księgi wieczystej każdej nieruchomości.": "sprawdzone online 9.11",
+      "Sprawdziłem/Sprawdziłam treść księgi wieczystej każdej nieruchomości.": "sprawdzone online 9.11",
       "Wiem, z jakich środków kupiono nieruchomość (wspólne, osobiste, pomoc rodziny).": "",
       "Mam aktualne zaświadczenie o saldzie każdego kredytu.": "",
     },
@@ -152,6 +153,7 @@ export const MATERIAL_SAMPLES: Record<string, MaterialSample> = {
 
   "przygotowanie-do-konsultacji": {
     fields: {
+      "Czy któraś ze stron proponowała już mediację lub inne polubowne rozwiązanie? Kiedy, w jakiej formie i z jaką odpowiedzią?": "ja — mailem 2.11, brak odpowiedzi",
       "Data zawarcia małżeństwa i miejsce (USC)": "06.2014, USC w Poznaniu",
       "Ustrój majątkowy: wspólność ustawowa / rozdzielność / inny": "wspólność ustawowa",
       "Dzieci: imiona (lub inicjały) i wiek": "O. (8 l.), J. (5 l.)",
@@ -195,6 +197,13 @@ export const MATERIAL_SAMPLES: Record<string, MaterialSample> = {
 
   "przygotowanie-do-mediacji": {
     fields: {
+      "Data wysłania wniosku o mediację:": "4.11.2026",
+      "Mediator lub ośrodek mediacyjny (imię i nazwisko / nazwa, kontakt):": "ośrodek przy ul. Długiej — p. K.",
+      "Jak i kiedy wniosek został doręczony drugiej stronie (list polecony, e-mail, przez mediatora):": "list polecony 5.11, zwrotka jest",
+      "Odpowiedź drugiej strony (data, treść w skrócie):": "12.11 — na razie odmowa",
+      "Przebieg lub wynik (spotkania, ugoda, częściowe ustalenia, brak zgody):": "mediator wyśle info na piśmie",
+      "Dokumenty, które zachowuję (kopia wniosku, dowód doręczenia, korespondencja, informacja od mediatora):": "kopia wniosku, zwrotka, maile",
+      "Gdzie je przechowuję (folder, skany w chmurze):": "teczka „rozwód” + skany",
       "Trzy najważniejsze dla mnie sprawy (w kolejności):": "1. czas z dziećmi 2. mieszkanie 3. alimenty",
       "Dlaczego każda z nich jest dla mnie ważna (jaka potrzeba za nią stoi — bezpieczeństwo, stabilność, czas z dziećmi, spokój finansowy):":
         "stabilność dla dzieci, spokój finansowy",
@@ -231,6 +240,11 @@ export const MATERIAL_SAMPLES: Record<string, MaterialSample> = {
 
   "rozmowa-z-bankiem": {
     fields: {
+      "Opcja, którą preferuję — i dlaczego": "przejmuję kredyt — zdolność OK wg doradcy",
+      "Opcja, którą mogę zaakceptować awaryjnie": "sprzedaż i spłata, podział nadwyżki",
+      "Czego nie zaakceptuję (moja granica)": "wspólny kredyt bez terminu",
+      "Co już uzgodniliśmy (i gdzie to zapisaliśmy)": "raty po połowie do marca — mail 10.11",
+      "Sprawy do omówienia z mediatorem lub prawnikiem": "rozliczenie wkładu własnego",
       "Numer umowy kredytu i data zawarcia": "z umowy — podpisana 03.2018",
       "Kredytobiorcy wpisani w umowie": "oboje (ja i K.)",
       "Aktualne saldo zadłużenia (kapitał do spłaty)": "ok. 310 000 zł",

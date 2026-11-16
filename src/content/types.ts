@@ -28,7 +28,11 @@ export type MaterialBlock =
   /** Pola do samodzielnego wypełnienia (drukowane jako puste linie) */
   | { type: "worksheet"; title?: string; fields: string[] }
   /** Przykładowe sformułowania / wiadomości */
-  | { type: "script"; title?: string; lines: { label: string; text: string }[] };
+  | { type: "script"; title?: string; lines: { label: string; text: string }[] }
+  /** Ścieżka Nowego Etapu: Plan → Ustalenia → Pozew i sąd, z zaznaczonym etapem tego materiału */
+  | { type: "path"; current: 1 | 2 | 3; note?: string }
+  /** Wspólny blok: dlaczego warto próbować mediacji i jak udokumentować próbę */
+  | { type: "mediationAttempt" };
 
 export type MaterialSection = {
   heading: string;
@@ -61,6 +65,8 @@ export type Material = {
   sources: SourceRef[];
   /** Oferta Nowego Etapu adekwatna jako kolejny krok */
   nextOffer: OfferKey;
+  /** Etap ścieżki Nowego Etapu, któremu służy materiał: 1 Plan, 2 Ustalenia, 3 Pozew i sąd */
+  stage: 1 | 2 | 3;
   /** Kontekstowe CTA pod materiałem */
   ctaLabel: string;
   seo: { title: string; description: string };

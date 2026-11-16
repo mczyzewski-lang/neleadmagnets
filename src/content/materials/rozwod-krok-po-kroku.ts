@@ -7,9 +7,9 @@ export const material: Material = {
   coverSubtitle: "Od decyzji do życia po wyroku",
   coverTone: "green",
   h1: "Rozwód w Polsce krok po kroku — spokojny przewodnik od decyzji do wyroku",
-  h2: "Zobacz cały proces na jednej mapie: co przygotować, gdzie złożyć pozew, ile to kosztuje i co dzieje się po wyroku.",
+  h2: "Zobacz cały proces na jednej mapie — w kolejności, która ma sens: najpierw plan, potem ustalenia i mediacja, dopiero na końcu pozew, sąd i sprawy po wyroku.",
   promise:
-    "Cały proces rozwodowy rozpisany na etapy — żebyś wiedział, co Cię czeka, zanim złożysz pozew.",
+    "Cały proces rozwodowy rozpisany na etapy — od planu, przez ustalenia, po pozew — żebyś wiedział, co Cię czeka, zanim cokolwiek trafi do sądu.",
   forWho: [
     "Dla osób, które rozważają rozwód i chcą najpierw zrozumieć, jak wygląda cały proces.",
     "Dla tych, którzy chcą przygotować ustalenia dotyczące dzieci, mieszkania i finansów przed złożeniem pozwu.",
@@ -17,16 +17,20 @@ export const material: Material = {
     "Dla osób, które zastanawiają się, czy zamiast rozwodu nie wybrać separacji.",
   ],
   inside: [
-    "Mapa 7 etapów: od decyzji, przez ustalenia i mediację, po życie po wyroku",
-    "Który sąd jest właściwy i ile kosztuje pozew o rozwód",
-    "Lista dokumentów, które zwykle dołącza się do pozwu",
+    "Mapa 7 etapów w kolejności plan → ustalenia → pozew i sąd — i dlaczego właśnie tak",
+    "Arkusz „moje ustalenia przed pozwem” do samodzielnego wypełnienia",
+    "Próba mediacji: dlaczego ma znaczenie w sądzie, nawet gdy druga strona odmówi, i jak ją udokumentować",
+    "Pozew: właściwy sąd, opłata 600 zł i dokumenty, które zwykle się dołącza",
     "Co sąd rozstrzyga w wyroku rozwodowym (art. 58 KRO) — w prostych słowach",
     "Rozwód a separacja — porównanie w tabeli",
     "Checklista spraw po wyroku: nazwisko, majątek, bank, urzędy",
-    "Arkusz „moje ustalenia przed pozwem” do samodzielnego wypełnienia",
   ],
   time: "20 min",
   faq: [
+    {
+      q: "Dlaczego najpierw plan i ustalenia, a dopiero potem pozew?",
+      a: "Bo pozew pisany na gotowych ustaleniach jest konkretny, a sąd ma mniej spraw do rozstrzygania. Porozumienie o wychowaniu dzieci sąd uwzględnia, jeśli jest zgodne z dobrem dziecka (art. 58 § 1a KRO). Gdy nie ma sporu o winę, dzieci i mieszkanie, sprawa często kończy się na jednej rozprawie, a przy rozwodzie bez orzekania o winie na zgodny wniosek stron sąd zwraca z urzędu połowę opłaty od pozwu (art. 79 ust. 1 pkt 3 lit. b ustawy o kosztach sądowych). Także próba mediacji ma znaczenie: pozew musi zawierać informację, czy strony próbowały mediacji lub innego polubownego rozwiązania sporu, a jeśli nie — dlaczego (art. 187 § 1 pkt 3 KPC). Mediacja jest jednak dobrowolna i nie jest wskazana, gdy w związku jest przemoc, groźby lub kontrola.",
+    },
     {
       q: "Ile kosztuje rozwód w sądzie?",
       a: "Opłata sądowa od pozwu o rozwód wynosi 600 zł (ustawa o kosztach sądowych w sprawach cywilnych, art. 26). Do tego mogą dojść inne koszty, np. pełnomocnika, mediacji czy opinii biegłych. W niektórych sytuacjach możliwy jest częściowy zwrot opłaty lub zwolnienie od kosztów — warto to sprawdzić z prawnikiem.",
@@ -50,13 +54,14 @@ export const material: Material = {
   ],
   sources: [
     { label: "Kodeks rodzinny i opiekuńczy (art. 56–61⁶)", url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19640090059", verified: "2026-11-10" },
-    { label: "Kodeks postępowania cywilnego (art. 41, art. 183¹ i nast., art. 436, art. 445²)", url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19640430296", verified: "2026-11-10" },
-    { label: "Ustawa o kosztach sądowych w sprawach cywilnych (art. 26)", url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20051671398", verified: "2026-11-10" },
+    { label: "Kodeks postępowania cywilnego (art. 41, art. 103, art. 183¹ i nast., art. 187 § 1 pkt 3, art. 436, art. 445²)", url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19640430296", verified: "2026-11-16" },
+    { label: "Ustawa o kosztach sądowych w sprawach cywilnych (art. 26, art. 79 ust. 1 pkt 3 lit. b)", url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20051671398", verified: "2026-11-10" },
     { label: "Kodeks cywilny (art. 366, art. 519)", url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19640160093", verified: "2026-11-10" },
     { label: "gov.pl — Rozwiąż spór przez mediację", url: "https://www.gov.pl/web/gov/rozwiaz-spor-przez-mediacje", verified: "2026-11-10" },
     { label: "gov.pl — Uzyskaj odpis aktu stanu cywilnego", url: "https://www.gov.pl/web/gov/uzyskaj-odpis-aktu-stanu-cywilnego", verified: "2026-11-10" },
   ],
   nextOffer: "plan-rozwodu",
+  stage: 1,
   ctaLabel: "Przygotuj Plan Rozwodu przed pozwem",
   seo: {
     title: "Rozwód w Polsce krok po kroku | Nowy Etap",
@@ -72,18 +77,29 @@ export const material: Material = {
         "Rozwód to nie tylko jedno posiedzenie w sądzie. To ciąg decyzji, z których wiele możesz podjąć spokojnie, zanim cokolwiek trafi do sądu. Najpierw plan i ustalenia — dopiero potem pozew.",
       blocks: [
         {
+          type: "path",
+          current: 1,
+          note: "Ten przewodnik pokazuje całą drogę, ale zaczyna od planu: faktów, dokumentów, budżetu, potrzeb dzieci i Twoich priorytetów. Z planem łatwiej o ustalenia, a pozew złożony na gotowych ustaleniach jest krótszy i bardziej konkretny.",
+        },
+        {
           type: "table",
           head: ["Etap", "Co się dzieje", "Na co masz wpływ"],
           rows: [
-            ["1. Decyzja", "Upewniasz się, że rozpad związku jest trwały, i rozważasz, czy wybrać rozwód czy separację.", "Tempo, rozmowy, wsparcie (psycholog, prawnik)."],
-            ["2. Ustalenia", "Spisujesz, jak ma wyglądać opieka nad dziećmi, alimenty, mieszkanie, finanse.", "Bardzo duży — to najważniejszy etap."],
-            ["3. Mediacja (opcjonalnie)", "Z pomocą neutralnego mediatora dochodzicie do porozumienia.", "Decydujecie wspólnie, mediacja jest dobrowolna."],
-            ["4. Pozew", "Przygotowanie i złożenie pozwu w sądzie okręgowym, opłata 600 zł.", "Treść żądań, wniosek o (nie)orzekanie o winie."],
+            ["1. Decyzja i plan", "Upewniasz się, że rozpad związku jest trwały, rozważasz rozwód lub separację i spisujesz fakty: dokumenty, budżet, potrzeby dzieci, swoje priorytety.", "Tempo, rozmowy, wsparcie (psycholog, prawnik)."],
+            ["2. Ustalenia", "Rozmawiacie o tym, jak ma wyglądać opieka nad dziećmi, alimenty, mieszkanie, finanse — i spisujecie, co udało się uzgodnić.", "Bardzo duży — to najważniejszy etap."],
+            ["3. Mediacja", "Z pomocą neutralnego mediatora dochodzicie do porozumienia w sprawach, których nie udało się ustalić samodzielnie.", "Mediacja jest dobrowolna, ale sama udokumentowana próba ma znaczenie w sądzie."],
+            ["4. Pozew", "Dopiero teraz: przygotowanie i złożenie pozwu w sądzie okręgowym, opłata 600 zł. Pozew opiera się na gotowych ustaleniach.", "Treść żądań, wniosek o (nie)orzekanie o winie, informacja o próbie mediacji."],
             ["5. Rozprawa", "Sąd wysłuchuje stron, ewentualnie świadków; może skierować do mediacji.", "Przygotowanie, spokojna i rzeczowa postawa."],
             ["6. Wyrok", "Sąd rozwiązuje małżeństwo i rozstrzyga sprawy z art. 58 KRO.", "Porozumienie stron sąd bierze pod uwagę."],
             ["7. Po wyroku", "Uprawomocnienie, nazwisko, podział majątku, bank, urzędy.", "Kolejność i terminy spraw."],
           ],
           caption: "Siedem etapów rozwodu — przegląd",
+        },
+        {
+          type: "callout",
+          tone: "info",
+          title: "Dlaczego właśnie w tej kolejności",
+          text: "Sprawy uzgodnione wcześniej (np. porozumienie o wychowaniu dzieci) sąd może uwzględnić w wyroku — zostaje mniej kwestii do udowadniania. Gdy nie ma sporu o winę, dzieci i mieszkanie, sprawa często kończy się na jednej rozprawie. Z planem wiesz, czego potrzebujesz, i nie zgadzasz się na rozwiązania pod presją. A dzieci nie stają się „przedmiotem sporu” na sali sądowej.",
         },
         {
           type: "callout",
@@ -94,13 +110,17 @@ export const material: Material = {
       ],
     },
     {
-      heading: "Etap 1–2: decyzja i przygotowanie ustaleń",
+      heading: "Etap 1–2: decyzja, plan i ustalenia",
       intro:
         "Sąd orzeka rozwód, gdy między małżonkami nastąpił zupełny i trwały rozkład pożycia (art. 56 § 1 KRO). Oznacza to, że ustały więzi emocjonalne, fizyczne i gospodarcze, a powrót do wspólnego życia nie jest realny.",
       blocks: [
         {
           type: "p",
           text: "Nawet przy rozkładzie pożycia sąd nie orzeknie rozwodu, jeśli ucierpiałoby na tym dobro wspólnych małoletnich dzieci albo byłoby to sprzeczne z zasadami współżycia społecznego. Rozwód nie jest też co do zasady dopuszczalny, gdy żąda go wyłącznie winny małżonek, a drugi nie wyraża zgody (art. 56 § 2 i 3 KRO). Dlatego tak ważne jest, by pokazać sądowi, że sprawy dzieci są przemyślane.",
+        },
+        {
+          type: "p",
+          text: "Zacznij od planu: spisz fakty i dokumenty (akty stanu cywilnego, dochody, kredyt, majątek), policz budżet — swój i dzieci — i zastanów się, co jest dla Ciebie najważniejsze, a w czym możesz być elastyczny lub elastyczna. Taki plan jest podstawą rozmów; bez niego łatwo zgodzić się na coś pod presją albo walczyć o wszystko naraz.",
         },
         {
           type: "p",
@@ -124,12 +144,25 @@ export const material: Material = {
           title: "Porozumienie rodzicielskie",
           text: "Rodzice mogą przedstawić sądowi pisemne porozumienie o sposobie wykonywania władzy rodzicielskiej i kontaktach z dzieckiem (często nazywane planem wychowawczym). Sąd uwzględnia je, jeśli jest zgodne z dobrem dziecka (art. 58 § 1a KRO).",
         },
+        {
+          type: "worksheet",
+          title: "Moje ustalenia przed pozwem",
+          fields: [
+            "Czy oboje chcemy rozwodu bez orzekania o winie? (tak / nie / do rozmowy)",
+            "Miejsce zamieszkania dzieci i plan kontaktów:",
+            "Proponowana wysokość alimentów i sposób płatności:",
+            "Kto zostaje w mieszkaniu, kto płaci rachunki:",
+            "Co robimy z kredytem i wspólnymi kontami:",
+            "Majątek: dzielimy teraz / później / w jaki sposób:",
+            "Sprawy, w których potrzebuję porady prawnika:",
+          ],
+        },
       ],
     },
     {
-      heading: "Etap 3: mediacja — kiedy warto ją rozważyć",
+      heading: "Etap 3: mediacja — dlaczego warto spróbować przed pozwem",
       intro:
-        "Mediacja to dobrowolna i poufna rozmowa z udziałem neutralnego mediatora. Możecie z niej skorzystać przed złożeniem pozwu albo w trakcie sprawy — sąd może skierować Was do mediacji (art. 436 i art. 445² KPC).",
+        "Mediacja to dobrowolna i poufna rozmowa z udziałem neutralnego mediatora. Najwięcej daje przed złożeniem pozwu, gdy to, co uzgodnicie, może od razu trafić do pozwu. Możecie z niej skorzystać także w trakcie sprawy — sąd może skierować Was do mediacji (art. 436 i art. 445² KPC).",
       blocks: [
         {
           type: "list",
@@ -140,6 +173,7 @@ export const material: Material = {
             "Koszty i zasady wynagrodzenia mediatora zależą od tego, czy mediacja jest prywatna, czy skierowana przez sąd — sprawdź aktualne stawki przed rozpoczęciem.",
           ],
         },
+        { type: "mediationAttempt" },
         {
           type: "callout",
           tone: "safety",
@@ -151,7 +185,7 @@ export const material: Material = {
     {
       heading: "Etap 4: pozew — sąd, opłata i dokumenty",
       intro:
-        "Pozew o rozwód składasz do sądu okręgowego. To pismo, w którym opisujesz swoje żądania i fakty, a do którego dołączasz dokumenty.",
+        "Pozew o rozwód składasz do sądu okręgowego. To pismo, w którym opisujesz swoje żądania i fakty, a do którego dołączasz dokumenty. Gdy masz za sobą plan i ustalenia, pozew w dużej mierze je porządkuje: wiesz, o co wnosisz, co jest uzgodnione, a co zostaje do rozstrzygnięcia przez sąd.",
       blocks: [
         {
           type: "table",
@@ -161,6 +195,7 @@ export const material: Material = {
             ["Opłata", "600 zł od pozwu o rozwód (art. 26 ustawy o kosztach sądowych w sprawach cywilnych). Możesz wnioskować o zwolnienie od kosztów, jeśli nie jesteś w stanie ich ponieść."],
             ["Liczba egzemplarzy", "Pozew i załączniki składasz z odpisem dla drugiej strony."],
             ["Wina", "Możesz wnosić o rozwód z orzeczeniem o winie lub bez. Bez orzekania o winie sąd rozstrzyga na zgodne żądanie obojga (art. 57 § 2 KRO)."],
+            ["Próba mediacji", "Pozew musi zawierać informację, czy strony próbowały mediacji lub innego polubownego rozwiązania sporu, a jeśli nie — wyjaśnienie, dlaczego (art. 187 § 1 pkt 3 KPC)."],
           ],
         },
         {
@@ -171,6 +206,7 @@ export const material: Material = {
             "Dowód uiszczenia opłaty 600 zł (lub wniosek o zwolnienie od kosztów).",
             "Dokumenty o dochodach i kosztach utrzymania dzieci, jeśli wnosisz o alimenty (np. zaświadczenia o zarobkach, rachunki).",
             "Porozumienie rodzicielskie / plan wychowawczy, jeśli je macie.",
+            "Dokumenty próby mediacji, jeśli ją podjęliście: kopia wniosku o mediację, dowód doręczenia drugiej stronie, informacja od mediatora o przebiegu lub braku zgody.",
             "Wnioski dowodowe (np. świadkowie) — jeśli są potrzebne.",
             "Odpis pozwu i załączników dla drugiej strony.",
           ],
@@ -256,19 +292,6 @@ export const material: Material = {
             "Szkoła, przedszkole, lekarz: przekaż informacje o nowych ustaleniach i danych kontaktowych obojga rodziców.",
           ],
         },
-        {
-          type: "worksheet",
-          title: "Moje ustalenia przed pozwem",
-          fields: [
-            "Czy oboje chcemy rozwodu bez orzekania o winie? (tak / nie / do rozmowy)",
-            "Miejsce zamieszkania dzieci i plan kontaktów:",
-            "Proponowana wysokość alimentów i sposób płatności:",
-            "Kto zostaje w mieszkaniu, kto płaci rachunki:",
-            "Co robimy z kredytem i wspólnymi kontami:",
-            "Majątek: dzielimy teraz / później / w jaki sposób:",
-            "Sprawy, w których potrzebuję porady prawnika:",
-          ],
-        },
       ],
     },
     {
@@ -276,11 +299,11 @@ export const material: Material = {
       blocks: [
         {
           type: "p",
-          text: "Jeśli po lekturze masz poczucie, że chcesz najpierw poukładać ustalenia, a dopiero potem iść do sądu — to dobry kierunek. W Nowym Etapie pomagamy przygotować Plan Rozwodu: uporządkować sprawy dzieci, mieszkania, kredytu i majątku oraz spisać porozumienie, zanim powstanie pozew.",
+          text: "Jeśli po lekturze masz poczucie, że chcesz najpierw zrobić plan i poukładać ustalenia, a dopiero potem iść do sądu — to dobry kierunek. W Nowym Etapie pomagamy przygotować Plan Rozwodu: uporządkować sprawy dzieci, mieszkania, kredytu i majątku oraz spisać porozumienie, zanim powstanie pozew.",
         },
         {
           type: "p",
-          text: "Nie musisz decydować od razu. Możesz wrócić do tego przewodnika, wypełnić arkusz i porozmawiać z nami wtedy, gdy będziesz gotowy. Pamiętaj, że materiał ma charakter informacyjny — w sprawach indywidualnych skonsultuj się z prawnikiem.",
+          text: "Nie musisz decydować od razu. Możesz wrócić do tego przewodnika, wypełnić arkusz „Moje ustalenia przed pozwem” i porozmawiać z nami wtedy, gdy poczujesz, że to dobry moment. Pamiętaj, że materiał ma charakter informacyjny — w sprawach indywidualnych skonsultuj się z prawnikiem.",
         },
       ],
     },

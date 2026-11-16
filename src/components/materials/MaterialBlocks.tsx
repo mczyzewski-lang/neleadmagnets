@@ -1,5 +1,6 @@
 import type { MaterialBlock, MaterialSection } from "@/content/types";
 import { Alert } from "@/components/ui/Alert";
+import { PathStrip, MediationAttempt } from "@/components/landing/PathOrder";
 
 export function Block({ b }: { b: MaterialBlock }) {
   switch (b.type) {
@@ -38,6 +39,10 @@ export function Block({ b }: { b: MaterialBlock }) {
           {b.fields.map((f) => <div key={f} className="worksheet-line">{f}</div>)}
         </div>
       );
+    case "path":
+      return <div style={{ margin: "16px 0" }}><PathStrip current={b.current} note={b.note} /></div>;
+    case "mediationAttempt":
+      return <div style={{ margin: "16px 0" }}><MediationAttempt /></div>;
     case "script":
       return (
         <div style={{ margin: "16px 0" }}>

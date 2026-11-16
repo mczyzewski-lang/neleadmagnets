@@ -23,10 +23,14 @@ export const material: Material = {
     "Zasady koordynacji prezentów.",
     "Przewodnik po emocjach dzieci w różnym wieku.",
     "Plan dbania o siebie w dniach bez dziecka i propozycję na Sylwestra oraz ferie.",
-    "Gotową wiadomość z propozycją planu i informację, co robić, gdy brak porozumienia.",
+    "Gotową wiadomość z propozycją planu, informację, co robić, gdy brak porozumienia, i dlaczego warto udokumentować próbę mediacji.",
   ],
   time: "30 min",
   faq: [
+    {
+      q: "Dlaczego najpierw moje punkty wyjścia, potem rozmowa, a sąd dopiero na końcu?",
+      a: "Bo z jasnym planem — co jest ważne dla dziecka i dla ciebie, z czego możesz zrezygnować — rozmawia się spokojniej i trudniej zgodzić się na coś pod presją. Ustalenia między rodzicami są szybsze niż spór i oszczędzają dziecku bycia „przedmiotem sporu”. Sąd rozstrzyga tylko to, czego nie udało się ustalić — a na sprawę sądową przed świętami zwykle i tak jest za mało czasu.",
+    },
     {
       q: "Kiedy zacząć rozmowę o świętach?",
       a: "Najlepiej kilka tygodni wcześniej — w listopadzie lub na początku grudnia. Im więcej czasu, tym mniej presji i tym łatwiej uwzględnić plany rodzin i wyjazdy.",
@@ -43,6 +47,10 @@ export const material: Material = {
       q: "Co zrobić, jeśli nie możemy się porozumieć?",
       a: "Możesz zaproponować mediację, która pozwala ustalić plan przy wsparciu neutralnej osoby. Jeśli porozumienie nie jest możliwe, o kontaktach z dzieckiem w razie sporu rozstrzyga sąd (art. 113 i nast. KRO). Na sprawę sądową przed świętami zwykle jest już za mało czasu, więc warto zacząć rozmowy wcześnie.",
     },
+    {
+      q: "Czy warto proponować mediację, jeśli drugi rodzic pewnie odmówi?",
+      a: "Często tak. Jeśli sprawa kiedyś trafi do sądu, pozew musi zawierać informację, czy strony próbowały mediacji lub innego polubownego rozwiązania sporu (art. 187 § 1 pkt 3 KPC). Udokumentowana próba pokazuje twoją dobrą wolę i gotowość do porozumienia — to bywa istotne, gdy sąd ocenia postawę rodziców w sprawach dzieci. Nie gwarantuje to konkretnego rozstrzygnięcia. Mediacja jest dobrowolna — przy przemocy, groźbach lub kontroli nie musisz jej proponować.",
+    },
   ],
   sources: [
     {
@@ -56,12 +64,18 @@ export const material: Material = {
       verified: "2026-11-10",
     },
     {
+      label: "Kodeks postępowania cywilnego — art. 103, art. 187 § 1 pkt 3",
+      url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19640430296",
+      verified: "2026-11-16",
+    },
+    {
       label: "Mediacje — gov.pl",
       url: "https://www.gov.pl/web/gov/rozwiaz-spor-przez-mediacje",
       verified: "2026-11-10",
     },
   ],
   nextOffer: "mediacja",
+  stage: 2,
   ctaLabel: "Ustalcie plan świąt i kontaktów w mediacji",
   seo: {
     title: "Pierwsze święta po rozstaniu — planer | Nowy Etap",
@@ -76,6 +90,11 @@ export const material: Material = {
       intro:
         "Pierwsze święta po rozstaniu rzadko są „takie jak zawsze”. Nie muszą być idealne — wystarczy, że będą przewidywalne i spokojne dla dziecka.",
       blocks: [
+        {
+          type: "path",
+          current: 2,
+          note: "Planer służy ustaleniom z drugim rodzicem — ale zaczyna się od małego planu: co ważne dla dziecka i dla ciebie. Z tym łatwiej się dogadać, a sąd jest potrzebny tylko w tym, czego nie uda się ustalić.",
+        },
         {
           type: "worksheet",
           title: "Moje punkty wyjścia",
@@ -290,7 +309,7 @@ export const material: Material = {
           type: "callout",
           tone: "warning",
           title: "Gdy nie ma porozumienia",
-          text: "Zaproponuj mediację — to dobrowolna rozmowa z neutralnym mediatorem, która często pozwala szybciej ustalić plan niż spór. Jeśli porozumienie nie jest możliwe, o kontaktach z dzieckiem w razie sporu rozstrzyga sąd (art. 113 i nast. KRO). Jeśli w relacji występuje przemoc, nie negocjuj sam: w zagrożeniu dzwoń pod 112, wsparcie oferuje Niebieska Linia 800 120 002.",
+          text: "Zaproponuj mediację — najlepiej na piśmie — to dobrowolna rozmowa z neutralnym mediatorem, która często pozwala szybciej ustalić plan niż spór. Jeśli porozumienie nie jest możliwe, o kontaktach z dzieckiem w razie sporu rozstrzyga sąd (art. 113 i nast. KRO). Jeśli w relacji występuje przemoc, nie negocjuj sam: w zagrożeniu dzwoń pod 112, wsparcie oferuje Niebieska Linia 800 120 002.",
         },
       ],
     },
@@ -299,8 +318,9 @@ export const material: Material = {
       blocks: [
         {
           type: "p",
-          text: "Plan na pierwsze święta to dobry moment, by pomyśleć o ustaleniach na dłużej: kalendarzu kontaktów, wakacjach, świętach w kolejnych latach i kosztach utrzymania dziecka.",
+          text: "Plan na pierwsze święta to dobry moment, by pomyśleć o ustaleniach na dłużej: kalendarzu kontaktów, wakacjach, świętach w kolejnych latach i kosztach utrzymania dziecka. Takie ustalenia możecie spisać jako porozumienie o wychowaniu dzieci — sąd może je uwzględnić w wyroku, więc zostaje mniej kwestii do udowadniania.",
         },
+        { type: "mediationAttempt" },
         {
           type: "p",
           text: "Nowy Etap może pomóc wam ustalić to w mediacji albo przygotować Plan Rozwodu z porozumieniem dotyczącym dzieci, zanim trafi on do sądu. Najpierw plan i ustalenia — dopiero potem pozew. Spokojnych świąt — takich, na jakie was teraz stać.",

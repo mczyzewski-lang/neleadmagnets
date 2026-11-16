@@ -28,6 +28,6 @@ export const meta: ToolMeta = {
   sources: [
     { ...SRC.uksc, label: "Ustawa o kosztach sądowych w sprawach cywilnych — art. 26, 38, 79" },
     { ...SRC.kro, label: "Kodeks rodzinny i opiekuńczy — art. 57, 58" },
-    { ...SRC.kpc, label: "Kodeks postępowania cywilnego — mediacja (art. 183¹ i n.)" },
+    { ...SRC.kpc, label: "Kodeks postępowania cywilnego — art. 103, mediacja (art. 183¹ i n.), art. 187 § 1 pkt 3" },
   ],
 };

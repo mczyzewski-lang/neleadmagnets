@@ -68,6 +68,7 @@ const RULES: Rule[] = [
   { id: "u1", period: 3, category: "Ustalenia", text: "Spisz tematy do ustalenia i oznacz: uzgodnione / do rozmowy / sporne." },
   { id: "u2", period: 3, category: "Ustalenia", when: canTalk, text: "Jeśli oboje jesteście gotowi i czujecie się bezpiecznie — umówcie spokojną rozmowę o pierwszych ustaleniach (np. dzieci, mieszkanie w okresie przejściowym)." },
   { id: "u3", period: 3, category: "Mediacja", when: (a) => !safety(a), text: "Sprawdź, czym jest mediacja rodzinna i czy mogłaby być dla Was odpowiednia. Pamiętaj: jest dobrowolna.", note: "Pomocne: narzędzie Ustalenia przed pozwem." },
+  { id: "u9", period: 3, category: "Mediacja", when: (a) => notFiled(a) && !safety(a), text: "Jeśli myślisz o pozwie, najpierw zaproponuj drugiej stronie mediację na piśmie i zachowaj dowody (kopię propozycji, potwierdzenie doręczenia, odpowiedź).", note: "Pozew musi zawierać informację o próbie mediacji, a jeśli jej nie było — wyjaśnienie dlaczego (art. 187 § 1 pkt 3 KPC). Udokumentowana próba ma znaczenie nawet wtedy, gdy druga strona odmówi." },
   { id: "u4", period: 3, category: "Wsparcie prawne", when: safety, text: "Zamiast wspólnych negocjacji rozważ wsparcie pełnomocnika, który będzie reprezentował Twoje interesy." },
   { id: "u5", period: 3, category: "Specjaliści", text: "Przygotuj się do konsultacji: krótka oś czasu, lista dokumentów, pytania (także o koszty i sposób pracy)." },
   { id: "u6", period: 3, category: "Specjaliści", when: kids, text: "Jeśli dzieci przeżywają zmiany trudno, rozważ konsultację z psychologiem dziecięcym." },
@@ -77,7 +78,8 @@ const RULES: Rule[] = [
   // ---- Dni 22–30
   { id: "z1", period: 4, category: "Podsumowanie", text: "Przejrzyj listę: co udało się uporządkować, co pozostaje otwarte." },
   { id: "z2", period: 4, category: "Decyzje", text: "Wypisz otwarte decyzje i informacje, których potrzebujesz, by je podjąć." },
-  { id: "z3", period: 4, category: "Kolejne kroki", when: notFiled, text: "Ustal, czy chcesz najpierw przygotować ustalenia (plan), czy od razu przejść do formalnych kroków — i z kim." },
+  { id: "z3", period: 4, category: "Kolejne kroki", when: (a) => notFiled(a) && !safety(a), text: "Ułóż kolejne kroki w kolejności: najpierw plan, potem ustalenia (rozmowa, mediacja), dopiero potem pozew — i zdecyduj, z kim je przejdziesz.", note: "Sprawy uzgodnione przed pozwem sąd może uwzględnić w wyroku — zostaje mniej do rozstrzygania, a sprawa jest zwykle krótsza i tańsza." },
+  { id: "z7", period: 4, category: "Kolejne kroki", when: (a) => notFiled(a) && safety(a), text: "Ustal kolejne kroki z prawnikiem lub ośrodkiem pomocy. Przy zagrożeniu nie musisz próbować wspólnych ustaleń ani mediacji — mediacja jest dobrowolna." },
   { id: "z4", period: 4, category: "Kolejne kroki", when: filed, text: "Zaplanuj przygotowanie do kolejnych etapów sprawy: dokumenty, propozycje porozumień, terminy." },
   { id: "z5", period: 4, category: "Finanse", text: "Zaktualizuj budżet o to, czego dowiedziałeś/dowiedziałaś się w ostatnich tygodniach." },
   { id: "z6", period: 4, category: "Wsparcie", text: "Sprawdź, jak się czujesz. Zaplanuj coś, co daje Ci oparcie w kolejnym miesiącu." },

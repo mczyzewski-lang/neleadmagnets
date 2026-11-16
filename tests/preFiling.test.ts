@@ -33,4 +33,10 @@ describe("preFiling", () => {
     const r = buildPreFiling({ decision: "taken", safety: "no", openness: "both", balance: "ok", children: "none", finances: "no", topics: ["opieka", "majatek"] });
     expect(r.readiness.total).toBe(1);
   });
+  it("druga strona niegotowa → rada, by udokumentować propozycję mediacji (art. 187, art. 103 KPC)", () => {
+    const r = buildPreFiling({ decision: "taken", safety: "no", openness: "me", children: "none", finances: "no", topics: ["majatek"] });
+    const txt = r.mediationSteps.join(" ");
+    expect(txt).toMatch(/187 § 1 pkt 3 KPC/);
+    expect(txt).toMatch(/103 KPC/);
+  });
 });

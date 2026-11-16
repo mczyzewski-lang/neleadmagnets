@@ -60,8 +60,8 @@ export const STATEMENTS: Statement[] = [
     id: "mediacja",
     text: "Mediacja przed rozwodem jest obowiązkowa.",
     answer: "mit",
-    explanation: "Mediacja jest dobrowolna. Sąd może skierować strony do mediacji — wtedy każda z nich może się temu sprzeciwić w ciągu tygodnia. W sytuacji przemocy lub zagrożenia wspólne negocjacje mogą nie być bezpieczne.",
-    source: "Kodeks postępowania cywilnego, art. 183¹ i 183⁸",
+    explanation: "Mediacja jest dobrowolna. Sąd może skierować strony do mediacji — wtedy każda z nich może się temu sprzeciwić w ciągu tygodnia. Warto jednak spróbować przed pozwem: pozew musi zawierać informację, czy strony próbowały mediacji, a jeśli nie — dlaczego. Udokumentowana próba ma znaczenie nawet wtedy, gdy druga strona odmówi, a sąd może obciążyć kosztami stronę, która w sposób oczywiście nieuzasadniony odmówiła mediacji. W sytuacji przemocy lub zagrożenia wspólne negocjacje mogą nie być bezpieczne — wtedy nie musisz proponować mediacji.",
+    source: "Kodeks postępowania cywilnego, art. 103, 183¹, 183⁸ i 187 § 1 pkt 3",
     topic: { label: "Czy warto ustalić warunki przed pozwem?", href: "/narzedzia/przed-pozwem" },
   },
   {

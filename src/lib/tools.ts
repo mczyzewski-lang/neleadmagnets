@@ -158,12 +158,13 @@ export const TOOLS: ToolMeta[] = [
     faq: [
       { q: "Czy mediacja jest obowiązkowa?", a: "Nie. Mediacja jest dobrowolna. Sąd może skierować strony do mediacji — wtedy każda z nich może się temu sprzeciwić (w ciągu tygodnia od skierowania). Z mediacji można też zrezygnować na każdym etapie. Mediator jest bezstronny i nie rozstrzyga sporu." },
       { q: "Czy ugoda z mediacji ma moc prawną?", a: "Ugoda zawarta przed mediatorem może zostać zatwierdzona przez sąd — wtedy ma moc prawną ugody sądowej. Nie każda kwestia rozwodowa może być jednak w całości uregulowana ugodą (np. sam rozwód orzeka sąd), dlatego warto skonsultować jej treść." },
-      { q: "Czy zawsze trzeba coś ustalać przed pozwem?", a: "Nie. W niektórych sytuacjach — np. gdy brak jest gotowości drugiej strony do rozmów albo gdy występuje przemoc — rozsądniejsze może być od razu skorzystanie z drogi sądowej lub pomocy pełnomocnika. Przygotowanie pozwu nie jest błędem." },
+      { q: "Czy zawsze trzeba coś ustalać przed pozwem?", a: "Nie. Gdy druga strona nie jest gotowa do rozmów, warto mimo to zaproponować mediację na piśmie i zachować dowód — pozew musi zawierać informację o próbie mediacji (art. 187 § 1 pkt 3 KPC), a udokumentowana próba ma znaczenie nawet przy odmowie drugiej strony. Potem przygotowanie pozwu nie jest błędem. Gdy występuje przemoc, nie musisz proponować mediacji — skorzystaj od razu z indywidualnej pomocy lub pełnomocnika." },
+      { q: "Co daje próba mediacji, jeśli druga strona odmówi?", a: "Udokumentowana próba (np. wniosek o mediację doręczony drugiej stronie, odpowiedź lub informacja od mediatora) pokazuje sądowi Twoją gotowość do porozumienia i wskazujesz ją w pozwie. Sąd może też obciążyć kosztami stronę, która w sposób oczywiście nieuzasadniony odmówiła mediacji (art. 103 KPC). Próba mediacji nie gwarantuje konkretnego rozstrzygnięcia." },
       { q: "Co, jeśli boję się drugiej strony?", a: "Twoje bezpieczeństwo jest najważniejsze. W takiej sytuacji nie zalecamy wspólnych negocjacji. Skorzystaj z indywidualnej pomocy — w sytuacji zagrożenia dzwoń pod 112, a wsparcie znajdziesz m.in. w Niebieskiej Linii (800 120 002)." },
       { q: "Ile kosztuje Plan Rozwodu?", a: "Plan Rozwodu jest bezpłatny. Na stronie Planu Rozwodu możesz też poprosić o informację o kosztach dalszej pomocy Nowego Etapu — bez zobowiązań." },
     ],
     sources: [
-      { ...SRC.kpc, label: "Kodeks postępowania cywilnego — art. 183¹ i n. (mediacja), art. 436, 445²" },
+      { ...SRC.kpc, label: "Kodeks postępowania cywilnego — art. 103, art. 183¹ i n. (mediacja), art. 187 § 1 pkt 3, art. 436, 445²" },
       { ...SRC.kro, label: "Kodeks rodzinny i opiekuńczy — art. 57, 58" },
       SRC.mediacjeGov,
       SRC.mediacjeMS,

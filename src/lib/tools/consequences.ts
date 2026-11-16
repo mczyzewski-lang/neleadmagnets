@@ -228,12 +228,15 @@ export function buildCards(a: ConsequencesAnswers): TopicCard[] {
       know.push(
         "Rozwód orzeka sąd okręgowy. Przesłanką jest zupełny i trwały rozkład pożycia. Na zgodne żądanie małżonków sąd zaniecha orzekania o winie.",
         "Alternatywą jest separacja — małżeństwo formalnie trwa, ale skutki są w dużej mierze podobne do rozwodu.",
+        "Kolejność, która zwykle się sprawdza: najpierw plan (fakty, dokumenty, priorytety), potem ustalenia (rozmowa, mediacja), dopiero potem pozew. Sprawy uzgodnione wcześniej sąd może uwzględnić w wyroku — zostaje mniej do rozstrzygania.",
         "Mediacja jest dobrowolna i może odbyć się przed złożeniem pozwu lub w trakcie sprawy. Jeśli sąd skieruje Was do mediacji, każde z Was może się temu sprzeciwić w terminie tygodnia.",
+        "Pozew musi zawierać informację, czy strony próbowały mediacji lub innego polubownego rozwiązania sporu, a jeśli nie — dlaczego (art. 187 § 1 pkt 3 KPC). Udokumentowana próba ma znaczenie nawet wtedy, gdy druga strona odmówi; przy przemocy lub kontroli nie musisz jej proponować.",
         "Opłata od pozwu o rozwód wynosi co do zasady 600 zł. Połowę opłaty sąd zwraca, gdy rozwód zostanie orzeczony bez orzekania o winie na zgodne żądanie małżonków.",
         "Rozwód orzeka obecnie wyłącznie sąd — projekt rozwodu w urzędzie stanu cywilnego nie wszedł w życie.",
       );
       if (a.steps === "filed") know.push("Skoro pozew został już złożony, nadal można prowadzić rozmowy lub mediację i przedstawić sądowi porozumienie, np. w sprawach dzieci.");
       if (a.steps === "judgment") know.push("Po wyroku mogą pozostać sprawy do załatwienia: podział majątku, zmiana nazwiska, sprawy w banku i urzędach.");
+      if (a.steps !== "filed" && a.steps !== "judgment") check.push("Które sprawy możecie uzgodnić przed pozwem i czy próba mediacji jest w Twojej sytuacji bezpieczna — jeśli tak, zaproponuj ją na piśmie i zachowaj dowody.");
       check.push("Który sąd byłby właściwy (zwykle według ostatniego wspólnego miejsca zamieszkania, jeśli jedno z Was nadal tam mieszka).");
       ask.push("Rozwód czy separacja — jakie są różnice w mojej sytuacji?", "Czy i jak warto przygotować ustalenia przed złożeniem pozwu?");
     } else {

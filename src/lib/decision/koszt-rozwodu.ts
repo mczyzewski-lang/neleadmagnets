@@ -155,6 +155,7 @@ export function hiddenCosts(i: CostInput): string[] {
   ];
   if (i.fault === "z") l.push("Postępowanie z orzekaniem o winie zwykle wymaga więcej dowodów i rozpraw — to może zwiększyć koszty pomocy prawnej. Rozważ to z pełnomocnikiem.");
   if (i.property !== "brak") l.push("Wycena majątku (np. rzeczoznawca) i ewentualne podatki przy przeniesieniu własności lub spłacie.");
+  l.push("Odmowa mediacji też może kosztować: sąd może obciążyć kosztami stronę, która w sposób oczywiście nieuzasadniony odmówiła mediacji (art. 103 KPC). Udokumentowana próba mediacji przed pozwem (np. wniosek doręczony drugiej stronie) pokazuje sądowi Twoją gotowość do porozumienia — nawet jeśli druga strona odmówi.");
   l.push("Ewentualna apelacja i dodatkowe wnioski (np. o uzasadnienie wyroku) wiążą się z osobnymi opłatami — sprawdź aktualne stawki.");
   l.push("Koszty pomocy psychologicznej lub wsparcia dla dzieci, jeśli będzie potrzebne.");
   return l;

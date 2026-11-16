@@ -22,4 +22,12 @@ describe("first30", () => {
     const p = buildPlan({ urgent: ["none"] });
     expect(planProgress(p, new Set([p[0].id])).completed).toBe(1);
   });
+  it("przed pozwem: najpierw plan i ustalenia, próba mediacji (bez zagrożenia)", () => {
+    const p = buildPlan({ decision: "mine", urgent: ["none"], filed: "no" });
+    expect(p.some((t) => t.id === "u9")).toBe(true);
+    expect(p.find((t) => t.id === "z3")?.text).toMatch(/najpierw plan, potem ustalenia/);
+    const s = buildPlan({ urgent: ["safety"], filed: "no" });
+    expect(s.some((t) => t.id === "u9" || t.id === "z3")).toBe(false);
+    expect(s.some((t) => t.id === "z7")).toBe(true);
+  });
 });

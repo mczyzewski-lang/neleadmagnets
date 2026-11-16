@@ -144,6 +144,7 @@ export function considerations(a: FaultAnswers): string[] {
   const c: string[] = [];
   if (a.consent === "yes") c.push("Skoro druga strona dopuszcza rozwód bez orzekania o winie, warto potwierdzić to na piśmie lub w rozmowie z udziałem specjalisty — zgodne żądanie musi zostać zgłoszone w sądzie.");
   if (a.consent === "no") c.push("Jeśli druga strona żąda ustalenia winy, sąd będzie ją badał — nawet jeśli Ty wolisz rozwód bez orzekania o winie. Warto przygotować się na postępowanie dowodowe.");
+  if (a.consent === "no" && a.safety !== "yes") c.push("Brak zgody dziś nie zamyka rozmowy. Przed pozwem możesz zaproponować mediację na piśmie i zachować dowody — udokumentowana próba ma znaczenie nawet przy odmowie drugiej strony: wskazujesz ją w pozwie (art. 187 § 1 pkt 3 KPC), a sąd może obciążyć kosztami stronę, która w sposób oczywiście nieuzasadniony odmówiła mediacji (art. 103 KPC).");
   if (a.consent === "unsure") c.push("Nie wiesz, jakie stanowisko zajmie druga strona. Rozmowa (lub mediacja, jeśli jest bezpieczna) może pomóc to wyjaśnić przed złożeniem pozwu.");
   if (a.hardship === "me") c.push("Jeśli po rozwodzie możesz znaleźć się w trudnej sytuacji materialnej, forma wyroku może mieć znaczenie dla możliwości i czasu trwania alimentów od byłego małżonka (art. 60 KRO). To wymaga indywidualnej analizy.");
   if (a.hardship === "partner") c.push("Jeśli to druga strona może znaleźć się w trudnej sytuacji materialnej, forma wyroku może wpływać na zakres i czas ewentualnego obowiązku alimentacyjnego wobec niej.");
@@ -151,6 +152,8 @@ export function considerations(a: FaultAnswers): string[] {
   if (a.children === "minor") c.push("Przy małoletnich dzieciach sąd zawsze rozstrzyga o władzy rodzicielskiej, kontaktach i alimentach. Pisemne porozumienie rodzicielskie bywa pomocne niezależnie od decyzji o winie.");
   if (a.priorities?.includes("justice")) c.push("Potrzeba ustalenia odpowiedzialności jest zrozumiała. Warto zastanowić się, czego oczekujesz od orzeczenia o winie — i porównać to z kosztami emocjonalnymi i czasowymi.");
   if (a.priorities?.includes("privacy")) c.push("Przy orzekaniu o winie sprawy prywatne mogą być omawiane przy świadkach. Rozprawy w sprawach rozwodowych odbywają się jednak co do zasady przy drzwiach zamkniętych, chyba że obie strony żądają jawności — szczegóły sprawdź z prawnikiem.");
+  if (a.safety !== "yes") c.push("Stanowisko co do winy to jeden z tematów do ustalenia przed pozwem: najpierw plan (czego oczekujesz i dlaczego), potem rozmowa lub mediacja, dopiero potem pozew. Rozwód bez orzekania o winie wymaga zgodnego żądania obojga — dlatego tę rozmowę warto odbyć wcześniej.");
+  else c.push("Przy przemocy lub groźbach nie musisz proponować rozmowy ani mediacji — mediacja jest dobrowolna. Kolejne kroki omów z prawnikiem lub ośrodkiem pomocy.");
   c.push("Decyzja o żądaniu orzeczenia o winie należy do Ciebie. Zmiana stanowiska w toku sprawy jest możliwa — zapytaj prawnika o skutki procesowe.");
   return c;
 }
