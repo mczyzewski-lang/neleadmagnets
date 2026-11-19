@@ -21,7 +21,7 @@ export const OFFERS: Record<OfferKey, Offer> = {
     key: "plan-rozwodu",
     title: "Bezpłatny Plan Rozwodu",
     description:
-      "Uporządkowana lista spraw do ustalenia przed pozwem — dzieci, mieszkanie, finanse — oraz informacja, jak może wyglądać współpraca z Nowym Etapem i ile kosztuje.",
+      "Lista spraw do ustalenia przed pozwem (dzieci, mieszkanie, finanse) i informacja, jak wygląda współpraca z Nowym Etapem i ile kosztuje.",
     cta: "Sprawdź koszt i odbierz bezpłatny Plan Rozwodu",
     href: "/plan-rozwodu",
     requestType: "plan_rozwodu",
@@ -30,16 +30,16 @@ export const OFFERS: Record<OfferKey, Offer> = {
     key: "mediacja",
     title: "Mediacja i ustalenia przedsądowe",
     description:
-      "Informacje o tym, jak może wyglądać mediacja rodzinna, kiedy ma sens i jak się do niej przygotować. Mediacja jest zawsze dobrowolna.",
+      "Jak wygląda mediacja rodzinna, kiedy ma sens i jak się do niej przygotować. Zwykle zaczyna się od zaproszenia do mediacji. Jest zawsze dobrowolna.",
     cta: "Dowiedz się więcej o mediacji",
     href: "/plan-rozwodu#mediacja",
     requestType: "mediacja",
   },
   duo: {
     key: "duo",
-    title: "DUO — wspólna ścieżka dla dwojga",
+    title: "DUO: wspólna ścieżka dla dwojga",
     description:
-      "Dla par, które chcą wspólnie i spokojnie przygotować ustalenia dotyczące dzieci, mieszkania i finansów przed złożeniem pozwu.",
+      "Dla par, które chcą wspólnie i spokojnie przygotować ustalenia o dzieciach, mieszkaniu i finansach przed pozwem.",
     cta: "Poznaj ścieżkę DUO",
     href: "/plan-rozwodu#duo",
     requestType: "duo",
@@ -47,7 +47,7 @@ export const OFFERS: Record<OfferKey, Offer> = {
   konsultacja: {
     key: "konsultacja",
     title: "Rozmowa o Twojej sytuacji",
-    description: "Jeśli wolisz porozmawiać o swojej sytuacji indywidualnie, możesz poprosić o kontakt. Bez zobowiązań.",
+    description: "Wolisz porozmawiać indywidualnie? Poproś o kontakt. Bez zobowiązań.",
     cta: "Poproś o kontakt",
     href: "/plan-rozwodu#kontakt",
     requestType: "konsultacja",

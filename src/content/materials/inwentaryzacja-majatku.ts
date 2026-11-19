@@ -6,57 +6,57 @@ export const material: Material = {
   coverTitle: "Inwentaryzacja majątku i długów",
   coverSubtitle: "Arkusz do podziału majątku po rozstaniu",
   coverTone: "green",
-  h1: "Inwentaryzacja majątku i długów przed podziałem — arkusz do wypełnienia",
-  h2: "Spisz nieruchomości, oszczędności, pojazdy, firmę i kredyty. Oznacz, co jest wspólne, a co osobiste — i przygotuj się do rozmowy o podziale.",
+  h1: "Inwentaryzacja majątku i długów przed podziałem: arkusz do wypełnienia",
+  h2: "Spisz nieruchomości, oszczędności, pojazdy, firmę i kredyty. Oznacz, co jest wspólne, a co osobiste, i przygotuj się do rozmowy o podziale.",
   promise:
-    "Kompletny arkusz, który pomoże Ci spisać wspólny majątek i długi — zanim zaczniecie rozmawiać o podziale.",
+    "Arkusz, który pomoże Ci spisać wspólny majątek i długi, zanim zaczniecie rozmawiać o podziale.",
   forWho: [
     "Dla małżonków przed rozwodem, separacją lub podziałem majątku.",
-    "Dla osób, które nie mają pełnego obrazu wspólnych finansów i chcą go uporządkować.",
-    "Dla tych, którzy mieli majątek przed ślubem albo otrzymali darowiznę lub spadek.",
-    "Dla par niebędących małżeństwem, które mają wspólne mieszkanie, samochód lub kredyt.",
+    "Dla osób, które nie mają pełnego obrazu wspólnych finansów.",
+    "Dla tych, którzy mieli majątek przed ślubem albo dostali darowiznę lub spadek.",
+    "Dla par niebędących małżeństwem ze wspólnym mieszkaniem, autem lub kredytem.",
   ],
   inside: [
-    "Jak odróżnić majątek wspólny od osobistego (art. 31 i 33 KRO)",
-    "System oznaczeń: przed ślubem / w trakcie / darowizna / spadek",
-    "Tabele: nieruchomości, ruchomości, pojazdy, konta, inwestycje, PPK/IKE/IKZE, firma",
-    "Tabela długów i kredytów — z uwagą o odpowiedzialności wobec banku",
-    "Nakłady z majątku wspólnego i osobistego (art. 45 KRO)",
-    "Pary niebędące małżeństwem — współwłasność według Kodeksu cywilnego",
-    "Dlaczego spis majątku to pierwszy krok — przed rozmową o podziale i długo przed sądem",
+    "Jak odróżnić majątek wspólny od osobistego",
+    "Oznaczenia: przed ślubem, w trakcie, darowizna, spadek",
+    "Tabele: nieruchomości, ruchomości, pojazdy, konta, inwestycje, firma",
+    "Tabela długów i kredytów",
+    "Nakłady z majątku wspólnego i osobistego",
+    "Pary niebędące małżeństwem: współwłasność",
+    "Podsumowanie i wstępna propozycja podziału",
   ],
   time: "60–90 min",
   faq: [
     {
-      q: "Po co spisywać majątek, zanim zaczniemy rozmawiać o podziale albo złożymy pozew?",
-      a: "Bo to część planu, od którego warto zacząć. Z rzetelnym spisem wiesz, na czym stoisz, i nie zgadzasz się na rozwiązania pod presją. Potem łatwiej o ustalenia — samodzielnie, w mediacji lub u notariusza — a każde uzgodnienie to jedna sprawa mniej dla sądu. Jeśli do sądu trafi tylko to, czego nie udało się ustalić, postępowanie jest prostsze. Warto też wiedzieć, że pozew musi zawierać informację, czy strony próbowały mediacji lub innego polubownego rozwiązania sporu, a jeśli nie — dlaczego (art. 187 § 1 pkt 3 KPC).",
+      q: "Po co spisywać majątek przed rozmową o podziale?",
+      a: "Bo to część planu. Ze spisem wiesz, na czym stoisz, i nie zgadzasz się na nic pod presją. Potem łatwiej o ustalenia: w rozmowach, w mediacji lub u notariusza. Do sądu trafia tylko to, czego nie uda się ustalić.",
     },
     {
       q: "Co wchodzi do majątku wspólnego małżonków?",
-      a: "Co do zasady przedmioty majątkowe nabyte w czasie trwania wspólności ustawowej przez oboje lub jedno z małżonków, m.in. pobrane wynagrodzenia i dochody z majątku (art. 31 KRO). Majątkiem osobistym są m.in. rzeczy nabyte przed ślubem oraz otrzymane w darowiźnie lub spadku, chyba że darczyńca lub spadkodawca postanowił inaczej (art. 33 KRO).",
+      a: "Co do zasady to, co oboje lub jedno z Was nabyliście w trakcie wspólności, w tym wynagrodzenia. Majątek osobisty to m.in. rzeczy sprzed ślubu oraz darowizny i spadki, chyba że darczyńca lub spadkodawca postanowił inaczej.",
     },
     {
       q: "Czy majątek dzieli się zawsze po połowie?",
-      a: "Zasadą są równe udziały w majątku wspólnym. Z ważnych powodów każdy z małżonków może żądać, by sąd ustalił udziały nierówne, z uwzględnieniem stopnia, w jakim każde z nich przyczyniło się do powstania majątku (art. 43 KRO). Ocena takiej sytuacji wymaga konsultacji z prawnikiem.",
+      a: "Zasadą są równe udziały. Z ważnych powodów sąd może ustalić udziały nierówne, biorąc pod uwagę, kto ile przyczynił się do majątku. Taką sytuację oceń z prawnikiem.",
     },
     {
       q: "Wyremontowałem/Wyremontowałam mieszkanie żony ze wspólnych pieniędzy. Czy to się liczy?",
-      a: "Takie sytuacje to tzw. nakłady. Przy podziale majątku każdy z małżonków może żądać zwrotu wydatków i nakładów poczynionych z majątku wspólnego na majątek osobisty i odwrotnie (art. 45 KRO). Warto zachować dokumenty potwierdzające wydatki.",
+      a: "To tzw. nakład. Przy podziale można żądać zwrotu nakładów z majątku wspólnego na osobisty i odwrotnie. Zachowaj dokumenty wydatków.",
     },
     {
       q: "Jak dzieli się PPK, IKE czy IKZE?",
-      a: "Zasady zależą od rodzaju produktu i przepisów szczególnych, a także od tego, kiedy i z jakich środków dokonywano wpłat. Wpisz te produkty do arkusza i skonsultuj sposób ich rozliczenia z prawnikiem oraz instytucją finansową.",
+      a: "Zależy od produktu, przepisów szczególnych i źródła wpłat. Wpisz je do arkusza i zapytaj prawnika oraz instytucję finansową.",
     },
     {
       q: "Nie mamy ślubu, ale wspólne mieszkanie. Jak to podzielić?",
-      a: "Do par niebędących małżeństwem nie stosuje się przepisów KRO o wspólności majątkowej. Jeśli oboje jesteście współwłaścicielami, zastosowanie mają przepisy Kodeksu cywilnego o współwłasności i jej zniesieniu (art. 195 i nast., art. 210 KC). Rozliczenia mogą być złożone — warto skonsultować je z prawnikiem.",
+      a: "Nie dotyczy Was wspólność majątkowa małżonków. Jeśli oboje jesteście współwłaścicielami, stosuje się przepisy o współwłasności i jej zniesieniu. Rozliczenia bywają złożone, skonsultuj je z prawnikiem.",
     },
   ],
   sources: [
     { label: "Kodeks rodzinny i opiekuńczy (art. 31, 33, 43, 45, 58 § 3)", url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19640090059", verified: "2026-11-10" },
     { label: "Kodeks cywilny (art. 195 i nast., art. 210, art. 366, art. 519)", url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19640160093", verified: "2026-11-10" },
     { label: "Kodeks postępowania cywilnego (art. 103, art. 183¹ i nast., art. 187 § 1 pkt 3)", url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19640430296", verified: "2026-11-16" },
-    { label: "Elektroniczne Księgi Wieczyste — ekw.ms.gov.pl", url: "https://ekw.ms.gov.pl/", verified: "2026-11-10" },
+    { label: "Elektroniczne Księgi Wieczyste: ekw.ms.gov.pl", url: "https://ekw.ms.gov.pl/", verified: "2026-11-10" },
   ],
   nextOffer: "plan-rozwodu",
   stage: 1,
@@ -70,44 +70,43 @@ export const material: Material = {
     "Photorealistic 3D render of a standing A4 spiral-bound worksheet planner at a slight angle on a warm off-white (#FCF9F8) background with a soft natural shadow. The cover is deep green (#295550) with a dark green (#263D3A) frame and gold (#C79B59) typography and fine ruled-line details suggesting a ledger. Minimalist premium typography. Render this exact text, spelled exactly, and keep all text minimal: small wordmark at the top \"NOWY ETAP · PORADNIA ROZWODOWA\"; main title \"Inwentaryzacja majątku i długów\"; subtitle \"Arkusz do podziału majątku po rozstaniu\". A subtle thin gold staircase line motif (a stylised ascending step line) near the bottom. No gavels, no paragraph symbols, no people, no money bills, no house icons, no wedding rings, no other text. Square 1:1 composition, high detail, elegant studio lighting.",
   sections: [
     {
-      heading: "Zanim zaczniesz: wspólne czy osobiste?",
+      heading: "Wspólne czy osobiste?",
       intro:
-        "Rzetelny spis majątku to podstawa każdej rozmowy o podziale — między Wami, w mediacji, u notariusza, a dopiero na końcu w sądzie. Pomaga też uniknąć sytuacji, w której o jakimś koncie lub długu dowiadujesz się na końcu.",
+        "Rzetelny spis to podstawa każdej rozmowy o podziale. Chroni też przed niespodzianką w postaci nieznanego konta lub długu.",
       blocks: [
         {
           type: "path",
           current: 1,
-          note: "Spis majątku i długów to część planu. Najpierw fakty, potem rozmowa o podziale — samodzielnie, z mediatorem lub u notariusza — a sąd dopiero wtedy, gdy czegoś nie uda się ustalić. Kto zna liczby, negocjuje spokojniej i nie zgadza się na rozwiązania pod presją.",
+          note: "Spis majątku i długów to część planu. Najpierw fakty, potem rozmowa o podziale, a sąd tylko w tym, czego nie ustalicie.",
         },
         {
           type: "p",
-          text: "Jeśli małżonkowie nie zawarli umowy majątkowej (intercyzy), z chwilą zawarcia małżeństwa powstaje między nimi wspólność ustawowa. Obejmuje ona przedmioty nabyte w czasie jej trwania przez oboje lub jedno z małżonków — m.in. pobrane wynagrodzenia i dochody z majątku wspólnego i osobistego (art. 31 KRO). Wspólność ustaje m.in. z uprawomocnieniem się wyroku rozwodowego lub orzeczeniem separacji.",
+          text: "Bez intercyzy od ślubu obowiązuje wspólność ustawowa. Obejmuje to, co oboje lub jedno z Was nabyliście w jej trakcie, w tym wynagrodzenia. Wspólność ustaje m.in. z prawomocnym rozwodem lub separacją.",
         },
         {
           type: "table",
           head: ["Oznaczenie", "Co to znaczy", "Zwykle należy do"],
           rows: [
-            ["PS — przed ślubem", "Nabyte przed powstaniem wspólności", "Majątku osobistego (art. 33 KRO)"],
-            ["WT — w trakcie", "Nabyte w czasie trwania wspólności, np. z wynagrodzeń", "Majątku wspólnego (art. 31 KRO)"],
-            ["D — darowizna", "Otrzymane w darowiźnie", "Majątku osobistego, chyba że darczyńca postanowił inaczej (art. 33 KRO)"],
-            ["S — spadek", "Nabyte w drodze dziedziczenia lub zapisu", "Majątku osobistego, chyba że spadkodawca postanowił inaczej (art. 33 KRO)"],
-            ["Z — zamiana", "Kupione za pieniądze lub w zamian za składnik majątku osobistego", "Często majątku osobistego (art. 33 KRO) — wymaga udokumentowania"],
-            ["? — nie wiem", "Pochodzenie środków jest niejasne lub mieszane", "Do wyjaśnienia z prawnikiem"],
+            ["PS: przed ślubem", "Nabyte przed powstaniem wspólności", "Majątku osobistego"],
+            ["WT: w trakcie", "Nabyte w trakcie wspólności, np. z wynagrodzeń", "Majątku wspólnego"],
+            ["D: darowizna", "Otrzymane w darowiźnie", "Majątku osobistego, chyba że darczyńca postanowił inaczej"],
+            ["S: spadek", "Odziedziczone", "Majątku osobistego, chyba że spadkodawca postanowił inaczej"],
+            ["Z: zamiana", "Kupione za środki z majątku osobistego", "Często majątku osobistego; trzeba to udokumentować"],
+            ["?: nie wiem", "Pochodzenie środków niejasne lub mieszane", "Do wyjaśnienia z prawnikiem"],
           ],
-          caption: "System oznaczeń używany w arkuszu",
+          caption: "Oznaczenia używane w arkuszu",
         },
         {
           type: "callout",
           tone: "info",
-          title: "Pamiętaj",
-          text: "Oznaczenia w arkuszu to Twoja robocza ocena, nie rozstrzygnięcie. Kwalifikacja składnika majątku bywa sporna (np. gdy do zakupu dołożyły się obie strony lub rodzice). Arkusz ma charakter informacyjny — ostateczne wnioski skonsultuj z prawnikiem.",
+          text: "Oznaczenia to Twoja robocza ocena, nie rozstrzygnięcie. Kwalifikacja bywa sporna, np. gdy do zakupu dołożyli się rodzice. Wnioski skonsultuj z prawnikiem.",
         },
       ],
     },
     {
       heading: "Nieruchomości i pojazdy",
       intro:
-        "Wpisz każdą nieruchomość osobno. Numer księgi wieczystej znajdziesz w akcie notarialnym, a jej treść sprawdzisz bezpłatnie w serwisie ekw.ms.gov.pl.",
+        "Każdą nieruchomość wpisz osobno. Numer księgi wieczystej jest w akcie notarialnym, a treść księgi sprawdzisz bezpłatnie na ekw.ms.gov.pl.",
       blocks: [
         {
           type: "table",
@@ -142,7 +141,7 @@ export const material: Material = {
     {
       heading: "Ruchomości, konta, oszczędności i inwestycje",
       intro:
-        "Ruchomości o większej wartości warto spisać pojedynczo, a resztę zbiorczo (np. „wyposażenie kuchni”). Przy kontach wpisz saldo na konkretny dzień — najlepiej na dzień rozstania i aktualne.",
+        "Cenne rzeczy spisz pojedynczo, resztę zbiorczo. Przy kontach podaj saldo na dzień rozstania i aktualne.",
       blocks: [
         {
           type: "table",
@@ -184,14 +183,14 @@ export const material: Material = {
           type: "callout",
           tone: "warning",
           title: "PPK, IKE, IKZE i polisy",
-          text: "Zasady rozliczania tych produktów przy podziale majątku zależą od rodzaju produktu, przepisów szczególnych i źródła wpłat. Nie zakładaj automatycznie, że „to tylko moje” albo „to wspólne”. Wpisz je do arkusza i skonsultuj z prawnikiem oraz instytucją finansową.",
+          text: "Rozliczenie zależy od produktu i źródła wpłat. Nie zakładaj z góry, że to „tylko moje” albo „wspólne”. Zapytaj prawnika i instytucję finansową.",
         },
       ],
     },
     {
-      heading: "Firma i działalność gospodarcza",
+      heading: "Firma",
       intro:
-        "Jeśli któreś z Was prowadzi firmę, jej składniki mogą wchodzić do majątku wspólnego. To jeden z najbardziej złożonych obszarów — spisz fakty, a ocenę zostaw na rozmowę z prawnikiem i księgowym.",
+        "Składniki firmy mogą wchodzić do majątku wspólnego. Spisz fakty, ocenę zostaw prawnikowi i księgowemu.",
       blocks: [
         {
           type: "worksheet",
@@ -199,11 +198,11 @@ export const material: Material = {
           fields: [
             "Forma prawna (JDG, spółka cywilna, spółka z o.o., inna) i kto jest właścicielem / wspólnikiem:",
             "Data założenia (przed ślubem / w trakcie małżeństwa):",
-            "Udziały / akcje — liczba i szacowana wartość:",
+            "Udziały / akcje: liczba i szacowana wartość:",
             "Środki trwałe (sprzęt, pojazdy firmowe, lokal):",
             "Środki na rachunkach firmowych na dzień …:",
             "Zobowiązania firmy (kredyty, leasingi, zaległości):",
-            "Czy w firmę inwestowano środki wspólne lub osobiste — jakie i kiedy:",
+            "Czy w firmę inwestowano środki wspólne lub osobiste (jakie i kiedy):",
           ],
         },
       ],
@@ -211,7 +210,7 @@ export const material: Material = {
     {
       heading: "Długi i kredyty",
       intro:
-        "Długi są równie ważne jak aktywa. Spisz wszystkie — także te, które „spłaca on/ona”.",
+        "Długi są tak samo ważne jak aktywa. Spisz wszystkie, także te, które „spłaca on/ona”.",
       blocks: [
         {
           type: "table",
@@ -230,7 +229,7 @@ export const material: Material = {
           type: "callout",
           tone: "warning",
           title: "Kredyt nie dzieli się razem z majątkiem",
-          text: "Rozwód ani podział majątku nie zmieniają umowy kredytowej. Współkredytobiorcy nadal odpowiadają wobec banku solidarnie — bank może żądać całości lub części długu od każdego z nich (art. 366 KC). Przejęcie długu przez jedną osobę wymaga zgody banku (art. 519 KC). Zaplanuj rozmowę z bankiem przed ostatecznym podziałem.",
+          text: "Rozwód ani podział majątku nie zmieniają umowy kredytowej. Bank może żądać całego długu od każdego kredytobiorcy. Przejęcie kredytu przez jedną osobę wymaga zgody banku. Porozmawiaj z bankiem przed podziałem.",
         },
         {
           type: "checklist",
@@ -246,7 +245,7 @@ export const material: Material = {
     {
       heading: "Nakłady i rozliczenia",
       intro:
-        "Przy podziale majątku każdy z małżonków może żądać zwrotu wydatków i nakładów, które poczynił z majątku wspólnego na majątek osobisty — i odwrotnie (art. 45 KRO). Nie zwraca się wydatków i nakładów koniecznych na przedmioty przynoszące dochód.",
+        "Przy podziale można żądać zwrotu nakładów z majątku wspólnego na osobisty i odwrotnie. Wyjątkiem są nakłady konieczne na rzeczy przynoszące dochód.",
       blocks: [
         {
           type: "table",
@@ -261,32 +260,36 @@ export const material: Material = {
         {
           type: "list",
           items: [
-            "Przykład: ze wspólnych oszczędności sfinansowano remont mieszkania, które jedno z małżonków odziedziczyło — to może być nakład z majątku wspólnego na majątek osobisty.",
-            "Przykład: pieniądze ze sprzedaży mieszkania kupionego przed ślubem dołożono do zakupu wspólnego domu — to może być nakład z majątku osobistego na wspólny.",
-            "Zasadą są równe udziały w majątku wspólnym; ustalenie nierównych udziałów jest możliwe z ważnych powodów (art. 43 KRO).",
+            "Przykład: ze wspólnych oszczędności wyremontowano odziedziczone mieszkanie jednego z Was. To może być nakład z majątku wspólnego na osobisty.",
+            "Przykład: pieniądze ze sprzedaży mieszkania sprzed ślubu dołożono do wspólnego domu. To może być nakład z majątku osobistego na wspólny.",
           ],
         },
         {
           type: "callout",
           tone: "info",
-          text: "Podział majątku może nastąpić umownie (przy nieruchomościach umowa wymaga formy aktu notarialnego) albo w sądzie: w wyroku rozwodowym (na wniosek, jeśli nie spowoduje nadmiernej zwłoki — art. 58 § 3 KRO) lub w osobnym postępowaniu sądowym. Warto zacząć od próby porozumienia — do sądu trafia wtedy tylko to, czego nie udało się uzgodnić.",
+          text: "Podział może być umowny (przy nieruchomościach u notariusza) albo sądowy: w wyroku rozwodowym, jeśli nie opóźni sprawy, lub w osobnym postępowaniu. Zacznij od próby porozumienia.",
         },
       ],
     },
     {
       heading: "Pary niebędące małżeństwem",
       intro:
-        "Jeśli nie jesteście małżeństwem, przepisy KRO o wspólności majątkowej Was nie dotyczą. Każde z Was ma swój majątek, a to, co kupiliście razem, jest zwykle współwłasnością.",
+        "Nie dotyczy Was wspólność majątkowa małżonków. Każde ma swój majątek, a to, co kupiliście razem, jest zwykle współwłasnością.",
       blocks: [
         {
           type: "list",
           items: [
-            "Współwłasność i jej zniesienie regulują przepisy Kodeksu cywilnego (art. 195 i nast. KC). Każdy ze współwłaścicieli może żądać zniesienia współwłasności (art. 210 KC) — umownie lub przed sądem.",
-            "Udziały wynikają z dokumentów nabycia (np. aktu notarialnego). Jeśli nie są określone, domniemywa się, że są równe.",
-            "Rozliczenia wkładów jednej osoby w majątek drugiej (np. remont mieszkania partnera) mogą być złożone i zależą od okoliczności — skonsultuj je z prawnikiem.",
-            "Wspólny kredyt działa tak samo jak u małżonków: wobec banku odpowiadacie solidarnie, a zmiana dłużnika wymaga zgody banku.",
+            "Każdy współwłaściciel może żądać zniesienia współwłasności, umownie lub w sądzie.",
+            "Udziały wynikają z dokumentów nabycia. Jeśli ich nie określono, przyjmuje się, że są równe.",
+            "Rozliczenie wkładu w majątek partnera (np. remont jego mieszkania) bywa złożone. Skonsultuj je z prawnikiem.",
+            "Wspólny kredyt działa jak u małżonków: odpowiadacie za cały dług, a zmiana dłużnika wymaga zgody banku.",
           ],
         },
+      ],
+    },
+    {
+      heading: "Podsumowanie",
+      blocks: [
         {
           type: "worksheet",
           title: "Podsumowanie arkusza",
@@ -307,16 +310,12 @@ export const material: Material = {
       blocks: [
         {
           type: "p",
-          text: "Wypełniony arkusz to solidna baza do rozmowy o podziale — z drugą stroną, z mediatorem lub z prawnikiem. Jeśli chcesz, w Nowym Etapie pomożemy Ci przełożyć go na konkretne propozycje w Planie Rozwodu: kto zostaje w mieszkaniu, co z kredytem, jak rozliczyć nakłady — zanim złożysz pozew.",
-        },
-        {
-          type: "p",
-          text: "Jeśli rozmowa o podziale utknie, rozważ mediację. Nawet gdy druga strona odmówi, Twoja udokumentowana próba ma znaczenie w późniejszej sprawie:",
+          text: "Wypełniony arkusz to baza do rozmowy o podziale. W Nowym Etapie pomożemy przełożyć go na propozycje w Planie Rozwodu: mieszkanie, kredyt, nakłady. Jeśli rozmowa utknie, rozważ mediację:",
         },
         { type: "mediationAttempt" },
         {
           type: "p",
-          text: "Możesz też wypełniać arkusz stopniowo i wrócić do nas, kiedy poczujesz, że to dobry moment. Pamiętaj, że to materiał informacyjny — ostateczne decyzje majątkowe skonsultuj z prawnikiem.",
+          text: "Materiał jest informacyjny. Decyzje majątkowe skonsultuj z prawnikiem.",
         },
       ],
     },

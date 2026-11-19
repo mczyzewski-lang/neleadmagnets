@@ -6,57 +6,61 @@ export const material: Material = {
   coverTitle: "Przygotowanie do mediacji",
   coverSubtitle: "Zeszyt ćwiczeń przed pierwszym spotkaniem",
   coverTone: "dark",
-  h1: "Przygotowanie do mediacji rozwodowej — zeszyt ćwiczeń",
-  h2: "Uporządkuj priorytety, potrzeby dzieci i fakty finansowe, zanim usiądziesz do rozmowy z mediatorem.",
+  h1: "Przygotowanie do mediacji rozwodowej: zeszyt ćwiczeń",
+  h2: "Uporządkuj priorytety, potrzeby dzieci i fakty finansowe, zanim usiądziesz z mediatorem.",
   promise:
     "Ćwiczenia, dzięki którym przyjdziesz na mediację spokojniejszy, z jasnymi priorytetami i kompletem informacji.",
   forWho: [
-    "Dla osób, które rozważają mediację przed złożeniem pozwu lub zostały do niej skierowane przez sąd.",
-    "Dla tych, którzy chcą wiedzieć, czego się spodziewać na spotkaniu z mediatorem.",
-    "Dla rodziców, którzy chcą wspólnie ustalić plan opieki nad dziećmi.",
-    "Dla osób, które obawiają się, że w emocjach zapomną, co jest dla nich naprawdę ważne.",
+    "Dla osób, które rozważają mediację przed pozwem lub zostały do niej skierowane przez sąd.",
+    "Dla tych, którzy chcą wiedzieć, czego się spodziewać.",
+    "Dla rodziców, którzy chcą ustalić plan opieki nad dziećmi.",
+    "Dla osób, które boją się, że w emocjach zapomną, co jest ważne.",
   ],
   inside: [
-    "Czym jest mediacja: dobrowolność, poufność, neutralny mediator, ugoda zatwierdzana przez sąd",
-    "Kiedy mediacja może nie być dobrym rozwiązaniem — i gdzie szukać pomocy",
-    "Ćwiczenie: moje priorytety, sprawy nienegocjowalne i obszary elastyczne",
+    "Czym jest mediacja i czym różni się od zwykłych rozmów",
+    "Kiedy mediacja nie jest dobrym pomysłem",
+    "Ćwiczenie: priorytety i granice",
     "Ćwiczenie: potrzeby dzieci",
-    "Lista faktów finansowych do zebrania i pytania do mediatora",
+    "Fakty finansowe i pytania do mediatora",
     "Ćwiczenie: co jeśli się nie porozumiemy?",
-    "Arkusz „Moja próba mediacji” — jak udokumentować próbę, nawet gdy druga strona odmówi",
+    "Arkusz „Moja próba mediacji”",
   ],
-  time: "45–60 min",
+  time: "40–50 min",
   faq: [
     {
       q: "Czy mediacja jest obowiązkowa?",
-      a: "Nie. Mediacja jest dobrowolna (art. 183¹ KPC). Jeśli sąd skieruje Was do mediacji, każda ze stron może się temu sprzeciwić — zgodnie z przepisami obowiązującymi od 2026 r. sprzeciw trzeba zgłosić w ciągu tygodnia od skierowania (art. 183⁸ KPC). Możecie też w każdej chwili z niej zrezygnować.",
+      a: "Nie, jest dobrowolna. Gdy sąd skieruje Was do mediacji, możesz się sprzeciwić w ciągu tygodnia. Z mediacji można też zrezygnować w każdej chwili.",
+    },
+    {
+      q: "Jak zacząć mediację?",
+      a: "Zwykle od zaproszenia do mediacji. Wysyłasz je sam/a albo wysyła je wybrany mediator lub ośrodek. Formalny wniosek doręczany drugiej stronie to tylko jedna z możliwości.",
     },
     {
       q: "Co, jeśli druga strona odmówi mediacji?",
-      a: "Próba i tak ma znaczenie. Pozew musi zawierać informację, czy strony próbowały mediacji lub innego polubownego rozwiązania sporu, a jeśli nie — wyjaśnienie, dlaczego (art. 187 § 1 pkt 3 KPC). Udokumentowana próba (kopia wniosku o mediację, dowód doręczenia drugiej stronie, odpowiedź lub informacja od mediatora o braku zgody) pokazuje sądowi Twoją dobrą wolę. Sąd może obciążyć kosztami stronę, która w sposób oczywiście nieuzasadniony odmówiła mediacji (art. 103 KPC). Próba nie gwarantuje konkretnego rozstrzygnięcia. Jeśli doświadczasz przemocy, gróźb lub kontroli — nie musisz mediacji proponować.",
+      a: "Próba i tak się liczy. W pozwie piszesz, czy była próba mediacji, a jeśli nie, dlaczego. Przy wyraźnej odmowie mediator może to potwierdzić na piśmie. Próba nie przesądza o wyniku. Przy przemocy, groźbach lub kontroli nie musisz jej proponować.",
     },
     {
       q: "Czy to, co powiem na mediacji, może zostać użyte w sądzie?",
-      a: "Mediacja nie jest jawna, a mediator ma obowiązek zachować w tajemnicy fakty, o których dowiedział się w związku z mediacją. Przepisy KPC chronią też propozycje ugodowe składane w trakcie mediacji. Szczegóły i wyjątki warto omówić z mediatorem na początku spotkania.",
+      a: "Mediacja jest poufna, a mediator musi zachować tajemnicę. Chronione są też propozycje ugodowe. Wyjątki omów z mediatorem na początku.",
     },
     {
       q: "Czy ugoda z mediacji jest wiążąca?",
-      a: "Ugodę zawartą przed mediatorem może zatwierdzić sąd. Po zatwierdzeniu ma moc prawną ugody zawartej przed sądem. W sprawie rozwodowej ustalenia z mediacji (np. dotyczące dzieci) sąd bierze pod uwagę przy wydawaniu wyroku.",
+      a: "Po zatwierdzeniu przez sąd ma moc ugody sądowej. W sprawie rozwodowej sąd bierze ustalenia z mediacji pod uwagę.",
     },
     {
       q: "Ile kosztuje mediacja?",
-      a: "To zależy od tego, czy mediacja jest prywatna, czy skierowana przez sąd, oraz od rodzaju sprawy. Zapytaj mediatora o stawki przed pierwszym spotkaniem i sprawdź aktualne przepisy.",
+      a: "Zależy, czy jest prywatna, czy skierowana przez sąd. Zapytaj mediatora o stawki przed pierwszym spotkaniem.",
     },
     {
       q: "Czy mogę przyjść na mediację z prawnikiem?",
-      a: "Wiele osób konsultuje się z prawnikiem przed mediacją i przed podpisaniem ugody. O udziale pełnomocnika w samych spotkaniach warto porozmawiać z mediatorem i drugą stroną.",
+      a: "Wiele osób konsultuje się z prawnikiem przed mediacją i przed podpisaniem ugody. Udział pełnomocnika w spotkaniach ustal z mediatorem i drugą stroną.",
     },
   ],
   sources: [
     { label: "Kodeks postępowania cywilnego (art. 103, art. 183¹ i nast., art. 187 § 1 pkt 3, art. 436, art. 445²)", url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19640430296", verified: "2026-11-16" },
     { label: "Kodeks rodzinny i opiekuńczy (art. 58)", url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19640090059", verified: "2026-11-10" },
-    { label: "gov.pl — Rozwiąż spór przez mediację", url: "https://www.gov.pl/web/gov/rozwiaz-spor-przez-mediacje", verified: "2026-11-10" },
-    { label: "Ministerstwo Sprawiedliwości — Postępowanie mediacyjne w sprawach cywilnych", url: "https://www.gov.pl/web/sprawiedliwosc/postepowanie-mediacyjne-w-sprawach-cywilnych", verified: "2026-11-10" },
+    { label: "gov.pl: Rozwiąż spór przez mediację", url: "https://www.gov.pl/web/gov/rozwiaz-spor-przez-mediacje", verified: "2026-11-10" },
+    { label: "Ministerstwo Sprawiedliwości: Postępowanie mediacyjne w sprawach cywilnych", url: "https://www.gov.pl/web/sprawiedliwosc/postepowanie-mediacyjne-w-sprawach-cywilnych", verified: "2026-11-10" },
   ],
   nextOffer: "mediacja",
   stage: 2,
@@ -70,80 +74,76 @@ export const material: Material = {
     "Photorealistic 3D render of a standing spiral-bound workbook at a slight angle on a warm off-white (#FCF9F8) background with a soft natural shadow. The cover is dark green (#263D3A) with a deep green (#295550) inner panel and gold (#C79B59) typography and accents. Minimalist premium typography. Render this exact text, spelled exactly, and keep all text minimal: small wordmark at the top \"NOWY ETAP · PORADNIA ROZWODOWA\"; main title \"Przygotowanie do mediacji\"; subtitle \"Zeszyt ćwiczeń przed pierwszym spotkaniem\". A subtle thin gold staircase line motif (a stylised ascending step line) across the lower third. No gavels, no paragraph symbols, no people, no handshakes, no wedding rings, no other text. Square 1:1 composition, high detail, elegant studio lighting.",
   sections: [
     {
-      heading: "Czym jest mediacja (i czym nie jest)",
+      heading: "Czym jest mediacja",
       intro:
-        "Mediacja to rozmowa z udziałem neutralnej osoby — mediatora — która pomaga Wam samodzielnie wypracować porozumienie. Najwięcej daje przed złożeniem pozwu; możecie z niej skorzystać także w trakcie sprawy, gdy sąd skieruje Was do mediacji (art. 436 i art. 445² KPC).",
+        "Rozmowy to Wasze próby dogadania się. Mediacja to spotkania z bezstronnym mediatorem, który pomaga Wam samym wypracować porozumienie. Najwięcej daje przed pozwem.",
       blocks: [
         {
           type: "path",
           current: 2,
-          note: "Mediacja to serce etapu ustaleń. Przychodzisz na nią z planem — priorytetami, faktami finansowymi i potrzebami dzieci — a to, co uzgodnicie, może trafić do pozwu jako gotowe porozumienie. Sąd rozstrzyga wtedy tylko to, czego nie udało się ustalić.",
+          note: "Na mediację przychodzisz z planem. To, co uzgodnicie, trafia do pozwu jako gotowe porozumienie.",
         },
         {
           type: "table",
-          head: ["Zasada", "Co to dla Ciebie znaczy"],
+          head: ["Zasada", "Co to znaczy"],
           rows: [
-            ["Dobrowolność", "Udział w mediacji zależy od Twojej zgody i możesz z niej zrezygnować na każdym etapie (art. 183¹ KPC)."],
-            ["Poufność", "Mediacja nie jest jawna, a mediator ma obowiązek zachować w tajemnicy to, czego się dowiedział (przepisy KPC o mediacji)."],
-            ["Neutralność", "Mediator nie jest sędzią ani pełnomocnikiem żadnej ze stron. Nie rozstrzyga, kto ma rację."],
-            ["Wasza decyzja", "To Wy decydujecie o treści porozumienia. Mediator pomaga rozmawiać i porządkować tematy."],
-            ["Moc prawna", "Ugodę zawartą przed mediatorem może zatwierdzić sąd — wtedy ma moc ugody sądowej."],
+            ["Dobrowolność", "Uczestniczysz za zgodą i możesz zrezygnować w każdej chwili."],
+            ["Poufność", "Mediacja nie jest jawna, mediator zachowuje tajemnicę."],
+            ["Bezstronność", "Mediator nie jest sędzią ani pełnomocnikiem. Nie rozstrzyga, kto ma rację."],
+            ["Wasza decyzja", "O treści porozumienia decydujecie Wy."],
+            ["Moc prawna", "Ugoda zatwierdzona przez sąd ma moc ugody sądowej."],
           ],
-          caption: "Podstawowe zasady mediacji",
+          caption: "Zasady mediacji",
         },
         {
           type: "p",
-          text: "W sprawach rozwodowych mediacja może dotyczyć pojednania, ale najczęściej dotyczy warunków rozstania: opieki nad dziećmi i kontaktów, alimentów, sposobu korzystania z mieszkania i spraw majątkowych. To dokładnie te tematy, które sąd rozstrzyga w wyroku (art. 58 KRO) — dlatego dobrze przygotowana mediacja może bardzo uprościć sprawę sądową.",
-        },
-        {
-          type: "p",
-          text: "Dlaczego warto spróbować przed pozwem? Sprawy uzgodnione wcześniej sąd może uwzględnić w wyroku, więc zostaje mniej kwestii do udowadniania. Gdy nie ma sporu o winę, dzieci i mieszkanie, sprawa często kończy się na jednej rozprawie. A pozew pisany na gotowych ustaleniach jest krótszy i konkretniejszy — wiesz, o co wnosisz.",
+          text: "W rozwodzie mediacja dotyczy zwykle warunków rozstania: opieki, kontaktów, alimentów, mieszkania i majątku. To te same sprawy, które sąd rozstrzyga w wyroku.",
         },
         {
           type: "callout",
           tone: "info",
-          text: "Zeszyt ma charakter informacyjny. Przed podpisaniem ugody warto skonsultować jej treść z prawnikiem, zwłaszcza w sprawach majątkowych i kredytowych.",
+          text: "Zeszyt ma charakter informacyjny. Przed podpisaniem ugody, zwłaszcza majątkowej, skonsultuj ją z prawnikiem.",
         },
       ],
     },
     {
-      heading: "Kiedy mediacja może nie być dobrym rozwiązaniem",
+      heading: "Kiedy mediacja nie jest dobrym pomysłem",
       intro:
-        "Mediacja wymaga, by obie strony mogły mówić swobodnie i bez lęku. Nie zawsze jest to możliwe.",
+        "Mediacja wymaga, by obie strony mogły mówić swobodnie i bez lęku.",
       blocks: [
         {
           type: "checklist",
           items: [
-            "W związku występuje lub występowała przemoc — fizyczna, psychiczna, ekonomiczna lub seksualna.",
-            "Boisz się drugiej strony albo otrzymujesz groźby.",
-            "Jedna strona ma silną przewagę (np. kontroluje wszystkie finanse, informacje, kontakty) i druga nie może swobodnie wyrazić swojego zdania.",
-            "Druga strona nadużywa alkoholu lub innych substancji w sposób, który uniemożliwia rzeczową rozmowę.",
-            "Czujesz, że zgodzisz się na wszystko, byle tylko mieć spokój.",
+            "Jest lub była przemoc: fizyczna, psychiczna, ekonomiczna lub seksualna.",
+            "Boisz się drugiej strony albo dostajesz groźby.",
+            "Jedna strona kontroluje finanse, informacje lub kontakty i druga nie może swobodnie mówić.",
+            "Druga strona nadużywa alkoholu lub innych substancji tak, że rzeczowa rozmowa jest niemożliwa.",
+            "Czujesz, że zgodzisz się na wszystko, byle mieć spokój.",
           ],
         },
         {
           type: "p",
-          text: "Jeśli któryś z tych punktów Cię dotyczy, powiedz o tym mediatorowi przed spotkaniem lub zrezygnuj z mediacji. W takich sytuacjach lepszym rozwiązaniem bywa indywidualna pomoc: prawnika, psychologa, ośrodka interwencji kryzysowej. Masz prawo nie siadać do wspólnego stołu. Pozew musi wtedy zawierać wyjaśnienie, dlaczego nie próbowaliście mediacji (art. 187 § 1 pkt 3 KPC) — warto przygotować je z prawnikiem.",
+          text: "Jeśli coś z tego Cię dotyczy, powiedz o tym mediatorowi przed spotkaniem albo zrezygnuj. Masz prawo nie siadać do wspólnego stołu. W pozwie wyjaśnisz wtedy, dlaczego nie było mediacji. Przygotuj to z prawnikiem.",
         },
         {
           type: "callout",
           tone: "safety",
           title: "Jeśli jesteś w niebezpieczeństwie",
-          text: "W sytuacji bezpośredniego zagrożenia dzwoń pod numer alarmowy 112. Wsparcie, informację i rozmowę zapewnia Ogólnopolski Telefon dla Osób Doznających Przemocy Domowej „Niebieska Linia”: 800 120 002.",
+          text: "W bezpośrednim zagrożeniu dzwoń pod 112. Wsparcie: „Niebieska Linia” 800 120 002.",
         },
       ],
     },
     {
       heading: "Ćwiczenie 1: moje priorytety i granice",
       intro:
-        "W emocjach łatwo walczyć o wszystko naraz. To ćwiczenie pomaga oddzielić to, co naprawdę ważne, od tego, w czym możesz ustąpić. Wypełnij je sam/a, zanim porozmawiasz z drugą stroną.",
+        "Oddziel to, co naprawdę ważne, od tego, w czym możesz ustąpić. Wypełnij samodzielnie, przed rozmową.",
       blocks: [
         {
           type: "worksheet",
           title: "Moje priorytety",
           fields: [
             "Trzy najważniejsze dla mnie sprawy (w kolejności):",
-            "Dlaczego każda z nich jest dla mnie ważna (jaka potrzeba za nią stoi — bezpieczeństwo, stabilność, czas z dziećmi, spokój finansowy):",
+            "Dlaczego każda z nich jest dla mnie ważna (jaka potrzeba za nią stoi: bezpieczeństwo, stabilność, czas z dziećmi, spokój finansowy):",
             "Jak będzie wyglądało moje życie za rok, jeśli porozumienie się uda:",
           ],
         },
@@ -159,20 +159,20 @@ export const material: Material = {
             ["Samochód, oszczędności, inne składniki majątku", "", ""],
             ["Sposób komunikacji po rozstaniu", "", ""],
           ],
-          caption: "Wypełnij: co jest dla mnie nienegocjowalne, a gdzie mam pole manewru",
+          caption: "Co jest nienegocjowalne, a gdzie mam pole manewru",
         },
         {
           type: "callout",
           tone: "info",
           title: "Wskazówka",
-          text: "Jeśli wszystko wpisujesz jako „nienegocjowalne”, zatrzymaj się. Zapytaj siebie: czego się boję, jeśli tu ustąpię? Często za stanowiskiem stoi potrzeba, którą można zaspokoić na kilka sposobów.",
+          text: "Wszystko jest „nienegocjowalne”? Zapytaj siebie: czego się boję, jeśli tu ustąpię? Za stanowiskiem zwykle stoi potrzeba, którą da się zaspokoić na kilka sposobów.",
         },
       ],
     },
     {
       heading: "Ćwiczenie 2: potrzeby dzieci",
       intro:
-        "Na mediacji łatwo mówić o „moim czasie” i „twoim czasie”. Spróbuj spojrzeć z perspektywy dziecka — to często pomaga obojgu rodzicom wyjść z okopów.",
+        "Spójrz z perspektywy dziecka, a nie „mojego” i „twojego” czasu.",
       blocks: [
         {
           type: "worksheet",
@@ -180,10 +180,10 @@ export const material: Material = {
           fields: [
             "Imię i wiek dziecka:",
             "Co daje mu poczucie bezpieczeństwa (rytuały, osoby, miejsca):",
-            "Szkoła/przedszkole, zajęcia, przyjaciele — co powinno zostać bez zmian:",
+            "Szkoła/przedszkole, zajęcia, przyjaciele: co powinno zostać bez zmian:",
             "Szczególne potrzeby (zdrowie, terapia, nauka):",
             "Jak dziecko znosi zmiany i przejścia między domami:",
-            "Co dziecko mówiło o rozstaniu (bez wypytywania — to, co samo powiedziało):",
+            "Co dziecko mówiło o rozstaniu (bez wypytywania, to, co samo powiedziało):",
             "Czego dziecko potrzebuje od każdego z rodziców:",
           ],
         },
@@ -204,7 +204,7 @@ export const material: Material = {
     {
       heading: "Fakty finansowe do zebrania",
       intro:
-        "Rozmowy o pieniądzach są łatwiejsze, gdy opierają się na liczbach, a nie na wrażeniach. Zbierz te informacje przed mediacją (a najlepiej wymieńcie się nimi z drugą stroną).",
+        "O pieniądzach łatwiej rozmawiać na liczbach. Zbierz je przed mediacją, najlepiej wymieńcie się nimi.",
       blocks: [
         {
           type: "table",
@@ -212,12 +212,12 @@ export const material: Material = {
           rows: [
             ["Dochody", "Wynagrodzenie netto, inne dochody, PIT za ostatni rok", ""],
             ["Koszty dzieci", "Miesięczne zestawienie: jedzenie, ubrania, szkoła, zajęcia, leczenie, wakacje", ""],
-            ["Koszty mieszkania", "Czynsz/raty, media, ubezpieczenie, podatek od nieruchomości", ""],
-            ["Kredyt", "Saldo zadłużenia, wysokość raty, kto jest kredytobiorcą", ""],
-            ["Oszczędności i inwestycje", "Stany kont i lokat, fundusze, akcje, PPK/IKE/IKZE", ""],
-            ["Nieruchomości i pojazdy", "Orientacyjna wartość, kto jest właścicielem, czy jest hipoteka", ""],
+            ["Koszty mieszkania", "Czynsz lub raty, media, ubezpieczenie, podatek", ""],
+            ["Kredyt", "Saldo, rata, kto jest kredytobiorcą", ""],
+            ["Oszczędności i inwestycje", "Konta, lokaty, fundusze, akcje, PPK/IKE/IKZE", ""],
+            ["Nieruchomości i pojazdy", "Orientacyjna wartość, właściciel, hipoteka", ""],
             ["Długi", "Pożyczki, karty kredytowe, leasingi, zaległości", ""],
-            ["Majątek osobisty", "Co było przed ślubem, darowizny, spadki (z dokumentami)", ""],
+            ["Majątek osobisty", "Sprzed ślubu, darowizny, spadki (z dokumentami)", ""],
           ],
           caption: "Lista faktów finansowych",
         },
@@ -225,14 +225,14 @@ export const material: Material = {
           type: "callout",
           tone: "warning",
           title: "Kredyt a ugoda",
-          text: "Nawet jeśli w ugodzie ustalicie, że kredyt spłaca jedna osoba, wobec banku oboje kredytobiorcy nadal odpowiadają solidarnie (art. 366 KC). Zmiana dłużnika wymaga zgody banku (art. 519 KC). Sprawdź w banku możliwości, zanim podpiszesz ustalenia.",
+          text: "Ugoda nie zmienia umowy z bankiem. Wobec banku oboje nadal odpowiadacie za cały dług, a zmiana dłużnika wymaga zgody banku. Sprawdź to, zanim podpiszesz ustalenia.",
         },
       ],
     },
     {
       heading: "Pytania do mediatora i plan B",
       intro:
-        "Masz prawo wiedzieć, jak będzie wyglądać mediacja. Zadaj te pytania podczas pierwszego kontaktu. Potem zastanów się, co zrobisz, jeśli porozumienia nie będzie — to paradoksalnie pomaga spokojniej negocjować. Pamiętaj też, że nawet jeśli porozumienia nie będzie, udokumentowana próba mediacji ma znaczenie w późniejszej sprawie sądowej (o tym w kolejnej części).",
+        "Zadaj te pytania przy pierwszym kontakcie. Potem zastanów się, co zrobisz bez porozumienia. To pomaga negocjować spokojniej.",
       blocks: [
         {
           type: "checklist",
@@ -252,10 +252,10 @@ export const material: Material = {
           title: "Co jeśli się nie porozumiemy?",
           fields: [
             "Moja najlepsza realna alternatywa bez porozumienia (np. sprawa w sądzie, osobne ustalenia z pomocą prawnika):",
-            "Ile może mnie to kosztować — czasu, pieniędzy, emocji, relacji z dziećmi:",
+            "Ile może mnie to kosztować (czasu, pieniędzy, emocji, relacji z dziećmi):",
             "Czego realnie mogę się spodziewać w sądzie (najlepiej omówione z prawnikiem):",
             "Jaka propozycja byłaby dla mnie lepsza niż ta alternatywa:",
-            "Poniżej czego nie zejdę — i dlaczego:",
+            "Poniżej czego nie zejdę i dlaczego:",
             "Co mogę zaproponować, żeby druga strona też zyskała:",
           ],
         },
@@ -272,32 +272,32 @@ export const material: Material = {
       ],
     },
     {
-      heading: "Moja próba mediacji: jak ją udokumentować",
+      heading: "Moja próba mediacji",
       intro:
-        "Mediacja nie zawsze dochodzi do skutku — druga strona może się nie zgodzić albo przerwać rozmowy. Twoja próba i tak się liczy, jeśli zostawisz po niej ślad. Ten arkusz pomoże Ci zebrać informacje, które później wskażesz w pozwie.",
+        "Druga strona może odmówić albo przerwać mediację. Twoja próba i tak się liczy, jeśli zostawisz po niej ślad.",
       blocks: [
         { type: "mediationAttempt" },
         {
           type: "list",
           ordered: true,
           items: [
-            "Wybierz mediatora lub ośrodek mediacyjny i skieruj do niego wniosek o przeprowadzenie mediacji.",
-            "Zadbaj, by wniosek został doręczony drugiej stronie w sposób, który da się potwierdzić (np. list polecony za potwierdzeniem odbioru, e-mail lub kontakt przez mediatora).",
-            "Zachowaj kopię wniosku, dowód doręczenia i całą korespondencję w sprawie mediacji.",
-            "Poproś mediatora o pisemną informację o przebiegu mediacji albo o tym, że druga strona nie wyraziła zgody.",
-            "Przy pisaniu pozwu wskaż, że próbowaliście mediacji, i dołącz lub wymień te dokumenty.",
+            "Wybierz mediatora lub ośrodek.",
+            "Wyślij drugiej stronie zaproszenie do mediacji albo poproś o to mediatora. Wybierz formę, którą da się potwierdzić (e-mail, list, wiadomość od mediatora).",
+            "Zachowaj zaproszenie, odpowiedź (albo informację, że jej nie było) i korespondencję.",
+            "Przy wyraźnej odmowie poproś mediatora o pisemne potwierdzenie.",
+            "W pozwie napisz, że była próba mediacji, i wskaż te dokumenty.",
           ],
         },
         {
           type: "worksheet",
           title: "Moja próba mediacji",
           fields: [
-            "Data wysłania wniosku o mediację:",
+            "Data wysłania zaproszenia do mediacji:",
             "Mediator lub ośrodek mediacyjny (imię i nazwisko / nazwa, kontakt):",
-            "Jak i kiedy wniosek został doręczony drugiej stronie (list polecony, e-mail, przez mediatora):",
+            "Kto i jak wysłał zaproszenie (ja, mediator; e-mail, list, telefon):",
             "Odpowiedź drugiej strony (data, treść w skrócie):",
             "Przebieg lub wynik (spotkania, ugoda, częściowe ustalenia, brak zgody):",
-            "Dokumenty, które zachowuję (kopia wniosku, dowód doręczenia, korespondencja, informacja od mediatora):",
+            "Dokumenty, które zachowuję (zaproszenie, odpowiedź, korespondencja, potwierdzenie od mediatora):",
             "Gdzie je przechowuję (folder, skany w chmurze):",
           ],
         },
@@ -308,11 +308,7 @@ export const material: Material = {
       blocks: [
         {
           type: "p",
-          text: "Wypełniony zeszyt to Twoja mapa na mediację. Jeśli chcesz, w Nowym Etapie pomożemy Ci przygotować się do rozmów, uporządkować ustalenia i spisać je w Planie Rozwodu lub porozumieniu — zanim powstanie pozew. Jeśli druga strona nie zgodzi się na mediację, zachowaj dokumenty swojej próby: to ważna informacja do pozwu.",
-        },
-        {
-          type: "p",
-          text: "Nie musisz podejmować decyzji od razu. Wróć do ćwiczeń, gdy poczujesz potrzebę, i skontaktuj się z nami, kiedy poczujesz, że to dobry moment. Pamiętaj: zeszyt ma charakter informacyjny, a ostateczne decyzje warto skonsultować z prawnikiem.",
+          text: "Wypełniony zeszyt to Twoja mapa na mediację. W Nowym Etapie pomożemy Ci przygotować się do rozmów i spisać ustalenia w Planie Rozwodu lub porozumieniu, zanim powstanie pozew. Zeszyt jest informacyjny, decyzje skonsultuj z prawnikiem.",
         },
       ],
     },

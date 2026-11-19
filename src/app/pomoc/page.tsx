@@ -22,7 +22,7 @@ export default function Help() {
       <div className="container container--narrow">
         <span className="eyebrow">Bezpieczeństwo</span>
         <h1 style={{ fontSize: "var(--fs-2xl)" }}>Gdy potrzebujesz pilnej pomocy</h1>
-        <p className="lead">Jeśli doświadczasz przemocy, gróźb lub obawiasz się o swoje bezpieczeństwo albo bezpieczeństwo dzieci, w pierwszej kolejności zadbaj o siebie. Wspólne negocjacje czy mediacja z drugą stroną mogą w takiej sytuacji nie być bezpieczne.</p>
+        <p className="lead">Jeśli doświadczasz przemocy, gróźb lub boisz się o siebie albo o dzieci, najpierw zadbaj o bezpieczeństwo. Wspólne rozmowy czy mediacja z drugą stroną mogą wtedy nie być bezpieczne.</p>
         <div className="grid">
           {lines.map((l) => (
             <div key={l.n} className="card" style={{ display: "flex", gap: 16, alignItems: "center" }}>
@@ -32,10 +32,10 @@ export default function Help() {
           ))}
         </div>
         <div className="mt">
-          <Alert tone="info"><p>Godziny działania niektórych linii mogą się zmieniać — sprawdź aktualne informacje na stronach operatorów, np. <a href="https://www.niebieskalinia.info/" target="_blank" rel="noopener noreferrer">niebieskalinia.info</a>. Lista zweryfikowana: 10.11.2026.</p></Alert>
+          <Alert tone="info"><p>Godziny działania linii mogą się zmieniać. Sprawdź aktualne informacje u operatorów, np. <a href="https://www.niebieskalinia.info/" target="_blank" rel="noopener noreferrer">niebieskalinia.info</a>. Lista zweryfikowana: 10.11.2026.</p></Alert>
         </div>
         <h2 style={{ fontSize: "var(--fs-xl)", marginTop: 32 }}>Indywidualna pomoc prawna</h2>
-        <p>Możesz skorzystać z porady adwokata lub radcy prawnego, a także z nieodpłatnej pomocy prawnej w punktach prowadzonych przez powiaty (informacje: gov.pl — „Nieodpłatna pomoc prawna”). Pełnomocnik reprezentuje wyłącznie Twoje interesy.</p>
+        <p>Możesz skorzystać z porady adwokata lub radcy prawnego albo z nieodpłatnej pomocy prawnej w punktach prowadzonych przez powiaty (informacje: gov.pl, „Nieodpłatna pomoc prawna”). Pełnomocnik reprezentuje wyłącznie Twoje interesy.</p>
       </div>
     </section>
   );

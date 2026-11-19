@@ -38,8 +38,8 @@ export function DivorceCostTool() {
   const reset = () => { setI(DEFAULT_INPUT); setShown(false); };
 
   const report = (): Report => ({
-    title: "Ile kosztuje rozwód — moje zestawienie",
-    intro: `Zestawienie z ${todayPL()} na podstawie moich założeń. Kwoty pełnomocników, notariusza i mediacji prywatnej wpisałem/wpisałam samodzielnie.`,
+    title: isSep ? "Ile kosztuje separacja: moje zestawienie" : "Ile kosztuje rozwód: moje zestawienie",
+    intro: `Zestawienie z ${todayPL()} na podstawie moich założeń. Kwoty pełnomocników, notariusza i mediacji prywatnej wpisane samodzielnie.`,
     sections: [
       { heading: "Suma", items: [`Łącznie: ${range(sum.min, sum.max)}`, `Koszty sądowe i urzędowe: ${formatPLN(sum.court)}`, `Pozostałe: ${range(sum.others.min, sum.others.max)}`, ...(sum.refund ? [`Możliwy zwrot połowy opłaty: ${formatPLN(sum.refund)} (do weryfikacji) → po zwrocie ${range(sum.minAfterRefund, sum.maxAfterRefund)}`] : [])] },
       { heading: "Pozycje", items: lines.map((l) => `${l.label}: ${range(l.min, l.max)}${l.verify ? " (do weryfikacji)" : ""}`) },
@@ -61,7 +61,7 @@ export function DivorceCostTool() {
               <>
                 <Seg label="Orzekanie o winie" value={i.fault} onChange={(v) => set({ fault: v, jointNoFault: v === "bez" ? i.jointNoFault : false })} options={[{ value: "bez", label: "Bez orzekania o winie" }, { value: "z", label: "Z orzekaniem o winie" }]} />
                 {i.fault === "bez" && (
-                  <label className="check"><input type="checkbox" checked={i.jointNoFault} onChange={(e) => set({ jointNoFault: e.target.checked })} /><span>Oboje zgodnie wnosimy o zaniechanie orzekania o winie (art. 57 § 2 KRO)</span></label>
+                  <label className="check"><input type="checkbox" checked={i.jointNoFault} onChange={(e) => set({ jointNoFault: e.target.checked })} /><span>Oboje zgodnie wnosimy o {isSep ? "separację" : "rozwód"} bez orzekania o winie</span></label>
                 )}
               </>
             )}
@@ -74,7 +74,7 @@ export function DivorceCostTool() {
               <label className="check"><input type="checkbox" checked={i.propertyAgreed} onChange={(e) => set({ propertyAgreed: e.target.checked })} /><span>Mamy zgodny projekt podziału (opłata 300 zł zamiast 1000 zł)</span></label>
             )}
             {i.property === "notariusz" && (
-              <div className="field"><span className="field__label">Koszt notarialny (taksa, opłaty) — wpisz po zapytaniu notariusza</span><AmountInput label="Koszt notarialny" value={i.notaryCost} onChange={(v) => set({ notaryCost: v })} /></div>
+              <div className="field"><span className="field__label">Koszt notarialny (taksa, opłaty). Wpisz po zapytaniu notariusza</span><AmountInput label="Koszt notarialny" value={i.notaryCost} onChange={(v) => set({ notaryCost: v })} /></div>
             )}
           </div>
 
@@ -94,7 +94,7 @@ export function DivorceCostTool() {
             {i.mediation === "prywatna" && (
               <div className="field"><span className="field__label">Koszt mediacji prywatnej (łącznie)</span><AmountInput label="Koszt mediacji prywatnej" value={i.mediationPrivate} onChange={(v) => set({ mediationPrivate: v })} /></div>
             )}
-            <p className="xsmall muted" style={{ marginBottom: 0 }}>Mediację prywatną możecie przeprowadzić jeszcze przed pozwem. Sprawy uzgodnione wcześniej sąd może uwzględnić w wyroku, a pozew musi zawierać informację o próbie mediacji (art. 187 § 1 pkt 3 KPC). Mediacja jest dobrowolna — przy przemocy lub kontroli nie musisz jej proponować.</p>
+            <p className="xsmall muted" style={{ marginBottom: 0 }}>Mediację prywatną możecie przeprowadzić przed pozwem. Uzgodnienia sąd może uwzględnić w wyroku, a w pozwie piszesz, czy była próba mediacji. Mediacja jest dobrowolna: przy przemocy lub kontroli nie musisz jej proponować.</p>
           </div>
 
           <div className="card card--sand dc-card">
@@ -130,7 +130,7 @@ export function DivorceCostTool() {
           <div className="result-head">
             <span className="eyebrow">Twoje zestawienie</span>
             <h2 style={{ fontSize: "var(--fs-2xl)" }}>{isSep ? "Separacja" : "Rozwód"}: szacunkowo {range(sum.min, sum.max)}</h2>
-            <p>Wynik aktualizuje się na bieżąco — możesz zmieniać założenia powyżej.</p>
+            <p>Wynik aktualizuje się na bieżąco. Możesz zmieniać założenia powyżej.</p>
             <div className="kpis kpis--3">
               <div className="kpi"><span className="kpi__label">Koszty sądowe i urzędowe</span><span className="kpi__value">{formatPLN(sum.court)}</span></div>
               <div className="kpi"><span className="kpi__label">Pozostałe koszty</span><span className="kpi__value">{range(sum.others.min, sum.others.max)}</span></div>
@@ -142,7 +142,7 @@ export function DivorceCostTool() {
             <h3><Icon name="coins" width={22} /> Struktura kosztów</h3>
             <Donut title="Struktura kosztów (wartości maksymalne)" centerLabel="łącznie do" centerValue={formatPLN(sum.max)}
               slices={lines.map((l, k) => ({ label: l.label, value: l.max, color: ["#295550", "#C79B59", "#4a6d68", "#ead9bb", "#7E5B26", "#9fb5b1", "#263D3A", "#c9a96e"][k % 8] }))} />
-            <div tabIndex={0} role="region" aria-label="Tabela — przewiń w poziomie, jeśli nie mieści się na ekranie" className="table-wrap mt">
+            <div tabIndex={0} role="region" aria-label="Tabela, przewiń w poziomie, jeśli nie mieści się na ekranie" className="table-wrap mt">
               <table className="table">
                 <thead><tr><th>Pozycja</th><th className="num">Kwota</th></tr></thead>
                 <tbody>
@@ -154,7 +154,7 @@ export function DivorceCostTool() {
               </table>
             </div>
             {refundPossible(i) && (
-              <p className="small mt">Po ewentualnym zwrocie połowy opłaty ({formatPLN(sum.refund)}) — <strong>{range(sum.minAfterRefund, sum.maxAfterRefund)}</strong>. Zwrot dotyczy rozwodu lub separacji bez orzekania o winie na zgodny wniosek, po uprawomocnieniu wyroku <span className="dc-verify">do weryfikacji</span>.</p>
+              <p className="small mt">Po ewentualnym zwrocie połowy opłaty ({formatPLN(sum.refund)}): <strong>{range(sum.minAfterRefund, sum.maxAfterRefund)}</strong>. Zwrot dotyczy rozwodu lub separacji bez orzekania o winie na zgodny wniosek, po uprawomocnieniu wyroku <span className="dc-verify">do weryfikacji</span>.</p>
             )}
           </div>
 
@@ -175,15 +175,15 @@ export function DivorceCostTool() {
               ))}
             </div>
             {paths[0].summary.min === paths[1].summary.min && paths[0].summary.max === paths[1].summary.max && (
-              <p className="small mt"><strong>Przy obecnych założeniach obie ścieżki mają te same pozycje.</strong> Różnice pojawiają się zwykle przy podziale majątku, mediacji i pomocy pełnomocnika — dodaj je powyżej, aby zobaczyć porównanie.</p>
+              <p className="small mt"><strong>Przy obecnych założeniach obie ścieżki mają te same pozycje.</strong> Różnice pojawiają się zwykle przy podziale majątku, mediacji i pełnomocnikach. Dodaj je powyżej, aby zobaczyć porównanie.</p>
             )}
-            <p className="xsmall muted mt">To ilustracja zbudowana z Twoich założeń. Wybór drogi zależy od Waszej sytuacji, a nie tylko od kosztów — porozumienie nie zawsze jest możliwe ani bezpieczne.</p>
+            <p className="xsmall muted mt">To ilustracja zbudowana z Twoich założeń. Wybór drogi zależy od Waszej sytuacji, nie tylko od kosztów. Porozumienie nie zawsze jest możliwe ani bezpieczne.</p>
           </div>
 
           <div className="result-section">
             <h3><Icon name="alert" width={22} /> Koszty, o których łatwo zapomnieć</h3>
             <ul className="list-dot">{hidden.map((h) => <li key={h}>{h}</li>)}</ul>
-            <Alert tone="warn" className="mt"><p>Zestawienie ma charakter orientacyjny. Opłaty mogą się zmienić; w niektórych sytuacjach możliwe jest zwolnienie od kosztów sądowych. Ostateczne koszty zależą od przebiegu sprawy.</p></Alert>
+            <Alert tone="warn" className="mt"><p>Zestawienie ma charakter orientacyjny. Opłaty mogą się zmienić. W niektórych sytuacjach możliwe jest zwolnienie od kosztów sądowych. Ostateczne koszty zależą od przebiegu sprawy.</p></Alert>
           </div>
 
           <div className="result-section">
@@ -191,7 +191,7 @@ export function DivorceCostTool() {
           </div>
           <div className="result-section" style={{ background: "var(--cream)" }}>
             <NextStep toolId={TOOL} offers={[
-              { key: "plan-rozwodu", cta: "Sprawdź koszt pomocy Nowego Etapu", why: "Odbierz bezpłatny Plan Rozwodu i zapytaj o koszt pomocy w przygotowaniu ustaleń przed pozwem — bez zobowiązań." },
+              { key: "plan-rozwodu", cta: "Sprawdź koszt pomocy Nowego Etapu", why: "Odbierz bezpłatny Plan Rozwodu i zapytaj o koszt pomocy w przygotowaniu ustaleń przed pozwem. Bez zobowiązań." },
               { key: "materialy", href: "/materialy/rozwod-krok-po-kroku", cta: "Przewodnik: rozwód krok po kroku", why: "Cały proces na jednej mapie: od decyzji i ustaleń po wyrok." },
             ]} />
           </div>

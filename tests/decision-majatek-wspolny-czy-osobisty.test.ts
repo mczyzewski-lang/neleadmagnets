@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { classify, analyze } from "@/lib/decision/majatek-wspolny-czy-osobisty";
+import { classify, analyze, lawyerQuestions } from "@/lib/decision/majatek-wspolny-czy-osobisty";
 
 const A = (p: object) => ({ id: "x", type: "samochod" as const, ...p });
 
@@ -32,5 +32,24 @@ describe("majątek wspólny czy osobisty", () => {
     const r = analyze([A({ id: "1", when: "w-trakcie", funds: "wspolne", value: 40000 }), A({ id: "2", type: "dlug", value: 10000 })], "marriage", "wspolnosc");
     expect(r.totals.wspolny).toBe(40000);
     expect(r.debts).toBe(10000);
+  });
+  it("związek nieformalny: bez treści małżeńskich w dokumentach i pytaniach", () => {
+    const items = [A({ id: "1", owner: "razem", when: "przed", funds: "darowizna" }), A({ id: "2", type: "dlug", owner: "razem" })];
+    const r = analyze(items, "informal", "nie-wiem");
+    const t = JSON.stringify(r) + lawyerQuestions("informal", "nie-wiem", r.results).join(" ");
+    expect(t).not.toMatch(/ślub|małżon|intercyz|rozwod|wspólność majątkow/i);
+    expect(r.results[1].status).toBe("analiza");
+    expect(r.results[1].reason).toMatch(/wierzyciel/);
+  });
+  it("odpowiedź o właścicielu zmienia uzasadnienie długu w związku nieformalnym", () => {
+    const reasons = (["razem", "ja", "nie-wiem"] as const).map((owner) => classify(A({ type: "dlug", owner }), "informal", "nie-wiem").reason);
+    expect(new Set(reasons).size).toBe(3);
+  });
+  it("bez myślników i przepisów w uzasadnieniach i pytaniach", () => {
+    const cases = [A({ when: "przed", laterJointFunds: "tak" }), A({ when: "przed", laterJointFunds: "nie-wiem" }), A({ when: "w-trakcie", funds: "spadek", donorJoint: "nie-wiem" }), A({ type: "firma", when: "w-trakcie", funds: "mieszane" }), A({ when: "po", funds: "wspolne" }), A({ type: "dlug" })];
+    const r = analyze(cases.map((c, i) => ({ ...c, id: String(i) })), "marriage", "nie-wiem");
+    const t = r.results.map((x) => `${x.reason} ${x.nakład ?? ""}`).join(" ") + lawyerQuestions("marriage", "nie-wiem", r.results).join(" ");
+    expect(t).not.toMatch(/—| – /);
+    expect(t).not.toMatch(/art\.|§|KPC|KRO/);
   });
 });

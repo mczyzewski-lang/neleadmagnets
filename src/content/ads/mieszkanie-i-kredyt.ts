@@ -3,13 +3,13 @@ import type { AdSet } from "./types";
 // Na podstawie MARKETING/ADS.md
 export const ads: AdSet = {
   "slug": "mieszkanie-i-kredyt",
-  "angle": "Mieszkanie i wspólny kredyt to najczęstsze pytanie praktyczne — pokazujemy 3 scenariusze i fakt, że rozwód nie kończy umowy z bankiem.",
+  "angle": "Mieszkanie i wspólny kredyt to najczęstsze pytanie praktyczne. Pokazujemy 3 scenariusze i fakt, że rozwód nie kończy umowy z bankiem.",
   "targeting": "Kontekstowe i tematyczne: treści o finansach osobistych, prawie, rodzinie i poradnikach; Search: frazy informacyjne. Demografia szeroka (25–60). Bez remarketingu, list klientów, podobnych odbiorców i segmentów opartych na wnioskowaniu o kryzysie w związku.",
   "meta": {
     "primaryTexts": [
-      "Wspólne mieszkanie i kredyt: zobacz 3 możliwe scenariusze — sprzedaż, spłata lub dalsza współwłasność. Bezpłatnie.",
+      "Wspólne mieszkanie i kredyt: zobacz 3 możliwe scenariusze: sprzedaż, spłata lub dalsza współwłasność. Bezpłatnie.",
       "Rozwód nie zwalnia współkredytobiorcy z umowy z bankiem. Sprawdź, co warto ustalić i o co zapytać bank.",
-      "Wartość mieszkania minus saldo kredytu — oszacuj punkt wyjścia do rozmowy. Wynik w kilka minut, bez logowania."
+      "Wartość mieszkania minus saldo kredytu: oszacuj punkt wyjścia do rozmowy. Wynik w kilka minut, bez logowania."
     ],
     "headlines": [
       "Mieszkanie i kredyt: 3 scenariusze",
@@ -57,13 +57,13 @@ export const ads: AdSet = {
       "zwolnienie z kredytu po rozwodzie"
     ],
     "headlines": [
-      "Mieszkanie i kredyt — rozwód",
+      "Mieszkanie i kredyt a rozwód",
       "3 scenariusze dla mieszkania",
       "Rozwód a wspólny kredyt",
       "Sprzedaż, spłata czy podział?",
       "Ile jest do podziału?",
       "Pytania do banku w 1 miejscu",
-      "Nowy Etap — poradnia",
+      "Nowy Etap, poradnia",
       "Bezpłatnie, bez logowania",
       "Wynik do pobrania (PDF)",
       "Najpierw plan, potem pozew"
@@ -72,7 +72,7 @@ export const ads: AdSet = {
       "Rozwód nie zwalnia z kredytu. Zobacz 3 scenariusze dla mieszkania i listę pytań do banku.",
       "Wpisz wartość mieszkania i saldo kredytu. Orientacyjne wyliczenie i ryzyka w kilka minut.",
       "Bezpłatne narzędzie Nowego Etapu. Bez zakładania konta. Wynik do pobrania jako PDF.",
-      "Małżeństwo czy związek nieformalny — scenariusze dopasowane do Twoich odpowiedzi."
+      "Małżeństwo czy związek nieformalny? Scenariusze dopasowane do Twoich odpowiedzi."
     ],
     "paths": [
       "mieszkanie",

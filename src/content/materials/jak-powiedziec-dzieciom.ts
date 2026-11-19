@@ -6,60 +6,60 @@ export const material: Material = {
   coverTitle: "Jak powiedzieć dzieciom o rozstaniu",
   coverSubtitle: "Rozmowa dopasowana do wieku dziecka",
   coverTone: "cream",
-  h1: "Jak powiedzieć dzieciom o rozstaniu — przewodnik dla rodziców",
-  h2: "Przykładowe zdania dla dzieci w wieku 0–3, 4–6, 7–11 i 12–18 lat, czego unikać i kiedy poszukać wsparcia specjalisty.",
+  h1: "Jak powiedzieć dzieciom o rozstaniu: przewodnik dla rodziców",
+  h2: "Przykładowe zdania dla dzieci w wieku 0–3, 4–6, 7–11 i 12–18 lat, czego unikać i kiedy poszukać wsparcia.",
   promise:
-    "Konkretne słowa i wskazówki, jak spokojnie powiedzieć dziecku o rozstaniu — dopasowane do jego wieku.",
+    "Konkretne słowa i wskazówki, jak spokojnie powiedzieć dziecku o rozstaniu, dopasowane do jego wieku.",
   forWho: [
-    "Dla rodziców, którzy podjęli decyzję o rozstaniu i zastanawiają się, jak powiedzieć o tym dzieciom.",
+    "Dla rodziców, którzy zastanawiają się, jak powiedzieć dzieciom o rozstaniu.",
     "Dla tych, którzy chcą przygotować wspólną rozmowę z drugim rodzicem.",
-    "Dla rodziców, którzy już rozmawiali z dzieckiem, ale widzą, że temat wraca.",
+    "Dla rodziców, u których temat wraca po pierwszej rozmowie.",
     "Dla osób, które chcą chronić dziecko przed konfliktem dorosłych.",
   ],
   inside: [
-    "Jak przygotować rozmowę: kiedy, gdzie, kto mówi",
-    "Wskazówki i przykładowe zdania dla 4 grup wiekowych",
+    "Przygotowanie rozmowy: kiedy, gdzie, kto mówi",
+    "Przykładowe zdania dla 4 grup wiekowych",
     "Odpowiedzi na trudne pytania dzieci",
-    "Czego unikać: obwinianie, wciąganie w konflikt, dziecko jako posłaniec",
-    "Sygnały, przy których warto porozmawiać z psychologiem dziecięcym",
-    "Głos dziecka i porozumienie rodziców — co mówi prawo i dlaczego ustalenia warto zrobić przed sądem",
-    "Arkusz do wspólnego przygotowania rozmowy z drugim rodzicem",
+    "Czego unikać",
+    "Sygnały, przy których warto iść do psychologa",
+    "Głos dziecka i porozumienie rodzicielskie",
+    "Arkusz do wspólnego przygotowania rozmowy",
   ],
-  time: "20 min",
+  time: "15 min",
   faq: [
     {
       q: "Czy powinniśmy rozmawiać z dzieckiem razem?",
-      a: "Jeśli to możliwe i bezpieczne — tak. Wspólna rozmowa pokazuje dziecku, że rodzice nadal współpracują w sprawach, które go dotyczą. Jeśli wspólna rozmowa groziłaby kłótnią, lepiej, by każde z Was porozmawiało osobno, ale według tych samych, wcześniej uzgodnionych zasad.",
+      a: "Jeśli to możliwe i bezpieczne, tak. Wspólna rozmowa pokazuje, że nadal współpracujecie w sprawach dziecka. Jeśli groziłaby kłótnią, porozmawiajcie osobno, ale według tych samych zasad.",
     },
     {
       q: "Kiedy najlepiej powiedzieć dziecku o rozstaniu?",
-      a: "Zwykle wtedy, gdy decyzja jest już podjęta i wiecie, co konkretnie zmieni się w codzienności dziecka. Dobrze, jeśli po rozmowie macie czas, by być z dzieckiem — np. nie tuż przed szkołą czy wyjazdem.",
+      a: "Gdy decyzja jest podjęta i wiecie, co zmieni się w codzienności dziecka. Wybierzcie moment, po którym możecie z nim zostać, nie tuż przed szkołą.",
     },
     {
-      q: "Czy z rozmową z dzieckiem i ustaleniami czekać do pozwu?",
-      a: "Nie trzeba — i zwykle lepiej nie. Najpierw plan (co zmieni się w codzienności dziecka), potem ustalenia między rodzicami — samodzielnie albo w mediacji — a dopiero na końcu pozew i sąd. Rodzice, którzy najpierw ustalają plan opieki, oszczędzają dzieciom bycia „przedmiotem sporu” na sali sądowej. Pisemne porozumienie o wykonywaniu władzy rodzicielskiej i kontaktach sąd uwzględnia, jeśli jest zgodne z dobrem dziecka (art. 58 § 1a KRO). Mediacja jest dobrowolna i nie jest wskazana, gdy w rodzinie występuje przemoc, groźby lub kontrola.",
+      q: "Czy z ustaleniami czekać do pozwu?",
+      a: "Lepiej nie. Najpierw plan, potem ustalenia między rodzicami (rozmowy albo mediacja), na końcu pozew. Porozumienie rodzicielskie sąd uwzględnia, jeśli jest zgodne z dobrem dziecka. Mediacja nie jest wskazana przy przemocy, groźbach lub kontroli.",
     },
     {
       q: "Czy dziecko będzie musiało zeznawać w sądzie?",
-      a: "Dziecko nie jest stroną sprawy rozwodowej. Sąd może wysłuchać dziecko w sprawach, które go dotyczą, jeśli pozwala na to jego rozwój umysłowy, stan zdrowia i stopień dojrzałości — robi się to w sposób dostosowany do wieku i zwykle poza salą rozpraw. Czy i jak to nastąpi, zależy od konkretnej sprawy.",
+      a: "Dziecko nie jest stroną sprawy. Sąd może je wysłuchać, jeśli pozwala na to jego dojrzałość. Robi się to w sposób dostosowany do wieku, zwykle poza salą rozpraw.",
     },
     {
       q: "Co zrobić, gdy dziecko pyta, czyja to wina?",
-      a: "Powiedz spokojnie, że to decyzja dorosłych i że dziecko w żaden sposób jej nie spowodowało. Nie wchodź w szczegóły dotyczące winy drugiego rodzica — to sprawy dorosłych, które obciążają dziecko.",
+      a: "Powiedz, że to decyzja dorosłych i dziecko jej nie spowodowało. Nie mów o winie drugiego rodzica.",
     },
     {
       q: "Kiedy szukać pomocy psychologa?",
-      a: "Gdy trudne zachowania lub objawy utrzymują się przez dłuższy czas, nasilają się albo utrudniają dziecku codzienne funkcjonowanie. Konsultacja nie oznacza, że coś jest „nie tak” — to wsparcie dla dziecka i dla Ciebie.",
+      a: "Gdy trudności utrzymują się, nasilają albo utrudniają dziecku codzienne życie. Konsultacja to wsparcie, a nie ocena.",
     },
   ],
   sources: [
     { label: "Kodeks rodzinny i opiekuńczy (art. 58, art. 95 § 4, art. 113)", url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19640090059", verified: "2026-11-10" },
-    { label: "Kodeks rodzinny i opiekuńczy — art. 58 § 1a (porozumienie o wychowaniu dzieci)", url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19640090059", verified: "2026-11-16" },
-    { label: "Kodeks postępowania cywilnego (wysłuchanie dziecka; art. 103, art. 187 § 1 pkt 3 — próba mediacji)", url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19640430296", verified: "2026-11-10" },
+    { label: "Kodeks rodzinny i opiekuńczy: art. 58 § 1a (porozumienie rodzicielskie)", url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19640090059", verified: "2026-11-16" },
+    { label: "Kodeks postępowania cywilnego (wysłuchanie dziecka; art. 103, art. 187 § 1 pkt 3, próba mediacji)", url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19640430296", verified: "2026-11-10" },
   ],
   nextOffer: "mediacja",
   stage: 2,
-  ctaLabel: "Ustalcie plan wychowawczy w mediacji",
+  ctaLabel: "Ustalcie porozumienie rodzicielskie w mediacji",
   seo: {
     title: "Jak powiedzieć dzieciom o rozstaniu | Nowy Etap",
     description:
@@ -69,35 +69,35 @@ export const material: Material = {
     "Photorealistic 3D render of a single standing softcover booklet at a slight angle on a warm off-white (#FCF9F8) background with a soft natural shadow. The cover is a light warm cream tone with a deep green (#295550) title, a dark green (#263D3A) spine and delicate gold (#C79B59) accents. Minimalist premium, gentle and calm typography. Render this exact text, spelled exactly, and keep all text minimal: small wordmark at the top \"NOWY ETAP · PORADNIA ROZWODOWA\"; main title \"Jak powiedzieć dzieciom o rozstaniu\"; subtitle \"Rozmowa dopasowana do wieku dziecka\". A subtle thin gold staircase line motif (a stylised ascending step line) at the bottom of the cover. No gavels, no paragraph symbols, no people, no children, no wedding rings, no other text. Square 1:1 composition, high detail, soft studio lighting.",
   sections: [
     {
-      heading: "Zanim porozmawiasz: przygotowanie",
+      heading: "Zanim porozmawiasz",
       intro:
-        "Dzieci zwykle zapamiętują nie tyle konkretne słowa, ile atmosferę rozmowy: czy rodzice byli spokojni, czy mogły zadawać pytania, czy usłyszały, że nadal są kochane. Przygotowanie pomaga Ci zachować spokój, nawet jeśli w środku przeżywasz wiele emocji.",
+        "Dzieci pamiętają głównie atmosferę rozmowy: czy rodzice byli spokojni i czy usłyszały, że są kochane.",
       blocks: [
         {
           type: "path",
           current: 2,
-          note: "Rozmowę z dzieckiem najlepiej przeprowadzić, gdy macie plan i choć wstępne ustalenia między rodzicami: gdzie dziecko będzie mieszkać i kiedy będzie z każdym z Was. Dziecko potrzebuje konkretów i spokoju, a nie sporu — dlatego sąd i formalności to dopiero kolejny krok.",
+          note: "Najlepiej rozmawiać, gdy macie choć wstępne ustalenia: gdzie dziecko będzie mieszkać i kiedy będzie z każdym z Was.",
         },
         {
           type: "checklist",
           items: [
-            "Uzgodnijcie z drugim rodzicem wspólną, prostą wersję wyjaśnienia — bez szczegółów o winie.",
+            "Uzgodnijcie z drugim rodzicem wspólną, prostą wersję wyjaśnienia, bez szczegółów o winie.",
             "Ustalcie, co konkretnie zmieni się dla dziecka: gdzie będzie mieszkać, kiedy będzie z każdym z rodziców, co zostaje bez zmian (szkoła, przyjaciele, zajęcia).",
             "Wybierzcie spokojny moment, kiedy po rozmowie będziecie mogli być z dzieckiem.",
-            "Jeśli macie kilkoro dzieci, rozważcie wspólną rozmowę, a potem krótkie rozmowy z każdym osobno, dopasowane do wieku.",
-            "Przygotuj się na różne reakcje: płacz, złość, obojętność, natychmiastowe pytania o praktyczne sprawy. Każda z nich jest w porządku.",
-            "Zadbaj o siebie przed rozmową — jeśli czujesz, że emocje mogą Cię przerosnąć, porozmawiaj wcześniej z kimś zaufanym lub specjalistą.",
+            "Przy kilkorgu dzieciach: wspólna rozmowa, potem krótkie rozmowy z każdym osobno.",
+            "Przygotuj się na różne reakcje: płacz, złość, obojętność, pytania praktyczne. Każda jest w porządku.",
+            "Jeśli emocje mogą Cię przerosnąć, porozmawiaj wcześniej z kimś zaufanym lub specjalistą.",
           ],
         },
         {
           type: "script",
-          title: "Wspólne przesłanie — wersja dla każdego wieku",
+          title: "Wspólne przesłanie dla każdego wieku",
           lines: [
             { label: "Decyzja dorosłych", text: "Mama i tata postanowili, że nie będą już razem mieszkać. To decyzja dorosłych." },
             { label: "To nie twoja wina", text: "Nic, co zrobiłeś albo powiedziałeś, tego nie spowodowało. I nic, co zrobisz, tego nie zmieni." },
             { label: "Miłość się nie zmienia", text: "Oboje bardzo cię kochamy i zawsze będziemy twoimi rodzicami." },
             { label: "Konkret", text: "Będziesz mieszkać … , a z … będziesz się widzieć … ." },
-            { label: "Zaproszenie do pytań", text: "Możesz pytać o wszystko — dziś, jutro i za miesiąc." },
+            { label: "Zaproszenie do pytań", text: "Możesz pytać o wszystko: dziś, jutro i za miesiąc." },
           ],
         },
       ],
@@ -105,16 +105,16 @@ export const material: Material = {
     {
       heading: "Dzieci w wieku 0–3 lata",
       intro:
-        "Najmłodsze dzieci nie rozumieją pojęcia rozstania, ale bardzo silnie odczuwają zmiany w rytmie dnia i emocje dorosłych. Dla nich najważniejsza jest przewidywalność i bliskość.",
+        "Maluchy nie rozumieją rozstania, ale czują zmiany rytmu i emocje dorosłych. Potrzebują przewidywalności i bliskości.",
       blocks: [
         {
           type: "list",
           items: [
-            "Utrzymuj stałe pory snu, posiłków i rytuały (kąpiel, czytanie, przytulanka).",
-            "Mów krótko, prostymi słowami, nawet jeśli wydaje się, że dziecko nie rozumie — ton głosu niesie spokój.",
-            "Przy zmianie domu zabieraj ulubione przedmioty dziecka, by „przenosiły” poczucie bezpieczeństwa.",
-            "Częste, krótsze kontakty z drugim rodzicem bywają dla maluchów łatwiejsze niż rzadkie i długie — ustalcie to z myślą o potrzebach dziecka.",
-            "Przekazujcie sobie informacje o śnie, jedzeniu i samopoczuciu dziecka, np. w krótkim zeszycie lub wspólnej notatce.",
+            "Trzymaj stałe pory snu, posiłków i rytuały.",
+            "Mów krótko i spokojnie. Ton głosu niesie bezpieczeństwo.",
+            "Przy zmianie domu zabieraj ulubione przedmioty dziecka.",
+            "Częstsze, krótsze kontakty z drugim rodzicem bywają łatwiejsze niż rzadkie i długie.",
+            "Przekazujcie sobie informacje o śnie, jedzeniu i samopoczuciu, np. we wspólnej notatce.",
           ],
         },
         {
@@ -130,15 +130,14 @@ export const material: Material = {
     {
       heading: "Dzieci w wieku 4–6 lat",
       intro:
-        "Przedszkolaki często myślą „magicznie” — mogą sądzić, że to one spowodowały rozstanie albo że mogą je cofnąć. Potrzebują prostych wyjaśnień i wielokrotnego zapewnienia, że to nie ich wina.",
+        "Przedszkolaki mogą sądzić, że to one spowodowały rozstanie albo mogą je cofnąć. Potrzebują prostych słów i częstego zapewnienia, że to nie ich wina.",
       blocks: [
         {
           type: "list",
           items: [
-            "Używaj konkretów: „U mamy będziesz w poniedziałek, wtorek i środę”. Pomaga kalendarz z obrazkami lub kolorami.",
-            "Spodziewaj się powracających pytań — to sposób dziecka na oswajanie sytuacji. Odpowiadaj cierpliwie, tak samo jak za pierwszym razem.",
+            "Mów konkretnie: „U mamy będziesz w poniedziałek, wtorek i środę”. Pomaga kalendarz z obrazkami.",
+            "Pytania będą wracać. Odpowiadaj cierpliwie, tak samo jak za pierwszym razem.",
             "Pozwól wyrażać emocje przez zabawę i rysunek.",
-            "Przeczytajcie razem książeczkę o uczuciach lub o różnych rodzinach — to ułatwia rozmowę.",
           ],
         },
         {
@@ -155,34 +154,34 @@ export const material: Material = {
     {
       heading: "Dzieci w wieku 7–11 lat i nastolatki 12–18 lat",
       intro:
-        "Dzieci w wieku szkolnym rozumieją więcej i często zadają bardzo praktyczne pytania. Nastolatki potrzebują szczerości, szacunku dla swojej perspektywy i przestrzeni.",
+        "Starsze dzieci pytają praktycznie. Nastolatki potrzebują szczerości, szacunku i przestrzeni.",
       blocks: [
         {
           type: "table",
           head: ["", "7–11 lat", "12–18 lat"],
           rows: [
-            ["Co może się pojawić", "Smutek, złość, poczucie lojalności wobec obojga rodziców, nadzieja na pojednanie", "Złość, wycofanie, krytyka rodziców, chęć decydowania o sobie"],
-            ["Czego potrzebuje", "Konkretnego planu, stałości (szkoła, koledzy), zgody na emocje", "Szczerości bez szczegółów z życia dorosłych, wpływu na plan, prywatności"],
-            ["Jak wspierać", "Wspólny kalendarz, stałe pory telefonów do drugiego rodzica, rozmowy przy wspólnych czynnościach", "Pytanie o zdanie (np. w sprawie grafiku), elastyczność wobec szkoły i przyjaciół, dostępność bez nacisku"],
-            ["Uważaj na", "Stawianie dziecka w roli powiernika lub „małego dorosłego”", "Zwierzanie się nastolatkowi z konfliktu i szukanie w nim sojusznika"],
+            ["Co może się pojawić", "Smutek, złość, rozdarcie między rodzicami, nadzieja na powrót", "Złość, wycofanie, krytyka rodziców"],
+            ["Czego potrzebuje", "Konkretnego planu, stałości, zgody na emocje", "Szczerości bez szczegółów, wpływu na plan, prywatności"],
+            ["Jak wspierać", "Wspólny kalendarz, stałe pory telefonów do drugiego rodzica", "Pytanie o zdanie, elastyczność wobec szkoły i przyjaciół"],
+            ["Uważaj na", "Robienie z dziecka powiernika", "Szukanie w nastolatku sojusznika w konflikcie"],
           ],
-          caption: "Starsze dzieci — porównanie",
+          caption: "Starsze dzieci: porównanie",
         },
         {
           type: "script",
-          title: "Przykładowe zdania — 7–11 lat",
+          title: "Przykładowe zdania: 7–11 lat",
           lines: [
-            { label: "Wyjaśnienie", text: "Próbowaliśmy rozwiązać nasze problemy, ale nie udało się. Postanowiliśmy, że będziemy mieszkać osobno. To decyzja dorosłych i nie zmienia tego, jak bardzo cię kochamy." },
+            { label: "Wyjaśnienie", text: "Próbowaliśmy rozwiązać nasze problemy, ale nie udało się. Będziemy mieszkać osobno. To decyzja dorosłych i nie zmienia tego, jak bardzo cię kochamy." },
             { label: "Lojalność", text: "Możesz kochać nas oboje i dobrze czuć się w obu domach. Nie musisz wybierać." },
             { label: "Praktyka", text: "Zostajesz w tej samej szkole. Na treningi będzie cię woził tata we wtorki, a mama w czwartki." },
           ],
         },
         {
           type: "script",
-          title: "Przykładowe zdania — 12–18 lat",
+          title: "Przykładowe zdania: 12–18 lat",
           lines: [
-            { label: "Szczerość", text: "Chcemy być z tobą szczerzy: rozstajemy się. Nie będziemy opowiadać ci szczegółów naszych spraw, bo to sprawy między nami — ale na twoje pytania o to, co zmieni się dla ciebie, odpowiemy." },
-            { label: "Wpływ", text: "Twoje zdanie jest dla nas ważne. Chcemy usłyszeć, jak widzisz plan tygodnia. Ostateczną decyzję podejmiemy my, ale weźmiemy pod uwagę to, co powiesz." },
+            { label: "Szczerość", text: "Rozstajemy się. Szczegóły zostaną między nami, ale na pytania o to, co zmieni się dla ciebie, odpowiemy." },
+            { label: "Wpływ", text: "Chcemy usłyszeć, jak widzisz plan tygodnia. Decyzję podejmiemy my, ale weźmiemy pod uwagę twoje zdanie." },
             { label: "Złość", text: "Masz prawo być zły. Jestem tu, kiedy będziesz chciał porozmawiać." },
           ],
         },
@@ -190,76 +189,71 @@ export const material: Material = {
     },
     {
       heading: "Czego unikać",
-      intro: "Rozstanie rodziców samo w sobie jest dla dziecka trudne. Największym obciążeniem bywa jednak konflikt, w który dziecko zostaje wciągnięte.",
+      intro: "Najbardziej obciąża dziecko konflikt, w który zostaje wciągnięte.",
       blocks: [
         {
           type: "table",
           head: ["Zamiast…", "Spróbuj…"],
           rows: [
             ["„Tata nas zostawił.”", "„Postanowiliśmy mieszkać osobno.”"],
-            ["„Powiedz mamie, żeby oddała pieniądze.”", "Sprawy finansowe i organizacyjne załatwiaj bezpośrednio z drugim rodzicem."],
+            ["„Powiedz mamie, żeby oddała pieniądze.”", "Sprawy finansowe załatwiaj bezpośrednio z drugim rodzicem."],
             ["„Z kim chcesz mieszkać?” (jako decyzja dziecka)", "„Chcemy wiedzieć, co jest dla ciebie ważne. Decyzję podejmiemy my.”"],
-            ["Wypytywanie dziecka, co działo się u drugiego rodzica", "„Jak ci minął weekend?” — i akceptacja krótkiej odpowiedzi."],
-            ["Krytyka drugiego rodzica przy dziecku", "Rozmowy o konflikcie tylko z dorosłymi: przyjacielem, prawnikiem, terapeutą."],
-            ["Obietnice bez pokrycia („Nic się nie zmieni”)", "Prawda o tym, co się zmieni, i o tym, co zostaje."],
+            ["Wypytywanie o to, co działo się u drugiego rodzica", "„Jak ci minął weekend?” i akceptacja krótkiej odpowiedzi."],
+            ["Krytyka drugiego rodzica przy dziecku", "Rozmowy o konflikcie tylko z dorosłymi."],
+            ["„Nic się nie zmieni.”", "Prawda o tym, co się zmieni, a co zostaje."],
           ],
-          caption: "Zamiast — spróbuj",
+          caption: "Zamiast… spróbuj…",
         },
         {
           type: "callout",
           tone: "warning",
           title: "Dziecko nie jest posłańcem ani sędzią",
-          text: "Nie proś dziecka o przekazywanie wiadomości, pieniędzy czy dokumentów. Nie każ mu wybierać ani oceniać rodziców. Jeśli komunikacja z drugim rodzicem jest trudna, rozważ mediację lub pisemne ustalenia — tak, by dziecko pozostało poza sporem.",
+          text: "Nie przekazuj przez dziecko wiadomości, pieniędzy ani dokumentów. Nie każ mu wybierać. Gdy komunikacja jest trudna, pomogą pisemne ustalenia lub mediacja.",
         },
       ],
     },
     {
       heading: "Kiedy poszukać wsparcia specjalisty",
       intro:
-        "Smutek, złość czy chwilowy regres (np. powrót do moczenia nocnego u młodszych dzieci, gorsze oceny) mogą pojawić się po tak dużej zmianie. Warto jednak obserwować dziecko i reagować, gdy trudności się utrzymują.",
+        "Smutek, złość czy chwilowy regres są po takiej zmianie częste. Reaguj, gdy trudności się utrzymują.",
       blocks: [
         {
           type: "checklist",
           items: [
-            "Trudności ze snem, jedzeniem lub dolegliwości bólowe utrzymują się przez kilka tygodni.",
-            "Dziecko wycofuje się z kontaktów z rówieśnikami, przestaje robić to, co lubiło.",
-            "Pojawia się wyraźna, utrzymująca się agresja, wybuchy złości lub lęk przed rozstaniem z rodzicem.",
-            "Znaczny, długotrwały spadek wyników w szkole lub odmowa chodzenia do szkoły.",
-            "Dziecko mówi o tym, że jest „wszystkiemu winne”, że jest niepotrzebne, lub o samookaleczaniu.",
+            "Kłopoty ze snem, jedzeniem lub bóle utrzymują się kilka tygodni.",
+            "Dziecko wycofuje się z kontaktów z rówieśnikami i przestaje robić to, co lubiło.",
+            "Pojawia się utrzymująca się agresja, wybuchy złości lub lęk przed rozstaniem z rodzicem.",
+            "Wyraźny, długi spadek wyników w szkole lub odmowa chodzenia do szkoły.",
+            "Dziecko mówi, że jest „wszystkiemu winne”, niepotrzebne, albo mówi o samookaleczaniu.",
             "Nastolatek sięga po alkohol lub inne substancje, ryzykownie się zachowuje.",
-            "Ty sam/a czujesz, że nie dajesz rady i potrzebujesz wsparcia, by wspierać dziecko.",
+            "Ty sam/a czujesz, że nie dajesz rady i potrzebujesz wsparcia.",
           ],
         },
         {
           type: "p",
-          text: "W takich sytuacjach warto porozmawiać z psychologiem dziecięcym, pedagogiem szkolnym lub w poradni psychologiczno-pedagogicznej. Konsultacja nie jest diagnozą ani oceną Ciebie jako rodzica — to sposób, by dziecko dostało dodatkowe wsparcie. Ten przewodnik nie zastępuje porady specjalisty.",
+          text: "Wtedy porozmawiaj z psychologiem dziecięcym, pedagogiem szkolnym lub w poradni psychologiczno-pedagogicznej. Ten przewodnik nie zastępuje porady specjalisty.",
         },
         {
           type: "callout",
           tone: "safety",
           title: "Gdy chodzi o bezpieczeństwo",
-          text: "Jeśli dziecko mówi o zrobieniu sobie krzywdy lub jest w bezpośrednim zagrożeniu, dzwoń pod 112. Dzieci i nastolatki mogą też bezpłatnie zadzwonić na Telefon Zaufania dla Dzieci i Młodzieży 116 111.",
+          text: "Jeśli dziecko mówi o zrobieniu sobie krzywdy lub jest w zagrożeniu, dzwoń pod 112. Dzieci i nastolatki mogą bezpłatnie dzwonić pod 116 111 (Telefon Zaufania dla Dzieci i Młodzieży).",
         },
       ],
     },
     {
-      heading: "Głos dziecka w sprawach rodzinnych",
+      heading: "Głos dziecka i porozumienie rodzicielskie",
       intro:
-        "Dziecko ma prawo do tego, by jego zdanie było brane pod uwagę — ale nie powinno być obarczane decyzjami dorosłych. Najlepiej służy mu porozumienie rodziców przygotowane, zanim sprawa trafi do sądu.",
+        "Zdanie dziecka się liczy, ale decyzje należą do dorosłych.",
       blocks: [
         {
           type: "list",
           items: [
-            "Rodzice przed podjęciem decyzji w ważniejszych sprawach dotyczących dziecka powinni je wysłuchać, jeżeli rozwój umysłowy, stan zdrowia i stopień dojrzałości dziecka na to pozwalają, i w miarę możności uwzględnić jego rozsądne życzenia (art. 95 § 4 KRO).",
-            "W sprawach, które dotyczą dziecka, sąd może je wysłuchać — w sposób dostosowany do wieku i dojrzałości, zwykle poza salą rozpraw (przepisy KPC). O tym, czy i jak to nastąpi, decyduje sąd w konkretnej sprawie.",
-            "W wyroku rozwodowym sąd rozstrzyga o władzy rodzicielskiej, kontaktach i kosztach utrzymania dziecka, biorąc pod uwagę jego dobro i porozumienie rodziców, jeśli je przedstawili (art. 58 KRO). Kontakty z dzieckiem są prawem i obowiązkiem zarówno rodziców, jak i dziecka (art. 113 KRO).",
+            "Przed ważnymi decyzjami rodzice powinni wysłuchać dziecka, jeśli pozwala na to jego dojrzałość, i w miarę możności uwzględnić jego rozsądne życzenia.",
+            "Sąd może wysłuchać dziecko w sposób dostosowany do wieku, zwykle poza salą rozpraw. Decyduje o tym w konkretnej sprawie.",
+            "Kontakty z dzieckiem są prawem i obowiązkiem zarówno rodziców, jak i dziecka.",
+            "Porozumienie rodzicielskie sąd uwzględnia, jeśli jest zgodne z dobrem dziecka. Plan uzgodniony wcześniej trzyma dziecko z dala od sporu.",
           ],
-        },
-        {
-          type: "callout",
-          tone: "info",
-          title: "Dlaczego najpierw ustalenia, potem sąd",
-          text: "Pisemne porozumienie rodziców o wykonywaniu władzy rodzicielskiej i kontaktach z dzieckiem sąd uwzględnia, jeśli jest zgodne z dobrem dziecka (art. 58 § 1a KRO). Gdy plan opieki jest uzgodniony wcześniej, zostaje mniej kwestii do udowadniania, a dziecko nie staje się „przedmiotem sporu” na sali sądowej.",
         },
         {
           type: "worksheet",
@@ -281,16 +275,12 @@ export const material: Material = {
       blocks: [
         {
           type: "p",
-          text: "Dzieci najlepiej odnajdują się w nowej sytuacji, gdy rodzice mają wspólny, jasny plan. Jeśli chcesz, w Nowym Etapie pomożemy Wam przygotować plan wychowawczy i ustalenia dotyczące opieki — w spokojnych rozmowach lub w mediacji — zanim sprawa trafi do sądu.",
-        },
-        {
-          type: "p",
-          text: "Jeśli rozmowy z drugim rodzicem utknęły, mediacja bywa dobrym kolejnym krokiem. A gdy druga strona jej odmówi, Twoja udokumentowana próba nadal ma znaczenie:",
+          text: "Dzieciom najłatwiej, gdy rodzice mają wspólny, jasny plan. W Nowym Etapie pomożemy Wam przygotować porozumienie rodzicielskie, w rozmowach lub w mediacji, zanim sprawa trafi do sądu. Jeśli rozmowy utknęły, mediacja bywa dobrym krokiem:",
         },
         { type: "mediationAttempt" },
         {
           type: "p",
-          text: "Możesz też zacząć od wypełnienia arkusza powyżej i wrócić do nas, kiedy uznasz, że to dobry moment. Materiał ma charakter informacyjny i nie zastępuje porady prawnika ani psychologa.",
+          text: "Materiał ma charakter informacyjny i nie zastępuje porady prawnika ani psychologa.",
         },
       ],
     },

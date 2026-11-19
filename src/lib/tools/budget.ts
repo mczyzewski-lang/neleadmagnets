@@ -1,8 +1,8 @@
 /**
- * Narzędzie 2 — Budżet po rozstaniu.
+ * Narzędzie 2: budżet po rozstaniu.
  * Deterministyczne przeliczenia na podstawie kwot podanych przez użytkownika.
  * Warianty to WYŁĄCZNIE dane użytkownika skorygowane o widoczne, edytowalne założenia procentowe.
- * Narzędzie nie przewiduje alimentów — kwota alimentów to wyłącznie założenie użytkownika.
+ * Narzędzie nie przewiduje alimentów. Kwota alimentów to wyłącznie założenie użytkownika.
  */
 import { type Frequency, monthlyEquivalent, oneOffAmount } from "./expenses";
 
@@ -53,7 +53,7 @@ export const VARIANT_LABELS: Record<VariantKey, string> = {
   optimistic: "Optymistyczny",
 };
 
-/** Przykładowe założenia startowe — widoczne i edytowalne. Bazowy = dokładnie Twoje kwoty. */
+/** Przykładowe założenia startowe, widoczne i edytowalne. Bazowy = dokładnie Twoje kwoty. */
 export const DEFAULT_ASSUMPTIONS: Record<VariantKey, Assumptions> = {
   cautious: { income: 0, housing: 10, other: 10, oneOff: 20 },
   base: { income: 0, housing: 0, other: 0, oneOff: 0 },
@@ -146,17 +146,17 @@ export function financialTodo(s: BudgetState, variants: VariantResult[]): string
   const cautious = variants.find((v) => v.key === "cautious")!;
   const get = (c: BudgetCategory) => base.byCategory.find((x) => x.category === c)?.monthly || 0;
   const t: string[] = [];
-  if (base.balance < 0) t.push("W wariancie bazowym wydatki przekraczają dochody. Warto ustalić, które koszty można ograniczyć lub jak sfinansować okres przejściowy.");
-  else if (cautious.balance < 0) t.push("W wariancie ostrożnym pojawia się deficyt — sprawdź, które założenia są najbardziej prawdopodobne.");
-  if (base.oneOff > pos(s.savings)) t.push("Koszty jednorazowe przekraczają Twoje oszczędności. Zaplanuj, z czego je pokryjesz (np. podział wspólnych oszczędności, rozłożenie w czasie).");
-  if (get("housing") > 0 && base.income > 0 && get("housing") / base.income > 0.4) t.push("Koszty mieszkania pochłaniają ponad 40% dochodów. Rozważ, czy rozwiązanie mieszkaniowe jest możliwe do utrzymania.");
-  if (get("debts") > 0) t.push("Ustal, kto i w jakiej części spłaca wspólne zobowiązania (kredyty, karty, raty) — wobec wierzyciela mogą odpowiadać oboje.");
-  if (get("children") > 0 || pos(s.alimonyIn) || pos(s.alimonyOut)) t.push("Przygotuj zestawienie kosztów dzieci i porozmawiajcie o podziale wydatków. Wysokość alimentów zależy od potrzeb dziecka i możliwości rodziców — w razie sporu ustala ją sąd.");
-  if (pos(s.alimonyIn) || pos(s.alimonyOut)) t.push("Kwota alimentów w kalkulatorze to Twoje założenie, nie prognoza. Sprawdź, jak zmieni się budżet bez niej.");
+  if (base.balance < 0) t.push("W wariancie bazowym wydatki przekraczają dochody. Ustal, które koszty można ograniczyć albo jak sfinansować okres przejściowy.");
+  else if (cautious.balance < 0) t.push("W wariancie ostrożnym pojawia się deficyt. Sprawdź, które założenia są najbardziej prawdopodobne.");
+  if (base.oneOff > 0 && base.oneOff > pos(s.savings)) t.push("Koszty jednorazowe przekraczają Twoje oszczędności. Zaplanuj, z czego je pokryjesz (np. podział wspólnych oszczędności, rozłożenie w czasie).");
+  if (get("housing") > 0 && base.income > 0 && get("housing") / base.income > 0.4) t.push("Mieszkanie pochłania ponad 40% dochodów. Zastanów się, czy utrzymasz takie rozwiązanie.");
+  if (get("debts") > 0) t.push("Ustal, kto i w jakiej części spłaca wspólne kredyty, karty i raty. Wobec wierzyciela mogą odpowiadać oboje.");
+  if (get("children") > 0 || pos(s.alimonyIn) || pos(s.alimonyOut)) t.push("Przygotuj zestawienie kosztów dzieci i porozmawiajcie o podziale wydatków. Alimenty zależą od potrzeb dziecka i możliwości rodziców. W razie sporu ustala je sąd.");
+  if (pos(s.alimonyIn) || pos(s.alimonyOut)) t.push("Kwota alimentów to Twoje założenie, nie prognoza. Sprawdź, jak wygląda budżet bez niej.");
   t.push("Ustal, co dzieje się ze wspólnymi kontami, kartami i stałymi zleceniami.");
-  t.push("Sprawdź ubezpieczenia (na życie, mieszkania, samochodu) — kto jest ubezpieczonym, a kto uposażonym.");
-  t.push("Sprawdź, jak rozliczysz podatek dochodowy za rok rozstania — wspólne rozliczenie małżonków ma określone warunki.");
-  if (pos(s.savings) > 0) t.push("Spisz wspólne oszczędności i inwestycje na dzień rozstania — przyda się przy rozliczeniach.");
+  t.push("Sprawdź ubezpieczenia (na życie, mieszkania, samochodu): kto jest ubezpieczonym, a kto uposażonym.");
+  t.push("Jeśli jesteście małżeństwem, sprawdź, jak rozliczysz podatek za rok rozstania. Wspólne rozliczenie małżonków ma określone warunki.");
+  if (pos(s.savings) > 0) t.push("Spisz wspólne oszczędności i inwestycje na dzień rozstania. Przyda się przy rozliczeniach.");
   return t;
 }
 

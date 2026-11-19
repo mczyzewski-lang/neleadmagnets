@@ -21,14 +21,14 @@ const OPT = {
   meWhere: [{ value: "pl", label: "W Polsce" }, { value: "abroad", label: "Za granicą" }] as O,
   fault: [{ value: "none", label: "Bez orzekania o winie", desc: "Wymaga zgodnego żądania obojga" }, { value: "fault", label: "Z orzekaniem o winie" }, { value: "unsure", label: "Jeszcze nie wiem" }] as O,
   children: [{ value: "minor", label: "Tak, małoletnie" }, { value: "adult", label: "Tak, tylko pełnoletnie" }, { value: "none", label: "Nie mamy wspólnych dzieci" }] as O,
-  agreement: [{ value: "yes", label: "Tak, mamy porozumienie" }, { value: "maybe", label: "Pracujemy nad nim / możliwe" }, { value: "no", label: "Nie" }] as O,
+  agreement: [{ value: "yes", label: "Tak, mamy porozumienie" }, { value: "maybe", label: "Pracujemy nad nim" }, { value: "no", label: "Nie" }] as O,
   yn: [{ value: "yes", label: "Tak" }, { value: "no", label: "Nie" }] as O,
   property: [{ value: "together", label: "Chcemy podziału w wyroku rozwodowym", desc: "Zwykle przy zgodnym projekcie podziału" }, { value: "later", label: "Podział osobno, później" }, { value: "none", label: "Nie dotyczy (brak majątku wspólnego)" }, { value: "unsure", label: "Nie wiem" }] as O,
   mediation: [
     { value: "yes", label: "Tak, była mediacja lub inna próba porozumienia" },
-    { value: "refused", label: "Proponowałem/proponowałam, druga strona odmówiła lub nie odpowiedziała" },
+    { value: "refused", label: "Zaproponowałem/zaproponowałam mediację, druga strona odmówiła lub nie odpowiedziała" },
     { value: "no", label: "Jeszcze nie" },
-    { value: "unsafe", label: "Nie — mediacja nie jest bezpieczna", desc: "Przemoc, groźby lub kontrola w relacji" },
+    { value: "unsafe", label: "Nie, mediacja nie jest bezpieczna", desc: "Przemoc, groźby lub kontrola w relacji" },
   ] as O,
   alimony: [{ value: "request", label: "Rozważam żądanie alimentów od małżonka" }, { value: "no", label: "Nie" }, { value: "unsure", label: "Nie wiem" }] as O,
 };
@@ -43,11 +43,11 @@ const steps: WizardStep<PetitionAnswers>[] = [
   { id: "meWhere", title: "Gdzie mieszkasz Ty?", valid: (a) => !!a.meWhere, summary: (a) => labelOf(OPT.meWhere, a.meWhere), render: pick("meWhere", OPT.meWhere, "Twoje miejsce zamieszkania") },
   { id: "fault", title: "Jakie masz stanowisko co do winy?", valid: (a) => !!a.fault, summary: (a) => labelOf(OPT.fault, a.fault), render: pick("fault", OPT.fault, "Wina") },
   { id: "children", title: "Czy macie wspólne dzieci?", valid: (a) => !!a.children, summary: (a) => labelOf(OPT.children, a.children), render: pick("children", OPT.children, "Dzieci") },
-  { id: "agreement", title: "Czy macie pisemne porozumienie dotyczące dzieci?", help: "Porozumienie o wykonywaniu władzy rodzicielskiej i kontaktach.", when: (a) => a.children === "minor", valid: (a) => !!a.agreement, summary: (a) => labelOf(OPT.agreement, a.agreement), render: pick("agreement", OPT.agreement, "Porozumienie rodzicielskie") },
+  { id: "agreement", title: "Czy macie pisemne porozumienie rodzicielskie?", help: "Ustalenia o władzy rodzicielskiej, kontaktach i alimentach.", when: (a) => a.children === "minor", valid: (a) => !!a.agreement, summary: (a) => labelOf(OPT.agreement, a.agreement), render: pick("agreement", OPT.agreement, "Porozumienie rodzicielskie") },
   { id: "flat", title: "Czy nadal wspólnie zajmujecie mieszkanie?", valid: (a) => !!a.flat, summary: (a) => labelOf(OPT.yn, a.flat), render: pick("flat", OPT.yn, "Wspólne mieszkanie") },
   { id: "property", title: "Co z podziałem majątku wspólnego?", valid: (a) => !!a.property, summary: (a) => labelOf(OPT.property, a.property), render: pick("property", OPT.property, "Majątek") },
   { id: "alimony", title: "Czy rozważasz żądanie alimentów od małżonka dla siebie?", valid: (a) => !!a.alimony, summary: (a) => labelOf(OPT.alimony, a.alimony), render: pick("alimony", OPT.alimony, "Alimenty od małżonka") },
-  { id: "mediation", title: "Czy próbowaliście mediacji lub innego polubownego rozwiązania?", help: "Pozew musi zawierać informację, czy była próba mediacji, a jeśli nie — dlaczego (art. 187 § 1 pkt 3 KPC). Udokumentowana próba liczy się także wtedy, gdy druga strona odmówi.", valid: (a) => !!a.mediation, summary: (a) => labelOf(OPT.mediation, a.mediation), render: pick("mediation", OPT.mediation, "Mediacja") },
+  { id: "mediation", title: "Czy próbowaliście mediacji lub innego polubownego rozwiązania?", help: "W pozwie piszesz, czy była próba mediacji, a jeśli nie, dlaczego. Próba liczy się także wtedy, gdy druga strona odmówi.", valid: (a) => !!a.mediation, summary: (a) => labelOf(OPT.mediation, a.mediation), render: pick("mediation", OPT.mediation, "Mediacja") },
 ];
 
 export function PetitionTool() {
@@ -68,10 +68,10 @@ export function PetitionTool() {
   const toggle = (id: string) => setChecked((s) => { const n = new Set(s); if (n.has(id)) n.delete(id); else n.add(id); return n; });
 
   const report = (): Report => ({
-    title: "Konspekt pozwu o rozwód — lista kontrolna",
-    intro: `Przygotowano ${todayPL()}. To lista kontrolna, nie gotowy pozew — pozew warto przygotować z prawnikiem.`,
+    title: "Konspekt pozwu o rozwód: lista kontrolna",
+    intro: `Przygotowano ${todayPL()}. To lista kontrolna, nie gotowy pozew. Pozew warto przygotować z prawnikiem.`,
     sections: [
-      { heading: "Który sąd (art. 41 KPC)", items: [court.court, court.explanation, ...court.notes] },
+      { heading: "Który sąd", items: [court.court, court.explanation, ...court.notes] },
       ...groups.map((g) => ({ heading: g.title, items: g.items.map((i) => `${checked.has(i.id) ? "[x]" : "[ ]"} ${i.text}${i.note ? ` (${i.note})` : ""}`) })),
     ],
   });
@@ -83,7 +83,7 @@ export function PetitionTool() {
     <div ref={ref} className="tool-frame" style={{ scrollMarginTop: 70 }}>
       <div className="result-head">
         <span className="eyebrow">Twój konspekt</span>
-        <h2 style={{ fontSize: "var(--fs-2xl)" }}>Konspekt pozwu o rozwód — lista kontrolna</h2>
+        <h2 style={{ fontSize: "var(--fs-2xl)" }}>Konspekt pozwu o rozwód: lista kontrolna</h2>
         <p>Gdzie złożyć pozew i co powinien zawierać w Twojej sytuacji. To lista kontrolna, nie gotowy pozew.</p>
         <div className="kpis kpis--3">
           <div className="kpi"><span className="kpi__label">Właściwy sąd</span><span className="kpi__value" style={{ fontSize: "var(--fs-md)", lineHeight: 1.3 }}>{court.court}</span></div>
@@ -95,7 +95,7 @@ export function PetitionTool() {
 
       <div className="result-section">
         <h3><Icon name="map" width={22} /> Gdzie złożyć pozew</h3>
-        <p className="small">Rozwód orzeka wyłącznie sąd okręgowy. O tym, który, decyduje kolejność reguł z art. 41 KPC:</p>
+        <p className="small">Rozwód orzeka wyłącznie sąd okręgowy. Który, wynika z trzech reguł stosowanych po kolei:</p>
         <ol className="court-rule">
           {COURT_RULES.map((r, i) => (
             <li key={r.id} className={i === activeIdx ? "is-active" : activeIdx >= 0 && i < activeIdx ? "is-skip" : undefined}>
@@ -105,24 +105,24 @@ export function PetitionTool() {
           ))}
         </ol>
         {court.rule === "consult" && <Alert tone="warn" className="mt"><p><strong>{court.explanation}</strong></p></Alert>}
-        <div className="mt"><Alert tone="info"><p><strong>Jak znaleźć konkretny sąd?</strong> Sprawdź, który sąd okręgowy obejmuje daną miejscowość — na stronie internetowej sądu (zakładka o właściwości/obszarze) albo w wyszukiwarce sądów Ministerstwa Sprawiedliwości.</p></Alert></div>
+        <div className="mt"><Alert tone="info"><p><strong>Jak znaleźć konkretny sąd?</strong> Sprawdź, który sąd okręgowy obejmuje daną miejscowość: na stronie sądu albo w wyszukiwarce sądów Ministerstwa Sprawiedliwości.</p></Alert></div>
         {court.notes.length > 0 && <ul className="list-dot mt">{court.notes.map((n) => <li key={n}>{n}</li>)}</ul>}
       </div>
 
       <div className="result-section">
         <h3><Icon name="handshake" width={22} /> Najpierw plan i ustalenia, potem pozew</h3>
-        <p className="small">Pozew najlepiej składać, gdy wiesz, o co wnosisz, i masz za sobą próbę porozumienia. Sprawy uzgodnione wcześniej sąd może uwzględnić w wyroku — zostaje mniej kwestii do udowadniania, a sprawa jest zwykle krótsza i tańsza.</p>
+        <p className="small">Pozew najlepiej składać, gdy wiesz, o co wnosisz, i masz za sobą próbę porozumienia. Uzgodnienia sąd może uwzględnić w wyroku. Sprawa jest wtedy zwykle krótsza i tańsza.</p>
         <ul className="list-check">
-          <li>Które sprawy możecie uzgodnić wcześniej (dzieci, mieszkanie, finanse) — <Link href="/narzedzia/przed-pozwem">mapa ustaleń przed pozwem</Link>.</li>
-          {answers.mediation === "no" && <li>Zaproponuj mediację na piśmie i zachowaj dowody (kopię wniosku, dowód doręczenia, odpowiedź). Nawet jeśli druga strona odmówi, wskażesz tę próbę w pozwie (art. 187 § 1 pkt 3 KPC); sąd może obciążyć kosztami stronę, która w sposób oczywiście nieuzasadniony odmówiła mediacji (art. 103 KPC).</li>}
-          {answers.fault !== "none" && <li>Stanowisko co do winy i jego skutki — <Link href="/przed-decyzja/wina-czy-bez-winy">porównanie: z winą czy bez</Link>.</li>}
-          {answers.children === "minor" && <li>Plan opieki i kontaktów — <Link href="/narzedzia/plan-opieki-nad-dzieckiem">kreator planu opieki</Link>; koszty dzieci — <Link href="/narzedzia/koszty-utrzymania-dziecka">kalkulator kosztów</Link>.</li>}
-          {answers.flat === "yes" && <li>Scenariusze dla mieszkania i kredytu — <Link href="/narzedzia/mieszkanie-i-kredyt">narzędzie Mieszkanie i kredyt</Link>.</li>}
-          <li>Komplet dokumentów — <Link href="/materialy/checklista-dokumentow">checklista dokumentów</Link>.</li>
+          <li>Które sprawy możecie uzgodnić wcześniej: <Link href="/narzedzia/przed-pozwem">mapa ustaleń przed pozwem</Link>.</li>
+          {answers.mediation === "no" && <li>Zaproponuj mediację: wyślij zaproszenie do mediacji (sam/sama albo przez mediatora) i zachowaj dowody. Przy wyraźnej odmowie mediator może to potwierdzić na piśmie. Tę próbę wskażesz w pozwie.</li>}
+          {answers.fault !== "none" && <li>Stanowisko co do winy i jego skutki: <Link href="/przed-decyzja/wina-czy-bez-winy">porównanie: z winą czy bez</Link>.</li>}
+          {answers.children === "minor" && <li>Plan opieki i kontaktów: <Link href="/narzedzia/plan-opieki-nad-dzieckiem">kreator planu opieki</Link>. Koszty dzieci: <Link href="/narzedzia/koszty-utrzymania-dziecka">kalkulator kosztów</Link>.</li>}
+          {answers.flat === "yes" && <li>Scenariusze dla mieszkania i kredytu: <Link href="/narzedzia/mieszkanie-i-kredyt">narzędzie Mieszkanie i kredyt</Link>.</li>}
+          <li>Komplet dokumentów: <Link href="/materialy/checklista-dokumentow">checklista dokumentów</Link>.</li>
         </ul>
         {answers.mediation === "unsafe"
-          ? <Alert tone="warn" className="mt"><p><strong>Twoje bezpieczeństwo jest ważniejsze niż próba mediacji.</strong> Mediacja jest dobrowolna — przy przemocy, groźbach lub kontroli nie musisz jej proponować. Skonsultuj kolejne kroki z prawnikiem lub ośrodkiem pomocy; w sytuacji zagrożenia dzwoń pod 112.</p></Alert>
-          : <p className="xsmall muted mt">Mediacja jest dobrowolna i nie gwarantuje konkretnego rozstrzygnięcia. Jeśli doświadczasz przemocy, gróźb lub kontroli — nie musisz jej proponować.</p>}
+          ? <Alert tone="warn" className="mt"><p><strong>Twoje bezpieczeństwo jest ważniejsze niż próba mediacji.</strong> Mediacja jest dobrowolna. Przy przemocy, groźbach lub kontroli nie musisz jej proponować. Kolejne kroki omów z prawnikiem lub ośrodkiem pomocy. W sytuacji zagrożenia dzwoń pod 112.</p></Alert>
+          : <p className="xsmall muted mt">Mediacja jest dobrowolna i nie gwarantuje konkretnego rozstrzygnięcia. Jeśli doświadczasz przemocy, gróźb lub kontroli, nie musisz jej proponować.</p>}
       </div>
 
       <div className="result-section">
@@ -144,7 +144,7 @@ export function PetitionTool() {
             ))}
           </section>
         ))}
-        <Alert tone="warn"><p><strong>To nie jest gotowy pozew.</strong> Treść żądań, uzasadnienia i wniosków dowodowych zależy od szczegółów sprawy — pozew warto przygotować z prawnikiem.</p></Alert>
+        <Alert tone="warn"><p><strong>To nie jest gotowy pozew.</strong> Treść żądań i uzasadnienia zależy od szczegółów sprawy. Pozew warto przygotować z prawnikiem.</p></Alert>
       </div>
 
       <div className="result-section"><ResultActions toolId={TOOL} report={report} filename="konspekt-pozwu-rozwodowego" onReset={reset} /></div>

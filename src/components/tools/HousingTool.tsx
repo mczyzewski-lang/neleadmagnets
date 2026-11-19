@@ -11,7 +11,7 @@ import { track } from "@/lib/analytics";
 import type { Report } from "@/lib/report";
 import {
   type HousingAnswers, DEFAULT_SALE_COST_PCT, agreementsToDiscuss, bankChecklist, buildRisks, buildScenarios, computeMoney,
-  documentsList, hasLoan, isMarriage, propertyStatus, questionsForExperts, someoneStays,
+  documentsList, hasLoan, isMarriage, normalizeAnswers, propertyStatus, questionsForExperts, someoneStays, LTV_HIGH,
 } from "@/lib/tools/housing";
 
 const TOOL = "mieszkanie-i-kredyt";
@@ -33,7 +33,7 @@ const O = {
     { value: "unsure", label: "Nie pamiętam / to skomplikowane" },
   ],
   regime: [
-    { value: "wspolnosc", label: "Wspólność majątkowa", desc: "Najczęstsza sytuacja — jeśli nie podpisywaliście intercyzy" },
+    { value: "wspolnosc", label: "Wspólność majątkowa", desc: "Najczęstsza sytuacja, jeśli nie podpisywaliście intercyzy" },
     { value: "rozdzielnosc", label: "Rozdzielność majątkowa", desc: "Np. intercyza u notariusza" },
     { value: "inny", label: "Inny ustrój", desc: "Np. rozszerzona lub ograniczona wspólność" },
     { value: "unsure", label: "Nie wiem" },
@@ -73,7 +73,7 @@ const opts = (k: keyof typeof O) => O[k] as unknown as { value: string; label: s
 
 const steps: WizardStep<HousingAnswers>[] = [
   {
-    id: "relation", title: "Czy jesteście małżeństwem?", help: "Od tego zależą przepisy: małżeństwo — Kodeks rodzinny, związek nieformalny — Kodeks cywilny.",
+    id: "relation", title: "Czy jesteście małżeństwem?", help: "Od tego zależą przepisy: inne dla małżeństwa, inne dla związku nieformalnego.",
     valid: (a) => !!a.relation, summary: (a) => labelOf(opts("relation"), a.relation),
     render: (a, set) => <SingleChoice legend="Status związku" options={opts("relation")} value={a.relation} onChange={(v) => set({ relation: v as HousingAnswers["relation"] })} />,
   },
@@ -106,7 +106,7 @@ const steps: WizardStep<HousingAnswers>[] = [
   },
   {
     id: "numbers", title: "Orientacyjne kwoty", optional: true,
-    help: "Wystarczą przybliżenia. Możesz pominąć ten krok — scenariusze pokażemy także bez liczb.",
+    help: "Wystarczą przybliżenia. Możesz pominąć ten krok, scenariusze pokażemy też bez liczb.",
     summary: (a) => [a.value ? `wartość ${formatPLN(a.value)}` : null, hasLoan(a) && a.balance !== undefined ? `kredyt ${formatPLN(a.balance)}` : null].filter(Boolean).join(", ") || "nie podano",
     render: (a, set) => (
       <div>
@@ -122,7 +122,7 @@ const steps: WizardStep<HousingAnswers>[] = [
     render: (a, set) => <SingleChoice legend="Kto chce zostać" options={opts("stay")} value={a.stay} onChange={(v) => set({ stay: v as HousingAnswers["stay"] })} />,
   },
   {
-    id: "afford", title: "Czy osoba, która chce zostać, mogłaby samodzielnie ponosić koszty mieszkania i raty?",
+    id: "afford", title: "Czy osoba, która chce zostać, mogłaby sama ponosić koszty mieszkania (i ewentualne raty)?",
     when: (a) => someoneStays(a),
     valid: (a) => !!a.afford, summary: (a) => labelOf(opts("afford"), a.afford),
     render: (a, set) => <SingleChoice legend="Samodzielna spłata" options={opts("afford")} value={a.afford} onChange={(v) => set({ afford: v as HousingAnswers["afford"] })} />,
@@ -169,17 +169,20 @@ export function HousingTool() {
     setWizardKey((k) => k + 1);
   };
 
+  const visible = normalizeAnswers(answers);
   const situation = [
-    labelOf(opts("relation"), answers.relation),
-    `Właściciel: ${labelOf(opts("owner"), answers.owner)?.toLowerCase()}`,
-    answers.purchase ? `Zakup: ${labelOf(opts("purchase"), answers.purchase)?.toLowerCase()}` : null,
-    answers.regime ? `Ustrój: ${labelOf(opts("regime"), answers.regime)?.toLowerCase()}` : null,
-    `Kredyt: ${labelOf(opts("loan"), answers.loan)?.toLowerCase()}`,
+    labelOf(opts("relation"), visible.relation),
+    `Właściciel: ${labelOf(opts("owner"), visible.owner)?.toLowerCase()}`,
+    visible.purchase ? `Zakup: ${labelOf(opts("purchase"), visible.purchase)?.toLowerCase()}` : null,
+    visible.regime ? `Ustrój: ${labelOf(opts("regime"), visible.regime)?.toLowerCase()}` : null,
+    `Kredyt: ${labelOf(opts("loan"), visible.loan)?.toLowerCase()}`,
   ].filter(Boolean) as string[];
+  const ltvPct = money.ltv !== undefined ? Math.round(money.ltv * 100) : undefined;
+  const BANK_NOTE = "Zasady różnią się między bankami. Bank liczy LTV od własnej wyceny mieszkania i sam ocenia zdolność kredytową. Ten wynik to szacunek do sprawdzenia w banku lub u doradcy kredytowego.";
 
   const report = (): Report => ({
-    title: "Mieszkanie i kredyt po rozstaniu — moje scenariusze",
-    intro: `Zestawienie przygotowane ${todayPL()} na podstawie moich odpowiedzi.`,
+    title: "Mieszkanie i kredyt po rozstaniu: moje scenariusze",
+    intro: `Zestawienie z ${todayPL()} na podstawie moich odpowiedzi. To możliwości do rozważenia, nie ocena prawna ani decyzja banku.`,
     sections: [
       { heading: "Moja sytuacja", items: [...situation, `Status mieszkania: ${status.label} (${status.certainty}). ${status.text}`] },
       ...(money.equity !== undefined
@@ -187,6 +190,7 @@ export function HousingTool() {
             `Wartość: ${formatPLN(money.value)}`, `Saldo kredytu: ${formatPLN(money.balance)}`,
             `Różnica wartość − kredyt: ${formatPLN(money.equity)}`,
             `Po założonych kosztach sprzedaży (${answers.saleCostPct ?? DEFAULT_SALE_COST_PCT}%): ${formatPLN(money.equityAfterCosts)}`,
+            ...(ltvPct !== undefined ? [`LTV (saldo kredytu / podana wartość): ok. ${ltvPct}%. ${BANK_NOTE}`] : []),
           ] }]
         : []),
       ...scenarios.map((s, i) => ({ heading: `Scenariusz ${i + 1}: ${s.title}`, items: [s.summary, ...s.why.map((w) => `Dlaczego: ${w}`), ...s.steps.map((x) => `Krok: ${x}`), ...s.watch.map((w) => `Uwaga: ${w}`)] })),
@@ -209,15 +213,15 @@ export function HousingTool() {
       <div className="result-head">
         <span className="eyebrow">Twój wynik</span>
         <h2 style={{ fontSize: "var(--fs-2xl)" }}>3 możliwe scenariusze dla Waszego mieszkania</h2>
-        <p style={{ marginBottom: 16 }}>Ułożone według dopasowania do Twoich odpowiedzi. To możliwości do rozważenia — nie rekomendacja ani ocena prawna.</p>
+        <p style={{ marginBottom: 16 }}>Ułożone według dopasowania do Twoich odpowiedzi. To możliwości do rozważenia, nie rekomendacja ani ocena prawna.</p>
         {money.equity !== undefined ? (
           <div className="kpis kpis--3">
             <div className="kpi"><span className="kpi__label">Wartość mieszkania</span><span className="kpi__value">{formatPLN(money.value)}</span></div>
-            <div className="kpi"><span className="kpi__label">Saldo kredytu</span><span className="kpi__value">{formatPLN(money.balance)}</span></div>
+            {hasLoan(visible) && <div className="kpi"><span className="kpi__label">Saldo kredytu</span><span className="kpi__value">{formatPLN(money.balance)}</span></div>}
             <div className={`kpi ${money.negative ? "kpi--neg" : ""}`}><span className="kpi__label">Różnica (orientacyjnie)</span><span className="kpi__value">{formatPLN(money.equity)}</span><span className="kpi__note">przed kosztami sprzedaży</span></div>
           </div>
         ) : (
-          <p className="small" style={{ margin: 0, opacity: 0.85 }}>Nie podano kwot — scenariusze oparte są na pozostałych odpowiedziach. <button type="button" className="btn btn--link btn--sm no-print" style={{ color: "#fff" }} onClick={() => edit("numbers")}>Dodaj kwoty</button></p>
+          <p className="small" style={{ margin: 0, opacity: 0.85 }}>Nie podano kwot. Scenariusze opierają się na pozostałych odpowiedziach. <button type="button" className="btn btn--link btn--sm no-print" style={{ color: "#fff" }} onClick={() => edit("numbers")}>Dodaj kwoty</button></p>
         )}
       </div>
 
@@ -241,7 +245,7 @@ export function HousingTool() {
           <h3><Icon name="coins" width={22} /> Orientacyjne liczby</h3>
           <div className="hbar" role="img" aria-label={`Wartość ${formatPLN(money.value)}, kredyt ${formatPLN(money.balance)}, różnica ${formatPLN(money.equity)}`}>
             <div className="hbar__row"><span>Wartość</span><div className="hbar__track"><div className="hbar__fill" style={{ width: `${((money.value || 0) / max) * 100}%` }} /></div><span className="hbar__val">{formatPLN(money.value)}</span></div>
-            <div className="hbar__row"><span>Kredyt</span><div className="hbar__track"><div className="hbar__fill" style={{ width: `${((money.balance || 0) / max) * 100}%`, background: "var(--gold-500)" }} /></div><span className="hbar__val">{formatPLN(money.balance)}</span></div>
+            {hasLoan(visible) && <div className="hbar__row"><span>Kredyt</span><div className="hbar__track"><div className="hbar__fill" style={{ width: `${((money.balance || 0) / max) * 100}%`, background: "var(--gold-500)" }} /></div><span className="hbar__val">{formatPLN(money.balance)}</span></div>}
             <div className="hbar__row"><span>Koszty sprzedaży</span><div className="hbar__track"><div className="hbar__fill" style={{ width: `${((money.saleCosts || 0) / max) * 100}%`, background: "var(--ink-3)" }} /></div><span className="hbar__val">{formatPLN(money.saleCosts)}</span></div>
           </div>
           <div className="grid grid--2" style={{ marginTop: 16 }}>
@@ -256,22 +260,23 @@ export function HousingTool() {
                     onChange={(e) => setAnswersState((a) => ({ ...a, saleCostPct: Math.max(0, Math.min(15, Number(e.target.value) || 0)) }))}
                     style={{ width: 60, font: "inherit", padding: "2px 4px", border: "1px solid var(--line-strong)", borderRadius: 6 }} />
                 </label>
-                <span className="print-only-inline">{answers.saleCostPct ?? DEFAULT_SALE_COST_PCT}</span> % wartości (prowizja, notariusz, inne — zmień według siebie)
+                <span className="print-only-inline">{answers.saleCostPct ?? DEFAULT_SALE_COST_PCT}</span> % wartości (prowizja, notariusz, inne; zmień według siebie)
               </span>
             </div>
-            {money.ltv !== undefined && (
+            {ltvPct !== undefined && (
               <div className="kpi">
-                <span className="kpi__label">Kredyt / wartość (LTV)</span>
-                <span className="kpi__value">{Math.round(money.ltv * 100)}%</span>
-                <span className="kpi__note">Im wyższy, tym trudniej o refinansowanie przez jedną osobę</span>
+                <span className="kpi__label">Kredyt / wartość (LTV), szacunek</span>
+                <span className="kpi__value">ok. {ltvPct}%</span>
+                <span className="kpi__note">Saldo kredytu podzielone przez podaną wartość. Im wyższe, tym trudniej zwykle o przejęcie kredytu przez jedną osobę.{money.ltv! > LTV_HIGH ? ` Powyżej ok. ${Math.round(LTV_HIGH * 100)}% banki często stawiają dodatkowe warunki.` : ""}</span>
               </div>
             )}
           </div>
           {money.halfIllustration !== undefined && (
-            <p className="small muted" style={{ marginTop: 12 }}>Ilustracyjnie: przy równych udziałach i bez innych rozliczeń połowa różnicy to ok. <strong>{formatPLN(money.halfIllustration)}</strong>.</p>
+            <p className="small muted" style={{ marginTop: 12 }}>Dla ilustracji: przy równych udziałach i bez innych rozliczeń połowa różnicy to ok. <strong>{formatPLN(money.halfIllustration)}</strong>.</p>
           )}
           <Alert tone="warn" className="mt">
-            <p><strong>To nie jest podział majątku ani kwota do wypłaty.</strong> Rzeczywiste rozliczenie zależy m.in. od statusu mieszkania, nakładów, innych składników majątku, podatków i kosztów, a także od Waszych ustaleń lub orzeczenia sądu.</p>
+            <p><strong>To nie jest podział majątku ani kwota do wypłaty.</strong> Rozliczenie zależy m.in. od statusu mieszkania, nakładów, reszty majątku, podatków i kosztów oraz od Waszych ustaleń lub wyroku sądu.</p>
+            {ltvPct !== undefined && <p>{BANK_NOTE}</p>}
           </Alert>
         </div>
       )}
@@ -279,7 +284,7 @@ export function HousingTool() {
       {answers.loan === "joint" && (
         <div className="result-section" style={{ paddingTop: 0, borderTop: 0 }}>
           <Alert tone="danger" title="Ważne: rozwód nie zwalnia z kredytu">
-            <p>Rozwód, separacja ani podział mieszkania nie zmieniają umowy z bankiem. Oboje odpowiadacie za cały kredyt, dopóki bank nie zgodzi się na zmianę (np. zwolnienie jednej osoby lub refinansowanie). Nie da się jednostronnie „przepisać” kredytu.</p>
+            <p>Rozwód, separacja ani podział mieszkania nie zmieniają umowy z bankiem. Oboje odpowiadacie za cały kredyt, dopóki bank nie zgodzi się na zmianę. Nie da się samemu „przepisać” kredytu.</p>
           </Alert>
         </div>
       )}
@@ -317,6 +322,7 @@ export function HousingTool() {
           {bank.length > 0 && (
             <div>
               <h3><Icon name="bank" width={22} /> Co sprawdzić w banku</h3>
+              <p className="small muted">Każdy bank ma własne zasady. Te pytania pomogą je poznać. Możesz je zadać też doradcy kredytowemu.</p>
               <ul className="list-check">{bank.map((r) => <li key={r}>{r}</li>)}</ul>
             </div>
           )}
@@ -342,9 +348,9 @@ export function HousingTool() {
       <div className="result-section" style={{ background: "var(--cream)" }}>
         <NextStep
           toolId={TOOL}
-          intro="Mieszkanie i kredyt to zwykle jedne z najtrudniejszych tematów. Łatwiej o nich rozmawiać, gdy macie wspólny plan."
+          intro="Mieszkanie i kredyt to zwykle najtrudniejsze tematy. Łatwiej o nich rozmawiać ze wspólnym planem."
           offers={[
-            { key: "plan-rozwodu", cta: "Sprawdź, jakie kwestie warto ustalić przed pozwem", why: "Bezpłatny Plan Rozwodu porządkuje wszystkie sprawy do ustalenia — w tym mieszkanie, kredyt i podział majątku." },
+            { key: "plan-rozwodu", cta: "Sprawdź, jakie kwestie warto ustalić przed pozwem", why: "Bezpłatny Plan Rozwodu porządkuje sprawy do ustalenia, w tym mieszkanie, kredyt i podział majątku." },
             { key: "materialy", href: "/materialy/rozmowa-z-bankiem", cta: "Pobierz: jak przygotować rozmowę z bankiem", why: "Skrypt rozmowy z bankiem, lista dokumentów i arkusz z najważniejszymi liczbami." },
           ]}
         />

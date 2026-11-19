@@ -7,53 +7,53 @@ export const material: Material = {
   coverSubtitle: "Jak się przygotować do rozmowy z prawnikiem lub mediatorem",
   coverTone: "green",
   h1: "Jak przygotować się do pierwszej konsultacji z prawnikiem lub mediatorem",
-  h2: "Co zabrać, jak spisać oś czasu i najważniejsze fakty, o co zapytać (także o mediację i porozumienie przed pozwem) i jak porównać specjalistów — żeby z pierwszej rozmowy wyjść z planem, a nie od razu z pozwem.",
+  h2: "Co zabrać, jak spisać oś czasu i fakty, o co zapytać i jak porównać specjalistów. Z pierwszej rozmowy wychodzisz z planem, nie od razu z pozwem.",
   promise:
-    "Przyjdziesz na pierwszą konsultację przygotowany: z dokumentami, faktami i pytaniami — i wykorzystasz ten czas na to, co naprawdę ważne.",
+    "Przyjdziesz na konsultację z dokumentami, faktami i pytaniami i wykorzystasz ten czas na to, co ważne.",
   forWho: [
     "Planujesz pierwszą rozmowę z adwokatem, radcą prawnym lub mediatorem.",
-    "Nie wiesz, jakie dokumenty zabrać i od czego zacząć opowieść.",
-    "Chcesz wiedzieć, o co pytać, żeby porównać kilku specjalistów.",
-    "Boisz się, że emocje sprawią, że zapomnisz o czymś ważnym.",
+    "Nie wiesz, co zabrać i od czego zacząć.",
+    "Chcesz porównać kilku specjalistów.",
+    "Boisz się, że przez emocje zapomnisz o czymś ważnym.",
   ],
   inside: [
-    "Checklistę dokumentów do zabrania na konsultację.",
-    "Arkusz osi czasu najważniejszych wydarzeń.",
+    "Checklistę dokumentów.",
+    "Arkusz osi czasu.",
     "Kartę kluczowych faktów: małżeństwo, dzieci, majątek, dochody.",
-    "Listę pytań o koszty, sposób pracy, czas trwania i ryzyka — oraz o porozumienie i mediację przed pozwem, w tym jak udokumentować próbę mediacji.",
+    "Pytania o koszty, sposób pracy, ryzyka, porozumienie i mediację przed pozwem.",
     "Porównanie ról: adwokat i radca prawny, mediator, psycholog.",
-    "Informację o tajemnicy zawodowej pełnomocnika.",
-    "Wskazówki, jak przygotować się emocjonalnie i co zrobić po spotkaniu.",
+    "Kilka słów o tajemnicy zawodowej.",
+    "Przygotowanie emocjonalne i notatkę po spotkaniu.",
   ],
-  time: "20 min",
+  time: "15 min",
   faq: [
     {
       q: "Po co iść do prawnika, skoro nie chcę jeszcze składać pozwu?",
-      a: "Właśnie dlatego. Konsultacja jest częścią budowania planu: pomaga zrozumieć twoją sytuację, opcje i ryzyka, zanim zaczniesz rozmawiać z drugą stroną. Z planem łatwiej prowadzić ustalenia (rozmowy, mediację), a pozew — jeśli będzie potrzebny — pisze się na gotowych ustaleniach i jest konkretny. Sprawy uzgodnione wcześniej sąd może uwzględnić w wyroku, więc zostaje mniej kwestii do udowadniania.",
+      a: "Właśnie dlatego. Poznasz opcje i ryzyka, zanim zaczniesz rozmowy z drugą stroną.",
     },
     {
       q: "Czy warto próbować mediacji, jeśli druga strona prawdopodobnie odmówi?",
-      a: "Często tak — ale omów to z prawnikiem. Pozew musi zawierać informację, czy strony próbowały mediacji lub innego polubownego rozwiązania sporu, a jeśli nie — wyjaśnienie dlaczego (art. 187 § 1 pkt 3 KPC). Udokumentowana próba pokazuje sądowi twoją dobrą wolę, a sąd może obciążyć kosztami stronę, która w sposób oczywiście nieuzasadniony odmówiła mediacji (art. 103 KPC). Próba nie gwarantuje konkretnego rozstrzygnięcia. Mediacja jest dobrowolna — przy przemocy, groźbach lub kontroli nie musisz jej proponować; najpierw bezpieczeństwo.",
+      a: "Często tak, ale omów to z prawnikiem. Udokumentowana próba pokazuje twoją dobrą wolę, choć nie gwarantuje wyniku. Przy przemocy, groźbach lub kontroli nie musisz proponować mediacji.",
     },
     {
-      q: "Czy muszę mieć wszystkie dokumenty na pierwszej konsultacji?",
-      a: "Nie. Zabierz to, co masz pod ręką. Specjalista powie ci, czego jeszcze może potrzebować. Dobrze przygotowana oś czasu i karta faktów są często ważniejsze niż komplet dokumentów.",
+      q: "Czy muszę mieć wszystkie dokumenty?",
+      a: "Nie. Zabierz to, co masz. Oś czasu i karta faktów są często ważniejsze niż komplet dokumentów.",
     },
     {
       q: "Czym różni się adwokat lub radca prawny od mediatora?",
-      a: "Adwokat i radca prawny mogą być twoimi pełnomocnikami — doradzają tobie i reprezentują cię w sądzie. Mediator jest neutralny, nie reprezentuje żadnej ze stron i pomaga wam wspólnie wypracować porozumienie.",
+      a: "Adwokat i radca prawny doradzają tobie i mogą reprezentować cię w sądzie. Mediator jest bezstronny i pomaga wam obojgu wypracować porozumienie.",
     },
     {
       q: "Czy to, co powiem prawnikowi, zostanie między nami?",
-      a: "Adwokaci i radcowie prawni są związani tajemnicą zawodową, która obejmuje informacje uzyskane w związku z udzielaniem pomocy prawnej. Jej zakres i wyjątki określają przepisy — jeśli masz wątpliwości, zapytaj o to na początku spotkania.",
+      a: "Adwokatów i radców obowiązuje tajemnica zawodowa, z wyjątkami w przepisach. Zapytaj o nią na początku.",
     },
     {
       q: "Czy pierwsza konsultacja jest płatna?",
-      a: "To zależy od specjalisty. Zapytaj o koszt konsultacji i sposób rozliczania dalszej współpracy, zanim umówisz spotkanie.",
+      a: "To zależy od specjalisty. Zapytaj o koszt przed umówieniem spotkania.",
     },
     {
-      q: "Czy mogę przyjść na konsultację z kimś bliskim?",
-      a: "Zapytaj o to wcześniej. Obecność osoby trzeciej może mieć znaczenie dla poufności rozmowy, a część spotkania specjalista może chcieć przeprowadzić tylko z tobą.",
+      q: "Czy mogę przyjść z kimś bliskim?",
+      a: "Zapytaj wcześniej. Obecność osoby trzeciej może wpłynąć na poufność rozmowy.",
     },
   ],
   sources: [
@@ -82,7 +82,7 @@ export const material: Material = {
   stage: 1,
   ctaLabel: "Umów konsultację i zacznij od planu",
   seo: {
-    title: "Pierwsza konsultacja z prawnikiem — checklista | Nowy Etap",
+    title: "Pierwsza konsultacja z prawnikiem: checklista | Nowy Etap",
     description:
       "Jak przygotować się do konsultacji z prawnikiem rodzinnym lub mediatorem: dokumenty, oś czasu, karta faktów, pytania o koszty i porównanie specjalistów.",
   },
@@ -91,34 +91,32 @@ export const material: Material = {
   sections: [
     {
       heading: "Po co się przygotowywać",
-      intro:
-        "Pierwsza konsultacja trwa zwykle od kilkudziesięciu minut do godziny. Jeśli większość tego czasu zajmie ustalanie dat i szukanie dokumentów, zostanie mało czasu na to, co najważniejsze: twoje opcje i kolejne kroki.",
+      intro: "Konsultacja trwa zwykle do godziny. Nie trać jej na szukanie dat i dokumentów.",
       blocks: [
         {
           type: "path",
           current: 1,
-          note: "Konsultacja to część budowania planu, a nie start sprawy w sądzie. Najpierw rozumiesz swoją sytuację i opcje, potem próbujecie ustaleń (rozmowy, mediacja) — a pozew pisze się dopiero na tym, co już wiadomo i co udało się uzgodnić.",
+          note: "Konsultacja to część planu, nie start sprawy w sądzie. Najpierw rozumiesz swoją sytuację, potem próbujecie ustaleń.",
         },
         {
           type: "list",
           items: [
-            "Specjalista szybciej zrozumie twoją sytuację i zada trafniejsze pytania.",
-            "Łatwiej porównasz kilku specjalistów, jeśli każdemu przedstawisz te same fakty.",
-            "Mniej emocji „w biegu” — masz wszystko zapisane.",
-            "Wyjdziesz ze spotkania z konkretną listą kolejnych kroków.",
-            "Zapytasz nie tylko o sąd, ale też o drogi polubowne — porozumienie i mediację — zanim padnie decyzja o pozwie.",
+            "Specjalista szybciej zrozumie sytuację.",
+            "Łatwiej porównasz specjalistów.",
+            "Masz wszystko zapisane, nawet gdy pojawią się emocje.",
+            "Wyjdziesz z listą kolejnych kroków.",
           ],
         },
         {
           type: "callout",
           tone: "info",
-          text: "Nie musisz mieć gotowych decyzji ani planować od razu pozwu. Konsultacja jest po to, by poznać możliwości i ułożyć kolejność działań. Ten materiał ma charakter informacyjny i nie zastępuje porady prawnej.",
+          text: "Nie musisz mieć gotowych decyzji. Ten materiał ma charakter informacyjny i nie zastępuje porady prawnej.",
         },
       ],
     },
     {
       heading: "Co zabrać na konsultację",
-      intro: "Zaznacz to, co masz. Kopie są zwykle wystarczające — oryginały zostaw w domu, chyba że specjalista poprosi inaczej.",
+      intro: "Zaznacz to, co masz. Zwykle wystarczą kopie.",
       blocks: [
         {
           type: "checklist",
@@ -130,9 +128,9 @@ export const material: Material = {
             "Wcześniejsze orzeczenia, ugody lub pisma z sądu (np. w sprawie alimentów, kontaktów, separacji)",
             "Dokumenty dotyczące nieruchomości: numer księgi wieczystej, akt notarialny",
             "Umowy kredytowe i aktualne harmonogramy spłat",
-            "Informacje o dochodach (np. PIT, zaświadczenie o zarobkach) — twoich i, jeśli znasz, drugiej osoby",
+            "Informacje o dochodach (np. PIT, zaświadczenie o zarobkach): twoich i, jeśli znasz, drugiej osoby",
             "Zestawienie stałych kosztów życia i wydatków na dzieci",
-            "Ważna korespondencja z drugą osobą (wydruk lub zrzuty ekranu — wybrane, nie wszystko)",
+            "Ważna korespondencja z drugą osobą (wybrane wydruki lub zrzuty ekranu)",
             "Dokumentacja dotycząca przemocy, jeśli występowała (zgłoszenia, dokumentacja medyczna)",
             "Wypełniona oś czasu i karta faktów z tego materiału",
             "Lista pytań",
@@ -142,8 +140,7 @@ export const material: Material = {
     },
     {
       heading: "Oś czasu i karta kluczowych faktów",
-      intro:
-        "Spisz wydarzenia w kolejności. Nie musisz pisać wypracowania — wystarczą daty i jedno zdanie opisu.",
+      intro: "Wystarczą daty (także przybliżone) i jedno zdanie opisu.",
       blocks: [
         {
           type: "table",
@@ -154,11 +151,10 @@ export const material: Material = {
             ["[rok]", "Zakup mieszkania / zaciągnięcie kredytu", "Akt notarialny, umowa kredytu"],
             ["[miesiąc, rok]", "Początek kryzysu w związku", ""],
             ["[miesiąc, rok]", "Wyprowadzka / zamieszkanie osobno", ""],
-            ["[miesiąc, rok]", "Ostatnie wspólne ustalenia (np. dotyczące dzieci, pieniędzy)", ""],
+            ["[miesiąc, rok]", "Ostatnie wspólne ustalenia (np. dzieci, pieniądze)", ""],
             ["", "", ""],
             ["", "", ""],
           ],
-          caption: "Wpisz własne wydarzenia. Daty przybliżone są w porządku.",
         },
         {
           type: "worksheet",
@@ -181,13 +177,13 @@ export const material: Material = {
         {
           type: "callout",
           tone: "info",
-          text: "Wystarczą przedziały dochodów (np. 6–8 tys. zł netto). Dokładne kwoty i dokumenty specjalista może zebrać później.",
+          text: "Wystarczą przedziały dochodów (np. 6–8 tys. zł netto). Dokładne kwoty zbierzecie później.",
         },
       ],
     },
     {
       heading: "Pytania, które warto zadać",
-      intro: "Wybierz najważniejsze dla ciebie i zapisz je wcześniej. Na spotkaniu zaznaczaj odpowiedzi. Pytania ułożyliśmy w kolejności Nowego Etapu: najpierw twoja sytuacja i plan, potem możliwe ustalenia, na końcu przebieg sprawy i koszty.",
+      intro: "Wybierz najważniejsze. Kolejność: sytuacja, ustalenia, sprawa i koszty.",
       blocks: [
         {
           type: "checklist",
@@ -196,10 +192,10 @@ export const material: Material = {
             "Jakie są główne ryzyka i na co powinienem uważać już teraz?",
             "Czego nie robić, zanim podejmę decyzję (np. w sprawie wyprowadzki, pieniędzy, dzieci)?",
             "Czy w mojej sprawie realne jest porozumienie lub mediacja? Jak to wygląda w praktyce?",
-            "Czy w mojej sytuacji warto najpierw spróbować mediacji i jak udokumentować próbę?",
-            "Które sprawy (dzieci, mieszkanie, kredyt, majątek) możemy spróbować uzgodnić przed złożeniem pozwu — i w jakiej formie je zapisać?",
-            "Co powinno znaleźć się w pozwie na temat prób polubownego rozwiązania sporu (art. 187 § 1 pkt 3 KPC)?",
-            "Jak zmieni się przebieg i koszt sprawy, jeśli dojdziemy do porozumienia, a jak — jeśli nie?",
+            "Jak zaprosić drugą stronę do mediacji i jak udokumentować tę próbę?",
+            "Które sprawy (dzieci, mieszkanie, kredyt, majątek) możemy uzgodnić przed pozwem i jak je zapisać?",
+            "Co napisać w pozwie o próbach polubownego rozwiązania sporu?",
+            "Jak zmieni się przebieg i koszt sprawy, jeśli dojdziemy do porozumienia, a jak, jeśli nie?",
             "Jak orientacyjnie może wyglądać przebieg sprawy i od czego zależy czas jej trwania?",
             "Jakie dokumenty muszę zebrać i w jakiej kolejności?",
             "Jakie są koszty: konsultacji, prowadzenia sprawy, opłat sądowych? Jak rozliczana jest współpraca (stała kwota, stawka godzinowa, etapy)?",
@@ -213,21 +209,20 @@ export const material: Material = {
           type: "callout",
           tone: "warning",
           title: "Uważaj na obietnice",
-          text: "Rzetelny specjalista mówi o scenariuszach i ryzykach, a nie gwarantuje konkretnego wyniku. Rozstrzygnięcie sądu zależy od okoliczności sprawy i oceny sądu.",
+          text: "Rzetelny specjalista mówi o scenariuszach i ryzykach, a nie gwarantuje wyniku.",
         },
       ],
     },
     {
       heading: "Porozumienie i mediacja przed pozwem",
-      intro:
-        "Dobry specjalista pomoże ci nie tylko przygotować pozew, ale też sprawdzić, co da się ustalić wcześniej. Dlaczego warto o to zapytać już na pierwszym spotkaniu?",
+      intro: "Zapytaj o to już na pierwszym spotkaniu.",
       blocks: [
         {
           type: "list",
           items: [
-            "Sprawy uzgodnione wcześniej (np. porozumienie o wychowaniu dzieci) sąd może uwzględnić w wyroku — zostaje mniej kwestii do udowadniania.",
-            "Gdy nie ma sporu o winę, dzieci i mieszkanie, sprawa często kończy się na jednej rozprawie.",
-            "Pozew pisany na gotowych ustaleniach jest konkretny: wiesz, o co wnosisz i dlaczego.",
+            "Sprawy uzgodnione wcześniej, np. porozumienie rodzicielskie, sąd może uwzględnić w wyroku.",
+            "Bez sporu o winę, dzieci i mieszkanie sprawa często kończy się na jednej rozprawie.",
+            "Pozew pisany na gotowych ustaleniach jest konkretny.",
           ],
         },
         { type: "mediationAttempt" },
@@ -242,20 +237,20 @@ export const material: Material = {
           rows: [
             [
               "Adwokat / radca prawny",
-              "Pełnomocnik — doradza tobie, przygotowuje pisma, może reprezentować cię w sądzie.",
-              "Gdy potrzebujesz oceny prawnej i planu, wsparcia przy negocjacjach i spisaniu porozumienia, a w razie potrzeby — pisma procesowego lub reprezentacji.",
-              "Działa w twoim interesie. Jest związany tajemnicą zawodową.",
+              "Twój pełnomocnik: doradza, pisze pisma, może reprezentować cię w sądzie.",
+              "Ocena prawna, plan, negocjacje, porozumienie, pozew.",
+              "Działa w twoim interesie. Obowiązuje go tajemnica zawodowa.",
             ],
             [
               "Mediator",
-              "Osoba neutralna, która pomaga obu stronom rozmawiać i wypracować porozumienie.",
-              "Gdy chcecie ustalić sprawy dzieci, majątku czy alimentów bez długiego sporu.",
-              "Nie reprezentuje żadnej ze stron i nie doradza jednej z nich. Mediacja jest dobrowolna (art. 183¹ i nast. KPC).",
+              "Bezstronna osoba, która pomaga obu stronom wypracować porozumienie.",
+              "Ustalenia o dzieciach, majątku, alimentach.",
+              "Nie reprezentuje żadnej strony. Mediacja jest dobrowolna i co do zasady poufna.",
             ],
             [
               "Psycholog / terapeuta",
               "Wsparcie emocjonalne, pomoc w kryzysie, wsparcie dzieci.",
-              "Gdy emocje utrudniają codzienne funkcjonowanie lub decyzje, albo martwisz się o dziecko.",
+              "Gdy emocje utrudniają decyzje lub martwisz się o dziecko.",
               "Nie udziela porad prawnych.",
             ],
           ],
@@ -271,15 +266,11 @@ export const material: Material = {
             "Z kim czuję się bezpiecznie i swobodnie?",
           ],
         },
-        {
-          type: "p",
-          text: "O tajemnicy zawodowej: adwokaci i radcowie prawni są obowiązani zachować w tajemnicy informacje, które uzyskali w związku z udzielaniem pomocy prawnej. Przepisy przewidują jednak określone wyjątki. Jeśli poufność jest dla ciebie szczególnie ważna, zapytaj o jej zakres na początku spotkania. Mediator również jest co do zasady zobowiązany do zachowania w tajemnicy faktów, o których dowiedział się w związku z prowadzeniem mediacji — szczegóły wyjaśni mediator.",
-        },
       ],
     },
     {
       heading: "Przygotowanie emocjonalne",
-      intro: "Rozmowa o rozstaniu z obcą osobą bywa trudna. To normalne, że pojawią się łzy, złość albo pustka w głowie.",
+      intro: "Łzy, złość albo pustka w głowie podczas takiej rozmowy są normalne.",
       blocks: [
         {
           type: "checklist",
@@ -287,7 +278,7 @@ export const material: Material = {
             "Zaplanuj spotkanie tak, by nie musieć biec od razu do pracy czy po dziecko.",
             "Zabierz wodę, chusteczki i notes z pytaniami.",
             "Zapisz trzy najważniejsze rzeczy, które chcesz wiedzieć po spotkaniu.",
-            "Pozwól sobie na pauzę — możesz poprosić o chwilę przerwy.",
+            "Możesz poprosić o przerwę.",
             "Poproś o powtórzenie lub wyjaśnienie, jeśli coś jest niejasne.",
             "Jeśli to możliwe, zapytaj o zgodę na nagranie lub rób notatki.",
             "Zaplanuj coś dobrego dla siebie po spotkaniu.",
@@ -307,7 +298,7 @@ export const material: Material = {
           type: "callout",
           tone: "safety",
           title: "Gdy chodzi o bezpieczeństwo",
-          text: "Jeśli doświadczasz przemocy, powiedz o tym na początku konsultacji — to wpływa na wybór dalszej drogi. W sytuacji zagrożenia dzwoń pod 112. Niebieska Linia: 800 120 002. Telefon dla dorosłych w kryzysie emocjonalnym: 116 123.",
+          text: "Przemoc zgłoś na początku konsultacji, bo wpływa na wybór drogi. W zagrożeniu: 112. Niebieska Linia: 800 120 002. Wsparcie w kryzysie: 116 123.",
         },
       ],
     },
@@ -316,11 +307,7 @@ export const material: Material = {
       blocks: [
         {
           type: "p",
-          text: "Dobrze przygotowana konsultacja to pierwszy krok do planu. Kolejny to uporządkowanie spraw, które trzeba ustalić: dzieci, mieszkanie, majątek, finanse — i kolejność działań. Potem przychodzi czas na ustalenia z drugą stroną (rozmowa, mediacja), a dopiero na końcu na pozew, który zbiera to, co już wiadomo.",
-        },
-        {
-          type: "p",
-          text: "W Nowym Etapie możesz umówić konsultację, przygotować Plan Rozwodu i ustalenia przed złożeniem pozwu albo skorzystać z mediacji. Najpierw plan i ustalenia — dopiero potem pozew. Wybierz to, co jest dla ciebie teraz potrzebne.",
+          text: "Po konsultacji: plan, potem rozmowy lub mediacja, na końcu pozew. W Nowym Etapie umówisz konsultację, Plan Rozwodu albo mediację.",
         },
       ],
     },

@@ -3,7 +3,7 @@ import type { AdSet } from "./types";
 // Na podstawie MARKETING/ADS.md
 export const ads: AdSet = {
   "slug": "checklista-dokumentow",
-  "angle": "Praktyczna lista do odhaczenia — niski próg wejścia.",
+  "angle": "Praktyczna lista do odhaczenia. Niski próg wejścia.",
   "targeting": "Kontekstowe i tematyczne: treści o finansach osobistych, prawie, rodzinie i poradnikach; Search: frazy informacyjne. Demografia szeroka (25–60). Bez remarketingu, list klientów, podobnych odbiorców i segmentów opartych na wnioskowaniu o kryzysie w związku.",
   "meta": {
     "primaryTexts": [
@@ -39,8 +39,8 @@ export const ads: AdSet = {
     ],
     "descriptions": [
       "Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych.",
-      "Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna.",
-      "Lista dokumentów do rozwodu, podziału majątku, spraw dzieci i kredytu — do odhaczania."
+      "Wypełniasz online, a podsumowanie masz od razu. To informacja, nie porada prawna.",
+      "Lista dokumentów do rozwodu, podziału majątku, spraw dzieci i kredytu do odhaczania."
     ],
     "cta": "Dowiedz się więcej",
     "creative": "Checklista na ekranie telefonu, obok segregator w kolorze #295550; trzy pozycje odhaczone złotym ptaszkiem."
@@ -60,19 +60,19 @@ export const ads: AdSet = {
       "Dokumenty do rozwodu",
       "Checklista online za darmo",
       "Co dołączyć do pozwu?",
-      "Podział majątku — dokumenty",
+      "Podział majątku: dokumenty",
       "Odhaczaj, co już masz",
       "Gdzie zdobyć odpisy?",
-      "Nowy Etap — poradnia",
+      "Nowy Etap, poradnia",
       "Materiał od Nowego Etapu",
       "Otwórz od razu",
       "Bez podawania danych"
     ],
     "descriptions": [
-      "Lista dokumentów do rozwodu, podziału majątku, spraw dzieci i kredytu — do odhaczania.",
+      "Lista dokumentów do rozwodu, podziału majątku, spraw dzieci i kredytu do odhaczania.",
       "Co zwykle jest potrzebne zawsze, a co zależy od sytuacji, i gdzie to uzyskać.",
       "Bezpłatna checklista Nowego Etapu. Odhaczasz online, bez pobierania.",
-      "Odpisy aktów stanu cywilnego zamówisz online — podpowiadamy jak."
+      "Odpisy aktów stanu cywilnego zamówisz online. Podpowiadamy jak."
     ],
     "paths": [
       "checklista",

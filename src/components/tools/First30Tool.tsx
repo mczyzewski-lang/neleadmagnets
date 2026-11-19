@@ -8,7 +8,7 @@ import { Icon } from "@/components/ui/Icon";
 import { track } from "@/lib/analytics";
 import { todayPL } from "@/lib/format";
 import type { Report } from "@/lib/report";
-import { buildPlan, planProgress, PERIODS, type First30Answers, type Period, type Task } from "@/lib/tools/first30";
+import { buildPlan, planProgress, sortTasks, tasksForPeriod, PERIODS, type First30Answers, type Period, type Task } from "@/lib/tools/first30";
 
 const TOOL = "pierwsze-30-dni";
 const STORE_KEY = "ne_plan30";
@@ -16,7 +16,7 @@ const STORE_KEY = "ne_plan30";
 type O = { value: string; label: string; desc?: string }[];
 const YN: O = [{ value: "yes", label: "Tak" }, { value: "no", label: "Nie" }];
 const opts = {
-  together: [{ value: "yes", label: "Tak, nadal mieszkamy razem" }, { value: "partly", label: "Częściowo / to się zmienia" }, { value: "no", label: "Nie, mieszkamy osobno" }] as O,
+  together: [{ value: "yes", label: "Tak, nadal mieszkamy razem" }, { value: "partly", label: "Częściowo, to się zmienia" }, { value: "no", label: "Nie, mieszkamy osobno" }] as O,
   decision: [{ value: "joint", label: "Tak, to wspólna decyzja" }, { value: "mine", label: "To moja decyzja" }, { value: "partner", label: "To decyzja drugiej osoby" }, { value: "unsure", label: "Trudno powiedzieć" }] as O,
   urgent: [
     { value: "safety", label: "Bezpieczeństwo moje lub dzieci", desc: "Obawiam się o swoje bezpieczeństwo" },
@@ -42,7 +42,7 @@ const steps: WizardStep<First30Answers>[] = [
         <MultiChoice legend="Pilne sprawy" options={opts.urgent} value={a.urgent || []} onChange={(v) => set({ urgent: v })} exclusive="none" />
         {a.urgent?.includes("safety") && (
           <Alert tone="safety" className="mt" title="Twoje bezpieczeństwo jest najważniejsze">
-            <p>W sytuacji zagrożenia dzwoń pod <strong>112</strong>. Bezpłatne wsparcie dla osób doznających przemocy domowej: <strong>Niebieska Linia 800 120 002</strong>. Plan uwzględni to w pierwszej kolejności.</p>
+            <p>W sytuacji zagrożenia dzwoń pod <strong>112</strong>. Bezpłatne wsparcie przy przemocy domowej: <strong>Niebieska Linia 800 120 002</strong>. Plan uwzględni to w pierwszej kolejności.</p>
           </Alert>
         )}
       </>
@@ -83,7 +83,7 @@ export function First30Tool() {
     // Zachowaj odhaczenia i własne zadania przy ponownym generowaniu po edycji odpowiedzi
     const fresh = buildPlan(answers);
     const custom = tasks.filter((t) => t.custom);
-    setTasks([...fresh, ...custom]);
+    setTasks(sortTasks([...fresh, ...custom]));
     setDone(true);
     track("tool_complete", { tool: TOOL });
     requestAnimationFrame(() => resultRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }));
@@ -94,10 +94,11 @@ export function First30Tool() {
   const toggle = (id: string) => setChecked((s) => { const n = new Set(s); if (n.has(id)) n.delete(id); else n.add(id); return n; });
   const removeTask = (id: string) => setTasks((t) => t.filter((x) => x.id !== id));
   const updateTask = (id: string, text: string) => setTasks((t) => t.map((x) => (x.id === id ? { ...x, text: text.slice(0, 300) } : x)));
+  const togglePriority = (id: string) => setTasks((t) => sortTasks(t.map((x) => (x.id === id ? { ...x, priority: !x.priority } : x))));
   const addTask = (period: Period) => {
     const text = (drafts[period] || "").trim();
     if (!text) return;
-    setTasks((t) => [...t, { id: `c${Date.now()}`, period, category: "Moje zadanie", text: text.slice(0, 300), custom: true }]);
+    setTasks((t) => sortTasks([...t, { id: `c${Date.now()}`, period, category: "Moje zadanie", text: text.slice(0, 300), custom: true }]));
     setDrafts((d) => ({ ...d, [period]: "" }));
   };
 
@@ -108,14 +109,14 @@ export function First30Tool() {
       setHasSaved(true);
       setSavedMsg("Plan zapisany w tej przeglądarce. Usuń go, jeśli korzystasz ze wspólnego urządzenia.");
     } catch {
-      setSavedMsg("Nie udało się zapisać — przeglądarka blokuje pamięć lokalną. Pobierz PDF.");
+      setSavedMsg("Nie udało się zapisać, bo przeglądarka blokuje pamięć lokalną. Pobierz PDF.");
     }
   };
   const loadLocal = () => {
     const s = readSaved();
     if (!s) return;
     setAnswersState(s.answers);
-    setTasks(s.tasks);
+    setTasks(sortTasks(s.tasks));
     setChecked(new Set(s.done));
     setDone(true);
   };
@@ -126,11 +127,11 @@ export function First30Tool() {
   };
 
   const report = (): Report => ({
-    title: "Pierwsze 30 dni po decyzji o rozstaniu — mój plan",
-    intro: `Plan przygotowany ${todayPL()}. To propozycja kolejności — dostosuj ją do siebie. Wykonane: ${progress.completed}/${progress.total}.`,
+    title: "Pierwsze 30 dni po decyzji o rozstaniu: mój plan",
+    intro: `Plan z ${todayPL()}. To propozycja kolejności, dostosuj ją do siebie. Wykonane: ${progress.completed}/${progress.total}.`,
     sections: PERIODS.map((p) => ({
       heading: `${p.label}: ${p.focus}`,
-      items: tasks.filter((t) => t.period === p.id).map((t) => `${checked.has(t.id) ? "[x]" : "[ ]"} ${t.text}${t.note ? ` (${t.note})` : ""}`),
+      items: tasksForPeriod(tasks, p.id).map((t) => `${checked.has(t.id) ? "[x]" : "[ ]"} ${t.priority ? "PILNE: " : ""}${t.text}${t.note ? ` (${t.note})` : ""}`),
     })),
   });
 
@@ -157,8 +158,8 @@ export function First30Tool() {
     <div ref={resultRef} className="tool-frame" style={{ scrollMarginTop: 70 }}>
       <div className="result-head">
         <span className="eyebrow">Twój plan</span>
-        <h2 style={{ fontSize: "var(--fs-2xl)" }}>Twoje pierwsze 30 dni — {tasks.length} kroków w 4 etapach</h2>
-        <p>To propozycja kolejności, a nie obowiązkowy harmonogram. Usuń to, co Cię nie dotyczy, i dodaj własne zadania.</p>
+        <h2 style={{ fontSize: "var(--fs-2xl)" }}>Twoje pierwsze 30 dni: {tasks.length} kroków w 4 etapach</h2>
+        <p>To propozycja kolejności, nie obowiązkowy harmonogram. Pilne zadania są na górze każdego etapu. Usuń to, co Cię nie dotyczy, i dodaj własne.</p>
         <div className="kpis kpis--3">
           <div className="kpi"><span className="kpi__label">Wykonane</span><span className="kpi__value">{progress.completed}/{progress.total}</span></div>
           <div className="kpi"><span className="kpi__label">Postęp</span><span className="kpi__value">{progress.pct}%</span></div>
@@ -173,7 +174,7 @@ export function First30Tool() {
         <AnswersSummary steps={steps} answers={answers} onEdit={edit} />
         {isSafety && (
           <Alert tone="safety" className="mt" title="Bezpieczeństwo na pierwszym miejscu">
-            <p>Jeśli grozi Ci niebezpieczeństwo — dzwoń pod <strong>112</strong>. Wsparcie: <strong>Niebieska Linia 800 120 002</strong>. W planie nie proponujemy wspólnych negocjacji z drugą stroną.</p>
+            <p>Jeśli grozi Ci niebezpieczeństwo, dzwoń pod <strong>112</strong>. Wsparcie: <strong>Niebieska Linia 800 120 002</strong>. Plan nie proponuje wspólnych negocjacji z drugą stroną.</p>
           </Alert>
         )}
         <div className="btn-row no-print mt">
@@ -184,7 +185,7 @@ export function First30Tool() {
       </div>
 
       {PERIODS.map((p) => {
-        const list = tasks.filter((t) => t.period === p.id);
+        const list = tasksForPeriod(tasks, p.id);
         const pd = list.filter((t) => checked.has(t.id)).length;
         return (
           <section key={p.id} className="result-section" aria-labelledby={`p${p.id}`}>
@@ -201,6 +202,7 @@ export function First30Tool() {
                   <div style={{ flex: 1 }}>
                     {editing ? (
                       <label>
+                        {t.priority && <span className="tag tag--danger" style={{ marginRight: 6, fontSize: 11 }}>pilne</span>}
                         <span className="visually-hidden">Treść zadania</span>
                         <textarea className="textarea" rows={2} value={t.text} onChange={(e) => updateTask(t.id, e.target.value)} />
                       </label>
@@ -213,7 +215,12 @@ export function First30Tool() {
                     <span className="task__meta">{t.category}{t.note ? ` · ${t.note}` : ""}</span>
                   </div>
                   {editing && (
-                    <button type="button" className="btn btn--link btn--sm no-print" onClick={() => removeTask(t.id)} aria-label={`Usuń zadanie: ${t.text}`}><Icon name="trash" width={16} /></button>
+                    <div className="no-print" style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+                      <button type="button" className="btn btn--link btn--sm" aria-pressed={!!t.priority} onClick={() => togglePriority(t.id)} aria-label={`${t.priority ? "Usuń oznaczenie pilne" : "Oznacz jako pilne"}: ${t.text}`}>
+                        <Icon name="alert" width={16} /> <span className="xsmall">Pilne</span>
+                      </button>
+                      <button type="button" className="btn btn--link btn--sm" onClick={() => removeTask(t.id)} aria-label={`Usuń zadanie: ${t.text}`}><Icon name="trash" width={16} /></button>
+                    </div>
                   )}
                 </div>
               ))}
@@ -222,7 +229,7 @@ export function First30Tool() {
               <form className="no-print" style={{ display: "flex", gap: 8, marginTop: 10 }} onSubmit={(e) => { e.preventDefault(); addTask(p.id); }}>
                 <label style={{ flex: 1 }}>
                   <span className="visually-hidden">Nowe zadanie ({p.label})</span>
-                  <input className="input" placeholder="Dodaj własne zadanie…" value={drafts[p.id] || ""} maxLength={300} onChange={(e) => setDrafts((d) => ({ ...d, [p.id]: e.target.value }))} />
+                  <input className="input" placeholder="Dodaj własne zadanie" value={drafts[p.id] || ""} maxLength={300} onChange={(e) => setDrafts((d) => ({ ...d, [p.id]: e.target.value }))} />
                 </label>
                 <button className="btn btn--sm" type="submit"><Icon name="plus" width={16} /> Dodaj</button>
               </form>
@@ -235,7 +242,7 @@ export function First30Tool() {
         <ResultActions toolId={TOOL} report={report} filename="pierwsze-30-dni-plan" onReset={reset} />
         <div className="card card--outline no-print mt" style={{ padding: 16 }}>
           <h4 style={{ marginBottom: 4 }}>Zapisz plan na tym urządzeniu (opcjonalnie)</h4>
-          <p className="small muted">Plan nie zapisuje się automatycznie. Jeśli zapiszesz go w tej przeglądarce, zobaczy go każdy, kto ma dostęp do urządzenia. Nie zapisuj na komputerze współdzielonym z drugą stroną.</p>
+          <p className="small muted">Plan nie zapisuje się sam. Zapisany w tej przeglądarce zobaczy każdy, kto ma dostęp do urządzenia. Nie zapisuj go na komputerze, z którego korzysta druga strona.</p>
           <div className="btn-row">
             <button type="button" className="btn btn--ghost btn--sm" onClick={saveLocal}><Icon name="lock" width={16} /> Zapisz w tej przeglądarce</button>
             {hasSaved && <button type="button" className="btn btn--link btn--sm" onClick={deleteLocal}><Icon name="trash" width={16} /> Usuń zapisany plan</button>}
@@ -249,8 +256,8 @@ export function First30Tool() {
           toolId={TOOL}
           offers={
             isSafety
-              ? [{ key: "konsultacja", cta: "Poproś o indywidualną rozmowę", why: "Indywidualna rozmowa o Twojej sytuacji — bez kontaktu z drugą stroną. Odezwiemy się wybranym przez Ciebie kanałem." }, { key: "materialy", href: "/materialy/bezpieczenstwo-cyfrowe-i-finansowe", cta: "Przewodnik: bezpieczeństwo cyfrowe i finansowe" }]
-              : [{ key: "plan-rozwodu", cta: "Sprawdź, jak przygotować indywidualny Plan Rozwodu", why: "Po pierwszych tygodniach łatwiej zaplanować dalej: Plan Rozwodu pomaga ułożyć ustalenia przed pozwem." }, { key: "materialy", href: "/materialy/checklista-dokumentow", cta: "Pobierz checklistę dokumentów" }]
+              ? [{ key: "konsultacja", cta: "Poproś o indywidualną rozmowę", why: "Rozmowa o Twojej sytuacji, bez kontaktu z drugą stroną. Odezwiemy się wybranym przez Ciebie kanałem." }, { key: "materialy", href: "/materialy/bezpieczenstwo-cyfrowe-i-finansowe", cta: "Przewodnik: bezpieczeństwo cyfrowe i finansowe" }]
+              : [{ key: "plan-rozwodu", cta: "Sprawdź, jak przygotować indywidualny Plan Rozwodu", why: "Po pierwszych tygodniach łatwiej planować dalej. Plan Rozwodu pomaga ułożyć ustalenia przed pozwem." }, { key: "materialy", href: "/materialy/checklista-dokumentow", cta: "Pobierz checklistę dokumentów" }]
           }
         />
       </div>

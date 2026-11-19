@@ -1,7 +1,7 @@
 /**
- * Kalkulator kosztów rozwodu / separacji.
+ * Kalkulator kosztów rozwodu / separacji. Teksty bez przepisów (COPY_GUIDE.md), podstawy w meta.sources.
  * Opłaty sądowe wg ustawy o kosztach sądowych w sprawach cywilnych (stan na 10.11.2026).
- * Wynagrodzenia pełnomocników, notariusza i mediacji prywatnej wpisuje użytkownik — nie zgadujemy stawek.
+ * Wynagrodzenia pełnomocników, notariusza i mediacji prywatnej wpisuje użytkownik. Nie zgadujemy stawek.
  */
 export type Procedure = "rozwod" | "separacja-pozew" | "separacja-zgodna";
 export type PropertyPath = "brak" | "w-wyroku" | "sad" | "notariusz";
@@ -24,7 +24,7 @@ export type CostInput = {
   lawyerMin?: number;
   lawyerMax?: number;
   docsCount: number;
-  docFee: number; // opłata skarbowa za odpis — do sprawdzenia
+  docFee: number; // opłata skarbowa za odpis, do sprawdzenia
   other?: number;
 };
 
@@ -49,7 +49,7 @@ export type CostLine = { id: string; label: string; min: number; max: number; gr
 
 const n = (v: number | undefined) => (v && v > 0 ? v : 0);
 
-/** Wynagrodzenie mediatora przy skierowaniu przez sąd (rozp. Dz.U. 2026 poz. 170) — do weryfikacji */
+/** Wynagrodzenie mediatora przy skierowaniu przez sąd (rozp. Dz.U. 2026 poz. 170), do weryfikacji */
 export function courtMediatorFee(kind: CostInput["mediationKind"], sessions: number, value?: number): number {
   if (kind === "niemajatkowa") {
     const s = Math.max(1, Math.min(20, Math.round(sessions)));
@@ -79,18 +79,18 @@ export function buildLines(i: CostInput): CostLine[] {
     const f = i.propertyAgreed ? 300 : 1000;
     lines.push({
       id: "property",
-      label: i.property === "w-wyroku" ? "Wniosek o podział majątku w wyroku rozwodowym" : "Wniosek o podział majątku wspólnego (osobne postępowanie)",
+      label: i.property === "w-wyroku" ? `Wniosek o podział majątku w wyroku ${i.procedure === "rozwod" ? "rozwodowym" : "orzekającym separację"}` : "Wniosek o podział majątku wspólnego (osobne postępowanie)",
       min: f, max: f, group: "sad",
-      note: i.propertyAgreed ? "300 zł przy zgodnym projekcie podziału (art. 38 UKSC)" : "1000 zł (art. 38 UKSC)",
+      note: i.propertyAgreed ? "300 zł przy zgodnym projekcie podziału" : "1000 zł bez zgodnego projektu",
       verify: i.property === "w-wyroku",
     });
   }
   if (i.property === "notariusz") {
-    lines.push({ id: "notary", label: "Umowa podziału majątku u notariusza (taksa, opłaty, podatki)", min: n(i.notaryCost), max: n(i.notaryCost), group: "inne", note: "Kwotę podaje notariusz — zależy od wartości majątku" });
+    lines.push({ id: "notary", label: "Umowa podziału majątku u notariusza (taksa, opłaty, podatki)", min: n(i.notaryCost), max: n(i.notaryCost), group: "inne", note: "Kwotę podaje notariusz. Zależy od wartości majątku" });
   }
   if (i.mediation === "sad") {
     const m = courtMediatorFee(i.mediationKind, i.mediationSessions, i.mediationValue);
-    lines.push({ id: "mediation", label: "Mediacja na skierowanie sądu (wynagrodzenie mediatora)", min: m, max: m, group: "inne", note: "Wg rozporządzenia; może dojść VAT i zwrot wydatków", verify: true });
+    lines.push({ id: "mediation", label: "Mediacja na skierowanie sądu (wynagrodzenie mediatora)", min: m, max: m, group: "inne", note: "Według rozporządzenia. Może dojść VAT i zwrot wydatków", verify: true });
   }
   if (i.mediation === "prywatna") {
     lines.push({ id: "mediation", label: "Mediacja prywatna", min: n(i.mediationPrivate), max: n(i.mediationPrivate), group: "inne", note: "Cenę ustala mediator" });
@@ -120,11 +120,12 @@ export function summarize(i: CostInput): CostSummary {
   return { min, max, court, others: { min: min - court, max: max - court }, refund, minAfterRefund: min - refund, maxAfterRefund: max - refund };
 }
 
-/** Dwie ilustracyjne ścieżki zbudowane z kwot użytkownika */
+/** Dwie ilustracyjne ścieżki zbudowane z kwot użytkownika, dla wybranej drogi (rozwód albo separacja) */
 export function comparePaths(i: CostInput) {
+  const divorce = i.procedure === "rozwod";
   const agreed: CostInput = {
     ...i,
-    procedure: "rozwod",
+    procedure: divorce ? "rozwod" : "separacja-zgodna",
     fault: "bez",
     jointNoFault: true,
     property: i.property === "brak" ? "brak" : i.property === "notariusz" ? "notariusz" : "w-wyroku",
@@ -133,7 +134,7 @@ export function comparePaths(i: CostInput) {
   };
   const disputed: CostInput = {
     ...i,
-    procedure: "rozwod",
+    procedure: divorce ? "rozwod" : "separacja-pozew",
     fault: "z",
     jointNoFault: false,
     property: i.property === "brak" ? "brak" : "sad",
@@ -141,22 +142,27 @@ export function comparePaths(i: CostInput) {
     mediation: "brak",
     lawyers: i.lawyers === 0 ? 0 : 2,
   };
+  const prop = i.property !== "brak";
+  const agreedDesc = divorce
+    ? `Rozwód bez orzekania o winie na zgodny wniosek${prop ? ", zgodny podział majątku" : ""}, Twoje założenia co do mediacji i pomocy prawnej.`
+    : `Separacja na zgodny wniosek (możliwy, gdy nie macie wspólnych małoletnich dzieci)${prop ? ", zgodny podział majątku" : ""}, Twoje założenia co do mediacji i pomocy prawnej.`;
+  const disputedDesc = `${divorce ? "Rozwód" : "Separacja"} z orzekaniem o winie${prop ? ", sporny podział majątku w sądzie" : ""}${i.lawyers > 0 ? ", każde z Was z pełnomocnikiem" : ""}.`;
   return [
-    { id: "agreed", title: "Porozumienie", desc: "Bez orzekania o winie na zgodny wniosek, zgodny podział majątku, Twoje założenia co do mediacji i pomocy prawnej.", summary: summarize(agreed), lines: buildLines(agreed) },
-    { id: "disputed", title: "Spór", desc: "Z orzekaniem o winie, sporny podział majątku w sądzie, każde z Was z pełnomocnikiem (jeśli zakładasz pomoc prawną).", summary: summarize(disputed), lines: buildLines(disputed) },
+    { id: "agreed", title: "Porozumienie", desc: agreedDesc, summary: summarize(agreed), lines: buildLines(agreed) },
+    { id: "disputed", title: "Spór", desc: disputedDesc, summary: summarize(disputed), lines: buildLines(disputed) },
   ];
 }
 
 export function hiddenCosts(i: CostInput): string[] {
   const l = [
-    "Czas: dni wolne na rozprawy, spotkania i załatwianie dokumentów.",
-    "Dojazdy do sądu (sąd właściwy może być w innej miejscowości niż obecne miejsce zamieszkania).",
+    "Czas: dni wolne na rozprawy, spotkania i dokumenty.",
+    "Dojazdy do sądu (właściwy sąd może być w innej miejscowości).",
     "Koszty przejściowe: podwójne mieszkanie, przeprowadzka, nowe wyposażenie.",
   ];
-  if (i.fault === "z") l.push("Postępowanie z orzekaniem o winie zwykle wymaga więcej dowodów i rozpraw — to może zwiększyć koszty pomocy prawnej. Rozważ to z pełnomocnikiem.");
+  if (i.fault === "z" && i.procedure !== "separacja-zgodna") l.push("Sprawa z orzekaniem o winie zwykle wymaga więcej dowodów i rozpraw. To może podnieść koszt pomocy prawnej.");
   if (i.property !== "brak") l.push("Wycena majątku (np. rzeczoznawca) i ewentualne podatki przy przeniesieniu własności lub spłacie.");
-  l.push("Odmowa mediacji też może kosztować: sąd może obciążyć kosztami stronę, która w sposób oczywiście nieuzasadniony odmówiła mediacji (art. 103 KPC). Udokumentowana próba mediacji przed pozwem (np. wniosek doręczony drugiej stronie) pokazuje sądowi Twoją gotowość do porozumienia — nawet jeśli druga strona odmówi.");
-  l.push("Ewentualna apelacja i dodatkowe wnioski (np. o uzasadnienie wyroku) wiążą się z osobnymi opłatami — sprawdź aktualne stawki.");
-  l.push("Koszty pomocy psychologicznej lub wsparcia dla dzieci, jeśli będzie potrzebne.");
+  if (i.mediation === "brak") l.push("Odmowa mediacji też może kosztować: strona, która bez ważnego powodu odmówiła, może zostać obciążona kosztami. Mediację zwykle zaczyna zaproszenie od Ciebie albo od wybranego mediatora. Przy wyraźnej odmowie mediator może to potwierdzić na piśmie.");
+  l.push("Apelacja i dodatkowe wnioski (np. o uzasadnienie wyroku) mają osobne opłaty. Sprawdź aktualne stawki.");
+  l.push("Pomoc psychologiczna dla Ciebie lub dzieci, jeśli będzie potrzebna.");
   return l;
 }

@@ -19,8 +19,8 @@ export const ads: AdSet = {
     headlines: ["Zasady na czas przejściowy", "Podział rachunków bez sporów", "Mieszkanie razem w trakcie zmian", "Propozycja zasad w 5 minut", "Spokojniej przez okres zmian"],
     longHeadlines: [
       "Kto gdzie mieszka i jak dzielicie rachunki? Przygotuj propozycję zasad na czas przejściowy",
-      "Spisane zasady na okres zmian: mieszkanie, dzieci, wspólne konto — bezpłatny kreator",
-      "Propozycja do rozmowy, nie umowa — uporządkuj codzienność, zanim zapadną decyzje",
+      "Spisane zasady na okres zmian: mieszkanie, dzieci, wspólne konto. Bezpłatny kreator",
+      "Propozycja do rozmowy, nie umowa. Uporządkuj codzienność, zanim zapadną decyzje",
     ],
     descriptions: [
       "Odpowiedz na kilka pytań i pobierz gotowy dokument do rozmowy z drugą osobą.",
@@ -32,7 +32,7 @@ export const ads: AdSet = {
   },
   search: {
     keywords: ["mieszkanie razem w trakcie rozwodu", "podział rachunków po rozstaniu", "rozstanie a wspólne mieszkanie", "jak podzielić rachunki z partnerem", "porozumienie na czas rozwodu", "wyprowadzka przed rozwodem", "wspólne konto a rozwód", "zasady po rozstaniu dzieci", "separacja faktyczna zasady"],
-    headlines: ["Zasady na czas przejściowy", "Podział rachunków – kalkulator", "Propozycja zasad w 5 minut", "Mieszkanie razem w trakcie", "Bezpłatny kreator", "Gotowy PDF do rozmowy", "Bez podawania danych", "Dzieci, rachunki, mieszkanie", "Nowy Etap – poradnia", "Najpierw plan i ustalenia", "Wspólne konto – zasady", "Sprawdź propozycję"],
+    headlines: ["Zasady na czas przejściowy", "Kalkulator podziału rachunków", "Propozycja zasad w 5 minut", "Mieszkanie razem w trakcie", "Bezpłatny kreator", "Gotowy PDF do rozmowy", "Bez podawania danych", "Dzieci, rachunki, mieszkanie", "Nowy Etap, poradnia", "Najpierw plan i ustalenia", "Zasady wspólnego konta", "Sprawdź propozycję"],
     descriptions: [
       "Przygotuj propozycję zasad na czas przejściowy: mieszkanie, dzieci, rachunki. Bezpłatnie.",
       "Policz podział rachunków po połowie lub proporcjonalnie do dochodów. Pobierz PDF.",

@@ -39,7 +39,7 @@ export const ads: AdSet = {
     ],
     "descriptions": [
       "Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych.",
-      "Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna.",
+      "Wypełniasz online, a podsumowanie masz od razu. To informacja, nie porada prawna.",
       "Trzy modele podziału świąt, arkusz ustaleń, logistyka dojazdów i prezentów."
     ],
     "cta": "Dowiedz się więcej",
@@ -63,7 +63,7 @@ export const ads: AdSet = {
       "Zaplanujcie wcześniej",
       "Modele podziału świąt",
       "Planer do wypełnienia online",
-      "Nowy Etap — poradnia",
+      "Nowy Etap, poradnia",
       "Materiał od Nowego Etapu",
       "Otwórz od razu",
       "Bezpłatnie, bez logowania"

@@ -26,7 +26,7 @@ function Preview() {
         <div className="kpi"><span className="kpi__label">Saldo po rozstaniu</span><span className="kpi__value" style={{ fontSize: 18 }}>+300 zł</span></div>
         <div className="kpi"><span className="kpi__label">Poduszka</span><span className="kpi__value" style={{ fontSize: 18 }}>2,4 mies.</span></div>
       </div>
-      <p className="xsmall" style={{ margin: "10px 0 0", fontWeight: 600, color: "var(--warn)" }}>Największe obciążenie: mieszkanie — 42% dochodów</p>
+      <p className="xsmall" style={{ margin: "10px 0 0", fontWeight: 600, color: "var(--warn)" }}>Największe obciążenie: mieszkanie, 42% dochodów</p>
     </div>
   );
 }

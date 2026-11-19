@@ -25,7 +25,7 @@ function Preview() {
         </div>
       </div>
       <ol style={{ margin: "12px 0 0", paddingLeft: 18, fontSize: 12.5 }}>
-        <li>Uporządkuj informacje</li><li>Określ priorytety</li><li>Rozmowa lub mediacja</li><li>Spisanie ustaleń → pozew</li>
+        <li>Uporządkuj informacje i priorytety</li><li>Rozmowy między Wami</li><li>Mediacja, jeśli potrzebna</li><li>Spisanie ustaleń, potem pozew</li>
       </ol>
     </div>
   );

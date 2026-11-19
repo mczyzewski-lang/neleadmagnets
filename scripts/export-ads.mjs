@@ -15,7 +15,7 @@ const TOOLS = ["mieszkanie-i-kredyt", "budzet-po-rozstaniu", "plan-opieki-nad-dz
 const pathOf = (s) => (DECISION.includes(s) ? `/przed-decyzja/${s}` : TOOLS.includes(s) ? `/narzedzia/${s}` : `/materialy/${s}`);
 const list = (arr, max) => arr.map((t) => `- ${t} _(${[...t].length}/${max})_`).join("\n");
 
-let md = `# Propozycje reklam — wersja do akceptacji\n\nWygenerowano z \`src/content/ads/*.ts\` (\`node scripts/export-ads.mjs\`). Te same treści widać w dymku na stronach \`<landing>/demo\` (spis: \`/demo\`).\nZasady zgodności i UTM: \`MARKETING/ADS.md\`, sekcja 0.\n\n`;
+let md = `# Propozycje reklam: wersja do akceptacji\n\nWygenerowano z \`src/content/ads/*.ts\` (\`node scripts/export-ads.mjs\`). Te same treści widać w dymku na stronach \`<landing>/demo\` (spis: \`/demo\`).\nZasady zgodności i UTM: \`MARKETING/ADS.md\`, sekcja 0.\n\n`;
 for (const slug of [...DECISION, ...TOOLS, ...Object.keys(ADS).filter((k) => !DECISION.includes(k) && !TOOLS.includes(k))]) {
   const a = ADS[slug];
   if (!a) continue;

@@ -6,46 +6,46 @@ export const material: Material = {
   coverTitle: "Rzeczowe wiadomości",
   coverSubtitle: "Szablony do drugiego rodzica",
   coverTone: "cream",
-  h1: "Rzeczowe wiadomości do drugiego rodzica — szablony",
-  h2: "Metoda 4K i ponad 20 gotowych wiadomości na odbiory, wakacje, święta, wydatki, szkołę i trudne momenty.",
+  h1: "Rzeczowe wiadomości do drugiego rodzica: szablony",
+  h2: "Metoda 4K i ponad 20 gotowych wiadomości: odbiory, wakacje, święta, wydatki, szkoła i trudne momenty.",
   promise:
-    "Napiszesz do drugiego rodzica krótko i spokojnie — tak, by rozmowa dotyczyła dziecka, a nie starego konfliktu.",
+    "Napiszesz do drugiego rodzica krótko i spokojnie, tak by rozmowa dotyczyła dziecka, a nie starego konfliktu.",
   forWho: [
-    "Każda wymiana wiadomości z drugim rodzicem kończy się kłótnią lub milczeniem.",
+    "Wymiana wiadomości z drugim rodzicem kończy się kłótnią lub milczeniem.",
     "Chcesz ustalać sprawy dziecka rzeczowo, ale emocje biorą górę.",
-    "Potrzebujesz gotowych sformułowań na typowe sytuacje: odbiory, wydatki, choroba, szkoła.",
-    "Chcesz mieć porządny zapis ustaleń, do którego oboje możecie wrócić.",
+    "Potrzebujesz gotowych sformułowań na odbiory, wydatki, chorobę, szkołę.",
+    "Chcesz mieć zapis ustaleń, do którego oboje możecie wrócić.",
   ],
   inside: [
-    "Autorską Metodę 4K: Krótko, Konkretnie, Kulturalnie, Kończ propozycją.",
-    "Ponad 20 szablonów wiadomości na najczęstsze sytuacje.",
-    "Wzór odpowiedzi na wrogą lub prowokującą wiadomość.",
-    "Propozycję zasad komunikacji do ustalenia z drugim rodzicem.",
-    "Listę sformułowań, których lepiej unikać — z zamiennikami.",
-    "Wzór dziennika ustaleń i szablon pisemnej propozycji mediacji — z informacją, jak udokumentować próbę, zanim sprawa trafi do sądu.",
-    "Informację, kiedy przerwać bezpośredni kontakt i gdzie szukać pomocy.",
+    "Metodę 4K: Krótko, Konkretnie, Kulturalnie, Kończ propozycją.",
+    "Ponad 20 szablonów na najczęstsze sytuacje.",
+    "Odpowiedzi na wrogą lub prowokującą wiadomość.",
+    "Propozycję zasad komunikacji.",
+    "Sformułowania, których lepiej unikać, z zamiennikami.",
+    "Dziennik ustaleń i zaproszenie do mediacji.",
+    "Kiedy przerwać bezpośredni kontakt i gdzie szukać pomocy.",
   ],
-  time: "20 min",
+  time: "15 min",
   faq: [
     {
       q: "Czy szablony nie brzmią sztucznie?",
-      a: "Traktuj je jak szkielet. Zmień słowa tak, by brzmiały jak ty, ale zachowaj strukturę: krótko, konkretnie, kulturalnie i z propozycją na końcu.",
+      a: "To szkielet. Zmień słowa na swoje, zachowaj strukturę 4K.",
     },
     {
       q: "Co, jeśli drugi rodzic w ogóle nie odpowiada?",
-      a: "Wyślij jedną krótką przypominającą wiadomość z jasnym terminem odpowiedzi i zapisz to w dzienniku ustaleń. Jeśli brak kontaktu się powtarza i dotyczy ważnych spraw dziecka, kolejnym krokiem może być pisemna propozycja mediacji (szablon 25) i rozmowa z mediatorem lub prawnikiem — zanim pomyślisz o wniosku do sądu.",
+      a: "Wyślij jedno przypomnienie z terminem (szablon 24) i zapisz to w dzienniku. Gdy milczenie się powtarza, wyślij zaproszenie do mediacji (szablon 25).",
     },
     {
-      q: "Czy wiadomości mogą być później użyte w sądzie?",
-      a: "Korespondencja między rodzicami bywa przedstawiana w sprawach rodzinnych. Dlatego warto pisać tak, jakby kiedyś miała ją przeczytać neutralna osoba — spokojnie i rzeczowo. O tym, co i jak przedstawić, decyduj z prawnikiem.",
+      q: "Czy wiadomości mogą trafić do sądu?",
+      a: "Może. Pisz tak, jakby miała je przeczytać neutralna osoba.",
     },
     {
       q: "O czym rodzice muszą decydować wspólnie?",
-      a: "Jeśli oboje macie władzę rodzicielską, o istotnych sprawach dziecka (np. wybór szkoły, poważne leczenie) co do zasady rozstrzygacie wspólnie (art. 97 § 2 KRO). Gdy nie możecie się porozumieć, warto najpierw spróbować rozmowy z pomocą mediatora. Jeśli i to nie pomoże, rozstrzyga sąd.",
+      a: "Przy wspólnej władzy rodzicielskiej o istotnych sprawach (szkoła, poważne leczenie) decydujecie zwykle razem. Bez porozumienia pomoże mediacja, a w ostateczności sąd.",
     },
     {
-      q: "Dlaczego najpierw pisemne ustalenia i mediacja, a dopiero potem sąd?",
-      a: "Bo to, co uzgodnicie, zostaje w waszych rękach. Porozumienie o wychowaniu dzieci sąd może uwzględnić w wyroku, więc zostaje mniej kwestii do udowadniania, a dzieci nie stają się „przedmiotem sporu” na sali sądowej. A jeśli sprawa trafi do sądu, pozew musi zawierać informację, czy strony próbowały mediacji lub innego polubownego rozwiązania sporu (art. 187 § 1 pkt 3 KPC). Udokumentowana próba pokazuje twoją dobrą wolę — nawet jeśli druga strona odmówi. Nie gwarantuje to konkretnego rozstrzygnięcia, a przy przemocy, groźbach lub kontroli nie musisz proponować mediacji.",
+      q: "Dlaczego najpierw ustalenia i mediacja, a sąd na końcu?",
+      a: "Bo to, co uzgodnicie, zostaje w waszych rękach, a porozumienie rodzicielskie sąd może uwzględnić w wyroku. Udokumentowana próba mediacji pokazuje twoją dobrą wolę, nawet przy odmowie, ale nie gwarantuje wyniku. Przy przemocy nie musisz jej proponować.",
     },
   ],
   sources: [
@@ -60,7 +60,7 @@ export const material: Material = {
       verified: "2026-11-16",
     },
     {
-      label: "Kodeks rodzinny i opiekuńczy — art. 58 (porozumienie o wychowaniu dzieci)",
+      label: "Kodeks rodzinny i opiekuńczy — art. 58 (porozumienie rodzicielskie)",
       url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19640090059",
       verified: "2026-11-16",
     },
@@ -79,7 +79,7 @@ export const material: Material = {
   stage: 2,
   ctaLabel: "Ustalcie zasady kontaktów w mediacji",
   seo: {
-    title: "Wiadomości do drugiego rodzica — szablony | Nowy Etap",
+    title: "Wiadomości do drugiego rodzica: szablony | Nowy Etap",
     description:
       "Metoda 4K i ponad 20 gotowych szablonów wiadomości do drugiego rodzica: odbiory, wakacje, święta, wydatki, choroba, szkoła i trudne rozmowy.",
   },
@@ -88,22 +88,21 @@ export const material: Material = {
   sections: [
     {
       heading: "Metoda 4K: jak pisać, żeby nie eskalować",
-      intro:
-        "Większość konfliktów w wiadomościach nie dotyczy samej sprawy, tylko tonu. Metoda 4K to prosta rama, którą sprawdzisz przed wysłaniem każdej wiadomości.",
+      intro: "Spory w wiadomościach dotyczą zwykle tonu, nie sprawy.",
       blocks: [
         {
           type: "path",
           current: 2,
-          note: "Ten materiał służy etapowi ustaleń: rzeczowe wiadomości, pisemne potwierdzenia i — gdy rozmowa utknie — mediacja. Każda sprawa dziecka uzgodniona na tym etapie to jedna sprawa mniej do rozstrzygania przez sąd.",
+          note: "Etap ustaleń: rzeczowe wiadomości, pisemne potwierdzenia, a gdy rozmowa utknie, mediacja.",
         },
         {
           type: "table",
           head: ["Zasada", "Co oznacza", "Pytanie kontrolne"],
           rows: [
-            ["Krótko", "Jedna sprawa w jednej wiadomości. Najlepiej kilka zdań.", "Czy da się to przeczytać w 20 sekund?"],
-            ["Konkretnie", "Daty, godziny, miejsca, kwoty. Bez ogólników i ocen.", "Czy wiadomo, o co dokładnie chodzi?"],
-            ["Kulturalnie", "Neutralny ton, bez ironii, wyrzutów i odwołań do przeszłości.", "Czy byłoby mi komfortowo, gdyby to przeczytał mediator?"],
-            ["Kończ propozycją", "Zakończ konkretną propozycją i terminem odpowiedzi.", "Czy druga osoba może odpowiedzieć „tak” lub „nie”?"],
+            ["Krótko", "Jedna sprawa, kilka zdań.", "Czy da się to przeczytać w 20 sekund?"],
+            ["Konkretnie", "Daty, godziny, miejsca, kwoty. Bez ocen.", "Czy wiadomo, o co dokładnie chodzi?"],
+            ["Kulturalnie", "Neutralny ton, bez ironii i przeszłości.", "Czy mógłby to przeczytać mediator?"],
+            ["Kończ propozycją", "Konkretna propozycja i termin odpowiedzi.", "Czy da się odpowiedzieć „tak” lub „nie”?"],
           ],
         },
         {
@@ -124,13 +123,13 @@ export const material: Material = {
           type: "callout",
           tone: "info",
           title: "Zasada 30 minut",
-          text: "Gdy wiadomość cię zdenerwuje, nie odpowiadaj od razu. Napisz szkic, odczekaj co najmniej 30 minut, przeczytaj go z perspektywy dziecka i dopiero wtedy wyślij.",
+          text: "Wiadomość cię zdenerwowała? Napisz szkic, odczekaj 30 minut, przeczytaj oczami dziecka i dopiero wyślij.",
         },
       ],
     },
     {
       heading: "Odbiory, wakacje i święta",
-      intro: "Szablony do kalendarza kontaktów. Wstaw własne dane w nawiasach kwadratowych.",
+      intro: "Wstaw własne dane w nawiasach kwadratowych.",
       blocks: [
         {
           type: "script",
@@ -138,11 +137,11 @@ export const material: Material = {
           lines: [
             {
               label: "1. Prośba o zmianę",
-              text: "Cześć, w piątek [data] mam [krótki powód, np. wyjazd służbowy] i nie zdążę na 16:00. Czy możemy przesunąć odbiór na 18:30? Daj znać do środy.",
+              text: "Cześć, w piątek [data] nie zdążę na 16:00. Możemy przesunąć odbiór na 18:30? Daj znać do środy.",
             },
             {
               label: "2. Propozycja zamiany weekendu",
-              text: "Czy zamienimy się weekendami: ja biorę [data], ty [data]? Jeśli tak, potwierdzę wszystko jednym mailem.",
+              text: "Czy zamienimy się weekendami: ja biorę [data], ty [data]? Jeśli tak, potwierdzę to jednym mailem.",
             },
             {
               label: "3. Odpowiedź na prośbę o zmianę",
@@ -150,7 +149,7 @@ export const material: Material = {
             },
             {
               label: "4. Spóźnienie",
-              text: "Utknąłem/Utknęłam w korku, będę ok. 15 minut później, czyli ok. [godzina]. Przepraszam za zmianę.",
+              text: "Stoję w korku, będę ok. 15 minut później, ok. [godzina]. Przepraszam.",
             },
           ],
         },
@@ -160,15 +159,15 @@ export const material: Material = {
           lines: [
             {
               label: "5. Propozycja podziału wakacji",
-              text: "Chciał(a)bym ustalić wakacje. Proponuję: ja [daty], ty [daty]. Jeśli masz inny pomysł, prześlij go do [data] — chętnie porównam.",
+              text: "Proponuję wakacje tak: ja [daty], ty [daty]. Jeśli masz inny pomysł, prześlij go do [data].",
             },
             {
               label: "6. Informacja o wyjeździe",
-              text: "W dniach [daty] będę z [imię dziecka] w [miejscowość]. Adres noclegu: [adres]. Dziecko może dzwonić do ciebie codziennie wieczorem, np. ok. 19:00.",
+              text: "W dniach [daty] będę z [imię dziecka] w [miejscowość]. Adres: [adres]. Dziecko może dzwonić do ciebie codziennie ok. 19:00.",
             },
             {
               label: "7. Wyjazd za granicę",
-              text: "Planuję wyjazd z [imię dziecka] do [kraj] w dniach [daty]. Chcę to z tobą uzgodnić z wyprzedzeniem. Czy możemy porozmawiać o szczegółach do [data]?",
+              text: "Planuję wyjazd z [imię dziecka] do [kraj] w dniach [daty]. Chcę to z tobą uzgodnić. Czy porozmawiamy o szczegółach do [data]?",
             },
           ],
         },
@@ -178,11 +177,11 @@ export const material: Material = {
           lines: [
             {
               label: "8. Propozycja planu świąt",
-              text: "Chciał(a)bym, żebyśmy wcześnie ustalili święta. Proponuję: Wigilia u mnie do 20:00, pierwszy dzień świąt u ciebie od 11:00. W przyszłym roku odwrotnie. Co o tym myślisz?",
+              text: "Proponuję: Wigilia u mnie do 20:00, pierwszy dzień świąt u ciebie od 11:00. W przyszłym roku odwrotnie. Co myślisz?",
             },
             {
               label: "9. Prośba o kontakt w dniu świątecznym",
-              text: "Czy w [dzień] mógł(a)bym zadzwonić do [imię dziecka] na wideo ok. 17:00, żeby złożyć życzenia?",
+              text: "Czy w [dzień] mogę zadzwonić do [imię dziecka] na wideo ok. 17:00, żeby złożyć życzenia?",
             },
           ],
         },
@@ -197,15 +196,15 @@ export const material: Material = {
           lines: [
             {
               label: "10. Propozycja wspólnego wydatku",
-              text: "Szkoła zbiera [kwota] zł na [cel], termin [data]. Proponuję podział po połowie. Mogę zapłacić całość i prześlesz mi [kwota] zł — pasuje?",
+              text: "Szkoła zbiera [kwota] zł na [cel] do [data]. Proponuję po połowie. Zapłacę całość, a ty prześlesz mi [kwota] zł. Pasuje?",
             },
             {
               label: "11. Rozliczenie z potwierdzeniem",
-              text: "W załączniku paragon za [np. buty zimowe] — [kwota] zł. Zgodnie z naszym ustaleniem twoja część to [kwota] zł. Numer konta: [numer].",
+              text: "W załączniku paragon za [np. buty zimowe]: [kwota] zł. Twoja część to [kwota] zł. Numer konta: [numer].",
             },
             {
               label: "12. Wydatek, z którym się nie zgadzasz",
-              text: "Rozumiem, że [wydatek] jest ważny. Teraz nie mogę dołożyć się do całej kwoty. Mogę zaproponować [kwota / inne rozwiązanie]. Czy to ci odpowiada?",
+              text: "Rozumiem, że [wydatek] jest ważny. Teraz nie dołożę się do całości. Mogę zaproponować [kwota / inne rozwiązanie]. Odpowiada ci to?",
             },
           ],
         },
@@ -215,11 +214,11 @@ export const material: Material = {
           lines: [
             {
               label: "13. Informacja o chorobie",
-              text: "[Imię dziecka] ma od rana gorączkę 38,5. Byliśmy u lekarza: [rozpoznanie / zalecenia]. Leki: [nazwa, dawkowanie]. Dam znać wieczorem, jak się czuje.",
+              text: "[Imię dziecka] ma od rana 38,5. Byliśmy u lekarza: [zalecenia]. Leki: [nazwa, dawkowanie]. Dam znać wieczorem.",
             },
             {
               label: "14. Choroba a termin kontaktu",
-              text: "Dziecko jest chore i lekarz zalecił, żeby zostało w domu. Proponuję, żebyś odwiedził je u mnie w sobotę, a weekend odrobimy [data]. Co ty na to?",
+              text: "Lekarz zalecił, żeby dziecko zostało w domu. Proponuję, żebyś odwiedził je u mnie w sobotę, a weekend odrobimy [data]. Co ty na to?",
             },
           ],
         },
@@ -229,22 +228,17 @@ export const material: Material = {
           lines: [
             {
               label: "15. Wywiadówka / spotkanie w szkole",
-              text: "Zebranie w szkole jest [data] o [godzina]. Wybierasz się? Jeśli nie, prześlę ci notatkę z najważniejszymi informacjami.",
+              text: "Zebranie w szkole jest [data] o [godzina]. Wybierasz się? Jeśli nie, prześlę ci notatkę.",
             },
             {
               label: "16. Ważna decyzja szkolna",
-              text: "Musimy zdecydować o [np. wyborze szkoły / klasy]. Zebrałem/Zebrałam informacje o dwóch opcjach: [A] i [B]. Proponuję rozmowę w [dzień] o [godzina] — telefonicznie albo na żywo.",
+              text: "Musimy zdecydować o [np. wyborze szkoły]. Mam informacje o dwóch opcjach: [A] i [B]. Proponuję rozmowę w [dzień] o [godzina].",
             },
             {
               label: "17. Nowe zajęcia dodatkowe",
-              text: "[Imię dziecka] chciałby chodzić na [zajęcia], [dzień i godzina], koszt [kwota] miesięcznie. Zajęcia wypadają w moim tygodniu, ale w twoim też musiałbyś go zawozić. Co o tym myślisz? Zapisy do [data].",
+              text: "[Imię dziecka] chce chodzić na [zajęcia], [dzień i godzina], koszt [kwota] miesięcznie. W twoim tygodniu też trzeba by go zawozić. Co myślisz? Zapisy do [data].",
             },
           ],
-        },
-        {
-          type: "callout",
-          tone: "info",
-          text: "Jeśli oboje macie władzę rodzicielską, o istotnych sprawach dziecka — takich jak wybór szkoły czy poważne leczenie — co do zasady decydujecie wspólnie (art. 97 § 2 KRO). Szablony 7, 16 i 17 pomagają zacząć taką rozmowę we właściwy sposób.",
         },
       ],
     },
@@ -257,15 +251,15 @@ export const material: Material = {
           lines: [
             {
               label: "18. Odpowiedź tylko na sprawę",
-              text: "Dziękuję za wiadomość. Odnośnie odbioru w sobotę: będę o 10:00 pod szkołą. Do pozostałych kwestii nie będę się teraz odnosić.",
+              text: "Dziękuję za wiadomość. Co do soboty: będę o 10:00 pod szkołą. Do reszty nie będę się teraz odnosić.",
             },
             {
               label: "19. Zatrzymanie eskalacji",
-              text: "Widzę, że ta rozmowa idzie w złą stronę. Wrócę do niej jutro. Teraz potwierdzam tylko: [konkret].",
+              text: "Ta rozmowa idzie w złą stronę. Wrócę do niej jutro. Teraz potwierdzam tylko: [konkret].",
             },
             {
               label: "20. Granica",
-              text: "Chcę rozmawiać o sprawach [imię dziecka]. Na wiadomości z obraźliwymi słowami nie będę odpowiadać. Gdy będziesz gotowy rozmawiać o [temat], jestem do dyspozycji.",
+              text: "Chcę rozmawiać o sprawach [imię dziecka]. Na obraźliwe wiadomości nie odpowiadam. Gdy będziesz gotowy rozmawiać o [temat], jestem do dyspozycji.",
             },
           ],
         },
@@ -275,11 +269,11 @@ export const material: Material = {
           lines: [
             {
               label: "21. Propozycja zasad",
-              text: "Proponuję kilka zasad, żeby nam obojgu było łatwiej: 1) sprawy organizacyjne piszemy mailem lub w jednym komunikatorze; 2) odpowiadamy w ciągu 48 godzin, w pilnych sprawach dzwonimy; 3) nie przekazujemy wiadomości przez dziecko; 4) raz w miesiącu robimy krótkie podsumowanie kalendarza. Co dodałbyś lub zmienił?",
+              text: "Proponuję zasady: 1) sprawy organizacyjne w jednym kanale (mail lub komunikator); 2) odpowiedź w 48 godzin, pilne telefonicznie; 3) nic przez dziecko; 4) raz w miesiącu podsumowanie kalendarza. Co byś zmienił?",
             },
             {
               label: "22. Prośba o wspólny kalendarz",
-              text: "Czy możemy założyć wspólny kalendarz online tylko dla spraw [imię dziecka]? Wpisywalibyśmy tam odbiory, wizyty u lekarza i zajęcia.",
+              text: "Czy założymy wspólny kalendarz online tylko dla spraw [imię dziecka]? Na odbiory, lekarza i zajęcia.",
             },
           ],
         },
@@ -289,30 +283,30 @@ export const material: Material = {
           lines: [
             {
               label: "23. Podsumowanie po rozmowie",
-              text: "Dziękuję za rozmowę. Dla porządku podsumowuję: [ustalenie 1], [ustalenie 2], [ustalenie 3]. Jeśli coś zapisałem/zapisałam inaczej, niż się umówiliśmy, daj znać do [data].",
+              text: "Dziękuję za rozmowę. Podsumowuję: [ustalenie 1], [ustalenie 2], [ustalenie 3]. Jeśli coś zapisałem/zapisałam inaczej, daj znać do [data].",
             },
             {
               label: "24. Przypomnienie o braku odpowiedzi",
-              text: "Wracam do mojej wiadomości z [data] w sprawie [temat]. Potrzebuję odpowiedzi do [data], bo [powód, np. termin zapisów]. Jeśli nie będzie odpowiedzi, [co zrobisz — spokojnie i rzeczowo].",
+              text: "Wracam do wiadomości z [data] w sprawie [temat]. Potrzebuję odpowiedzi do [data], bo [powód, np. termin zapisów]. Jeśli jej nie będzie, [co zrobisz, spokojnie i rzeczowo].",
             },
           ],
         },
       ],
     },
     {
-      heading: "Czego nie pisać — i co napisać zamiast",
+      heading: "Czego nie pisać i co napisać zamiast",
       blocks: [
         {
           type: "table",
           head: ["Unikaj", "Napisz zamiast"],
           rows: [
-            ["„Zawsze” / „nigdy” („Zawsze się spóźniasz”)", "„W sobotę odbiór był o 10:40 zamiast 10:00. Czy możemy trzymać się godziny?”"],
-            ["Ocen charakteru („Jesteś nieodpowiedzialny”)", "Opisu faktu i prośby („Dziecko wróciło bez leków. Proszę, pakuj je do plecaka.”)"],
-            ["Odwołań do przeszłości związku", "Tylko bieżącej sprawy dziecka"],
-            ["Ironii, emotek z przekąsem, wielkich liter", "Neutralnego, prostego zdania"],
-            ["Gróźb („To zobaczymy się w sądzie”)", "Propozycji kolejnego kroku („Jeśli się nie dogadamy, proponuję mediację.”)"],
-            ["Przekazywania wiadomości przez dziecko", "Bezpośredniej wiadomości do drugiego rodzica"],
-            ["Długich elaboratów o kilku sprawach naraz", "Jednej sprawy w jednej wiadomości"],
+            ["„Zawsze się spóźniasz”", "„W sobotę odbiór był o 10:40 zamiast 10:00.”"],
+            ["„Jesteś nieodpowiedzialny”", "„Dziecko wróciło bez leków. Proszę, pakuj je.”"],
+            ["Odwołań do przeszłości", "Bieżącej sprawy dziecka"],
+            ["Ironii i wielkich liter", "Prostego zdania"],
+            ["„Zobaczymy się w sądzie”", "„Jeśli się nie dogadamy, proponuję mediację.”"],
+            ["Wiadomości przez dziecko", "Wiadomości wprost"],
+            ["Kilku spraw naraz", "Jednej sprawy w jednej wiadomości"],
           ],
         },
         {
@@ -329,8 +323,7 @@ export const material: Material = {
     },
     {
       heading: "Dziennik ustaleń",
-      intro:
-        "Krótki, regularnie prowadzony dziennik zmniejsza liczbę sporów o to, „kto co powiedział”. Pomaga też w mediacji i przy ewentualnych zmianach ustaleń. Zapisuj w nim również propozycje mediacji i odpowiedzi na nie.",
+      intro: "Ucina spory o to, „kto co powiedział”. Zapisuj też zaproszenia do mediacji.",
       blocks: [
         {
           type: "table",
@@ -338,18 +331,16 @@ export const material: Material = {
           rows: [
             ["[data]", "Odbiór w weekend", "Sobota 10:00 zamiast piątku 16:00", "SMS z [data]", "Zrealizowane"],
             ["[data]", "Wydatek: wycieczka szkolna", "Po połowie, przelew do [data]", "E-mail z [data]", "Czeka na przelew"],
-            ["[data]", "Propozycja mediacji w sprawie kalendarza kontaktów", "Wysłana propozycja, termin odpowiedzi [data]", "E-mail z [data]", "Czeka na odpowiedź"],
+            ["[data]", "Mediacja w sprawie kalendarza kontaktów", "Wysłane zaproszenie, odpowiedź do [data]", "E-mail z [data]", "Czeka na odpowiedź"],
             ["", "", "", "", ""],
             ["", "", "", "", ""],
           ],
-          caption: "Wzór — prowadź go w notesie, arkuszu lub aplikacji, do której tylko ty masz dostęp.",
+          caption: "Prowadź go tam, gdzie tylko ty masz dostęp.",
         },
         {
           type: "list",
           items: [
             "Zapisuj fakty, nie emocje.",
-            "Dodawaj odnośnik do wiadomości, w której ustalenie padło.",
-            "Raz w miesiącu przejrzyj dziennik i zaproponuj krótkie podsumowanie drugiemu rodzicowi.",
             "Rób kopie zapasowe korespondencji.",
           ],
         },
@@ -357,11 +348,8 @@ export const material: Material = {
     },
     {
       heading: "Kiedy przerwać bezpośredni kontakt i poszukać pomocy",
+      intro: "Szablony nie są narzędziem na przemoc. Nie prowadź korespondencji sam, jeśli:",
       blocks: [
-        {
-          type: "p",
-          text: "Szablony pomagają przy zwykłym konflikcie. Nie są narzędziem na przemoc. Jeśli wiadomości zawierają groźby, zastraszanie, nękanie albo boisz się o bezpieczeństwo swoje lub dziecka — nie musisz prowadzić tej korespondencji sam.",
-        },
         {
           type: "checklist",
           items: [
@@ -375,40 +363,39 @@ export const material: Material = {
           type: "callout",
           tone: "safety",
           title: "Gdzie szukać pomocy",
-          text: "W sytuacji zagrożenia dzwoń pod 112. Niebieska Linia — pomoc dla osób doznających przemocy domowej: 800 120 002. Zachowaj wiadomości z groźbami i porozmawiaj z prawnikiem o kolejnych krokach. Mediacja nie jest właściwą drogą, gdy w relacji występuje przemoc.",
+          text: "W zagrożeniu: 112. Niebieska Linia: 800 120 002. Zachowaj wiadomości z groźbami i porozmawiaj z prawnikiem. Przy przemocy mediacja nie jest właściwą drogą.",
         },
         {
           type: "p",
-          text: "Gdy konflikt jest silny, ale bez przemocy, pomocne mogą być: komunikacja wyłącznie mailowa, przekazywanie dziecka w neutralnym miejscu albo mediacja, w której zasady kontaktów ustalacie przy wsparciu neutralnej osoby. Dopiero gdy te drogi nie przynoszą porozumienia, o kontaktach z dzieckiem rozstrzyga sąd (art. 113 i nast. KRO).",
+          text: "Przy silnym konflikcie bez przemocy pomaga kontakt mailowy i przekazanie dziecka w neutralnym miejscu.",
         },
       ],
     },
     {
-      heading: "Od wiadomości do porozumienia — zanim sprawa trafi do sądu",
-      intro:
-        "Gdy pojedyncze wiadomości nie wystarczają, nie zaczynaj od wniosku do sądu. Najpierw spróbujcie spisać ustalenia na dłużej, a jeśli rozmowa utknie — zaproponuj mediację. Dlaczego w tej kolejności? Uzgodnione sprawy zostają w waszych rękach, a sąd rozstrzyga tylko to, czego nie udało się ustalić.",
+      heading: "Od wiadomości do porozumienia",
+      intro: "Gdy wiadomości nie wystarczają, nie zaczynaj od sądu.",
       blocks: [
         {
           type: "list",
           ordered: true,
           items: [
-            "Rzeczowe wiadomości (Metoda 4K) i pisemne podsumowania ustaleń.",
-            "Spisanie zasad na dłużej: kalendarz kontaktów, wakacje, święta, wydatki, ważne decyzje.",
-            "Mediacja — gdy w jakiejś sprawie nie możecie się dogadać samodzielnie.",
-            "Sąd — dla spraw, których nie udało się ustalić; to, co uzgodniliście (np. porozumienie o wychowaniu dzieci), sąd może uwzględnić w wyroku.",
+            "Rzeczowe wiadomości i pisemne podsumowania.",
+            "Porozumienie rodzicielskie: kontakty, wakacje, święta, wydatki, ważne decyzje.",
+            "Mediacja, gdy sami nie możecie się dogadać.",
+            "Sąd tylko dla spraw nieuzgodnionych.",
           ],
         },
         {
           type: "script",
-          title: "Propozycja mediacji na piśmie",
+          title: "Zaproszenie do mediacji",
           lines: [
             {
-              label: "25. Propozycja mediacji",
-              text: "Widzę, że w sprawie [temat, np. kalendarza kontaktów] nie udaje nam się dojść do porozumienia. Proponuję mediację — spotkanie z neutralnym mediatorem, który pomoże nam ustalić zasady. Mogę przesłać kontakt do [mediator / ośrodek] lub rozważyć twoją propozycję. Daj znać do [data], czy się zgadzasz.",
+              label: "25. Zaproszenie do mediacji",
+              text: "W sprawie [temat] nie udaje nam się porozumieć. Zapraszam cię do mediacji, czyli spotkania z bezstronnym mediatorem. Proponuję [mediator / ośrodek], rozważę też twoją propozycję. Mediator może też sam do ciebie napisać. Daj znać do [data].",
             },
             {
               label: "26. Odpowiedź na odmowę mediacji",
-              text: "Dziękuję za odpowiedź. Szkoda, bo zależy mi na tym, żebyśmy sprawy [imię dziecka] ustalili sami. Moja propozycja mediacji pozostaje aktualna — jeśli zmienisz zdanie, daj znać.",
+              text: "Dziękuję za odpowiedź. Szkoda, bo zależy mi, żebyśmy sprawy [imię dziecka] ustalili sami. Moje zaproszenie jest aktualne, gdybyś zmienił zdanie.",
             },
           ],
         },
@@ -420,11 +407,7 @@ export const material: Material = {
       blocks: [
         {
           type: "p",
-          text: "Dobra komunikacja to fundament każdego planu wychowawczego. Gdy już umiecie wymieniać rzeczowe wiadomości, łatwiej ustalić zasady na dłużej: kalendarz kontaktów, wakacje, święta, wydatki.",
-        },
-        {
-          type: "p",
-          text: "Nowy Etap może pomóc wam w mediacji albo w przygotowaniu Planu Rozwodu i ustaleń dotyczących dzieci przed złożeniem pozwu. Najpierw plan i ustalenia — dopiero potem pozew, który zbiera to, co już uzgodniliście. Możesz wrócić do nas, kiedy będziesz gotowy.",
+          text: "Nowy Etap może pomóc wam w mediacji albo w przygotowaniu Planu Rozwodu i porozumienia rodzicielskiego. Najpierw plan i ustalenia, potem pozew.",
         },
       ],
     },

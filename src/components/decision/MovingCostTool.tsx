@@ -48,7 +48,7 @@ export function MovingCostTool() {
   const reset = () => { setKids("nie"); setI(init(false)); setShown(false); };
 
   const report = (): Report => ({
-    title: "Ile kosztuje moja wyprowadzka — zestawienie",
+    title: "Ile kosztuje moja wyprowadzka: zestawienie",
     intro: `Zestawienie z ${todayPL()} na podstawie moich kwot.`,
     sections: [
       { heading: "Podsumowanie", items: [`Kwota na start: ${formatPLN(s.start)}`, `Bez pozycji, które można odłożyć: ${formatPLN(s.startWithoutDeferrable)}`, `Miesięczny koszt nowego mieszkania: ${formatPLN(s.monthly)}`, ...(s.monthsCovered !== undefined ? [`Oszczędności po starcie wystarczą na ok. ${formatNum(s.monthsCovered)} mies.`] : [])] },
@@ -71,7 +71,7 @@ export function MovingCostTool() {
             <div className="dc-grid2">
               <div className="field"><span className="field__label">Czynsz najmu (miesięcznie, z opłatami)</span><AmountInput label="Czynsz najmu" value={i.rent} onChange={(v) => set({ rent: v })} /></div>
               <div className="field"><span className="field__label">Media, internet, telefon (miesięcznie)</span><AmountInput label="Media miesięcznie" value={i.monthlyBills} onChange={(v) => set({ monthlyBills: v })} /></div>
-              <div className="field"><label className="field__label" htmlFor="dep">Kaucja — ile czynszów?</label><input id="dep" className="input" type="number" min={0} max={6} step={0.5} value={i.depositMultiplier} onChange={(e) => set({ depositMultiplier: Math.max(0, Math.min(6, Number(e.target.value) || 0)) })} /><span className="field__hint">Twoje założenie — sprawdź w ofercie.</span></div>
+              <div className="field"><label className="field__label" htmlFor="dep">Kaucja: ile czynszów?</label><input id="dep" className="input" type="number" min={0} max={6} step={0.5} value={i.depositMultiplier} onChange={(e) => set({ depositMultiplier: Math.max(0, Math.min(6, Number(e.target.value) || 0)) })} /><span className="field__hint">Twoje założenie. Sprawdź w ofercie.</span></div>
               <div className="field"><span className="field__label">Prowizja dla pośrednika</span><AmountInput label="Prowizja" value={i.agencyFee} onChange={(v) => set({ agencyFee: v })} /></div>
             </div>
             <label className="check"><input type="checkbox" checked={i.firstMonthUpfront} onChange={(e) => set({ firstMonthUpfront: e.target.checked })} /><span>Czynsz za pierwszy miesiąc płatny z góry</span></label>
@@ -127,7 +127,7 @@ export function MovingCostTool() {
             <div className="kpis kpis--3">
               <div className="kpi"><span className="kpi__label">Kwota na start</span><span className="kpi__value">{formatPLN(s.start)}</span><span className="kpi__note">w tym do odłożenia: {formatPLN(s.deferrable)}</span></div>
               <div className="kpi"><span className="kpi__label">Nowe mieszkanie miesięcznie</span><span className="kpi__value">{formatPLN(s.monthly)}</span></div>
-              <div className={`kpi ${s.savingsAfterStart !== undefined && s.savingsAfterStart < 0 ? "kpi--neg" : ""}`}><span className="kpi__label">Oszczędności po starcie</span><span className="kpi__value">{s.savingsAfterStart !== undefined ? formatPLN(s.savingsAfterStart) : "—"}</span><span className="kpi__note">{s.monthsCovered !== undefined ? `≈ ${formatNum(s.monthsCovered)} mies. nowego mieszkania` : "podaj oszczędności, aby policzyć"}</span></div>
+              <div className={`kpi ${s.savingsAfterStart !== undefined && s.savingsAfterStart < 0 ? "kpi--neg" : ""}`}><span className="kpi__label">Oszczędności po starcie</span><span className="kpi__value">{s.savingsAfterStart !== undefined ? formatPLN(s.savingsAfterStart) : "brak danych"}</span><span className="kpi__note">{s.monthsCovered !== undefined ? `≈ ${formatNum(s.monthsCovered)} mies. nowego mieszkania` : "podaj oszczędności, aby policzyć"}</span></div>
             </div>
           </div>
           <div className="result-section">

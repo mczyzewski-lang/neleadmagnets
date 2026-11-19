@@ -33,7 +33,7 @@ export function ScoreBadge({ slug, size = "sm" }: { slug: string; size?: "sm" | 
         <span className="score__i" aria-hidden="true">i</span>
       </button>
       <span role="tooltip" id={id} className="score__tip">
-        <strong className="score__tip-h">{s.score}/10 — {scoreBand(s.score)}</strong>
+        <strong className="score__tip-h">{s.score}/10: {scoreBand(s.score)}</strong>
         <span className="score__tip-why">{s.why}</span>
         <span className="score__tip-help">{SCORE_SCALE_HELP}</span>
         <span className="score__tip-scale">

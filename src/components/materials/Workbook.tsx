@@ -90,7 +90,7 @@ export function Workbook({ m }: { m: Material }) {
   const rememberToggle = (
     <label className="check wb__remember no-print">
       <input type="checkbox" checked={remember} onChange={(e) => setRemember(e.target.checked)} />
-      <span><strong>Zapamiętaj moje odpowiedzi na tym urządzeniu</strong> — wrócisz do nich później. Zapisują się tylko w tej przeglądarce, nie u nas. Nie włączaj na wspólnym lub cudzym komputerze.</span>
+      <span><strong>Zapamiętaj moje odpowiedzi na tym urządzeniu</strong>, by wrócić do nich później. Zapisują się tylko w tej przeglądarce, nie u nas. Nie włączaj na wspólnym lub cudzym komputerze.</span>
     </label>
   );
 
@@ -171,7 +171,7 @@ export function Workbook({ m }: { m: Material }) {
             <div className="kpi"><span className="kpi__label">Do zrobienia</span><span className="kpi__value">{todo.reduce((a, t) => a + t.items.length, 0)}</span></div>
             <div className="kpi"><span className="kpi__label">Notatki</span><span className="kpi__value">{todo.reduce((a, t) => a + t.notes.length, 0)}</span></div>
           </div>
-          {stats.done === 0 && <p className="muted">Nie masz jeszcze żadnych odpowiedzi. Wróć do dowolnej części i odhacz lub wpisz, co już wiesz — podsumowanie ułoży się samo.</p>}
+          {stats.done === 0 && <p className="muted">Nie masz jeszcze odpowiedzi. Wróć do dowolnej części i odhacz lub wpisz, co już wiesz. Podsumowanie ułoży się samo.</p>}
           {todo.some((t) => t.notes.length) && (
             <section className="result-section">
               <h4>Twoje notatki</h4>

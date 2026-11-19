@@ -38,7 +38,7 @@ export const ads: AdSet = {
       "Kilka pytań, a potem karty z tematami, które warto omówić ze specjalistą"
     ],
     "descriptions": [
-      "Co warto wiedzieć, co sprawdzić, o co zapytać — osobna karta dla każdego tematu.",
+      "Co warto wiedzieć, co sprawdzić, o co zapytać. Osobna karta dla każdego tematu.",
       "Osobne treści dla małżeństwa i związku nieformalnego. Bez kategorycznych porad.",
       "Bezpłatne narzędzie Nowego Etapu. Raport do pobrania jako PDF."
     ],
@@ -63,7 +63,7 @@ export const ads: AdSet = {
       "Małżeństwo i konkubinat",
       "Pytania do specjalisty",
       "Co warto sprawdzić",
-      "Nowy Etap — poradnia",
+      "Nowy Etap, poradnia",
       "Bezpłatnie, bez logowania",
       "Wynik do pobrania (PDF)",
       "Najpierw właściwe pytania"

@@ -3,7 +3,7 @@ import type { AdSet } from "./types";
 // Na podstawie MARKETING/ADS.md
 export const ads: AdSet = {
   "slug": "jak-powiedziec-dzieciom",
-  "angle": "Wsparcie w jednej z najtrudniejszych rozmów — ton empatyczny, bez straszenia.",
+  "angle": "Wsparcie w jednej z najtrudniejszych rozmów. Ton empatyczny, bez straszenia.",
   "targeting": "Kontekstowe i tematyczne: treści o finansach osobistych, prawie, rodzinie i poradnikach; Search: frazy informacyjne. Demografia szeroka (25–60). Bez remarketingu, list klientów, podobnych odbiorców i segmentów opartych na wnioskowaniu o kryzysie w związku.",
   "meta": {
     "primaryTexts": [
@@ -39,7 +39,7 @@ export const ads: AdSet = {
     ],
     "descriptions": [
       "Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych.",
-      "Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna.",
+      "Wypełniasz online, a podsumowanie masz od razu. To informacja, nie porada prawna.",
       "Jak powiedzieć dziecku o rozstaniu: przykładowe zdania dla każdego wieku i czego unikać."
     ],
     "cta": "Dowiedz się więcej",
@@ -63,7 +63,7 @@ export const ads: AdSet = {
       "Czego unikać w rozmowie",
       "Poradnik dla rodziców",
       "Bezpłatny poradnik online",
-      "Nowy Etap — poradnia",
+      "Nowy Etap, poradnia",
       "Materiał od Nowego Etapu",
       "Otwórz od razu",
       "Spokojnie i z szacunkiem"

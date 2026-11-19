@@ -39,7 +39,7 @@ export const ads: AdSet = {
     ],
     "descriptions": [
       "Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych.",
-      "Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna.",
+      "Wypełniasz online, a podsumowanie masz od razu. To informacja, nie porada prawna.",
       "Zeszyt ćwiczeń przed mediacją: priorytety, potrzeby dzieci, fakty finansowe, pytania."
     ],
     "cta": "Dowiedz się więcej",
@@ -63,7 +63,7 @@ export const ads: AdSet = {
       "Priorytety przed spotkaniem",
       "Mediacja jest dobrowolna",
       "Wypełnij zeszyt online",
-      "Nowy Etap — poradnia",
+      "Nowy Etap, poradnia",
       "Materiał od Nowego Etapu",
       "Otwórz od razu",
       "Bezpłatny zeszyt online"

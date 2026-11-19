@@ -45,7 +45,7 @@ const O: Record<string, Opt[]> = {
   ],
   balance: [
     { value: "ok", label: "Tak, oboje możemy mówić swobodnie" },
-    { value: "unequal", label: "Nie zawsze — czuję presję lub boję się reakcji" },
+    { value: "unequal", label: "Nie zawsze, czuję presję lub boję się reakcji" },
     { value: "unsure", label: "Nie wiem" },
   ],
 };
@@ -86,7 +86,7 @@ const steps: WizardStep<PreFilingAnswers>[] = [
   { id: "agreed", title: "Czy któreś z tych tematów macie już wstępnie uzgodnione?", optional: true, when: (a) => notSafety(a) && (a.topics || []).length > 0,
     summary: (a) => (a.agreed?.length ? labelOf(selectedOpts(a), a.agreed) : "żadne"),
     render: (a, set) => <MultiChoice legend="Uzgodnione" options={selectedOpts(a)} value={a.agreed || []} onChange={(v) => set({ agreed: v, contested: (a.contested || []).filter((x) => !v.includes(x)) })} columns={2} /> },
-  { id: "contested", title: "Które tematy są szczególnie sporne?", help: "Wystarczy zaznaczyć — nie musisz opisywać szczegółów konfliktu.", optional: true,
+  { id: "contested", title: "Które tematy są szczególnie sporne?", help: "Wystarczy zaznaczyć. Nie musisz opisywać szczegółów konfliktu.", optional: true,
     when: (a) => notSafety(a) && (a.topics || []).filter((t) => !(a.agreed || []).includes(t)).length > 0,
     summary: (a) => (a.contested?.length ? labelOf(selectedOpts(a), a.contested) : "żadne"),
     render: (a, set) => <MultiChoice legend="Sporne" options={selectedOpts(a).filter((o) => !(a.agreed || []).includes(o.value))} value={a.contested || []} onChange={(v) => set({ contested: v })} columns={2} /> },
@@ -109,16 +109,22 @@ export function PreFilingTool() {
   const reset = () => { setAnswersState({}); setDone(false); setEditStep(undefined); setWizardKey((k) => k + 1); };
 
   const report = (): Report => ({
-    title: r.mode === "safety" ? "Ustalenia przed pozwem — moje kolejne kroki" : "Mapa możliwych ustaleń przed pozwem",
+    title: r.mode === "safety" ? "Ustalenia przed pozwem: moje kolejne kroki" : "Mapa możliwych ustaleń przed pozwem",
     intro: `Zestawienie przygotowane ${todayPL()} na podstawie moich odpowiedzi.`,
     sections: [
       ...(r.mode === "safety" ? [{ heading: "Bezpieczeństwo", items: ["W sytuacji zagrożenia: 112.", "Niebieska Linia (wsparcie dla osób doznających przemocy domowej): 800 120 002.", ...r.notes] }] : []),
       { heading: "Kwestie, które można spróbować uzgodnić", items: r.agreeable },
       { heading: "Kwestie wymagające indywidualnej analizy", items: r.analysis.map((x) => `${x.topic}: ${x.reason}`) },
-      { heading: "Potencjalne kroki mediacyjne", items: r.mediationSteps },
+      ...(r.talks ? [{ heading: "Rozmowy między stronami", items: [r.talks.intro, ...r.talks.points] }, { heading: "Jak spisać ustalenia", items: r.talks.writeDown }] : []),
+      ...(r.mediation ? [
+        { heading: "Mediacja: kiedy pomaga", items: [r.mediation.intro, ...r.mediation.when] },
+        { heading: "Mediacja: jak się zaczyna", items: r.mediation.start },
+        { heading: "Mediacja: jak przebiega", items: r.mediation.process },
+      ] : []),
+      { heading: "Co napisać w pozwie", items: r.pozew },
       { heading: "Dokumenty do przygotowania", items: r.documents },
       { heading: "Pytania do mediatora", items: r.mediatorQuestions },
-      { heading: "Wstępna kolejność działań", items: r.sequence.map((s, i) => `${i + 1}. ${s.title} — ${s.text}`) },
+      { heading: "Wstępna kolejność działań", items: r.sequence.map((s, i) => `${i + 1}. ${s.title}: ${s.text}`) },
       ...(r.mode === "standard" ? [{ heading: "Ważne", items: r.notes }] : []),
     ],
   });
@@ -140,7 +146,7 @@ export function PreFilingTool() {
         ) : (
           <>
             <h2 style={{ fontSize: "var(--fs-2xl)" }}>Mapa możliwych ustaleń przed pozwem</h2>
-            <p style={{ marginBottom: 16 }}>Stan Waszych ustaleń w {rd.total} {rd.total === 1 ? "temacie" : "tematach"}. To nie jest ocena, czy powinniście się rozwieść — tylko obraz tego, co już jest, a co zostaje do omówienia.</p>
+            <p style={{ marginBottom: 16 }}>Stan Waszych ustaleń w {rd.total} {rd.total === 1 ? "temacie" : "tematach"}. To nie jest ocena, czy powinniście się rozwieść. To obraz tego, co już jest, a co zostaje do omówienia.</p>
             <div className="readiness" role="img" aria-label={`Uzgodnione: ${rd.agreed}, otwarte: ${rd.open}, sporne: ${rd.contested}`}>
               <span className="readiness__agreed" style={{ width: `${pct(rd.agreed)}%` }} />
               <span className="readiness__open" style={{ width: `${pct(rd.open)}%` }} />
@@ -163,7 +169,7 @@ export function PreFilingTool() {
         <div className="result-section">
           <Alert tone="safety" title="Gdzie szukać pomocy">
             <p>W sytuacji bezpośredniego zagrożenia zadzwoń pod numer alarmowy <strong>112</strong>.</p>
-            <p>Niebieska Linia — ogólnopolski telefon dla osób doznających przemocy domowej: <strong>800 120 002</strong>.</p>
+            <p>Niebieska Linia, ogólnopolski telefon dla osób doznających przemocy domowej: <strong>800 120 002</strong>.</p>
             <p>Możesz też skorzystać z indywidualnej pomocy prawnika, który reprezentuje wyłącznie Ciebie, oraz z lokalnego ośrodka interwencji kryzysowej. <Link href="/pomoc">Więcej kontaktów</Link></p>
           </Alert>
           <p className="small muted mt">{r.notes.join(" ")}</p>
@@ -179,7 +185,7 @@ export function PreFilingTool() {
             <div className="pf-col pf-col--analysis">
               <h4><Icon name="scale" width={20} /> Wymaga indywidualnej analizy</h4>
               {r.analysis.length ? (
-                <ul className="list-dot">{r.analysis.map((x) => <li key={x.topic}><strong>{x.topic}</strong> — {x.reason}</li>)}</ul>
+                <ul className="list-dot">{r.analysis.map((x) => <li key={x.topic}><strong>{x.topic}:</strong> {x.reason}</li>)}</ul>
               ) : <p className="small">Brak tematów oznaczonych jako szczególnie złożone.</p>}
             </div>
           </div>
@@ -200,13 +206,42 @@ export function PreFilingTool() {
         </ol>
       </div>
 
-      {r.mediationSteps.length > 0 && (
+      {r.talks && (
         <div className="result-section">
-          <h3><Icon name="handshake" width={22} /> Jak może wyglądać mediacja</h3>
-          <ul className="list-check">{r.mediationSteps.map((x) => <li key={x}>{x}</li>)}</ul>
+          <h3><Icon name="message" width={22} /> 1. Rozmowy między Wami</h3>
+          <p>{r.talks.intro}</p>
+          <ul className="list-check">{r.talks.points.map((x) => <li key={x}>{x}</li>)}</ul>
+          {r.talks.writeDown.length > 0 && (
+            <>
+              <h4 className="mt">Jak spisać to, co uzgodnicie</h4>
+              <ul className="list-dot">{r.talks.writeDown.map((x) => <li key={x}>{x}</li>)}</ul>
+            </>
+          )}
+        </div>
+      )}
+
+      {r.mediation && (
+        <div className="result-section">
+          <h3><Icon name="handshake" width={22} /> 2. Mediacja z mediatorem</h3>
+          <p>{r.mediation.intro}</p>
+          {r.mediation.when.length > 0 && (
+            <>
+              <h4>Kiedy pomaga w Waszej sytuacji</h4>
+              <ul className="list-dot">{r.mediation.when.map((x) => <li key={x}>{x}</li>)}</ul>
+            </>
+          )}
+          <h4 className="mt">Jak się zaczyna</h4>
+          <ul className="list-check">{r.mediation.start.map((x) => <li key={x}>{x}</li>)}</ul>
+          <h4 className="mt">Jak przebiega</h4>
+          <ul className="list-dot">{r.mediation.process.map((x) => <li key={x}>{x}</li>)}</ul>
           <Alert tone="info" className="mt"><p>{r.notes.join(" ")}</p></Alert>
         </div>
       )}
+
+      <div className="result-section">
+        <h3><Icon name="doc" width={22} /> {r.mode === "safety" ? "Co napisać w pozwie" : "3. Pozew"}</h3>
+        <ul className="list-dot">{r.pozew.map((x) => <li key={x}>{x}</li>)}</ul>
+      </div>
 
       <div className="result-section">
         <div className="grid grid--2" style={{ gap: 24 }}>
@@ -231,7 +266,7 @@ export function PreFilingTool() {
         <NextStep
           toolId={TOOL}
           heading={r.mode === "safety" ? "Jeśli chcesz, porozmawiajmy indywidualnie" : "Co możesz zrobić dalej?"}
-          intro={r.mode === "safety" ? "Rozmowa dotyczy wyłącznie Ciebie i nie wymaga kontaktu z drugą stroną." : "Najpierw plan i ustalenia. Dopiero potem pozew — jeśli to dla Was możliwe."}
+          intro={r.mode === "safety" ? "Rozmowa dotyczy wyłącznie Ciebie i nie wymaga kontaktu z drugą stroną." : "Najpierw plan i ustalenia. Dopiero potem pozew, jeśli to dla Was możliwe."}
           offers={r.offers}
         />
       </div>

@@ -8,7 +8,7 @@ export const ads: AdSet = {
   "meta": {
     "primaryTexts": [
       "Jeden dom, dwa gospodarstwa. Zobacz miesięczne saldo, koszty jednorazowe i poduszkę finansową w 3 wariantach.",
-      "Kaucja, przeprowadzka, nowe sprzęty — koszty jednorazowe też warto policzyć. Bezpłatny kalkulator budżetu.",
+      "Kaucja, przeprowadzka, nowe sprzęty: koszty jednorazowe też warto policzyć. Bezpłatny kalkulator budżetu.",
       "Budżet po rozstaniu: ostrożny, bazowy, optymistyczny. Założenia widoczne i edytowalne. Wynik od razu."
     ],
     "headlines": [
@@ -63,7 +63,7 @@ export const ads: AdSet = {
       "Na ile wystarczy poduszka?",
       "Koszty jednorazowe policzone",
       "Saldo miesięczne od razu",
-      "Nowy Etap — poradnia",
+      "Nowy Etap, poradnia",
       "Bezpłatnie, bez logowania",
       "Wynik do pobrania (PDF)",
       "Najpierw plan finansowy"
@@ -72,7 +72,7 @@ export const ads: AdSet = {
       "Policz budżet po rozstaniu w 3 wariantach. Wykres, saldo miesięczne i poduszka finansowa.",
       "Wydatki miesięczne i nieregularne przeliczone na miesiąc. Założenia możesz zmieniać.",
       "Bez logowania i bez podawania danych. Obliczenia w Twojej przeglądarce.",
-      "To nie kalkulator alimentów — to uporządkowany obraz Twoich finansów."
+      "To nie kalkulator alimentów, tylko uporządkowany obraz Twoich finansów."
     ],
     "paths": [
       "budzet",

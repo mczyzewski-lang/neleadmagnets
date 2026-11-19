@@ -3,7 +3,7 @@ import type { AdSet } from "./types";
 // Na podstawie MARKETING/ADS.md
 export const ads: AdSet = {
   "slug": "rozwod-krok-po-kroku",
-  "angle": "Mapa całego procesu — redukuje niepewność „co mnie czeka”.",
+  "angle": "Mapa całego procesu. Zmniejsza niepewność „co mnie czeka”.",
   "targeting": "Kontekstowe i tematyczne: treści o finansach osobistych, prawie, rodzinie i poradnikach; Search: frazy informacyjne. Demografia szeroka (25–60). Bez remarketingu, list klientów, podobnych odbiorców i segmentów opartych na wnioskowaniu o kryzysie w związku.",
   "meta": {
     "primaryTexts": [
@@ -12,7 +12,7 @@ export const ads: AdSet = {
       "Najpierw plan i ustalenia, potem pozew. Zobacz całą drogę rozpisaną na etapy."
     ],
     "headlines": [
-      "Rozwód krok po kroku — poradnik",
+      "Rozwód krok po kroku: poradnik",
       "Cała droga na jednej mapie",
       "Etapy, dokumenty, koszty",
       "Od ustaleń do wyroku"
@@ -26,7 +26,7 @@ export const ads: AdSet = {
   },
   "demandGen": {
     "headlines": [
-      "Rozwód krok po kroku — poradnik",
+      "Rozwód krok po kroku: poradnik",
       "Cała droga na jednej mapie",
       "Etapy, dokumenty, koszty",
       "Od ustaleń do wyroku",
@@ -39,7 +39,7 @@ export const ads: AdSet = {
     ],
     "descriptions": [
       "Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych.",
-      "Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna.",
+      "Wypełniasz online, a podsumowanie masz od razu. To informacja, nie porada prawna.",
       "Cały proces rozwodowy rozpisany na etapy: dokumenty, sąd, opłaty, wyrok i życie po nim."
     ],
     "cta": "Dowiedz się więcej",
@@ -64,7 +64,7 @@ export const ads: AdSet = {
       "Co jest w wyroku?",
       "Od ustaleń do wyroku",
       "Najpierw plan, potem pozew",
-      "Nowy Etap — poradnia",
+      "Nowy Etap, poradnia",
       "Materiał od Nowego Etapu",
       "Otwórz od razu"
     ],

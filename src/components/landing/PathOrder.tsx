@@ -40,7 +40,7 @@ export function WhyOrderSection({ current, what = "To narzędzie" }: { current: 
     <section className="section landing-only" aria-labelledby="why-order-h">
       <div className="container">
         <span className="eyebrow">Nasza filozofia</span>
-        <h2 id="why-order-h">Najpierw plan, potem ustalenia — dopiero potem pozew</h2>
+        <h2 id="why-order-h">Najpierw plan, potem ustalenia, dopiero potem pozew</h2>
         <p className="muted" style={{ maxWidth: "70ch" }}>
           {what} należy do etapu <strong>„{here.name}”</strong>. {here.text}
         </p>

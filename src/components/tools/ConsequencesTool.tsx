@@ -8,7 +8,7 @@ import { Icon } from "@/components/ui/Icon";
 import { todayPL } from "@/lib/format";
 import { track } from "@/lib/analytics";
 import type { Report } from "@/lib/report";
-import { type ConsequencesAnswers, type TopicCard, PRIORITY_OPTIONS, buildCards, summaryLine } from "@/lib/tools/consequences";
+import { type ConsequencesAnswers, type TopicCard, PRIORITY_OPTIONS, buildCards, stageOf, summaryLine } from "@/lib/tools/consequences";
 import "./tools-extra.css";
 
 const TOOL = "konsekwencje-rozstania";
@@ -47,15 +47,25 @@ const O: Record<string, Opt[]> = {
   ],
   steps: [
     { value: "none", label: "Jeszcze nic" },
-    { value: "talks", label: "Rozmawiamy o warunkach" },
-    { value: "mediation", label: "Jesteśmy w mediacji" },
-    { value: "filed", label: "Pozew / wniosek został złożony" },
+    { value: "talks", label: "Rozmawiamy o warunkach", desc: "Sami, bez mediatora" },
+    { value: "mediation", label: "Jesteśmy w mediacji", desc: "Spotkania z bezstronnym mediatorem" },
+    { value: "filed", label: "Pozew lub wniosek jest już w sądzie" },
     { value: "judgment", label: "Jest już wyrok" },
   ],
 };
 
+/** Etapy dla par bez ślubu: nie ma pozwu rozwodowego, może być sprawa np. o dzieci */
+const STEPS_INFORMAL: Opt[] = [
+  { value: "none", label: "Jeszcze nic" },
+  { value: "talks", label: "Rozmawiamy o warunkach", desc: "Sami, bez mediatora" },
+  { value: "mediation", label: "Jesteśmy w mediacji", desc: "Spotkania z bezstronnym mediatorem" },
+  { value: "filed", label: "Sprawa jest w sądzie", desc: "Np. o dzieci albo wspólne rzeczy" },
+  { value: "judgment", label: "Sąd już orzekł" },
+];
+const stepOpts = (a: ConsequencesAnswers) => (a.relation === "informal" ? STEPS_INFORMAL : O.steps);
+
 const steps: WizardStep<ConsequencesAnswers>[] = [
-  { id: "relation", title: "Małżeństwo czy związek nieformalny?", help: "Przepisy dla obu sytuacji są różne — pokażemy właściwe informacje.", valid: (a) => !!a.relation, summary: (a) => labelOf(O.relation, a.relation),
+  { id: "relation", title: "Małżeństwo czy związek nieformalny?", help: "Przepisy są różne, więc pokażemy właściwe informacje.", valid: (a) => !!a.relation, summary: (a) => labelOf(O.relation, a.relation),
     render: (a, set) => <SingleChoice legend="Rodzaj związku" options={O.relation} value={a.relation} onChange={(v) => set({ relation: v as ConsequencesAnswers["relation"] })} /> },
   { id: "children", title: "Czy macie wspólne dzieci?", help: "Nie pytamy o imiona ani inne dane dzieci.", valid: (a) => !!a.children, summary: (a) => labelOf(O.children, a.children),
     render: (a, set) => <SingleChoice legend="Dzieci" options={O.children} value={a.children} onChange={(v) => set({ children: v as ConsequencesAnswers["children"] })} /> },
@@ -67,8 +77,8 @@ const steps: WizardStep<ConsequencesAnswers>[] = [
     render: (a, set) => <SingleChoice legend="Działalność" options={O.business} value={a.business} onChange={(v) => set({ business: v as ConsequencesAnswers["business"] })} /> },
   { id: "debts", title: "Czy istnieją inne wspólne zobowiązania?", help: "Np. pożyczki, karty kredytowe, leasing, kredyt na samochód.", valid: (a) => !!a.debts, summary: (a) => labelOf(O.debts, a.debts),
     render: (a, set) => <SingleChoice legend="Zobowiązania" options={O.debts} value={a.debts} onChange={(v) => set({ debts: v as ConsequencesAnswers["debts"] })} /> },
-  { id: "steps", title: "Czy podjęto już jakieś formalne kroki?", valid: (a) => !!a.steps, summary: (a) => labelOf(O.steps, a.steps),
-    render: (a, set) => <SingleChoice legend="Kroki" options={O.steps} value={a.steps} onChange={(v) => set({ steps: v as ConsequencesAnswers["steps"] })} /> },
+  { id: "steps", title: "Na jakim etapie jesteście?", help: "Dopasujemy wynik: przed sprawą, w jej trakcie albo po wyroku.", valid: (a) => !!a.steps, summary: (a) => labelOf(stepOpts(a), a.steps),
+    render: (a, set) => <SingleChoice legend="Etap" options={stepOpts(a)} value={a.steps} onChange={(v) => set({ steps: v as ConsequencesAnswers["steps"] })} /> },
   { id: "priorities", title: "Które tematy są dla Ciebie najważniejsze?", help: "Możesz zaznaczyć kilka. Pokażemy je na początku mapy.", optional: true,
     summary: (a) => (a.priorities?.length ? labelOf(PRIORITY_OPTIONS as unknown as Opt[], a.priorities) : "nie wybrano"),
     render: (a, set) => <MultiChoice legend="Priorytety" options={PRIORITY_OPTIONS as unknown as Opt[]} value={a.priorities || []} onChange={(v) => set({ priorities: v })} columns={2} /> },
@@ -98,6 +108,7 @@ export function ConsequencesTool() {
   const [wizardKey, setWizardKey] = useState(0);
   const resultRef = useRef<HTMLDivElement>(null);
   const cards = useMemo(() => buildCards(answers), [answers]);
+  const stage = stageOf(answers);
 
   const complete = () => {
     setDone(true);
@@ -160,7 +171,7 @@ export function ConsequencesTool() {
 
       <div className="result-section">
         <Alert tone="info">
-          <p>Mapa pokazuje tematy, które zwykle warto sprawdzić w podobnej sytuacji. <strong>Nie jest oceną Twoich uprawnień</strong> — konkretne skutki zależą od szczegółów. Oznaczenie „zależy od szczegółów” wskazuje kwestie wymagające indywidualnej analizy.</p>
+          <p>Mapa pokazuje tematy, które zwykle warto sprawdzić w podobnej sytuacji. <strong>Nie jest oceną Twoich uprawnień</strong>{answers.relation === "marriage" ? " i nie ocenia przesłanek rozwodu ani separacji" : ""}. Skutki zależą od szczegółów, dlatego nie zastępuje konsultacji ze specjalistą.</p>
         </Alert>
         <div className="stack mt">
           {cards.map((c) => <CardView key={c.id} c={c} />)}
@@ -174,13 +185,22 @@ export function ConsequencesTool() {
       <div className="result-section" style={{ background: "var(--cream)" }}>
         <NextStep
           toolId={TOOL}
-          intro="Gdy wiesz już, które tematy Cię dotyczą, łatwiej ułożyć kolejność działań."
-          offers={[
-            { key: "plan-rozwodu", cta: "Poznaj możliwe kolejne kroki i przygotuj plan działania", why: answers.relation === "informal" ? "Bezpłatny plan pomoże uporządkować sprawy dzieci, mieszkania i finansów — także bez sprawy rozwodowej." : "Bezpłatny Plan Rozwodu porządkuje tematy z mapy w kolejność działań — zanim złożysz pozew." },
-            answers.relation === "marriage"
-              ? { key: "materialy", href: "/narzedzia/separacja-czy-rozwod", cta: "Porównaj separację i rozwód", why: "Interaktywna tabela różnic między separacją a rozwodem." }
-              : { key: "materialy", href: "/materialy/przygotowanie-do-konsultacji", cta: "Jak przygotować się do konsultacji", why: "Checklista: co zabrać i o co zapytać na pierwszym spotkaniu ze specjalistą." },
-          ]}
+          intro={stage === "pre" ? "Gdy wiesz już, które tematy Cię dotyczą, łatwiej ułożyć kolejność działań." : stage === "filed" ? "W trakcie sprawy łatwiej działać, gdy wiesz, co jeszcze możecie uzgodnić." : "Po wyroku pomaga lista spraw do załatwienia po kolei."}
+          offers={
+            stage === "pre"
+              ? [
+                  { key: "plan-rozwodu", cta: "Poznaj możliwe kolejne kroki i przygotuj plan działania", why: answers.relation === "informal" ? "Bezpłatny plan pomoże uporządkować sprawy dzieci, mieszkania i finansów, także bez sprawy w sądzie." : "Bezpłatny Plan Rozwodu układa tematy z mapy w kolejność działań, zanim złożysz pozew." },
+                  answers.relation === "marriage"
+                    ? { key: "materialy", href: "/narzedzia/separacja-czy-rozwod", cta: "Porównaj separację i rozwód", why: "Interaktywna tabela różnic między separacją a rozwodem." }
+                    : { key: "materialy", href: "/materialy/przygotowanie-do-konsultacji", cta: "Jak przygotować się do konsultacji", why: "Checklista: co zabrać i o co zapytać na pierwszym spotkaniu ze specjalistą." },
+                ]
+              : [
+                  { key: "konsultacja", why: stage === "filed" ? "Porozmawiaj o tym, co możecie jeszcze uzgodnić w trakcie sprawy. Bez zobowiązań." : "Porozmawiaj o sprawach, które zostały po wyroku. Bez zobowiązań." },
+                  answers.relation === "marriage"
+                    ? { key: "materialy", href: "/materialy/rozwod-krok-po-kroku", cta: stage === "filed" ? "Zobacz, jak wygląda sprawa krok po kroku" : "Checklista spraw po wyroku", why: "Bezpłatny przewodnik od decyzji do życia po wyroku." }
+                    : { key: "materialy", href: "/materialy/przygotowanie-do-konsultacji", cta: "Jak przygotować się do konsultacji", why: "Checklista: co zabrać i o co zapytać na spotkaniu ze specjalistą." },
+                ]
+          }
         />
       </div>
     </div>

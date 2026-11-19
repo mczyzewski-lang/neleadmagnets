@@ -1,4 +1,4 @@
-# Propozycje reklam — wersja do akceptacji
+# Propozycje reklam: wersja do akceptacji
 
 Wygenerowano z `src/content/ads/*.ts` (`node scripts/export-ads.mjs`). Te same treści widać w dymku na stronach `<landing>/demo` (spis: `/demo`).
 Zasady zgodności i UTM: `MARKETING/ADS.md`, sekcja 0.
@@ -9,21 +9,21 @@ Zasady zgodności i UTM: `MARKETING/ADS.md`, sekcja 0.
 
 Landing: `/przed-decyzja/koszt-rozwodu` · Demo: `/przed-decyzja/koszt-rozwodu/demo`
 
-**Kąt:** Konkretna odpowiedź na częste pytanie „ile to kosztuje” — opłaty, mediacja, podział majątku i porównanie porozumienia ze sporem na własnych liczbach.
+**Kąt:** Konkretna odpowiedź na częste pytanie „ile to kosztuje”: opłaty, mediacja, podział majątku i porównanie porozumienia ze sporem na własnych liczbach.
 
 **Kierowanie:** Search: frazy kosztowe (wysoka intencja). Demand Gen/Meta: zainteresowania ogólne (finanse osobiste, prawo, poradniki rodzinne), dorośli 28–60, bez list remarketingowych i podobnych odbiorców.
 
 ### Meta (CTA: Dowiedz się więcej)
 
 **Tekst główny**
-- Opłata od pozwu to tylko początek. Policz koszty rozwodu: mediację, podział majątku i pomoc prawną — na swoich liczbach. _(120/125)_
-- Porozumienie czy spór — ile to kosztuje? Bezpłatny kalkulator Nowego Etapu porównuje obie ścieżki na Twoich kwotach. _(116/125)_
+- Opłata od pozwu to tylko początek. Policz na swoich liczbach mediację, podział majątku i pomoc prawną. _(102/125)_
+- Porozumienie czy spór: ile to kosztuje? Bezpłatny kalkulator Nowego Etapu porównuje obie ścieżki na Twoich kwotach. _(115/125)_
 - Ile kosztuje rozwód w Polsce? Sprawdź opłaty sądowe, możliwy zwrot połowy opłaty i koszty, o których łatwo zapomnieć. _(117/125)_
 
 **Nagłówki**
 - Ile kosztuje rozwód? Policz to _(30/40)_
 - Kalkulator kosztów rozwodu _(26/40)_
-- Porozumienie czy spór — porównaj _(32/40)_
+- Porozumienie czy spór? Porównaj _(31/40)_
 
 **Opisy**
 - Bezpłatnie, bez rejestracji _(27/30)_
@@ -42,7 +42,7 @@ Landing: `/przed-decyzja/koszt-rozwodu` · Demo: `/przed-decyzja/koszt-rozwodu/d
 
 **Długie nagłówki**
 - Ile kosztuje rozwód? Policz opłaty, mediację i podział majątku na własnych założeniach _(86/90)_
-- Porównaj koszt porozumienia i sporu — bezpłatny kalkulator Nowego Etapu _(71/90)_
+- Porównaj koszt porozumienia i sporu w bezpłatnym kalkulatorze Nowego Etapu _(74/90)_
 - Opłata od pozwu to nie wszystko. Sprawdź pełne koszty i ukryte wydatki _(70/90)_
 
 **Teksty**
@@ -68,7 +68,7 @@ Landing: `/przed-decyzja/koszt-rozwodu` · Demo: `/przed-decyzja/koszt-rozwodu/d
 - Bezpłatnie i bez rejestracji _(28/30)_
 - Wynik do pobrania w PDF _(23/30)_
 - Sprawdź możliwy zwrot opłaty _(28/30)_
-- Nowy Etap — poradnia _(20/30)_
+- Nowy Etap, poradnia _(19/30)_
 - Najpierw plan, potem pozew _(26/30)_
 - Koszty, o których zapominasz _(28/30)_
 
@@ -78,7 +78,7 @@ Landing: `/przed-decyzja/koszt-rozwodu` · Demo: `/przed-decyzja/koszt-rozwodu/d
 - Bez podawania danych kontaktowych. Obliczenia w przeglądarce. Sprawdź teraz. _(76/90)_
 - Nowy Etap pomaga przygotować ustalenia przed pozwem. Zacznij od kosztów. _(72/90)_
 
-**Uwagi:** Nie podawaj w reklamie konkretnych kwot honorariów — tylko opłaty ustawowe (np. 600 zł) i to po ich weryfikacji.
+**Uwagi:** Nie podawaj w reklamie konkretnych kwot honorariów. Tylko opłaty ustawowe (np. 600 zł) i to po ich weryfikacji.
 
 ---
 
@@ -86,7 +86,7 @@ Landing: `/przed-decyzja/koszt-rozwodu` · Demo: `/przed-decyzja/koszt-rozwodu/d
 
 Landing: `/przed-decyzja/rozmowa-o-rozstaniu` · Demo: `/przed-decyzja/rozmowa-o-rozstaniu/demo`
 
-**Kąt:** Trudną rozmowę łatwiej przeprowadzić, gdy wiadomo, od czego zacząć i czego unikać — bezpłatny plan rozmowy w 3 minuty.
+**Kąt:** Trudną rozmowę łatwiej przeprowadzić, gdy wiadomo, od czego zacząć i czego unikać. Bezpłatny plan rozmowy w 3 minuty.
 
 **Kierowanie:** Kontekstowo: tematy psychologii relacji, komunikacji, rozwoju osobistego; słowa kluczowe o trudnych rozmowach w związku. Szerokie grupy wiekowe 28–55. Bez list remarketingowych i bez podobnych odbiorców.
 
@@ -107,7 +107,7 @@ Landing: `/przed-decyzja/rozmowa-o-rozstaniu` · Demo: `/przed-decyzja/rozmowa-o
 - Bezpłatne narzędzie _(19/30)_
 - Bez logowania i danych _(22/30)_
 
-**Kreacja:** Grafika 1:1: telefon z ekranem wyniku — dymek „Jak możesz zacząć” z przykładowym zdaniem i trzy odhaczone punkty przygotowania. Tło off-white, akcent złotego schodka. Bez zdjęć par i smutnych twarzy.
+**Kreacja:** Grafika 1:1: telefon z ekranem wyniku: dymek „Jak możesz zacząć” z przykładowym zdaniem i trzy odhaczone punkty przygotowania. Tło off-white, akcent złotego schodka. Bez zdjęć par i smutnych twarzy.
 
 ### Google Demand Gen (CTA: Sprawdź)
 
@@ -116,17 +116,17 @@ Landing: `/przed-decyzja/rozmowa-o-rozstaniu` · Demo: `/przed-decyzja/rozmowa-o
 - Plan rozmowy w 3 minuty _(23/40)_
 - Pierwsze zdania, które pomagają _(31/40)_
 - Czego unikać w trudnej rozmowie _(31/40)_
-- Rozmowa o kryzysie — krok po kroku _(34/40)_
+- Rozmowa o kryzysie krok po kroku _(32/40)_
 
 **Długie nagłówki**
 - Przygotuj trudną rozmowę w związku: pierwsze zdania, czego unikać i co zrobić po rozmowie _(89/90)_
-- Bezpłatny plan rozmowy o kryzysie lub rozstaniu — dopasowany do Twoich odpowiedzi _(81/90)_
+- Bezpłatny plan rozmowy o kryzysie lub rozstaniu, dopasowany do Twoich odpowiedzi _(80/90)_
 - Najpierw spokojna rozmowa, potem decyzje. Sprawdź, jak się do niej przygotować _(78/90)_
 
 **Teksty**
 - 8 krótkich pytań, bez podawania danych. Otrzymasz plan rozmowy do pobrania jako PDF. _(84/90)_
 - Warianty pierwszych zdań, plan na wypadek eskalacji i co zrobić w ciągu 72 godzin. _(82/90)_
-- Narzędzie uwzględnia bezpieczeństwo — przy obawach nie proponuje rozmowy w cztery oczy. _(87/90)_
+- Narzędzie uwzględnia bezpieczeństwo. Przy obawach nie proponuje rozmowy w cztery oczy. _(86/90)_
 
 **Kreacja:** Wideo 15 s 9:16: dłonie z telefonem, przewijanie planu rozmowy (otwarcie → czego unikać → po rozmowie). Napis końcowy: „Plan rozmowy w 3 minuty. Bezpłatnie.” Logo Nowy Etap.
 
@@ -147,16 +147,16 @@ Landing: `/przed-decyzja/rozmowa-o-rozstaniu` · Demo: `/przed-decyzja/rozmowa-o
 - Bez logowania i danych _(22/30)_
 - Wynik w 3 minuty _(16/30)_
 - Pobierz plan jako PDF _(21/30)_
-- Nowy Etap – poradnia _(20/30)_
+- Nowy Etap, poradnia _(19/30)_
 - Co zrobić po rozmowie _(21/30)_
 
 **Teksty**
 - Odpowiedz na 8 pytań i otrzymaj plan rozmowy dopasowany do Twojej sytuacji. Bezpłatnie. _(87/90)_
 - Przykładowe pierwsze zdania, czego unikać, jak zakończyć i co zrobić w ciągu 72 godzin. _(87/90)_
 - O terapii, o zasadach na najbliższy czas lub o przyszłości. Odpowiedzi nie są zapisywane. _(89/90)_
-- Najpierw plan i spokojna rozmowa. Potem kolejne kroki. Nowy Etap – poradnia rozwodowa. _(86/90)_
+- Najpierw plan i spokojna rozmowa. Potem kolejne kroki. Nowy Etap, poradnia rozwodowa. _(85/90)_
 
-**Uwagi:** Nie używaj w reklamach Meta sformułowań typu „Chcesz odejść od partnera?” — sugerują znajomość sytuacji odbiorcy.
+**Uwagi:** Nie używaj w reklamach Meta sformułowań typu „Chcesz odejść od partnera?”, bo sugerują znajomość sytuacji odbiorcy.
 
 ---
 
@@ -164,7 +164,7 @@ Landing: `/przed-decyzja/rozmowa-o-rozstaniu` · Demo: `/przed-decyzja/rozmowa-o
 
 Landing: `/przed-decyzja/kompas-decyzji` · Demo: `/przed-decyzja/kompas-decyzji/demo`
 
-**Kąt:** Nie podpowiadamy, co zrobić — pomagamy uporządkować myśli, wartości i możliwe drogi, zanim zapadnie decyzja.
+**Kąt:** Nie podpowiadamy, co zrobić. Pomagamy uporządkować myśli, wartości i możliwe drogi, zanim zapadnie decyzja.
 
 **Kierowanie:** Kontekstowo: psychologia, relacje, rozwój osobisty, zdrowie psychiczne (bez kierowania na osoby w kryzysie). Słowa kluczowe informacyjne. Bez remarketingu i list klientów.
 
@@ -177,7 +177,7 @@ Landing: `/przed-decyzja/kompas-decyzji` · Demo: `/przed-decyzja/kompas-decyzji
 
 **Nagłówki**
 - Uporządkuj myśli spokojnie _(26/40)_
-- Kompas decyzji — bezpłatnie _(27/40)_
+- Bezpłatny kompas decyzji _(24/40)_
 - Wszystkie możliwe drogi _(23/40)_
 - Bez oceniania, bez presji _(25/40)_
 
@@ -197,7 +197,7 @@ Landing: `/przed-decyzja/kompas-decyzji` · Demo: `/przed-decyzja/kompas-decyzji
 - Pytania, które pomagają zdecydować _(34/40)_
 
 **Długie nagłówki**
-- Kompas decyzji: uporządkuj wartości, obraz sytuacji i drogi — bez gotowych odpowiedzi _(85/90)_
+- Kompas decyzji: uporządkuj wartości, obraz sytuacji i drogi. Bez gotowych odpowiedzi _(84/90)_
 - Terapia, czas osobno, mediacja, separacja czy rozwód? Poznaj drogi i ich konsekwencje _(85/90)_
 - Bezpłatne narzędzie do refleksji z planem małych kroków na najbliższe 7 dni _(75/90)_
 
@@ -225,16 +225,16 @@ Landing: `/przed-decyzja/kompas-decyzji` · Demo: `/przed-decyzja/kompas-decyzji
 - Bezpłatne narzędzie _(19/30)_
 - Wynik w 4 minuty _(16/30)_
 - Pytania do refleksji _(20/30)_
-- Nowy Etap – poradnia _(20/30)_
+- Nowy Etap, poradnia _(19/30)_
 - Bez podawania danych _(20/30)_
 
 **Teksty**
 - Nie podpowiadamy decyzji. Pomagamy zobaczyć wartości, obraz sytuacji i możliwe drogi. _(85/90)_
-- Terapia par, czas osobno, mediacja, separacja czy rozwód — neutralnie, bez rankingu. _(84/90)_
+- Terapia par, czas osobno, mediacja, separacja czy rozwód. Neutralnie, bez rankingu. _(83/90)_
 - Pytania do refleksji i plan małych kroków na 7 dni. Do pobrania jako PDF. _(73/90)_
-- Bez logowania. Twoje odpowiedzi nie są zapisywane. Nowy Etap – poradnia rozwodowa. _(82/90)_
+- Bez logowania. Twoje odpowiedzi nie są zapisywane. Nowy Etap, poradnia rozwodowa. _(81/90)_
 
-**Uwagi:** Nie obiecuj „odpowiedzi, czy się rozstać” — narzędzie celowo jej nie daje.
+**Uwagi:** Nie obiecuj „odpowiedzi, czy się rozstać”. Narzędzie celowo jej nie daje.
 
 ---
 
@@ -242,7 +242,7 @@ Landing: `/przed-decyzja/kompas-decyzji` · Demo: `/przed-decyzja/kompas-decyzji
 
 Landing: `/przed-decyzja/majatek-wspolny-czy-osobisty` · Demo: `/przed-decyzja/majatek-wspolny-czy-osobisty/demo`
 
-**Kąt:** Rozwiewa częste wątpliwości („mieszkanie jest na mnie”, „to darowizna od rodziców”) — pokazuje prawdopodobny status każdego składnika z uzasadnieniem.
+**Kąt:** Rozwiewa częste wątpliwości („mieszkanie jest na mnie”, „to darowizna od rodziców”). Pokazuje prawdopodobny status każdego składnika z uzasadnieniem.
 
 **Kierowanie:** Search: frazy o majątku wspólnym/osobistym, darowiźnie, mieszkaniu sprzed ślubu. Demand Gen/Meta: zainteresowania prawo, finanse osobiste, nieruchomości; dorośli 28–60; bez remarketingu i podobnych odbiorców.
 
@@ -250,7 +250,7 @@ Landing: `/przed-decyzja/majatek-wspolny-czy-osobisty` · Demo: `/przed-decyzja/
 
 **Tekst główny**
 - Mieszkanie sprzed ślubu, a raty płacone razem? Darowizna od rodziców? Sprawdź, co może być wspólne, a co osobiste. _(114/125)_
-- „Jest zapisane na mnie, więc jest moje” — nie zawsze. Sprawdź prawdopodobny status każdego składnika majątku. _(109/125)_
+- „Jest zapisane na mnie, więc jest moje”? Nie zawsze. Sprawdź prawdopodobny status każdego składnika majątku. _(108/125)_
 - Majątek wspólny czy osobisty? Dodaj składniki i zobacz uzasadnienie, dokumenty do zebrania i pytania do prawnika. _(113/125)_
 
 **Nagłówki**
@@ -274,7 +274,7 @@ Landing: `/przed-decyzja/majatek-wspolny-czy-osobisty` · Demo: `/przed-decyzja/
 - Sprawdź składniki majątku _(25/40)_
 
 **Długie nagłówki**
-- Mieszkanie sprzed ślubu, darowizna, spadek — sprawdź, co może być majątkiem wspólnym _(84/90)_
+- Mieszkanie sprzed ślubu, darowizna, spadek: sprawdź, co może być majątkiem wspólnym _(83/90)_
 - Dodaj składniki majątku i zobacz ich prawdopodobny status z uzasadnieniem _(73/90)_
 - Wspólne czy osobiste? Bezpłatne narzędzie z listą dokumentów i pytań do prawnika _(80/90)_
 
@@ -283,7 +283,7 @@ Landing: `/przed-decyzja/majatek-wspolny-czy-osobisty` · Demo: `/przed-decyzja/
 - Zobacz możliwe nakłady do rozliczenia i dokumenty, które warto zebrać. Bezpłatnie. _(82/90)_
 - Bez nazw i danych osobowych. Obliczenia w przeglądarce, wynik do pobrania. _(74/90)_
 
-**Kreacja:** 1.91:1: tabela czterech składników z etykietami statusów; po lewej nagłówek. Wideo 15 s: dodanie „Samochód — darowizna” i zmiana etykiety na „Osobisty”.
+**Kreacja:** 1.91:1: tabela czterech składników z etykietami statusów; po lewej nagłówek. Wideo 15 s: dodanie „Samochód (darowizna)” i zmiana etykiety na „Osobisty”.
 
 ### Google Search
 
@@ -301,13 +301,13 @@ Landing: `/przed-decyzja/majatek-wspolny-czy-osobisty` · Demo: `/przed-decyzja/
 - Bezpłatne narzędzie online _(26/30)_
 - Wynik do pobrania w PDF _(23/30)_
 - Bez rejestracji _(15/30)_
-- Nowy Etap — poradnia _(20/30)_
+- Nowy Etap, poradnia _(19/30)_
 - Dokumenty do zebrania _(21/30)_
 - Pytania do prawnika _(19/30)_
 
 **Teksty**
 - Dodaj składniki i zobacz ich status: wspólny, osobisty, mieszany albo do analizy. _(81/90)_
-- Darowizna, spadek, mieszkanie sprzed ślubu — uzasadnienie z przepisami KRO. Bezpłatnie. _(87/90)_
+- Darowizna, spadek, mieszkanie sprzed ślubu. Proste uzasadnienie przy każdym. Bezpłatnie. _(88/90)_
 - Lista możliwych nakładów, dokumentów i pytań do prawnika. Bez podawania danych. _(79/90)_
 - Najpierw plan i ustalenia, potem pozew. Uporządkuj majątek z Nowym Etapem. _(74/90)_
 
@@ -317,7 +317,7 @@ Landing: `/przed-decyzja/majatek-wspolny-czy-osobisty` · Demo: `/przed-decyzja/
 
 Landing: `/przed-decyzja/wina-czy-bez-winy` · Demo: `/przed-decyzja/wina-czy-bez-winy/demo`
 
-**Kąt:** Rzeczowe porównanie skutków obu wariantów wyroku — bez oceniania i bez podpowiadania decyzji.
+**Kąt:** Rzeczowe porównanie skutków obu wariantów wyroku, bez oceniania i bez podpowiadania decyzji.
 
 **Kierowanie:** Search: frazy o rozwodzie z orzekaniem o winie / bez orzekania o winie. Demand Gen: tematy prawo rodzinne, finanse osobiste, poradniki prawne; szeroka demografia 28–55. Bez list klientów, remarketingu i podobnych odbiorców.
 
@@ -326,12 +326,12 @@ Landing: `/przed-decyzja/wina-czy-bez-winy` · Demo: `/przed-decyzja/wina-czy-be
 **Tekst główny**
 - Rozwód z winą czy bez? W 3 minuty zobacz różnice: alimenty, dowody, koszty, dzieci. Bezpłatnie, bez podawania danych. _(117/125)_
 - Orzeczenie o winie wpływa m.in. na alimenty między byłymi małżonkami. Zobacz tabelę różnic i pytania do prawnika. _(113/125)_
-- Bez oceniania i podpowiadania decyzji. Porównaj skutki rozwodu z winą i bez — prostym językiem, z podstawą prawną. _(114/125)_
+- Bez oceniania i podpowiadania decyzji. Porównaj skutki rozwodu z winą i bez. Prostym językiem, ze źródłami. _(107/125)_
 
 **Nagłówki**
 - Z winą czy bez? Porównaj skutki _(31/40)_
 - Tabela różnic w 3 minuty _(24/40)_
-- Alimenty, dowody, koszty — różnice _(34/40)_
+- Alimenty, dowody, koszty: różnice _(33/40)_
 - Bezpłatne porównanie wariantów _(30/40)_
 
 **Opisy**
@@ -346,17 +346,17 @@ Landing: `/przed-decyzja/wina-czy-bez-winy` · Demo: `/przed-decyzja/wina-czy-be
 - Rozwód z winą czy bez? _(22/40)_
 - Porównaj skutki obu wariantów _(29/40)_
 - Alimenty a orzeczenie o winie _(29/40)_
-- Tabela różnic — bezpłatnie _(26/40)_
+- Bezpłatna tabela różnic _(23/40)_
 - Co zmienia orzeczenie o winie? _(30/40)_
 
 **Długie nagłówki**
 - Rozwód z orzekaniem o winie czy bez? Zobacz różnice w alimentach, dowodach i kosztach _(85/90)_
-- Bezpłatna tabela różnic: co zmienia orzeczenie o winie — w prostych słowach _(75/90)_
+- Bezpłatna tabela różnic: co zmienia orzeczenie o winie, w prostych słowach _(74/90)_
 - Porównaj skutki obu wariantów wyroku i przygotuj pytania do prawnika _(68/90)_
 
 **Teksty**
 - Odpowiedz na 5 pytań i zobacz różnice wyróżnione pod Twoją sytuację. Bez podawania danych. _(90/90)_
-- Alimenty między byłymi małżonkami, dowody, czas, koszty, dzieci — z podstawą prawną. _(84/90)_
+- Alimenty między byłymi małżonkami, dowody, czas, koszty, dzieci. Prostym językiem. _(82/90)_
 - Narzędzie niczego nie rekomenduje. Porządkuje różnice i pytania do specjalisty. _(79/90)_
 
 **Kreacja:** Obraz 1.91:1 i 1:1: ekran telefonu z tabelą porównawczą, w tle ciepła beżowa przestrzeń, logo Nowy Etap. Wideo pionowe 15 s z napisami.
@@ -374,9 +374,9 @@ Landing: `/przed-decyzja/wina-czy-bez-winy` · Demo: `/przed-decyzja/wina-czy-be
 - Alimenty a orzeczenie o winie _(29/30)_
 - Wynik w 3 minuty _(16/30)_
 - Bez podawania danych _(20/30)_
-- Z podstawą prawną _(17/30)_
+- Prostym językiem _(16/30)_
 - Pytania do prawnika w PDF _(25/30)_
-- Nowy Etap – poradnia _(20/30)_
+- Nowy Etap, poradnia _(19/30)_
 - Dowody, koszty, dzieci _(22/30)_
 - Bez oceniania decyzji _(21/30)_
 - Sprawdź różnice _(15/30)_
@@ -384,10 +384,10 @@ Landing: `/przed-decyzja/wina-czy-bez-winy` · Demo: `/przed-decyzja/wina-czy-be
 **Teksty**
 - Porównaj rozwód z orzekaniem o winie i bez: alimenty, dowody, koszty, dzieci. Bezpłatnie. _(89/90)_
 - Odpowiedz na 5 pytań i zobacz różnice ważne w Twojej sytuacji. Wynik pobierzesz jako PDF. _(89/90)_
-- Narzędzie niczego nie rekomenduje — porządkuje skutki i pytania do specjalisty. _(79/90)_
+- Narzędzie niczego nie rekomenduje. Porządkuje skutki i pytania do specjalisty. _(78/90)_
 - Najpierw plan i ustalenia, potem pozew. Bezpłatne narzędzia Nowego Etapu. _(73/90)_
 
-**Uwagi:** Nie używaj sformułowań typu „Twój mąż zawinił?” — Meta zabrania sugerowania cech/sytuacji odbiorcy.
+**Uwagi:** Nie używaj sformułowań typu „Twój mąż zawinił?”. Meta zabrania sugerowania cech/sytuacji odbiorcy.
 
 ---
 
@@ -429,8 +429,8 @@ Landing: `/przed-decyzja/porozumienie-przejsciowe` · Demo: `/przed-decyzja/poro
 
 **Długie nagłówki**
 - Kto gdzie mieszka i jak dzielicie rachunki? Przygotuj propozycję zasad na czas przejściowy _(90/90)_
-- Spisane zasady na okres zmian: mieszkanie, dzieci, wspólne konto — bezpłatny kreator _(84/90)_
-- Propozycja do rozmowy, nie umowa — uporządkuj codzienność, zanim zapadną decyzje _(80/90)_
+- Spisane zasady na okres zmian: mieszkanie, dzieci, wspólne konto. Bezpłatny kreator _(83/90)_
+- Propozycja do rozmowy, nie umowa. Uporządkuj codzienność, zanim zapadną decyzje _(79/90)_
 
 **Teksty**
 - Odpowiedz na kilka pytań i pobierz gotowy dokument do rozmowy z drugą osobą. _(76/90)_
@@ -447,16 +447,16 @@ Landing: `/przed-decyzja/porozumienie-przejsciowe` · Demo: `/przed-decyzja/poro
 
 **Nagłówki**
 - Zasady na czas przejściowy _(26/30)_
-- Podział rachunków – kalkulator _(30/30)_
+- Kalkulator podziału rachunków _(29/30)_
 - Propozycja zasad w 5 minut _(26/30)_
 - Mieszkanie razem w trakcie _(26/30)_
 - Bezpłatny kreator _(17/30)_
 - Gotowy PDF do rozmowy _(21/30)_
 - Bez podawania danych _(20/30)_
 - Dzieci, rachunki, mieszkanie _(28/30)_
-- Nowy Etap – poradnia _(20/30)_
+- Nowy Etap, poradnia _(19/30)_
 - Najpierw plan i ustalenia _(25/30)_
-- Wspólne konto – zasady _(22/30)_
+- Zasady wspólnego konta _(22/30)_
 - Sprawdź propozycję _(18/30)_
 
 **Teksty**
@@ -471,7 +471,7 @@ Landing: `/przed-decyzja/porozumienie-przejsciowe` · Demo: `/przed-decyzja/poro
 
 Landing: `/przed-decyzja/koszty-wyprowadzki` · Demo: `/przed-decyzja/koszty-wyprowadzki/demo`
 
-**Kąt:** Praktyczne pytanie „ile potrzebuję na start w nowym mieszkaniu” — konkretna kwota, plan zakupów i liczba miesięcy, na które starczą oszczędności.
+**Kąt:** Praktyczne pytanie „ile potrzebuję na start w nowym mieszkaniu”: konkretna kwota, plan zakupów i liczba miesięcy, na które starczą oszczędności.
 
 **Kierowanie:** Search: frazy o kosztach wyprowadzki i najmu. Demand Gen/Meta: zainteresowania mieszkanie/najem, finanse osobiste, przeprowadzki; dorośli 25–55; bez remarketingu i podobnych odbiorców.
 
@@ -529,13 +529,13 @@ Landing: `/przed-decyzja/koszty-wyprowadzki` · Demo: `/przed-decyzja/koszty-wyp
 - Bezpłatnie i bez rejestracji _(28/30)_
 - Wynik do pobrania w PDF _(23/30)_
 - Co można kupić później? _(23/30)_
-- Nowy Etap — poradnia _(20/30)_
+- Nowy Etap, poradnia _(19/30)_
 - Policz w 4 minuty _(17/30)_
 
 **Teksty**
 - Policz koszty startu w nowym mieszkaniu: kaucja, czynsz, przeprowadzka, meble, media. _(85/90)_
 - Sprawdź, na ile miesięcy wystarczą oszczędności po przeprowadzce. Bezpłatny kalkulator. _(87/90)_
-- Wpisujesz własne kwoty — bez średnich i zgadywania. Zestawienie pobierzesz jako PDF. _(84/90)_
+- Wpisujesz własne kwoty, bez średnich i zgadywania. Zestawienie pobierzesz jako PDF. _(83/90)_
 - Uwzględnij okres przejściowy i potrzeby dzieci. Obliczenia w Twojej przeglądarce. _(81/90)_
 
 ---
@@ -544,7 +544,7 @@ Landing: `/przed-decyzja/koszty-wyprowadzki` · Demo: `/przed-decyzja/koszty-wyp
 
 Landing: `/przed-decyzja/plan-wsparcia` · Demo: `/przed-decyzja/plan-wsparcia/demo`
 
-**Kąt:** W trudnym okresie łatwiej, gdy wiesz, na kogo możesz liczyć i co Ci pomaga — jednostronicowy plan wsparcia do wydruku.
+**Kąt:** W trudnym okresie łatwiej, gdy wiesz, na kogo możesz liczyć i co Ci pomaga. Jednostronicowy plan wsparcia do wydruku.
 
 **Kierowanie:** Kontekstowo: zdrowie psychiczne i dobrostan, psychologia, rodzicielstwo. Szeroko, bez kierowania na osoby w kryzysie i bez remarketingu.
 
@@ -552,7 +552,7 @@ Landing: `/przed-decyzja/plan-wsparcia` · Demo: `/przed-decyzja/plan-wsparcia/d
 
 **Tekst główny**
 - Rozstanie to bardzo trudny okres. Przygotuj prosty plan: kto Ci pomoże, co działa na Ciebie i co robić w gorszy dzień. _(118/125)_
-- Jednostronicowy plan wsparcia do wydruku — bez imion, bez logowania. Z numerami pomocowymi i planem na trudny dzień. _(116/125)_
+- Jednostronicowy plan wsparcia do wydruku. Bez imion, bez logowania. Z numerami pomocowymi i planem na trudny dzień. _(115/125)_
 - Wiesz, do kogo zadzwonisz, gdy będzie ciężko? Zbierz to w jednym miejscu w 4 minuty. _(84/125)_
 
 **Nagłówki**
@@ -565,12 +565,12 @@ Landing: `/przed-decyzja/plan-wsparcia` · Demo: `/przed-decyzja/plan-wsparcia/d
 - Jedna strona do wydruku _(23/30)_
 - Bez logowania i imion _(21/30)_
 
-**Kreacja:** Grafika 1:1: wydrukowana karta „Mój plan wsparcia” na stole obok kubka herbaty — tabelka „kto/w czym”, sekcja „gdy… to…”. Ciepłe światło, bez twarzy. Nagłówek: „Nie musisz przechodzić przez to sam(a)”.
+**Kreacja:** Grafika 1:1: wydrukowana karta „Mój plan wsparcia” na stole obok kubka herbaty: tabelka „kto/w czym”, sekcja „gdy… to…”. Ciepłe światło, bez twarzy. Nagłówek: „Nie musisz przechodzić przez to sam(a)”.
 
 ### Google Demand Gen (CTA: Przygotuj plan)
 
 **Nagłówki**
-- Mój plan wsparcia — bezpłatnie _(30/40)_
+- Bezpłatny plan wsparcia _(23/40)_
 - Na kogo możesz liczyć? _(22/40)_
 - Plan na trudny dzień _(20/40)_
 - Wsparcie w trudnym okresie _(26/40)_
@@ -578,7 +578,7 @@ Landing: `/przed-decyzja/plan-wsparcia` · Demo: `/przed-decyzja/plan-wsparcia/d
 
 **Długie nagłówki**
 - Osobisty plan wsparcia na czas rozstania: ludzie, strategie i plan na trudny dzień _(82/90)_
-- Plan wsparcia na jednej stronie — z numerami pomocowymi i cotygodniowym check-inem _(82/90)_
+- Plan wsparcia na jednej stronie, z numerami pomocowymi i cotygodniowym check-inem _(81/90)_
 - Nie musisz przechodzić przez to sam(a). Zbierz źródła wsparcia w jednym miejscu _(79/90)_
 
 **Teksty**
@@ -603,14 +603,14 @@ Landing: `/przed-decyzja/plan-wsparcia` · Demo: `/przed-decyzja/plan-wsparcia/d
 - Bez logowania i imion _(21/30)_
 - Numery pomocowe _(15/30)_
 - Strategie na trudne chwile _(26/30)_
-- Nowy Etap – poradnia _(20/30)_
+- Nowy Etap, poradnia _(19/30)_
 - Gotowe w 4 minuty _(17/30)_
 
 **Teksty**
 - Zbierz w jednym miejscu, kto Ci pomoże, co działa na Ciebie i co robić w trudny dzień. _(86/90)_
 - Jednostronicowy plan do wydruku z numerami pomocowymi i cotygodniowym check-inem. _(81/90)_
-- Bez imion i logowania. Narzędzie porządkujące — nie zastępuje pomocy specjalisty. _(81/90)_
-- Nie musisz przechodzić przez to sam(a). Nowy Etap – poradnia rozwodowa. _(71/90)_
+- Bez imion i logowania. Narzędzie porządkuje, ale nie zastępuje pomocy specjalisty. _(82/90)_
+- Nie musisz przechodzić przez to sam(a). Nowy Etap, poradnia rozwodowa. _(70/90)_
 
 **Uwagi:** Unikaj komunikatów medycznych i obietnic poprawy samopoczucia (zasady dotyczące zdrowia).
 
@@ -627,7 +627,7 @@ Landing: `/przed-decyzja/mity-o-rozwodzie` · Demo: `/przed-decyzja/mity-o-rozwo
 ### Meta (CTA: Wypróbuj)
 
 **Tekst główny**
-- Czy rozwód zwalnia ze wspólnego kredytu? Czy mediacja jest obowiązkowa? Sprawdź 12 popularnych mitów — z wyjaśnieniem. _(118/125)_
+- Czy rozwód zwalnia ze wspólnego kredytu? Czy mediacja jest obowiązkowa? Sprawdź 12 popularnych mitów z wyjaśnieniem. _(116/125)_
 - Mit czy fakt? 12 przekonań o rozwodzie, majątku i dzieciach. Przy każdym krótkie wyjaśnienie i źródło w przepisach. _(115/125)_
 - Rozwód w urzędzie stanu cywilnego? 600 zł opłaty? Sprawdź w 3 minuty, co jest prawdą. Bezpłatnie, bez logowania. _(112/125)_
 
@@ -641,7 +641,7 @@ Landing: `/przed-decyzja/mity-o-rozwodzie` · Demo: `/przed-decyzja/mity-o-rozwo
 - Wyjaśnienia i źródła _(20/30)_
 - 3 minuty, bez logowania _(23/30)_
 
-**Kreacja:** Karta 1:1 z dużym napisem w cudzysłowie „Rozwód zwalnia ze wspólnego kredytu” i dwoma przyciskami MIT / FAKT (złoty i biały obrys) na tle #263D3A. Wersja karuzeli: 4 karty z różnymi twierdzeniami, ostatnia — wynik 10/12 i CTA.
+**Kreacja:** Karta 1:1 z dużym napisem w cudzysłowie „Rozwód zwalnia ze wspólnego kredytu” i dwoma przyciskami MIT / FAKT (złoty i biały obrys) na tle #263D3A. Wersja karuzeli: 4 karty z różnymi twierdzeniami, ostatnia z wynikiem 10/12 i CTA.
 
 ### Google Demand Gen (CTA: Sprawdź)
 
@@ -658,9 +658,9 @@ Landing: `/przed-decyzja/mity-o-rozwodzie` · Demo: `/przed-decyzja/mity-o-rozwo
 - 12 przekonań o rozwodzie, które warto sprawdzić. Przy każdym źródło w przepisach _(80/90)_
 
 **Teksty**
-- Bezpłatny quiz Nowego Etapu. Po każdej odpowiedzi krótkie wyjaśnienie i podstawa prawna. _(88/90)_
+- Bezpłatny quiz Nowego Etapu. Po każdej odpowiedzi krótkie wyjaśnienie i źródła. _(79/90)_
 - To nie test, tylko przegląd. Na końcu lista tematów, które warto doczytać. Bez logowania. _(89/90)_
-- Kredyt, mediacja, nazwisko, majątek, dzieci — 12 twierdzeń, które często słychać. _(81/90)_
+- Kredyt, mediacja, nazwisko, majątek, dzieci: 12 twierdzeń, które często słychać. _(80/90)_
 
 **Kreacja:** Wideo 9:16, 15 s: na ekranie telefonu pojawia się twierdzenie, palec wybiera „Fakt”, karta odwraca się na „MIT” z jednym zdaniem wyjaśnienia; trzy szybkie powtórzenia, end card z wynikiem 10/12 i logo.
 
@@ -676,10 +676,10 @@ Landing: `/przed-decyzja/mity-o-rozwodzie` · Demo: `/przed-decyzja/mity-o-rozwo
 - Rozwód a wspólny kredyt _(23/30)_
 - Czy mediacja jest obowiązkowa _(29/30)_
 - Rozwód w USC? Sprawdź _(21/30)_
-- Wyjaśnienia i podstawa prawna _(29/30)_
+- Wyjaśnienia i źródła _(20/30)_
 - Bezpłatnie, bez logowania _(25/30)_
 - Sprawdź w 3 minuty _(18/30)_
-- Nowy Etap — poradnia _(20/30)_
+- Nowy Etap, poradnia _(19/30)_
 - Najpierw wiedza, potem decyzje _(30/30)_
 
 **Teksty**
@@ -696,19 +696,19 @@ Landing: `/przed-decyzja/mity-o-rozwodzie` · Demo: `/przed-decyzja/mity-o-rozwo
 
 Landing: `/przed-decyzja/pozew-rozwodowy-checklista` · Demo: `/przed-decyzja/pozew-rozwodowy-checklista/demo`
 
-**Kąt:** Konkret dla osób przed pozwem: który sąd jest właściwy i czego nie pominąć w pozwie — z listą kontrolną.
+**Kąt:** Konkret dla osób przed pozwem: który sąd jest właściwy i czego nie pominąć w pozwie, z listą kontrolną.
 
-**Kierowanie:** Search (główny kanał — wysoka intencja): frazy o pozwie rozwodowym, właściwym sądzie, załącznikach. Demand Gen: tematy prawo, poradniki prawne; szeroka demografia 28–60. Bez remarketingu i list klientów.
+**Kierowanie:** Search (główny kanał, wysoka intencja): frazy o pozwie rozwodowym, właściwym sądzie, załącznikach. Demand Gen: tematy prawo, poradniki prawne; szeroka demografia 28–60. Bez remarketingu i list klientów.
 
 ### Meta (CTA: Pobierz)
 
 **Tekst główny**
 - Który sąd jest właściwy do rozwodu i co musi zawierać pozew? Odpowiedz na kilka pytań i pobierz bezpłatną listę kontrolną. _(122/125)_
-- Żądania, dzieci, majątek, załączniki, opłata 600 zł — sprawdź, czego nie pominąć w pozwie. Konspekt do wydruku. _(111/125)_
-- Rozwód orzeka wyłącznie sąd okręgowy. Sprawdź, który (art. 41 KPC) i jakie dokumenty przygotować. Bez podawania danych. _(119/125)_
+- Żądania, dzieci, majątek, załączniki, opłata 600 zł: sprawdź, czego nie pominąć w pozwie. Konspekt do wydruku. _(110/125)_
+- Rozwód orzeka wyłącznie sąd okręgowy. Sprawdź, który jest właściwy i jakie dokumenty przygotować. Bez podawania danych. _(119/125)_
 
 **Nagłówki**
-- Pozew o rozwód — checklista _(27/40)_
+- Pozew o rozwód: checklista _(26/40)_
 - Który sąd jest właściwy? _(24/40)_
 - Czego nie pominąć w pozwie _(26/40)_
 - Konspekt pozwu w 4 minuty _(25/40)_
@@ -717,25 +717,25 @@ Landing: `/przed-decyzja/pozew-rozwodowy-checklista` · Demo: `/przed-decyzja/po
 - Bezpłatna lista kontrolna _(25/30)_
 - Wynik do wydruku i PDF _(22/30)_
 
-**Kreacja:** Grafika 1:1: lista kontrolna z 5 pozycjami (2 odhaczone) i plakietka „Właściwy sąd · art. 41 KPC”. Wideo 15 s: odpowiedzi → podświetlenie właściwej reguły → checklista.
+**Kreacja:** Grafika 1:1: lista kontrolna z 5 pozycjami (2 odhaczone) i plakietka „Właściwy sąd”. Wideo 15 s: odpowiedzi → podświetlenie właściwej reguły → checklista.
 
 ### Google Demand Gen (CTA: Sprawdź)
 
 **Nagłówki**
-- Pozew o rozwód — checklista _(27/40)_
+- Pozew o rozwód: checklista _(26/40)_
 - Który sąd rozpatrzy rozwód? _(27/40)_
 - Co musi zawierać pozew? _(23/40)_
-- Załączniki do pozwu — lista _(27/40)_
+- Lista załączników do pozwu _(26/40)_
 - Konspekt pozwu za darmo _(23/40)_
 
 **Długie nagłówki**
 - Gdzie złożyć pozew o rozwód i co powinien zawierać? Bezpłatna lista kontrolna _(77/90)_
-- Sprawdź właściwy sąd okręgowy według art. 41 KPC i pobierz konspekt pozwu _(73/90)_
-- Żądania, dzieci, majątek, załączniki — nie pomiń niczego w pozwie o rozwód _(74/90)_
+- Sprawdź, który sąd okręgowy jest właściwy, i pobierz konspekt pozwu _(67/90)_
+- Żądania, dzieci, majątek, załączniki: nie pomiń niczego w pozwie o rozwód _(73/90)_
 
 **Teksty**
 - Odpowiedz na kilka pytań i pobierz konspekt pozwu dopasowany do Twojej sytuacji. _(80/90)_
-- To lista kontrolna, nie gotowy pozew — pomoże przygotować się do rozmowy z prawnikiem. _(86/90)_
+- To lista kontrolna, nie gotowy pozew. Pomoże przygotować się do rozmowy z prawnikiem. _(85/90)_
 - Bez zakładania konta i bez podawania danych. Wynik pobierzesz jako PDF. _(71/90)_
 
 **Kreacja:** Obraz 1.91:1: dokument z nagłówkiem „Konspekt pozwu” i trzema regułami właściwości (jedna podświetlona), jasne tło, logo.
@@ -747,26 +747,26 @@ Landing: `/przed-decyzja/pozew-rozwodowy-checklista` · Demo: `/przed-decyzja/po
 **Ścieżki:** /pozew/checklista
 
 **Nagłówki**
-- Pozew o rozwód – checklista _(27/30)_
+- Pozew o rozwód: checklista _(26/30)_
 - Który sąd jest właściwy? _(24/30)_
 - Co musi zawierać pozew _(22/30)_
 - Załączniki do pozwu _(19/30)_
 - Konspekt pozwu za darmo _(23/30)_
-- Właściwy sąd – art. 41 KPC _(26/30)_
+- Próba mediacji w pozwie _(23/30)_
 - Opłata od pozwu 600 zł _(22/30)_
 - Wynik w 4 minuty _(16/30)_
 - Lista do wydruku (PDF) _(22/30)_
 - Bez podawania danych _(20/30)_
-- Nowy Etap – poradnia _(20/30)_
+- Nowy Etap, poradnia _(19/30)_
 - Przygotuj się do pozwu _(22/30)_
 
 **Teksty**
 - Sprawdź, który sąd okręgowy jest właściwy, i pobierz listę kontrolną elementów pozwu. _(85/90)_
 - Żądania, dzieci, majątek, załączniki, opłata. Konspekt dopasowany do Twojej sytuacji. _(85/90)_
-- To nie gotowy wzór pozwu — to lista kontrolna, która pomoże niczego nie pominąć. _(80/90)_
+- To nie gotowy wzór pozwu, tylko lista kontrolna, która pomoże niczego nie pominąć. _(82/90)_
 - Najpierw plan i ustalenia, potem pozew. Bezpłatne narzędzia Nowego Etapu. _(73/90)_
 
-**Uwagi:** Fraza „pozew rozwodowy wzór” ma intencję pobrania wzoru — w reklamie jasno komunikuj, że to lista kontrolna, nie wzór pozwu.
+**Uwagi:** Fraza „pozew rozwodowy wzór” ma intencję pobrania wzoru. W reklamie jasno komunikuj, że to lista kontrolna, nie wzór pozwu.
 
 ---
 
@@ -774,16 +774,16 @@ Landing: `/przed-decyzja/pozew-rozwodowy-checklista` · Demo: `/przed-decyzja/po
 
 Landing: `/narzedzia/mieszkanie-i-kredyt` · Demo: `/narzedzia/mieszkanie-i-kredyt/demo`
 
-**Kąt:** Mieszkanie i wspólny kredyt to najczęstsze pytanie praktyczne — pokazujemy 3 scenariusze i fakt, że rozwód nie kończy umowy z bankiem.
+**Kąt:** Mieszkanie i wspólny kredyt to najczęstsze pytanie praktyczne. Pokazujemy 3 scenariusze i fakt, że rozwód nie kończy umowy z bankiem.
 
 **Kierowanie:** Kontekstowe i tematyczne: treści o finansach osobistych, prawie, rodzinie i poradnikach; Search: frazy informacyjne. Demografia szeroka (25–60). Bez remarketingu, list klientów, podobnych odbiorców i segmentów opartych na wnioskowaniu o kryzysie w związku.
 
 ### Meta (CTA: Dowiedz się więcej)
 
 **Tekst główny**
-- Wspólne mieszkanie i kredyt: zobacz 3 możliwe scenariusze — sprzedaż, spłata lub dalsza współwłasność. Bezpłatnie. _(114/125)_
+- Wspólne mieszkanie i kredyt: zobacz 3 możliwe scenariusze: sprzedaż, spłata lub dalsza współwłasność. Bezpłatnie. _(113/125)_
 - Rozwód nie zwalnia współkredytobiorcy z umowy z bankiem. Sprawdź, co warto ustalić i o co zapytać bank. _(103/125)_
-- Wartość mieszkania minus saldo kredytu — oszacuj punkt wyjścia do rozmowy. Wynik w kilka minut, bez logowania. _(110/125)_
+- Wartość mieszkania minus saldo kredytu: oszacuj punkt wyjścia do rozmowy. Wynik w kilka minut, bez logowania. _(109/125)_
 
 **Nagłówki**
 - Mieszkanie i kredyt: 3 scenariusze _(34/40)_
@@ -825,13 +825,13 @@ Landing: `/narzedzia/mieszkanie-i-kredyt` · Demo: `/narzedzia/mieszkanie-i-kred
 **Ścieżki:** /mieszkanie/kredyt
 
 **Nagłówki**
-- Mieszkanie i kredyt — rozwód _(28/30)_
+- Mieszkanie i kredyt a rozwód _(28/30)_
 - 3 scenariusze dla mieszkania _(28/30)_
 - Rozwód a wspólny kredyt _(23/30)_
 - Sprzedaż, spłata czy podział? _(29/30)_
 - Ile jest do podziału? _(21/30)_
 - Pytania do banku w 1 miejscu _(28/30)_
-- Nowy Etap — poradnia _(20/30)_
+- Nowy Etap, poradnia _(19/30)_
 - Bezpłatnie, bez logowania _(25/30)_
 - Wynik do pobrania (PDF) _(23/30)_
 - Najpierw plan, potem pozew _(26/30)_
@@ -840,7 +840,7 @@ Landing: `/narzedzia/mieszkanie-i-kredyt` · Demo: `/narzedzia/mieszkanie-i-kred
 - Rozwód nie zwalnia z kredytu. Zobacz 3 scenariusze dla mieszkania i listę pytań do banku. _(89/90)_
 - Wpisz wartość mieszkania i saldo kredytu. Orientacyjne wyliczenie i ryzyka w kilka minut. _(89/90)_
 - Bezpłatne narzędzie Nowego Etapu. Bez zakładania konta. Wynik do pobrania jako PDF. _(83/90)_
-- Małżeństwo czy związek nieformalny — scenariusze dopasowane do Twoich odpowiedzi. _(81/90)_
+- Małżeństwo czy związek nieformalny? Scenariusze dopasowane do Twoich odpowiedzi. _(80/90)_
 
 ---
 
@@ -856,7 +856,7 @@ Landing: `/narzedzia/budzet-po-rozstaniu` · Demo: `/narzedzia/budzet-po-rozstan
 
 **Tekst główny**
 - Jeden dom, dwa gospodarstwa. Zobacz miesięczne saldo, koszty jednorazowe i poduszkę finansową w 3 wariantach. _(109/125)_
-- Kaucja, przeprowadzka, nowe sprzęty — koszty jednorazowe też warto policzyć. Bezpłatny kalkulator budżetu. _(106/125)_
+- Kaucja, przeprowadzka, nowe sprzęty: koszty jednorazowe też warto policzyć. Bezpłatny kalkulator budżetu. _(105/125)_
 - Budżet po rozstaniu: ostrożny, bazowy, optymistyczny. Założenia widoczne i edytowalne. Wynik od razu. _(101/125)_
 
 **Nagłówki**
@@ -905,7 +905,7 @@ Landing: `/narzedzia/budzet-po-rozstaniu` · Demo: `/narzedzia/budzet-po-rozstan
 - Na ile wystarczy poduszka? _(26/30)_
 - Koszty jednorazowe policzone _(28/30)_
 - Saldo miesięczne od razu _(24/30)_
-- Nowy Etap — poradnia _(20/30)_
+- Nowy Etap, poradnia _(19/30)_
 - Bezpłatnie, bez logowania _(25/30)_
 - Wynik do pobrania (PDF) _(23/30)_
 - Najpierw plan finansowy _(23/30)_
@@ -914,7 +914,7 @@ Landing: `/narzedzia/budzet-po-rozstaniu` · Demo: `/narzedzia/budzet-po-rozstan
 - Policz budżet po rozstaniu w 3 wariantach. Wykres, saldo miesięczne i poduszka finansowa. _(89/90)_
 - Wydatki miesięczne i nieregularne przeliczone na miesiąc. Założenia możesz zmieniać. _(84/90)_
 - Bez logowania i bez podawania danych. Obliczenia w Twojej przeglądarce. _(71/90)_
-- To nie kalkulator alimentów — to uporządkowany obraz Twoich finansów. _(69/90)_
+- To nie kalkulator alimentów, tylko uporządkowany obraz Twoich finansów. _(71/90)_
 
 ---
 
@@ -922,7 +922,7 @@ Landing: `/narzedzia/budzet-po-rozstaniu` · Demo: `/narzedzia/budzet-po-rozstan
 
 Landing: `/narzedzia/plan-opieki-nad-dzieckiem` · Demo: `/narzedzia/plan-opieki-nad-dzieckiem/demo`
 
-**Kąt:** Dziecko w centrum: kalendarz tygodnia, święta i wakacje jako propozycja do spokojnej rozmowy.
+**Kąt:** Dziecko w centrum: kalendarz tygodnia (gotowy model, własny układ lub gniazdowanie), święta i wakacje jako propozycja do spokojnej rozmowy.
 
 **Kierowanie:** Kontekstowe i tematyczne: treści o finansach osobistych, prawie, rodzinie i poradnikach; Search: frazy informacyjne. Demografia szeroka (25–60). Bez remarketingu, list klientów, podobnych odbiorców i segmentów opartych na wnioskowaniu o kryzysie w związku.
 
@@ -930,13 +930,13 @@ Landing: `/narzedzia/plan-opieki-nad-dzieckiem` · Demo: `/narzedzia/plan-opieki
 
 **Tekst główny**
 - Jak może wyglądać tydzień dziecka w dwóch domach? Ułóż kalendarz i zobacz go od razu na ekranie. _(96/125)_
-- Wigilia, ferie, urodziny — plan opieki pomaga ustalić to wcześniej, nie w ostatniej chwili. Bezpłatny kreator. _(110/125)_
+- Wigilia, ferie, urodziny. Ustalcie je wcześniej, także święta w latach parzystych i nieparzystych. Bezpłatny kreator. _(117/125)_
 - Kalendarz opieki do wydruku: tydzień, miesiąc, święta i lista punktów do omówienia. Propozycja do rozmowy. _(106/125)_
 
 **Nagłówki**
 - Tydzień dziecka w dwóch domach _(30/40)_
 - Kalendarz opieki do rozmowy _(27/40)_
-- Święta i ferie — ustalcie wcześniej _(35/40)_
+- Święta i ferie: ustalcie wcześniej _(34/40)_
 - Plan opieki do wydruku _(22/40)_
 
 **Opisy**
@@ -950,7 +950,7 @@ Landing: `/narzedzia/plan-opieki-nad-dzieckiem` · Demo: `/narzedzia/plan-opieki
 **Nagłówki**
 - Tydzień dziecka w dwóch domach _(30/40)_
 - Kalendarz opieki do rozmowy _(27/40)_
-- Święta i ferie — ustalcie wcześniej _(35/40)_
+- Święta i ferie: ustalcie wcześniej _(34/40)_
 - Co ustalone, co do omówienia _(28/40)_
 - Plan opieki do wydruku _(22/40)_
 
@@ -960,9 +960,9 @@ Landing: `/narzedzia/plan-opieki-nad-dzieckiem` · Demo: `/narzedzia/plan-opieki
 - Wigilia, ferie, urodziny. Plan opieki pomaga ustalić to wcześniej, nie w ostatniej chwili _(89/90)_
 
 **Teksty**
-- Kilka modeli opieki, kalendarz 2-tygodniowy i miesięczny, lista punktów otwartych, PDF. _(87/90)_
-- Nie pytamy o imię dziecka. Narzędzie nie rekomenduje modelu — pomaga go rozpisać. _(81/90)_
-- Propozycja do rozmowy z drugim rodzicem — nie wiążąca umowa. Bezpłatnie. _(72/90)_
+- Gotowe modele, własny układ lub gniazdowanie. Kalendarz 2-tygodniowy i miesięczny, PDF. _(87/90)_
+- Nie pytamy o imię dziecka. Narzędzie nie rekomenduje modelu, tylko pomaga go rozpisać. _(86/90)_
+- Propozycja do rozmowy z drugim rodzicem, nie umowa. Bezpłatnie. _(63/90)_
 
 **Kreacja:** Wideo 20 s: ręka przestawia dni w kalendarzu na telefonie (zieleń/złoto) → widok miesiąca → sekcja „Święta” → wydruk na stole → end card.
 
@@ -979,15 +979,16 @@ Landing: `/narzedzia/plan-opieki-nad-dzieckiem` · Demo: `/narzedzia/plan-opieki
 - Święta, ferie, urodziny _(23/30)_
 - Propozycja do rozmowy _(21/30)_
 - Kreator planu rodzicielskiego _(29/30)_
-- Nowy Etap — poradnia _(20/30)_
+- Nowy Etap, poradnia _(19/30)_
 - Bezpłatnie, bez logowania _(25/30)_
 - Wynik do pobrania (PDF) _(23/30)_
 - Bez danych dziecka _(18/30)_
+- Także gniazdowanie _(18/30)_
 
 **Teksty**
-- Ułóż wstępny plan opieki: tydzień, weekendy, wakacje, święta. Kalendarz i PDF od razu. _(86/90)_
-- Kilka modeli do wyboru lub własny układ dni. Lista punktów, które zostają do omówienia. _(87/90)_
-- Propozycja do rozmowy z drugim rodzicem — nie wiążąca umowa. Bezpłatnie, bez logowania. _(87/90)_
+- Ułóż wstępny plan opieki: tydzień, wakacje, święta w latach parzystych i nieparzystych. _(87/90)_
+- Gotowe modele, własny układ dni lub gniazdowanie. Lista punktów do omówienia. _(77/90)_
+- Propozycja do rozmowy z drugim rodzicem, nie umowa. Bezpłatnie, bez logowania. _(78/90)_
 - Nie pytamy o imię dziecka. Dane zostają w Twojej przeglądarce. _(62/90)_
 
 ---
@@ -1034,7 +1035,7 @@ Landing: `/narzedzia/konsekwencje-rozstania` · Demo: `/narzedzia/konsekwencje-r
 - Kilka pytań, a potem karty z tematami, które warto omówić ze specjalistą _(72/90)_
 
 **Teksty**
-- Co warto wiedzieć, co sprawdzić, o co zapytać — osobna karta dla każdego tematu. _(80/90)_
+- Co warto wiedzieć, co sprawdzić, o co zapytać. Osobna karta dla każdego tematu. _(79/90)_
 - Osobne treści dla małżeństwa i związku nieformalnego. Bez kategorycznych porad. _(79/90)_
 - Bezpłatne narzędzie Nowego Etapu. Raport do pobrania jako PDF. _(62/90)_
 
@@ -1053,7 +1054,7 @@ Landing: `/narzedzia/konsekwencje-rozstania` · Demo: `/narzedzia/konsekwencje-r
 - Małżeństwo i konkubinat _(23/30)_
 - Pytania do specjalisty _(22/30)_
 - Co warto sprawdzić _(18/30)_
-- Nowy Etap — poradnia _(20/30)_
+- Nowy Etap, poradnia _(19/30)_
 - Bezpłatnie, bez logowania _(25/30)_
 - Wynik do pobrania (PDF) _(23/30)_
 - Najpierw właściwe pytania _(25/30)_
@@ -1070,7 +1071,7 @@ Landing: `/narzedzia/konsekwencje-rozstania` · Demo: `/narzedzia/konsekwencje-r
 
 Landing: `/narzedzia/przed-pozwem` · Demo: `/narzedzia/przed-pozwem/demo`
 
-**Kąt:** Główna idea marki: najpierw plan i ustalenia, potem pozew — najmocniejsze przejście do Planu Rozwodu.
+**Kąt:** Główna idea marki: najpierw plan i ustalenia, potem pozew. Najmocniejsze przejście do Planu Rozwodu.
 
 **Kierowanie:** Kontekstowe i tematyczne: treści o finansach osobistych, prawie, rodzinie i poradnikach; Search: frazy informacyjne. Demografia szeroka (25–60). Bez remarketingu, list klientów, podobnych odbiorców i segmentów opartych na wnioskowaniu o kryzysie w związku.
 
@@ -1079,7 +1080,7 @@ Landing: `/narzedzia/przed-pozwem` · Demo: `/narzedzia/przed-pozwem/demo`
 **Tekst główny**
 - Najpierw plan i ustalenia. Dopiero potem pozew. Zobacz, które sprawy można spróbować uporządkować wcześniej. _(108/125)_
 - Dzieci, mieszkanie, majątek: mapa ustaleń, które można omówić jeszcze przed pozwem. Bezpłatnie. _(95/125)_
-- Mediacja krok po kroku: jak wygląda, co przygotować i o co zapytać mediatora. Sprawdź w 4 minuty. _(97/125)_
+- Mediacja krok po kroku: od zaproszenia do mediacji po pytania do mediatora. Sprawdź w 4 minuty. _(95/125)_
 
 **Nagłówki**
 - Najpierw ustalenia, potem pozew _(31/40)_
@@ -1091,7 +1092,7 @@ Landing: `/narzedzia/przed-pozwem` · Demo: `/narzedzia/przed-pozwem/demo`
 - Mapa w 4 minuty _(15/30)_
 - Plan Rozwodu za darmo _(21/30)_
 
-**Kreacja:** Grafika 1:1: dwie kolumny na ekranie telefonu — „Można spróbować uzgodnić” (zielona) i „Wymaga analizy” (złota), pod spodem oś 5 kroków. Hasło marki „Najpierw plan i ustalenia. Dopiero potem pozew.”
+**Kreacja:** Grafika 1:1: dwie kolumny na ekranie telefonu: „Można spróbować uzgodnić” (zielona) i „Wymaga analizy” (złota), pod spodem oś 5 kroków. Hasło marki „Najpierw plan i ustalenia. Dopiero potem pozew.”
 
 ### Google Demand Gen (CTA: Sprawdź)
 
@@ -1109,7 +1110,7 @@ Landing: `/narzedzia/przed-pozwem` · Demo: `/narzedzia/przed-pozwem/demo`
 
 **Teksty**
 - Co uzgodnić, co do analizy, kroki mediacyjne, dokumenty i kolejność działań. _(76/90)_
-- Mediacja jest dobrowolna i nie każda sprawa się do niej nadaje — narzędzie to uwzględnia. _(89/90)_
+- Mediacja jest dobrowolna i nie każda sprawa się do niej nadaje. Narzędzie to uwzględnia. _(88/90)_
 - Bezpłatna mapa ustaleń i Plan Rozwodu Nowego Etapu. Bez zobowiązań. _(67/90)_
 
 **Kreacja:** Wideo 30 s: notes z listą tematów → telefon, zaznaczanie tematów → mapa w dwóch kolumnach → oś kroków → przycisk „Odbierz bezpłatny Plan Rozwodu” → end card z hasłem marki.
@@ -1126,15 +1127,15 @@ Landing: `/narzedzia/przed-pozwem` · Demo: `/narzedzia/przed-pozwem/demo`
 - Mediacja krok po kroku _(22/30)_
 - Bezpłatny Plan Rozwodu _(22/30)_
 - Sprawdź koszt pomocy _(20/30)_
-- Rozwód polubowny — od czego? _(28/30)_
-- Nowy Etap — poradnia _(20/30)_
+- Rozwód polubowny: od czego? _(27/30)_
+- Nowy Etap, poradnia _(19/30)_
 - Bezpłatnie, bez logowania _(25/30)_
 - Wynik do pobrania (PDF) _(23/30)_
 - Bez zobowiązań _(14/30)_
 
 **Teksty**
 - Zobacz, które sprawy można spróbować ustalić przed pozwem i jak może wyglądać mediacja. _(87/90)_
-- Mapa ustaleń, dokumenty, pytania do mediatora i kolejność działań — w 4 minuty. _(79/90)_
+- Mapa ustaleń, dokumenty, pytania do mediatora i kolejność działań w 4 minuty. _(77/90)_
 - Odbierz bezpłatny Plan Rozwodu i sprawdź koszt pomocy Nowego Etapu. Bez zobowiązań. _(83/90)_
 - Mediacja jest dobrowolna. Narzędzie uwzględnia sytuacje, w których nie jest bezpieczna. _(87/90)_
 
@@ -1146,14 +1147,14 @@ Landing: `/narzedzia/przed-pozwem` · Demo: `/narzedzia/przed-pozwem/demo`
 
 Landing: `/narzedzia/koszty-utrzymania-dziecka` · Demo: `/narzedzia/koszty-utrzymania-dziecka/demo`
 
-**Kąt:** Rzeczowe zestawienie zamiast „na oko” — wyraźnie: to nie kalkulator alimentów.
+**Kąt:** Rzeczowe zestawienie zamiast „na oko”, także dla kilkorga dzieci w różnym wieku. Wyraźnie: to nie kalkulator alimentów.
 
 **Kierowanie:** Kontekstowe i tematyczne: treści o finansach osobistych, prawie, rodzinie i poradnikach; Search: frazy informacyjne. Demografia szeroka (25–60). Bez remarketingu, list klientów, podobnych odbiorców i segmentów opartych na wnioskowaniu o kryzysie w związku.
 
 ### Meta (CTA: Wypróbuj)
 
 **Tekst główny**
-- Ile naprawdę kosztuje miesiąc życia dziecka? Jedzenie, szkoła, zajęcia, zdrowie — policz i porównaj scenariusze. _(112/125)_
+- Ile kosztuje miesiąc życia dziecka? Jedzenie, szkoła, zajęcia, zdrowie. Policz dla jednego lub kilkorga dzieci. _(111/125)_
 - Miesięczne i roczne koszty dziecka na jednym wykresie. To nie kalkulator alimentów, tylko rzetelne zestawienie. _(111/125)_
 - Ferie, wyprawka, dentysta. Roczne wydatki łatwiej omówić, gdy są policzone. Bezpłatny kalkulator. _(97/125)_
 
@@ -1179,14 +1180,14 @@ Landing: `/narzedzia/koszty-utrzymania-dziecka` · Demo: `/narzedzia/koszty-utrz
 - Zestawienie zamiast „na oko” _(28/40)_
 
 **Długie nagłówki**
-- Ile naprawdę kosztuje miesiąc życia dziecka? Jedzenie, szkoła, zajęcia, zdrowie — policz _(88/90)_
+- Ile kosztuje miesiąc życia dziecka? Jedzenie, szkoła, zajęcia, zdrowie. Policz to _(81/90)_
 - Miesięczne i roczne koszty dziecka na jednym wykresie. To nie kalkulator alimentów _(82/90)_
 - Porównaj scenariusze kosztów dziecka i przygotuj rzeczową listę do rozmowy _(74/90)_
 
 **Teksty**
-- Wydatki miesięczne, kwartalne i roczne. Podział na kategorie i wykres. _(70/90)_
+- Kilkoro dzieci, każde w swoim wieku. Wydatki miesięczne i roczne, kategorie, wykres. _(84/90)_
 - Porównaj do 3 scenariuszy. Zestawienie do pobrania i wydruku. _(61/90)_
-- To nie kalkulator alimentów — ich wysokość zależy od szerszych przesłanek prawnych. _(83/90)_
+- To nie kalkulator alimentów. Ich wysokość zależy od wielu okoliczności. _(71/90)_
 
 **Kreacja:** Wideo 20 s: paragony i plecak na stole → wpisywanie kwot w telefonie → wykres kołowy się wypełnia → porównanie scenariuszy → end card.
 
@@ -1203,18 +1204,18 @@ Landing: `/narzedzia/koszty-utrzymania-dziecka` · Demo: `/narzedzia/koszty-utrz
 - Porównaj scenariusze _(20/30)_
 - Zestawienie do rozmowy _(22/30)_
 - To nie kalkulator alimentów _(27/30)_
-- Nowy Etap — poradnia _(20/30)_
+- Nowy Etap, poradnia _(19/30)_
 - Bezpłatnie, bez logowania _(25/30)_
 - Wynik do pobrania (PDF) _(23/30)_
-- Policz rzetelnie _(16/30)_
+- Koszty kilkorga dzieci _(22/30)_
 
 **Teksty**
 - Policz miesięczne i roczne koszty dziecka. Kategorie, wykres i porównanie scenariuszy. _(86/90)_
-- Jedzenie, ubrania, szkoła, zdrowie, zajęcia, wakacje — z częstotliwością wydatków. _(82/90)_
+- Jedzenie, szkoła, zdrowie, zajęcia, wakacje. Osobno dla każdego dziecka i jego wieku. _(85/90)_
 - To nie kalkulator alimentów. To rzetelne zestawienie, które pomaga w rozmowie. _(78/90)_
 - Bezpłatnie i bez logowania. Zestawienie do pobrania jako PDF. _(61/90)_
 
-**Uwagi:** W reklamach nie używaj słowa „alimenty” jako obietnicy wyliczenia — tylko jako zastrzeżenie.
+**Uwagi:** W reklamach nie używaj słowa „alimenty” jako obietnicy wyliczenia, tylko jako zastrzeżenie.
 
 ---
 
@@ -1222,14 +1223,14 @@ Landing: `/narzedzia/koszty-utrzymania-dziecka` · Demo: `/narzedzia/koszty-utrz
 
 Landing: `/narzedzia/separacja-czy-rozwod` · Demo: `/narzedzia/separacja-czy-rozwod/demo`
 
-**Kąt:** Neutralne porównanie dwóch dróg — bez podpowiadania, co wybrać.
+**Kąt:** Neutralne porównanie dwóch dróg. Bez podpowiadania, co wybrać.
 
 **Kierowanie:** Kontekstowe i tematyczne: treści o finansach osobistych, prawie, rodzinie i poradnikach; Search: frazy informacyjne. Demografia szeroka (25–60). Bez remarketingu, list klientów, podobnych odbiorców i segmentów opartych na wnioskowaniu o kryzysie w związku.
 
 ### Meta (CTA: Dowiedz się więcej)
 
 **Tekst główny**
-- Separacja i rozwód różnią się skutkami prawnymi. Zobacz porównanie w jednej tabeli — bez podpowiadania wyboru. _(110/125)_
+- Separacja i rozwód różnią się skutkami prawnymi. Zobacz porównanie w jednej tabeli, bez podpowiadania wyboru. _(109/125)_
 - Nazwisko, majątek, dziedziczenie, powrót do wspólnego życia. Porównaj obie drogi w 3 minuty. _(92/125)_
 - Czym w praktyce różni się separacja od rozwodu? Przejrzyste zestawienie i pytania do specjalisty. _(97/125)_
 
@@ -1279,7 +1280,7 @@ Landing: `/narzedzia/separacja-czy-rozwod` · Demo: `/narzedzia/separacja-czy-ro
 - Nazwisko, majątek, spadek _(25/30)_
 - Porównanie bez podpowiadania _(28/30)_
 - Pytania do specjalisty _(22/30)_
-- Nowy Etap — poradnia _(20/30)_
+- Nowy Etap, poradnia _(19/30)_
 - Bezpłatnie, bez logowania _(25/30)_
 - Wynik do pobrania (PDF) _(23/30)_
 - Stan prawny 11.2026 _(19/30)_
@@ -1288,7 +1289,7 @@ Landing: `/narzedzia/separacja-czy-rozwod` · Demo: `/narzedzia/separacja-czy-ro
 - Porównaj separację i rozwód: status małżeństwa, majątek, dzieci, koszty, nazwisko. _(82/90)_
 - Indywidualna tabela i pytania do specjalisty. Bez podpowiadania, co wybrać. _(75/90)_
 - Treści oparte na aktualnych polskich przepisach. Bezpłatnie, bez logowania. _(75/90)_
-- Możliwość zniesienia separacji, dziedziczenie, nowy związek — wszystko w jednym widoku. _(87/90)_
+- Możliwość zniesienia separacji, dziedziczenie, nowy związek: wszystko w jednym widoku. _(86/90)_
 
 ---
 
@@ -1347,13 +1348,13 @@ Landing: `/narzedzia/pierwsze-30-dni` · Demo: `/narzedzia/pierwsze-30-dni/demo`
 **Ścieżki:** /30-dni/checklista
 
 **Nagłówki**
-- Pierwsze 30 dni — checklista _(28/30)_
+- Pierwsze 30 dni: checklista _(27/30)_
 - Co zrobić najpierw? _(19/30)_
 - Plan na 4 tygodnie _(18/30)_
 - Dokumenty, finanse, dzieci _(26/30)_
 - Odhaczaj i pobierz PDF _(22/30)_
 - Spokojnie, krok po kroku _(24/30)_
-- Nowy Etap — poradnia _(20/30)_
+- Nowy Etap, poradnia _(19/30)_
 - Bezpłatnie, bez logowania _(25/30)_
 - Wynik do pobrania (PDF) _(23/30)_
 - Najpierw plan _(13/30)_
@@ -1370,7 +1371,7 @@ Landing: `/narzedzia/pierwsze-30-dni` · Demo: `/narzedzia/pierwsze-30-dni/demo`
 
 Landing: `/materialy/rozwod-krok-po-kroku` · Demo: `/materialy/rozwod-krok-po-kroku/demo`
 
-**Kąt:** Mapa całego procesu — redukuje niepewność „co mnie czeka”.
+**Kąt:** Mapa całego procesu. Zmniejsza niepewność „co mnie czeka”.
 
 **Kierowanie:** Kontekstowe i tematyczne: treści o finansach osobistych, prawie, rodzinie i poradnikach; Search: frazy informacyjne. Demografia szeroka (25–60). Bez remarketingu, list klientów, podobnych odbiorców i segmentów opartych na wnioskowaniu o kryzysie w związku.
 
@@ -1382,7 +1383,7 @@ Landing: `/materialy/rozwod-krok-po-kroku` · Demo: `/materialy/rozwod-krok-po-k
 - Najpierw plan i ustalenia, potem pozew. Zobacz całą drogę rozpisaną na etapy. _(77/125)_
 
 **Nagłówki**
-- Rozwód krok po kroku — poradnik _(31/40)_
+- Rozwód krok po kroku: poradnik _(30/40)_
 - Cała droga na jednej mapie _(26/40)_
 - Etapy, dokumenty, koszty _(24/40)_
 - Od ustaleń do wyroku _(20/40)_
@@ -1396,7 +1397,7 @@ Landing: `/materialy/rozwod-krok-po-kroku` · Demo: `/materialy/rozwod-krok-po-k
 ### Google Demand Gen (CTA: Dowiedz się więcej)
 
 **Nagłówki**
-- Rozwód krok po kroku — poradnik _(31/40)_
+- Rozwód krok po kroku: poradnik _(30/40)_
 - Cała droga na jednej mapie _(26/40)_
 - Etapy, dokumenty, koszty _(24/40)_
 - Od ustaleń do wyroku _(20/40)_
@@ -1409,7 +1410,7 @@ Landing: `/materialy/rozwod-krok-po-kroku` · Demo: `/materialy/rozwod-krok-po-k
 
 **Teksty**
 - Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych. _(76/90)_
-- Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna. _(82/90)_
+- Wypełniasz online, a podsumowanie masz od razu. To informacja, nie porada prawna. _(81/90)_
 - Cały proces rozwodowy rozpisany na etapy: dokumenty, sąd, opłaty, wyrok i życie po nim. _(87/90)_
 
 **Kreacja:** Ekran materiału na telefonie z osią etapów: „Ustalenia → Dokumenty → Pozew → Rozprawa → Po wyroku”, złota linia łącząca punkty.
@@ -1428,7 +1429,7 @@ Landing: `/materialy/rozwod-krok-po-kroku` · Demo: `/materialy/rozwod-krok-po-k
 - Co jest w wyroku? _(17/30)_
 - Od ustaleń do wyroku _(20/30)_
 - Najpierw plan, potem pozew _(26/30)_
-- Nowy Etap — poradnia _(20/30)_
+- Nowy Etap, poradnia _(19/30)_
 - Materiał od Nowego Etapu _(24/30)_
 - Otwórz od razu _(14/30)_
 
@@ -1444,7 +1445,7 @@ Landing: `/materialy/rozwod-krok-po-kroku` · Demo: `/materialy/rozwod-krok-po-k
 
 Landing: `/materialy/checklista-dokumentow` · Demo: `/materialy/checklista-dokumentow/demo`
 
-**Kąt:** Praktyczna lista do odhaczenia — niski próg wejścia.
+**Kąt:** Praktyczna lista do odhaczenia. Niski próg wejścia.
 
 **Kierowanie:** Kontekstowe i tematyczne: treści o finansach osobistych, prawie, rodzinie i poradnikach; Search: frazy informacyjne. Demografia szeroka (25–60). Bez remarketingu, list klientów, podobnych odbiorców i segmentów opartych na wnioskowaniu o kryzysie w związku.
 
@@ -1483,8 +1484,8 @@ Landing: `/materialy/checklista-dokumentow` · Demo: `/materialy/checklista-doku
 
 **Teksty**
 - Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych. _(76/90)_
-- Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna. _(82/90)_
-- Lista dokumentów do rozwodu, podziału majątku, spraw dzieci i kredytu — do odhaczania. _(86/90)_
+- Wypełniasz online, a podsumowanie masz od razu. To informacja, nie porada prawna. _(81/90)_
+- Lista dokumentów do rozwodu, podziału majątku, spraw dzieci i kredytu do odhaczania. _(84/90)_
 
 **Kreacja:** Checklista na ekranie telefonu, obok segregator w kolorze #295550; trzy pozycje odhaczone złotym ptaszkiem.
 
@@ -1498,19 +1499,19 @@ Landing: `/materialy/checklista-dokumentow` · Demo: `/materialy/checklista-doku
 - Dokumenty do rozwodu _(20/30)_
 - Checklista online za darmo _(26/30)_
 - Co dołączyć do pozwu? _(21/30)_
-- Podział majątku — dokumenty _(27/30)_
+- Podział majątku: dokumenty _(26/30)_
 - Odhaczaj, co już masz _(21/30)_
 - Gdzie zdobyć odpisy? _(20/30)_
-- Nowy Etap — poradnia _(20/30)_
+- Nowy Etap, poradnia _(19/30)_
 - Materiał od Nowego Etapu _(24/30)_
 - Otwórz od razu _(14/30)_
 - Bez podawania danych _(20/30)_
 
 **Teksty**
-- Lista dokumentów do rozwodu, podziału majątku, spraw dzieci i kredytu — do odhaczania. _(86/90)_
+- Lista dokumentów do rozwodu, podziału majątku, spraw dzieci i kredytu do odhaczania. _(84/90)_
 - Co zwykle jest potrzebne zawsze, a co zależy od sytuacji, i gdzie to uzyskać. _(77/90)_
 - Bezpłatna checklista Nowego Etapu. Odhaczasz online, bez pobierania. _(68/90)_
-- Odpisy aktów stanu cywilnego zamówisz online — podpowiadamy jak. _(64/90)_
+- Odpisy aktów stanu cywilnego zamówisz online. Podpowiadamy jak. _(63/90)_
 
 ---
 
@@ -1518,7 +1519,7 @@ Landing: `/materialy/checklista-dokumentow` · Demo: `/materialy/checklista-doku
 
 Landing: `/materialy/jak-powiedziec-dzieciom` · Demo: `/materialy/jak-powiedziec-dzieciom/demo`
 
-**Kąt:** Wsparcie w jednej z najtrudniejszych rozmów — ton empatyczny, bez straszenia.
+**Kąt:** Wsparcie w jednej z najtrudniejszych rozmów. Ton empatyczny, bez straszenia.
 
 **Kierowanie:** Kontekstowe i tematyczne: treści o finansach osobistych, prawie, rodzinie i poradnikach; Search: frazy informacyjne. Demografia szeroka (25–60). Bez remarketingu, list klientów, podobnych odbiorców i segmentów opartych na wnioskowaniu o kryzysie w związku.
 
@@ -1557,7 +1558,7 @@ Landing: `/materialy/jak-powiedziec-dzieciom` · Demo: `/materialy/jak-powiedzie
 
 **Teksty**
 - Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych. _(76/90)_
-- Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna. _(82/90)_
+- Wypełniasz online, a podsumowanie masz od razu. To informacja, nie porada prawna. _(81/90)_
 - Jak powiedzieć dziecku o rozstaniu: przykładowe zdania dla każdego wieku i czego unikać. _(88/90)_
 
 **Kreacja:** Dwa kubki (duży i mały) na parapecie, bez twarzy; obok telefon z ekranem materiału „Przykładowe zdania według wieku”.
@@ -1575,7 +1576,7 @@ Landing: `/materialy/jak-powiedziec-dzieciom` · Demo: `/materialy/jak-powiedzie
 - Czego unikać w rozmowie _(23/30)_
 - Poradnik dla rodziców _(21/30)_
 - Bezpłatny poradnik online _(25/30)_
-- Nowy Etap — poradnia _(20/30)_
+- Nowy Etap, poradnia _(19/30)_
 - Materiał od Nowego Etapu _(24/30)_
 - Otwórz od razu _(14/30)_
 - Spokojnie i z szacunkiem _(24/30)_
@@ -1631,7 +1632,7 @@ Landing: `/materialy/przygotowanie-do-mediacji` · Demo: `/materialy/przygotowan
 
 **Teksty**
 - Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych. _(76/90)_
-- Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna. _(82/90)_
+- Wypełniasz online, a podsumowanie masz od razu. To informacja, nie porada prawna. _(81/90)_
 - Zeszyt ćwiczeń przed mediacją: priorytety, potrzeby dzieci, fakty finansowe, pytania. _(85/90)_
 
 **Kreacja:** Ekran laptopa z zeszytem online w kolorze #295550 i złotym tytułem; widoczna tabela „Ważne dla mnie / Mogę omówić / Pytania”.
@@ -1649,7 +1650,7 @@ Landing: `/materialy/przygotowanie-do-mediacji` · Demo: `/materialy/przygotowan
 - Priorytety przed spotkaniem _(27/30)_
 - Mediacja jest dobrowolna _(24/30)_
 - Wypełnij zeszyt online _(22/30)_
-- Nowy Etap — poradnia _(20/30)_
+- Nowy Etap, poradnia _(19/30)_
 - Materiał od Nowego Etapu _(24/30)_
 - Otwórz od razu _(14/30)_
 - Bezpłatny zeszyt online _(23/30)_
@@ -1705,7 +1706,7 @@ Landing: `/materialy/inwentaryzacja-majatku` · Demo: `/materialy/inwentaryzacja
 
 **Teksty**
 - Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych. _(76/90)_
-- Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna. _(82/90)_
+- Wypełniasz online, a podsumowanie masz od razu. To informacja, nie porada prawna. _(81/90)_
 - Spisz nieruchomości, pojazdy, konta, oszczędności, firmę i długi w jednym arkuszu. _(82/90)_
 
 **Kreacja:** Arkusz online na ekranie laptopa w formie tabeli (Składnik, Wartość, Zobowiązanie, Uwagi) z przykładowymi wierszami; złota linia podsumowania.
@@ -1723,7 +1724,7 @@ Landing: `/materialy/inwentaryzacja-majatku` · Demo: `/materialy/inwentaryzacja
 - Nieruchomości, auta, konta _(26/30)_
 - Długi i kredyty _(15/30)_
 - Arkusz do wypełnienia online _(28/30)_
-- Nowy Etap — poradnia _(20/30)_
+- Nowy Etap, poradnia _(19/30)_
 - Materiał od Nowego Etapu _(24/30)_
 - Otwórz od razu _(14/30)_
 - Bezpłatnie, bez logowania _(25/30)_
@@ -1732,7 +1733,7 @@ Landing: `/materialy/inwentaryzacja-majatku` · Demo: `/materialy/inwentaryzacja
 - Spisz nieruchomości, pojazdy, konta, oszczędności, firmę i długi w jednym arkuszu. _(82/90)_
 - Oznacz, co przed ślubem, w trakcie, z darowizny lub spadku. Wyjaśniamy podstawy. _(80/90)_
 - Bezpłatny arkusz Nowego Etapu do wypełnienia online. Informacyjnie, nie porada prawna. _(86/90)_
-- Związek nieformalny? Wyjaśniamy różnicę — współwłasność według Kodeksu cywilnego. _(81/90)_
+- Związek nieformalny? Wyjaśniamy, czym różni się zwykła współwłasność. _(69/90)_
 
 ---
 
@@ -1740,7 +1741,7 @@ Landing: `/materialy/inwentaryzacja-majatku` · Demo: `/materialy/inwentaryzacja
 
 Landing: `/materialy/rozmowa-z-bankiem` · Demo: `/materialy/rozmowa-z-bankiem/demo`
 
-**Kąt:** Fakt o kredycie + praktyczny skrypt — przygotowanie zamiast stresu.
+**Kąt:** Fakt o kredycie + praktyczny skrypt: przygotowanie zamiast stresu.
 
 **Kierowanie:** Kontekstowe i tematyczne: treści o finansach osobistych, prawie, rodzinie i poradnikach; Search: frazy informacyjne. Demografia szeroka (25–60). Bez remarketingu, list klientów, podobnych odbiorców i segmentów opartych na wnioskowaniu o kryzysie w związku.
 
@@ -1779,7 +1780,7 @@ Landing: `/materialy/rozmowa-z-bankiem` · Demo: `/materialy/rozmowa-z-bankiem/d
 
 **Teksty**
 - Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych. _(76/90)_
-- Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna. _(82/90)_
+- Wypełniasz online, a podsumowanie masz od razu. To informacja, nie porada prawna. _(81/90)_
 - Rozwód nie zwalnia z kredytu. Skrypt rozmowy z bankiem, lista pytań i dokumentów. _(81/90)_
 
 **Kreacja:** Ekran telefonu z listą „Pytania do banku” (5 pozycji); obok klucze i kalkulator na stole.
@@ -1797,7 +1798,7 @@ Landing: `/materialy/rozmowa-z-bankiem` · Demo: `/materialy/rozmowa-z-bankiem/d
 - Pytania do banku _(16/30)_
 - Dokumenty dla banku _(19/30)_
 - Skrypt rozmowy online _(21/30)_
-- Nowy Etap — poradnia _(20/30)_
+- Nowy Etap, poradnia _(19/30)_
 - Materiał od Nowego Etapu _(24/30)_
 - Otwórz od razu _(14/30)_
 - Bezpłatnie, bez logowania _(25/30)_
@@ -1814,7 +1815,7 @@ Landing: `/materialy/rozmowa-z-bankiem` · Demo: `/materialy/rozmowa-z-bankiem/d
 
 Landing: `/materialy/bezpieczenstwo-cyfrowe-i-finansowe` · Demo: `/materialy/bezpieczenstwo-cyfrowe-i-finansowe/demo`
 
-**Kąt:** Higiena cyfrowa i porządek finansowy — bez sugerowania inwigilacji i bez straszenia.
+**Kąt:** Higiena cyfrowa i porządek finansowy. Bez sugerowania inwigilacji i bez straszenia.
 
 **Kierowanie:** Kontekstowe i tematyczne: treści o finansach osobistych, prawie, rodzinie i poradnikach; Search: frazy informacyjne. Demografia szeroka (25–60). Bez remarketingu, list klientów, podobnych odbiorców i segmentów opartych na wnioskowaniu o kryzysie w związku.
 
@@ -1853,8 +1854,8 @@ Landing: `/materialy/bezpieczenstwo-cyfrowe-i-finansowe` · Demo: `/materialy/be
 
 **Teksty**
 - Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych. _(76/90)_
-- Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna. _(82/90)_
-- Hasła, weryfikacja dwuetapowa, wspólne konta, subskrypcje i lokalizacja — krok po kroku. _(88/90)_
+- Wypełniasz online, a podsumowanie masz od razu. To informacja, nie porada prawna. _(81/90)_
+- Hasła, weryfikacja dwuetapowa, wspólne konta, subskrypcje i lokalizacja: krok po kroku. _(87/90)_
 
 **Kreacja:** Płaska ilustracja liniowa: kłódka, karta płatnicza, telefon połączone złotą linią na tle #295550; obok ekran checklisty z odhaczonymi pozycjami.
 
@@ -1871,13 +1872,13 @@ Landing: `/materialy/bezpieczenstwo-cyfrowe-i-finansowe` · Demo: `/materialy/be
 - Zastrzeżenie PESEL _(18/30)_
 - Subskrypcje i chmura _(20/30)_
 - Checklista online _(17/30)_
-- Nowy Etap — poradnia _(20/30)_
+- Nowy Etap, poradnia _(19/30)_
 - Materiał od Nowego Etapu _(24/30)_
 - Otwórz od razu _(14/30)_
 - Bezpłatnie, bez logowania _(25/30)_
 
 **Teksty**
-- Hasła, weryfikacja dwuetapowa, wspólne konta, subskrypcje i lokalizacja — krok po kroku. _(88/90)_
+- Hasła, weryfikacja dwuetapowa, wspólne konta, subskrypcje i lokalizacja: krok po kroku. _(87/90)_
 - Co zrobić ze wspólnym kontem i kartą, a czego unikać. Raport BIK i zastrzeżenie PESEL. _(86/90)_
 - Bezpłatny poradnik Nowego Etapu. Otworzysz go od razu, bez podawania danych. _(76/90)_
 - Odhaczasz online, podsumowanie od razu. Informacyjnie, nie porada prawna. _(73/90)_
@@ -1890,7 +1891,7 @@ Landing: `/materialy/bezpieczenstwo-cyfrowe-i-finansowe` · Demo: `/materialy/be
 
 Landing: `/materialy/komunikacja-z-drugim-rodzicem` · Demo: `/materialy/komunikacja-z-drugim-rodzicem/demo`
 
-**Kąt:** Mniej emocji, więcej konkretu — gotowe szablony wiadomości.
+**Kąt:** Mniej emocji, więcej konkretu: gotowe szablony wiadomości.
 
 **Kierowanie:** Kontekstowe i tematyczne: treści o finansach osobistych, prawie, rodzinie i poradnikach; Search: frazy informacyjne. Demografia szeroka (25–60). Bez remarketingu, list klientów, podobnych odbiorców i segmentów opartych na wnioskowaniu o kryzysie w związku.
 
@@ -1929,7 +1930,7 @@ Landing: `/materialy/komunikacja-z-drugim-rodzicem` · Demo: `/materialy/komunik
 
 **Teksty**
 - Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych. _(76/90)_
-- Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna. _(82/90)_
+- Wypełniasz online, a podsumowanie masz od razu. To informacja, nie porada prawna. _(81/90)_
 - 24 szablony wiadomości: odbiór dziecka, wakacje, święta, wydatki, szkoła, choroba. _(82/90)_
 
 **Kreacja:** Telefon z neutralnym komunikatorem i dymkiem z przykładową wiadomością o zmianie godziny odbioru dziecka; nad telefonem tytuł.
@@ -1947,7 +1948,7 @@ Landing: `/materialy/komunikacja-z-drugim-rodzicem` · Demo: `/materialy/komunik
 - Krótko i rzeczowo _(17/30)_
 - Zmiana odbioru, wakacje _(23/30)_
 - Szablony do skopiowania _(23/30)_
-- Nowy Etap — poradnia _(20/30)_
+- Nowy Etap, poradnia _(19/30)_
 - Materiał od Nowego Etapu _(24/30)_
 - Otwórz od razu _(14/30)_
 - Bezpłatnie, bez logowania _(25/30)_
@@ -1956,7 +1957,7 @@ Landing: `/materialy/komunikacja-z-drugim-rodzicem` · Demo: `/materialy/komunik
 - 24 szablony wiadomości: odbiór dziecka, wakacje, święta, wydatki, szkoła, choroba. _(82/90)_
 - Metoda 4K: Krótko, Konkretnie, Kulturalnie, Kończ propozycją. Co pisać, czego unikać. _(85/90)_
 - Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych. _(76/90)_
-- Kiedy przerwać bezpośredni kontakt i gdzie szukać pomocy — także o tym piszemy. _(79/90)_
+- Piszemy też, kiedy przerwać bezpośredni kontakt i gdzie szukać pomocy. _(70/90)_
 
 ---
 
@@ -2003,7 +2004,7 @@ Landing: `/materialy/pierwsze-swieta-po-rozstaniu` · Demo: `/materialy/pierwsze
 
 **Teksty**
 - Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych. _(76/90)_
-- Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna. _(82/90)_
+- Wypełniasz online, a podsumowanie masz od razu. To informacja, nie porada prawna. _(81/90)_
 - Trzy modele podziału świąt, arkusz ustaleń, logistyka dojazdów i prezentów. _(75/90)_
 
 **Kreacja:** Planer online na ekranie laptopa przy oknie z zimowym światłem, gałązka świerku, kubek; kalendarz 24–26 grudnia w dwóch kolorach (zieleń/złoto).
@@ -2021,7 +2022,7 @@ Landing: `/materialy/pierwsze-swieta-po-rozstaniu` · Demo: `/materialy/pierwsze
 - Zaplanujcie wcześniej _(21/30)_
 - Modele podziału świąt _(21/30)_
 - Planer do wypełnienia online _(28/30)_
-- Nowy Etap — poradnia _(20/30)_
+- Nowy Etap, poradnia _(19/30)_
 - Materiał od Nowego Etapu _(24/30)_
 - Otwórz od razu _(14/30)_
 - Bezpłatnie, bez logowania _(25/30)_
@@ -2079,8 +2080,8 @@ Landing: `/materialy/przygotowanie-do-konsultacji` · Demo: `/materialy/przygoto
 
 **Teksty**
 - Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych. _(76/90)_
-- Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna. _(82/90)_
-- Co zabrać, jak spisać oś czasu, jakie pytania zadać — także o koszty i sposób pracy. _(84/90)_
+- Wypełniasz online, a podsumowanie masz od razu. To informacja, nie porada prawna. _(81/90)_
+- Co zabrać, jak spisać oś czasu, jakie pytania zadać (także o koszty i sposób pracy). _(84/90)_
 
 **Kreacja:** Notes z listą „Pytania na konsultację”, obok teczka z dokumentami i telefon z ekranem materiału. Bez togi i kodeksów.
 
@@ -2097,13 +2098,13 @@ Landing: `/materialy/przygotowanie-do-konsultacji` · Demo: `/materialy/przygoto
 - Oś czasu i fakty _(16/30)_
 - Jak porównać specjalistów _(25/30)_
 - Checklista online _(17/30)_
-- Nowy Etap — poradnia _(20/30)_
+- Nowy Etap, poradnia _(19/30)_
 - Materiał od Nowego Etapu _(24/30)_
 - Otwórz od razu _(14/30)_
 - Bezpłatnie, bez logowania _(25/30)_
 
 **Teksty**
-- Co zabrać, jak spisać oś czasu, jakie pytania zadać — także o koszty i sposób pracy. _(84/90)_
+- Co zabrać, jak spisać oś czasu, jakie pytania zadać (także o koszty i sposób pracy). _(84/90)_
 - Różnice: adwokat, radca prawny, mediator, psycholog. Jak wybrać specjalistę. _(76/90)_
 - Bezpłatna checklista Nowego Etapu. Otworzysz ją od razu, bez podawania danych. _(78/90)_
 - Wypełniasz online, a na końcu masz podsumowanie i swoje notatki. _(64/90)_

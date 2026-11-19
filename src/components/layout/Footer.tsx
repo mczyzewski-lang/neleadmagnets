@@ -8,7 +8,7 @@ export function Footer() {
       <div className="container">
         <div className="site-footer__cols">
           <div>
-            <img src="/brand/nowy-etap-logo-poradnia-white.png" alt="Nowy Etap — Poradnia rozwodowa" width={150} height={38} />
+            <img src="/brand/nowy-etap-logo-poradnia-white.png" alt="Nowy Etap, Poradnia rozwodowa" width={150} height={38} />
             <p>{SITE.claim}</p>
             <p className="small">Nowy Etap pomaga w przygotowaniu rozwodu, mediacjach i wypracowywaniu ustaleń przedsądowych.</p>
           </div>
@@ -23,7 +23,7 @@ export function Footer() {
           <div>
             <h2>Informacje</h2>
             <ul>
-              <li><Link href="/przed-decyzja">Przed decyzją — 10 narzędzi</Link></li>
+              <li><Link href="/przed-decyzja">Przed decyzją: 10 narzędzi</Link></li>
               <li><Link href="/materialy">Bezpłatne materiały</Link></li>
               <li><Link href="/plan-rozwodu">Plan Rozwodu</Link></li>
               <li><Link href="/polityka-prywatnosci">Polityka prywatności i cookies</Link></li>

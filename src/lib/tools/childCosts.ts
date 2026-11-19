@@ -1,6 +1,7 @@
 /**
- * Narzędzie 6 — Kalkulator kosztów utrzymania dziecka.
+ * Narzędzie 6: kalkulator kosztów utrzymania dzieci.
  * To NIE jest kalkulator alimentów. Liczy wyłącznie zestawienie wydatków podanych przez użytkownika.
+ * Obsługuje kilkoro dzieci: każda pozycja ma `childId`, a każde dziecko własny wiek i własną listę wydatków.
  */
 import { type Frequency, monthlyEquivalent, oneOffAmount } from "./expenses";
 
@@ -44,7 +45,15 @@ export const AGE_BANDS: { value: AgeBand; label: string }[] = [
   { value: "18+", label: "18+ (uczy się)" },
 ];
 
-export type ChildLine = { id: string; category: ChildCategory; label: string; amount?: number; freq: Frequency; custom?: boolean };
+/** Dziecko w zestawieniu. Bez danych identyfikujących: nazwa to np. „Dziecko 1” albo „Starsze”. */
+export type ChildInfo = { id: string; name: string; age?: AgeBand };
+
+export const MAX_CHILDREN = 6;
+export const defaultChildName = (index: number) => `Dziecko ${index + 1}`;
+export const childDisplayName = (c: ChildInfo, index: number) => c.name.trim() || defaultChildName(index);
+export const ageLabel = (age: AgeBand | undefined) => (age ? AGE_BANDS.find((a) => a.value === age)!.label : undefined);
+
+export type ChildLine = { id: string; category: ChildCategory; label: string; amount?: number; freq: Frequency; custom?: boolean; childId?: string };
 export type ChildScenario = { id: string; name: string; lines: ChildLine[] };
 
 export type CategorySum = { category: ChildCategory; label: string; monthly: number; yearly: number; color: string };
@@ -71,6 +80,23 @@ export function scenarioTotals(s: ChildScenario): ScenarioTotals {
   return { monthly, yearly: monthly * 12, oneOff, yearlyWithOneOff: monthly * 12 + oneOff, byCategory };
 }
 
+export type ChildBreakdown = { child: ChildInfo; index: number; name: string; totals: ScenarioTotals };
+
+/** Pozycje jednego dziecka w scenariuszu. */
+export function linesForChild(s: ChildScenario, childId: string): ChildLine[] {
+  return s.lines.filter((l) => l.childId === childId);
+}
+
+/** Koszty w podziale na dzieci. Suma po dzieciach = scenarioTotals(s), o ile każda pozycja ma childId. */
+export function childBreakdown(s: ChildScenario, children: ChildInfo[]): ChildBreakdown[] {
+  return children.map((child, index) => ({
+    child,
+    index,
+    name: childDisplayName(child, index),
+    totals: scenarioTotals({ ...s, lines: linesForChild(s, child.id) }),
+  }));
+}
+
 export type Diff = { category: ChildCategory; label: string; values: number[]; delta: number };
 /** Porównanie miesięcznych kosztów kategorii między scenariuszami (delta = ostatni − pierwszy). */
 export function compareScenarios(list: ChildScenario[]): { totals: ScenarioTotals[]; rows: Diff[] } {
@@ -82,9 +108,14 @@ export function compareScenarios(list: ChildScenario[]): { totals: ScenarioTotal
   return { totals, rows };
 }
 
-/** Sugerowane pozycje (bez kwot — nie przyjmujemy nieuzasadnionych wartości) dopasowane do wieku. */
-export function suggestedLines(age: AgeBand | undefined, mk: () => string): ChildLine[] {
-  const L = (category: ChildCategory, label: string, freq: Frequency = "monthly"): ChildLine => ({ id: mk(), category, label, freq });
+/**
+ * Sugerowane pozycje dopasowane do wieku (bez kwot: nie przyjmujemy nieuzasadnionych wartości).
+ * Każde dziecko dostaje własną listę, oznaczoną jego `childId`.
+ */
+export function suggestedLines(age: AgeBand | undefined, mk: () => string, childId?: string): ChildLine[] {
+  const L = (category: ChildCategory, label: string, freq: Frequency = "monthly"): ChildLine => ({ id: mk(), category, label, freq, ...(childId ? { childId } : {}) });
+  const small = age === "0-2" || age === "3-6";
+  const teen = age === "13-18" || age === "18+";
   const lines: ChildLine[] = [
     L("food", "Jedzenie w domu"),
     L("clothes", "Ubrania i buty", "quarterly"),
@@ -92,16 +123,21 @@ export function suggestedLines(age: AgeBand | undefined, mk: () => string): Chil
   ];
   if (age === "0-2") lines.push(L("care", "Żłobek lub opiekunka"), L("other", "Pieluchy, kosmetyki, mleko"));
   else if (age === "3-6") lines.push(L("care", "Przedszkole (opłaty i wyżywienie)"));
-  else lines.push(L("education", "Obiady w szkole / stołówka"), L("care", "Świetlica lub opieka po lekcjach"));
+  else if (age === "7-12") lines.push(L("education", "Obiady w szkole"), L("care", "Świetlica lub opieka po lekcjach"));
+  else if (age === "13-18") lines.push(L("education", "Obiady w szkole"));
+  else if (age === "18+") lines.push(L("education", "Opłaty za szkołę lub studia"), L("housing", "Pokój lub akademik w innym mieście"));
+  else lines.push(L("care", "Opieka (żłobek, przedszkole, świetlica)"), L("education", "Obiady w szkole lub przedszkolu"));
   lines.push(
-    L("education", age === "0-2" || age === "3-6" ? "Książeczki, zabawki edukacyjne" : "Podręczniki, przybory, wyprawka", "yearly"),
+    L("education", small ? "Książeczki, zabawki edukacyjne" : "Podręczniki, przybory, wyprawka", "yearly"),
     L("health", "Leki, lekarze, dentysta"),
-    L("transport", "Dojazdy, bilety"),
-    L("activities", "Zajęcia dodatkowe (sport, języki, muzyka)"),
-    L("holidays", "Wakacje, kolonie, ferie", "yearly"),
-    L("other", "Kieszonkowe, prezenty, telefon"),
   );
-  if (age === "13-18" || age === "18+") lines.push(L("education", "Korepetycje"));
-  lines.push(L("other", "Większy zakup (np. rower, komputer)", "once"));
+  if (age !== "0-2") lines.push(L("transport", teen ? "Bilet miesięczny, dojazdy" : "Dojazdy do szkoły, przedszkola, na zajęcia"));
+  lines.push(
+    L("activities", "Zajęcia dodatkowe (sport, języki, muzyka)"),
+    L("holidays", small ? "Wakacje, wyjazdy" : "Wakacje, kolonie, ferie", "yearly"),
+    L("other", teen ? "Kieszonkowe, telefon" : "Prezenty, urodziny, drobne wydatki"),
+  );
+  if (teen) lines.push(L("education", "Korepetycje lub kursy"));
+  lines.push(L("other", age === "0-2" ? "Większy zakup (np. wózek, fotelik)" : teen ? "Większy zakup (np. komputer)" : "Większy zakup (np. rower)", "once"));
   return lines;
 }

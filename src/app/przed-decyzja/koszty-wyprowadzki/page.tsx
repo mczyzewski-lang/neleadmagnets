@@ -6,7 +6,7 @@ import { metaFor } from "@/lib/toolMetadata";
 export const metadata = metaFor(meta, "/przed-decyzja/koszty-wyprowadzki");
 
 function Preview() {
-  const rows: [string, number, string][] = [["Najem — kaucja i 1. miesiąc", 62, "#295550"], ["Meble i wyposażenie", 22, "#4a6d68"], ["Przeprowadzka", 9, "#C79B59"], ["Media i inne", 7, "#7E5B26"]];
+  const rows: [string, number, string][] = [["Najem: kaucja i 1. miesiąc", 62, "#295550"], ["Meble i wyposażenie", 22, "#4a6d68"], ["Przeprowadzka", 9, "#C79B59"], ["Media i inne", 7, "#7E5B26"]];
   return (
     <div>
       <p className="xsmall muted" style={{ margin: "6px 0 8px", fontWeight: 600 }}>KWOTA NA START</p>

@@ -1,13 +1,39 @@
-.pp-toggle { border: 0; font: inherit; font-size: var(--fs-xs); font-weight: 600; cursor: pointer; }
-.pp-toggle:focus-visible { box-shadow: var(--focus); }
 .pp-who { font-size: 10px; font-weight: 600; line-height: 1.1; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 0 2px; }
 .pp-visit { font-size: 10px; background: var(--gold-500); color: var(--green-900); border-radius: 999px; padding: 0 5px; line-height: 1.5; }
 .month__d { position: relative; }
+.pp-mwho { position: absolute; top: 2px; right: 4px; font-size: 9px; font-weight: 700; opacity: 0.85; }
 .pp-dot { position: absolute; bottom: 3px; width: 5px; height: 5px; border-radius: 50%; background: var(--gold-500); }
 .legend i.parent-a { background: var(--green-700); }
 .legend i.parent-b { background: var(--gold-200); }
-@media (min-width: 640px) { .pp-who { font-size: 12px; } }
+.pp-month { max-width: 440px; }
+.pp-iconbtn { min-width: 44px; min-height: 44px; padding: 8px; justify-content: center; }
+
+/* Notka „to przykłady” */
+.pp-note { display: flex; gap: 8px; align-items: flex-start; margin: 0 0 12px; padding: 10px 12px; font-size: var(--fs-sm); background: var(--gold-100); color: var(--ink); border-radius: var(--r-md); }
+.pp-note svg { flex: none; margin-top: 2px; }
+
+/* Grupy pól (siatka, przekazania, święta) */
+.pp-fieldset { border: 1px solid var(--line); border-radius: var(--r-md); padding: 12px; margin: 0 0 12px; min-width: 0; }
+.pp-fieldset > legend { padding: 0 6px; margin-bottom: 0; }
+.pp-fieldset .field { margin-bottom: 8px; }
+
+/* Edycja siatki: lista dni z natywnym <select> */
+.pp-grid-edit { display: grid; gap: 12px; margin-top: 12px; }
+.pp-row { display: grid; grid-template-columns: 7.5em 1fr; align-items: center; gap: 8px; margin-bottom: 6px; }
+.pp-row__label { font-size: var(--fs-sm); font-weight: 600; text-transform: capitalize; }
+.pp-row .select { min-height: 44px; padding: 8px 10px; }
+
+.pp-handover, .pp-holiday { display: grid; gap: 0 12px; grid-template-columns: 1fr; }
+
+@media (min-width: 640px) {
+  .pp-who { font-size: 12px; }
+  .pp-handover { grid-template-columns: 9em 1fr 1fr; }
+  .pp-holiday { grid-template-columns: 1fr 1fr; }
+  .pp-holiday > .field:last-child { grid-column: 1 / -1; }
+}
+@media (min-width: 900px) {
+  .pp-grid-edit { grid-template-columns: 1fr 1fr; }
+}
 @media print {
   .week__day, .month__d, .legend i { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
-.pp-month { max-width: 440px; }

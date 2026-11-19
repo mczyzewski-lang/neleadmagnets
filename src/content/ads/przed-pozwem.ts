@@ -3,13 +3,13 @@ import type { AdSet } from "./types";
 // Na podstawie MARKETING/ADS.md
 export const ads: AdSet = {
   "slug": "przed-pozwem",
-  "angle": "Główna idea marki: najpierw plan i ustalenia, potem pozew — najmocniejsze przejście do Planu Rozwodu.",
+  "angle": "Główna idea marki: najpierw plan i ustalenia, potem pozew. Najmocniejsze przejście do Planu Rozwodu.",
   "targeting": "Kontekstowe i tematyczne: treści o finansach osobistych, prawie, rodzinie i poradnikach; Search: frazy informacyjne. Demografia szeroka (25–60). Bez remarketingu, list klientów, podobnych odbiorców i segmentów opartych na wnioskowaniu o kryzysie w związku.",
   "meta": {
     "primaryTexts": [
       "Najpierw plan i ustalenia. Dopiero potem pozew. Zobacz, które sprawy można spróbować uporządkować wcześniej.",
       "Dzieci, mieszkanie, majątek: mapa ustaleń, które można omówić jeszcze przed pozwem. Bezpłatnie.",
-      "Mediacja krok po kroku: jak wygląda, co przygotować i o co zapytać mediatora. Sprawdź w 4 minuty."
+      "Mediacja krok po kroku: od zaproszenia do mediacji po pytania do mediatora. Sprawdź w 4 minuty."
     ],
     "headlines": [
       "Najpierw ustalenia, potem pozew",
@@ -22,7 +22,7 @@ export const ads: AdSet = {
       "Plan Rozwodu za darmo"
     ],
     "cta": "Dowiedz się więcej",
-    "creative": "Grafika 1:1: dwie kolumny na ekranie telefonu — „Można spróbować uzgodnić” (zielona) i „Wymaga analizy” (złota), pod spodem oś 5 kroków. Hasło marki „Najpierw plan i ustalenia. Dopiero potem pozew.”"
+    "creative": "Grafika 1:1: dwie kolumny na ekranie telefonu: „Można spróbować uzgodnić” (zielona) i „Wymaga analizy” (złota), pod spodem oś 5 kroków. Hasło marki „Najpierw plan i ustalenia. Dopiero potem pozew.”"
   },
   "demandGen": {
     "headlines": [
@@ -39,7 +39,7 @@ export const ads: AdSet = {
     ],
     "descriptions": [
       "Co uzgodnić, co do analizy, kroki mediacyjne, dokumenty i kolejność działań.",
-      "Mediacja jest dobrowolna i nie każda sprawa się do niej nadaje — narzędzie to uwzględnia.",
+      "Mediacja jest dobrowolna i nie każda sprawa się do niej nadaje. Narzędzie to uwzględnia.",
       "Bezpłatna mapa ustaleń i Plan Rozwodu Nowego Etapu. Bez zobowiązań."
     ],
     "cta": "Sprawdź",
@@ -62,15 +62,15 @@ export const ads: AdSet = {
       "Mediacja krok po kroku",
       "Bezpłatny Plan Rozwodu",
       "Sprawdź koszt pomocy",
-      "Rozwód polubowny — od czego?",
-      "Nowy Etap — poradnia",
+      "Rozwód polubowny: od czego?",
+      "Nowy Etap, poradnia",
       "Bezpłatnie, bez logowania",
       "Wynik do pobrania (PDF)",
       "Bez zobowiązań"
     ],
     "descriptions": [
       "Zobacz, które sprawy można spróbować ustalić przed pozwem i jak może wyglądać mediacja.",
-      "Mapa ustaleń, dokumenty, pytania do mediatora i kolejność działań — w 4 minuty.",
+      "Mapa ustaleń, dokumenty, pytania do mediatora i kolejność działań w 4 minuty.",
       "Odbierz bezpłatny Plan Rozwodu i sprawdź koszt pomocy Nowego Etapu. Bez zobowiązań.",
       "Mediacja jest dobrowolna. Narzędzie uwzględnia sytuacje, w których nie jest bezpieczna."
     ],

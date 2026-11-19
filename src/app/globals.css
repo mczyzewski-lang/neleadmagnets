@@ -1847,3 +1847,6 @@ body:has(#og) main { padding: 0; }
 .stage-group { margin-top: 40px; }
 .stage-group__h { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; font-size: var(--fs-xl); margin-bottom: 4px; }
 .stage-group__sub { font-weight: 500; color: var(--ink-3); font-size: var(--fs-md); }
+.sources { margin: 8px 0 16px; }
+.sources > summary { cursor: pointer; font-weight: 600; color: var(--green-700); min-height: 44px; display: flex; align-items: center; }
+.sources > ul { margin-top: 8px; }

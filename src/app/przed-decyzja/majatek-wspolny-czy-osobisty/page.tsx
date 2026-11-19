@@ -22,7 +22,7 @@ function Preview() {
           <span style={{ fontSize: 11, fontWeight: 700, padding: "3px 9px", borderRadius: 999, background: colors[k][0], color: colors[k][1], whiteSpace: "nowrap" }}>{s}</span>
         </div>
       ))}
-      <p className="xsmall" style={{ margin: "10px 0 0", fontWeight: 600, color: "var(--warn)" }}>1 nakład do rozważenia (art. 45 KRO)</p>
+      <p className="xsmall" style={{ margin: "10px 0 0", fontWeight: 600, color: "var(--warn)" }}>1 nakład do rozważenia</p>
     </div>
   );
 }

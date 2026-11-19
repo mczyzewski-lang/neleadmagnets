@@ -39,8 +39,8 @@ export const ads: AdSet = {
     ],
     "descriptions": [
       "Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych.",
-      "Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna.",
-      "Co zabrać, jak spisać oś czasu, jakie pytania zadać — także o koszty i sposób pracy."
+      "Wypełniasz online, a podsumowanie masz od razu. To informacja, nie porada prawna.",
+      "Co zabrać, jak spisać oś czasu, jakie pytania zadać (także o koszty i sposób pracy)."
     ],
     "cta": "Dowiedz się więcej",
     "creative": "Notes z listą „Pytania na konsultację”, obok teczka z dokumentami i telefon z ekranem materiału. Bez togi i kodeksów."
@@ -63,13 +63,13 @@ export const ads: AdSet = {
       "Oś czasu i fakty",
       "Jak porównać specjalistów",
       "Checklista online",
-      "Nowy Etap — poradnia",
+      "Nowy Etap, poradnia",
       "Materiał od Nowego Etapu",
       "Otwórz od razu",
       "Bezpłatnie, bez logowania"
     ],
     "descriptions": [
-      "Co zabrać, jak spisać oś czasu, jakie pytania zadać — także o koszty i sposób pracy.",
+      "Co zabrać, jak spisać oś czasu, jakie pytania zadać (także o koszty i sposób pracy).",
       "Różnice: adwokat, radca prawny, mediator, psycholog. Jak wybrać specjalistę.",
       "Bezpłatna checklista Nowego Etapu. Otworzysz ją od razu, bez podawania danych.",
       "Wypełniasz online, a na końcu masz podsumowanie i swoje notatki."

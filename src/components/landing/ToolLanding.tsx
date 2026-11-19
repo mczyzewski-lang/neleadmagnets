@@ -96,7 +96,7 @@ export function ToolLanding({ tool, preview, children, extra, hub = { href: "/na
           <h2 className="visually-hidden">Narzędzie</h2>
           {children}
           <p className="print-only xsmall" style={{ marginTop: 16 }}>
-            {SITE.name} — {SITE.tagline}. Wygenerowano na {SITE.url.replace("https://", "")}{base}. Materiał informacyjny, nie stanowi porady prawnej.
+            {SITE.name}, {SITE.tagline}. Wygenerowano na {SITE.url.replace("https://", "")}{base}. Materiał informacyjny, nie stanowi porady prawnej.
           </p>
         </div>
       </section>
@@ -117,14 +117,14 @@ export function ToolLanding({ tool, preview, children, extra, hub = { href: "/na
         <div className="container">
           <div className="grid grid--2" style={{ alignItems: "start", gap: 32 }}>
             <div>
-              <img src="/brand/nowy-etap-logo-poradnia.png" alt="Nowy Etap — Poradnia rozwodowa" width={180} height={45} style={{ height: 34, width: "auto", marginBottom: 16 }} />
+              <img src="/brand/nowy-etap-logo-poradnia.png" alt="Nowy Etap, Poradnia rozwodowa" width={180} height={45} style={{ height: 34, width: "auto", marginBottom: 16 }} />
               <h2 style={{ fontSize: "var(--fs-xl)" }}>Kto przygotował to narzędzie?</h2>
-              <p>Nowy Etap pomaga w przygotowaniu rozwodu, mediacjach i wypracowywaniu ustaleń przedsądowych. Wierzymy, że najpierw warto mieć plan i ustalenia — dopiero potem pozew.</p>
+              <p>Nowy Etap pomaga w przygotowaniu rozwodu, mediacjach i wypracowywaniu ustaleń przedsądowych. Najpierw plan i ustalenia, dopiero potem pozew.</p>
               <Alert tone="info">
                 <p>Narzędzie dostarcza informacji i materiałów pomocniczych. <strong>Nie jest indywidualną poradą prawną</strong> i nie podejmuje decyzji za Ciebie. Wyniki opierają się wyłącznie na Twoich odpowiedziach.</p>
               </Alert>
               {!SITE.legalApproved && (
-                <p className="xsmall muted" style={{ marginTop: 12 }}>Wersja testowa — treści prawne w trakcie weryfikacji przez prawnika.</p>
+                <p className="xsmall muted" style={{ marginTop: 12 }}>Wersja testowa: treści prawne w trakcie weryfikacji przez prawnika.</p>
               )}
             </div>
             <div>

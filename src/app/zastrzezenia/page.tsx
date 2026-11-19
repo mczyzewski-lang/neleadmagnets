@@ -18,9 +18,9 @@ export default function Disclaimer() {
         <h2>Czym są nasze narzędzia</h2>
         <ul>
           <li>Narzędzia dostarczają informacji i materiałów pomocniczych. Nie są indywidualną poradą prawną, finansową ani psychologiczną.</li>
-          <li>Wyniki są obliczane deterministycznie na podstawie Twoich odpowiedzi według jawnych reguł — nie są losowe ani generowane przez AI.</li>
+          <li>Wyniki są obliczane deterministycznie na podstawie Twoich odpowiedzi według jawnych reguł. Nie są losowe ani generowane przez AI.</li>
           <li>Nie przewidujemy orzeczeń sądu, wysokości alimentów ani podziału majątku.</li>
-          <li>Nie podejmujemy decyzji za Ciebie — o rozwodzie, separacji, opiece czy alimentach decydujesz Ty (a w razie sporu — sąd).</li>
+          <li>Nie podejmujemy decyzji za Ciebie. O rozwodzie, separacji, opiece czy alimentach decydujesz Ty (a w razie sporu sąd).</li>
           <li>Prawo zagraniczne było jedynie inspiracją dla projektowania doświadczenia użytkownika. Wszystkie treści prawne dotyczą prawa polskiego.</li>
         </ul>
         <h2>Aktualność</h2>

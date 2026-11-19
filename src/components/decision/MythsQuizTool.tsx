@@ -54,7 +54,7 @@ export function MythsQuizTool() {
   const topics = topicsToRead(answers);
 
   const report = (): Report => ({
-    title: "Mity i fakty o rozwodzie — moje podsumowanie",
+    title: "Mity i fakty o rozwodzie: moje podsumowanie",
     intro: `Przegląd wiedzy z ${todayPL()}. Trafione odpowiedzi: ${r.correct}/${total}.`,
     sections: [
       { heading: "Wszystkie twierdzenia i wyjaśnienia", items: STATEMENTS.map((x) => `${x.text} → ${x.answer.toUpperCase()} (moja odpowiedź: ${answers[x.id] ? LABEL[answers[x.id]!] : "brak"}). ${x.explanation} Źródło: ${x.source}.`) },
@@ -151,7 +151,7 @@ export function MythsQuizTool() {
               <div className="quiz-item__head">
                 <span className="scenario__num" style={{ fontSize: "1.2rem" }}>{String(n + 1).padStart(2, "0")}</span>
                 <Verdict v={x.answer} />
-                <span className={`tag ${ok ? "tag--ok" : a === "nie-wiem" ? "" : "tag--warn"}`}>Twoja odpowiedź: {a ? LABEL[a] : "—"}</span>
+                <span className={`tag ${ok ? "tag--ok" : a === "nie-wiem" ? "" : "tag--warn"}`}>Twoja odpowiedź: {a ? LABEL[a] : "brak"}</span>
               </div>
               <p style={{ fontWeight: 600, marginBottom: 4 }}>{x.text}</p>
               <p className="small" style={{ marginBottom: 4 }}>{x.explanation}</p>
@@ -159,7 +159,7 @@ export function MythsQuizTool() {
             </article>
           );
         })}
-        <p className="xsmall muted">Stan prawny na 10.11.2026. Materiał informacyjny — nie stanowi porady prawnej.</p>
+        <p className="xsmall muted">Stan prawny na 10.11.2026. Materiał informacyjny, nie porada prawna.</p>
       </div>
 
       <div className="result-section">

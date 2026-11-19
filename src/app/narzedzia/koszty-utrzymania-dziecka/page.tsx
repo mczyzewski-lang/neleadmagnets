@@ -10,7 +10,7 @@ export const metadata = toolMetadata(SLUG);
 function Preview() {
   return (
     <div>
-      <p className="xsmall muted" style={{ margin: "6px 0 10px", fontWeight: 600 }}>PODZIAŁ KOSZTÓW · 1 DZIECKO, 7–12 LAT</p>
+      <p className="xsmall muted" style={{ margin: "6px 0 10px", fontWeight: 600 }}>PODZIAŁ KOSZTÓW · 2 DZIECI</p>
       <Donut
         title="Przykładowy podział kosztów"
         centerValue="1 860 zł"
@@ -25,8 +25,8 @@ function Preview() {
         ]}
       />
       <div className="kpis" style={{ marginTop: 10 }}>
-        <div className="kpi"><span className="kpi__label">Rocznie</span><span className="kpi__value" style={{ fontSize: 18 }}>22 320 zł</span></div>
-        <div className="kpi"><span className="kpi__label">Scenariusz „nowa szkoła”</span><span className="kpi__value" style={{ fontSize: 18 }}>+240 zł</span></div>
+        <div className="kpi"><span className="kpi__label">Dziecko 1 · 0–2 lata</span><span className="kpi__value" style={{ fontSize: 18 }}>820 zł</span></div>
+        <div className="kpi"><span className="kpi__label">Dziecko 2 · 13–18 lat</span><span className="kpi__value" style={{ fontSize: 18 }}>1 040 zł</span></div>
       </div>
     </div>
   );

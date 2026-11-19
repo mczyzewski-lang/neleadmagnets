@@ -2,7 +2,7 @@ import type { AdSet } from "./types";
 
 export const ads: AdSet = {
   slug: "koszty-wyprowadzki",
-  angle: "Praktyczne pytanie „ile potrzebuję na start w nowym mieszkaniu” — konkretna kwota, plan zakupów i liczba miesięcy, na które starczą oszczędności.",
+  angle: "Praktyczne pytanie „ile potrzebuję na start w nowym mieszkaniu”: konkretna kwota, plan zakupów i liczba miesięcy, na które starczą oszczędności.",
   targeting: "Search: frazy o kosztach wyprowadzki i najmu. Demand Gen/Meta: zainteresowania mieszkanie/najem, finanse osobiste, przeprowadzki; dorośli 25–55; bez remarketingu i podobnych odbiorców.",
   meta: {
     primaryTexts: [
@@ -32,11 +32,11 @@ export const ads: AdSet = {
   },
   search: {
     keywords: ["ile kosztuje wyprowadzka", "koszty wyprowadzki", "ile pieniędzy na wyprowadzkę", "koszt przeprowadzki do wynajmowanego mieszkania", "wyprowadzka po rozstaniu", "ile kosztuje wynajem na start", "kaucja za mieszkanie ile", "wyprowadzka od partnera koszty"],
-    headlines: ["Ile kosztuje wyprowadzka?", "Kalkulator wyprowadzki", "Policz kwotę na start", "Kaucja, meble, przeprowadzka", "Na ile starczą oszczędności?", "Bezpłatnie i bez rejestracji", "Wynik do pobrania w PDF", "Co można kupić później?", "Nowy Etap — poradnia", "Policz w 4 minuty"],
+    headlines: ["Ile kosztuje wyprowadzka?", "Kalkulator wyprowadzki", "Policz kwotę na start", "Kaucja, meble, przeprowadzka", "Na ile starczą oszczędności?", "Bezpłatnie i bez rejestracji", "Wynik do pobrania w PDF", "Co można kupić później?", "Nowy Etap, poradnia", "Policz w 4 minuty"],
     descriptions: [
       "Policz koszty startu w nowym mieszkaniu: kaucja, czynsz, przeprowadzka, meble, media.",
       "Sprawdź, na ile miesięcy wystarczą oszczędności po przeprowadzce. Bezpłatny kalkulator.",
-      "Wpisujesz własne kwoty — bez średnich i zgadywania. Zestawienie pobierzesz jako PDF.",
+      "Wpisujesz własne kwoty, bez średnich i zgadywania. Zestawienie pobierzesz jako PDF.",
       "Uwzględnij okres przejściowy i potrzeby dzieci. Obliczenia w Twojej przeglądarce.",
     ],
     paths: ["wyprowadzka", "kalkulator"],

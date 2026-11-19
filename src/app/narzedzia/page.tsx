@@ -23,7 +23,7 @@ export default function ToolsHub() {
           <div style={{ maxWidth: 760 }}>
             <span className="eyebrow">Centrum bezpłatnych narzędzi · Nowy Etap</span>
             <h1>Co jeśli się rozstaniemy?</h1>
-            <p className="hero__sub">Sprawdź, jakie sprawy warto uporządkować — zanim podejmiesz kolejne kroki.</p>
+            <p className="hero__sub">Sprawdź, co warto uporządkować przed kolejnymi krokami.</p>
             <ul className="hero__meta">
               <li><Icon name="check" /> 8 narzędzi z indywidualnym wynikiem</li>
               <li><Icon name="lock" /> Bez konta i bez podawania danych</li>
@@ -54,7 +54,7 @@ export default function ToolsHub() {
         <div className="container">
           <span className="eyebrow">Nowy dział</span>
           <h2 id="pd-h">Zanim podejmiesz decyzję</h2>
-          <p className="lead" style={{ maxWidth: 680 }}>Narzędzia dla osób, które dopiero rozważają rozstanie: koszty, prawa, możliwe drogi i przygotowanie do rozmowy — bez presji.</p>
+          <p className="lead" style={{ maxWidth: 680 }}>Dla osób, które dopiero rozważają rozstanie: koszty, prawa, możliwe drogi i przygotowanie do rozmowy. Bez presji.</p>
           <div className="grid grid--2 grid--4-wide" style={{ marginTop: 20 }}>
             {DECISION_TOOLS.slice(0, 8).map((t) => (
               <Link key={t.slug} href={`/przed-decyzja/${t.slug}`} className="card card-link" style={{ padding: 18 }}>
@@ -74,11 +74,11 @@ export default function ToolsHub() {
             <div>
               <span className="eyebrow">Nasze podejście</span>
               <h2>{SITE.claim}</h2>
-              <p>Wiele osób zaczyna od pytań o mieszkanie, pieniądze i dzieci — na długo przed rozmową z kancelarią. Te narzędzia pomagają uporządkować te pytania we własnym tempie. Jeśli zechcesz, pomożemy przygotować ustalenia przed pozwem.</p>
+              <p>Pytania o mieszkanie, pieniądze i dzieci pojawiają się długo przed rozmową z kancelarią. Te narzędzia pomagają je uporządkować we własnym tempie. Jeśli zechcesz, pomożemy przygotować ustalenia przed pozwem.</p>
               <Link href="/plan-rozwodu" className="btn btn--gold">Poznaj bezpłatny Plan Rozwodu</Link>
             </div>
             <ul className="list-check" style={{ color: "#e3ebe9" }}>
-              <li>Wynik liczony jest w Twojej przeglądarce — nie zapisujemy odpowiedzi.</li>
+              <li>Wynik liczy się w Twojej przeglądarce. Nie zapisujemy odpowiedzi.</li>
               <li>Nie pytamy o imiona dzieci ani dane, które nie są potrzebne.</li>
               <li>Nie podejmujemy decyzji za Ciebie i nie przewidujemy wyroków.</li>
               <li>Odezwiemy się tylko, jeśli sam(a) o to poprosisz.</li>
@@ -91,7 +91,7 @@ export default function ToolsHub() {
         <div className="container">
           <span className="eyebrow">Do pobrania</span>
           <h2 id="materialy-h">Bezpłatne przewodniki, checklisty i planery</h2>
-          <p className="lead" style={{ maxWidth: 680 }}>Praktyczne materiały do przeczytania, wydrukowania i wypełnienia — od dokumentów do rozwodu po plan pierwszych świąt po rozstaniu.</p>
+          <p className="lead" style={{ maxWidth: 680 }}>Do przeczytania, wydrukowania i wypełnienia: od dokumentów do rozwodu po plan pierwszych świąt po rozstaniu.</p>
           <div className="grid grid--2 grid--4-wide" style={{ marginTop: 24 }}>
             {MATERIALS.map((m) => <MaterialCard key={m.slug} m={m} compact headingLevel={3} />)}
           </div>

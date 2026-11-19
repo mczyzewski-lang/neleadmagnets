@@ -3,18 +3,18 @@ import type { AdSet } from "./types";
 // Na podstawie MARKETING/ADS.md
 export const ads: AdSet = {
   "slug": "plan-opieki-nad-dzieckiem",
-  "angle": "Dziecko w centrum: kalendarz tygodnia, święta i wakacje jako propozycja do spokojnej rozmowy.",
+  "angle": "Dziecko w centrum: kalendarz tygodnia (gotowy model, własny układ lub gniazdowanie), święta i wakacje jako propozycja do spokojnej rozmowy.",
   "targeting": "Kontekstowe i tematyczne: treści o finansach osobistych, prawie, rodzinie i poradnikach; Search: frazy informacyjne. Demografia szeroka (25–60). Bez remarketingu, list klientów, podobnych odbiorców i segmentów opartych na wnioskowaniu o kryzysie w związku.",
   "meta": {
     "primaryTexts": [
       "Jak może wyglądać tydzień dziecka w dwóch domach? Ułóż kalendarz i zobacz go od razu na ekranie.",
-      "Wigilia, ferie, urodziny — plan opieki pomaga ustalić to wcześniej, nie w ostatniej chwili. Bezpłatny kreator.",
+      "Wigilia, ferie, urodziny. Ustalcie je wcześniej, także święta w latach parzystych i nieparzystych. Bezpłatny kreator.",
       "Kalendarz opieki do wydruku: tydzień, miesiąc, święta i lista punktów do omówienia. Propozycja do rozmowy."
     ],
     "headlines": [
       "Tydzień dziecka w dwóch domach",
       "Kalendarz opieki do rozmowy",
-      "Święta i ferie — ustalcie wcześniej",
+      "Święta i ferie: ustalcie wcześniej",
       "Plan opieki do wydruku"
     ],
     "descriptions": [
@@ -28,7 +28,7 @@ export const ads: AdSet = {
     "headlines": [
       "Tydzień dziecka w dwóch domach",
       "Kalendarz opieki do rozmowy",
-      "Święta i ferie — ustalcie wcześniej",
+      "Święta i ferie: ustalcie wcześniej",
       "Co ustalone, co do omówienia",
       "Plan opieki do wydruku"
     ],
@@ -38,9 +38,9 @@ export const ads: AdSet = {
       "Wigilia, ferie, urodziny. Plan opieki pomaga ustalić to wcześniej, nie w ostatniej chwili"
     ],
     "descriptions": [
-      "Kilka modeli opieki, kalendarz 2-tygodniowy i miesięczny, lista punktów otwartych, PDF.",
-      "Nie pytamy o imię dziecka. Narzędzie nie rekomenduje modelu — pomaga go rozpisać.",
-      "Propozycja do rozmowy z drugim rodzicem — nie wiążąca umowa. Bezpłatnie."
+      "Gotowe modele, własny układ lub gniazdowanie. Kalendarz 2-tygodniowy i miesięczny, PDF.",
+      "Nie pytamy o imię dziecka. Narzędzie nie rekomenduje modelu, tylko pomaga go rozpisać.",
+      "Propozycja do rozmowy z drugim rodzicem, nie umowa. Bezpłatnie."
     ],
     "cta": "Ułóż plan",
     "creative": "Wideo 20 s: ręka przestawia dni w kalendarzu na telefonie (zieleń/złoto) → widok miesiąca → sekcja „Święta” → wydruk na stole → end card."
@@ -63,15 +63,16 @@ export const ads: AdSet = {
       "Święta, ferie, urodziny",
       "Propozycja do rozmowy",
       "Kreator planu rodzicielskiego",
-      "Nowy Etap — poradnia",
+      "Nowy Etap, poradnia",
       "Bezpłatnie, bez logowania",
       "Wynik do pobrania (PDF)",
-      "Bez danych dziecka"
+      "Bez danych dziecka",
+      "Także gniazdowanie"
     ],
     "descriptions": [
-      "Ułóż wstępny plan opieki: tydzień, weekendy, wakacje, święta. Kalendarz i PDF od razu.",
-      "Kilka modeli do wyboru lub własny układ dni. Lista punktów, które zostają do omówienia.",
-      "Propozycja do rozmowy z drugim rodzicem — nie wiążąca umowa. Bezpłatnie, bez logowania.",
+      "Ułóż wstępny plan opieki: tydzień, wakacje, święta w latach parzystych i nieparzystych.",
+      "Gotowe modele, własny układ dni lub gniazdowanie. Lista punktów do omówienia.",
+      "Propozycja do rozmowy z drugim rodzicem, nie umowa. Bezpłatnie, bez logowania.",
       "Nie pytamy o imię dziecka. Dane zostają w Twojej przeglądarce."
     ],
     "paths": [

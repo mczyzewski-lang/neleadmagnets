@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 
 /** Mobilne CTA pokazywane, gdy przycisk w hero zniknie z ekranu, a narzędzie nie jest jeszcze widoczne. */
-export function StickyCta({ label = "Rozpocznij — to bezpłatne" }: { label?: string }) {
+export function StickyCta({ label = "Rozpocznij bezpłatnie" }: { label?: string }) {
   const [visible, setVisible] = useState(false);
   useEffect(() => {
     const hero = document.getElementById("hero-cta");

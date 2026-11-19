@@ -1,10 +1,10 @@
 /**
- * Kalkulator kosztów wyprowadzki. Wszystkie kwoty wpisuje użytkownik — brak domyślnych „cen rynkowych”.
+ * Kalkulator kosztów wyprowadzki. Wszystkie kwoty wpisuje użytkownik, bez domyślnych „cen rynkowych”.
  */
 export type MoveCategory = "najem" | "przeprowadzka" | "wyposazenie" | "media" | "przejsciowe" | "dzieci" | "inne";
 
 export const CATEGORIES: { id: MoveCategory; label: string; color: string }[] = [
-  { id: "najem", label: "Najem — na start", color: "#295550" },
+  { id: "najem", label: "Najem: na start", color: "#295550" },
   { id: "przeprowadzka", label: "Przeprowadzka", color: "#C79B59" },
   { id: "wyposazenie", label: "Meble i wyposażenie", color: "#4a6d68" },
   { id: "media", label: "Media i przyłączenia", color: "#7E5B26" },
@@ -28,7 +28,7 @@ export type MoveInput = {
   depositMultiplier: number; // kaucja = X × czynsz (założenie użytkownika)
   agencyFee?: number;
   firstMonthUpfront: boolean; // czynsz za pierwszy miesiąc z góry
-  monthlyBills?: number; // media, internet, telefon — miesięcznie
+  monthlyBills?: number; // media, internet, telefon, miesięcznie
   transitionMonths: number;
   transitionMonthly?: number; // dodatkowy koszt miesięczny w okresie przejściowym (np. dalsza rata/czynsz w poprzednim miejscu)
   savings?: number;
@@ -98,16 +98,17 @@ export function postponeList(i: MoveInput): string[] {
   const l = i.items.filter((x) => x.on && x.deferrable).map((x) => x.label);
   l.push("Większe zakupy można rozłożyć na kilka miesięcy lub rozważyć używane meble.");
   if (n(i.agencyFee)) l.push("Zapytaj, czy można wynająć bez pośrednika lub negocjować prowizję.");
-  if (i.depositMultiplier > 1) l.push("Kaucję czasem da się negocjować (np. rozłożyć na raty) — zapytaj wynajmującego.");
+  if (i.depositMultiplier > 1) l.push("Kaucję czasem da się negocjować (np. rozłożyć na raty). Zapytaj wynajmującego.");
   return l;
 }
 
 export function tips(i: MoveInput, s: MoveSummary): string[] {
   const t: string[] = [];
-  if (s.savingsAfterStart !== undefined && s.savingsAfterStart < 0) t.push("Koszty startu przekraczają podane oszczędności — rozważ odłożenie części zakupów lub inne terminy.");
+  if (s.savingsAfterStart !== undefined && s.savingsAfterStart < 0) t.push("Koszty startu przekraczają oszczędności. Rozważ odłożenie części zakupów lub inne terminy.");
   if (s.monthsCovered !== undefined && s.monthsCovered < 3 && s.savingsAfterStart! >= 0) t.push("Po starcie oszczędności pokryją mniej niż 3 miesiące nowego mieszkania. Sprawdź swój budżet w kalkulatorze „Budżet po rozstaniu”.");
   if (i.transitionMonths > 0 && n(i.transitionMonthly)) t.push("Ustal z drugą osobą na piśmie, kto i do kiedy płaci koszty dotychczasowego mieszkania.");
-  t.push("Zachowaj potwierdzenia wydatków — mogą być pomocne przy późniejszych rozliczeniach.");
-  t.push("Przed wyprowadzką z mieszkania z dziećmi lub wspólnego lokalu warto skonsultować skutki (np. dla ustaleń dotyczących dzieci i mieszkania).");
+  t.push("Zachowaj potwierdzenia wydatków. Mogą się przydać przy późniejszych rozliczeniach.");
+  if (i.items.some((x) => x.category === "dzieci")) t.push("Przed wyprowadzką z dziećmi warto skonsultować skutki dla ustaleń o opiece i kontaktach. Najlepiej najpierw porozmawiać z drugim rodzicem.");
+  else t.push("Wyprowadzka nie zwalnia z umowy najmu ani kredytu, której jesteś stroną. Sprawdź to przed przeprowadzką.");
   return t;
 }

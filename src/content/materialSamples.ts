@@ -14,19 +14,19 @@ export type MaterialSample = {
 export const MATERIAL_SAMPLES: Record<string, MaterialSample> = {
   "bezpieczenstwo-cyfrowe-i-finansowe": {
     fields: {
-      "Usługa / właściciel konta / kto płaci": "Netflix — konto wspólne, płacę ja → przenieść",
+      "Usługa 1: właściciel konta, kto płaci": "Netflix, konto wspólne, płacę ja → przenieść",
       "Konta dzieci (kto zarządza, co ustalić z drugim rodzicem)":
-        "konto Google Oli (8 l.) — ustalić wspólnie kontrolę rodzicielską",
+        "konto Google Oli (8 l.): ustalić wspólnie kontrolę rodzicielską",
       "Co chcę zrobić w tym tygodniu": "2FA na poczcie i w banku, do 17.11",
     },
     ticks: {
       "Zmień hasło do głównej poczty na nowe, długie i niepowtarzalne (najlepiej fraza z kilku słów).":
         "zrobione 12.11",
-      "Włącz weryfikację dwuetapową (2FA) — najlepiej przez aplikację uwierzytelniającą lub klucz sprzętowy, a nie tylko SMS.":
+      "Włącz weryfikację dwuetapową (2FA), najlepiej przez aplikację uwierzytelniającą lub klucz sprzętowy, a nie tylko SMS.":
         "",
       "Sprawdź w ustawieniach poczty listę zalogowanych urządzeń i wyloguj wszystkie, których nie rozpoznajesz.":
-        "stary tablet — wylogowany",
-      "Zaktualizuj telefon i e-mail odzyskiwania — upewnij się, że to twoje dane, a nie drugiej osoby.":
+        "stary tablet: wylogowany",
+      "Zaktualizuj telefon i e-mail odzyskiwania: to mają być twoje dane, nie drugiej osoby.":
         "",
       "Zmień hasła do bankowości elektronicznej i sprawdź zaufane urządzenia w aplikacji banku.":
         "",
@@ -36,17 +36,17 @@ export const MATERIAL_SAMPLES: Record<string, MaterialSample> = {
 
   "checklista-dokumentow": {
     fields: {
-      "Dokumenty ustaleń i próby mediacji — co mam, czego brakuje:": "mam wniosek do mediatora, brak potwierdzenia doręczenia",
+      "Dokumenty ustaleń i próby mediacji (co mam, czego brakuje):": "mam zaproszenie do mediacji, brak potwierdzenia od mediatora",
       "Dokumenty, które już mam (lista):": "akt małżeństwa, PIT za 2025, umowa kredytu",
-      "Brakuje mi — do zamówienia online:": "akty urodzenia Oli i Kuby (gov.pl)",
-      "Brakuje mi — do odebrania osobiście (gdzie, kiedy):": "zaświadczenie o saldzie — oddział, pt 20.11",
+      "Brakuje mi (do zamówienia online):": "akty urodzenia Oli i Kuby (gov.pl)",
+      "Brakuje mi (do odebrania osobiście, gdzie i kiedy):": "zaświadczenie o saldzie: oddział, pt 20.11",
       "Pytania do banku:": "czy można przejąć kredyt samodzielnie?",
       "Pytania do prawnika:": "jak opisać plan kontaktów w pozwie?",
       "Termin, do którego chcę mieć komplet:": "do 30.11",
     },
     ticks: {
-      "Odpis skrócony aktu małżeństwa — z USC lub online przez gov.pl.": "mam — skan w chmurze",
-      "Odpisy skrócone aktów urodzenia wspólnych małoletnich dzieci — j.w.": "zamówione 3.11",
+      "Odpis skrócony aktu małżeństwa z USC lub online przez gov.pl.": "mam, skan w chmurze",
+      "Odpisy skrócone aktów urodzenia wspólnych małoletnich dzieci.": "zamówione 3.11",
       "Twój numer PESEL i aktualne adresy obu stron (do wpisania w pozwie).": "",
       "Mam dokumenty o swoich dochodach (PIT za ostatni rok, zaświadczenie z pracy).": "PIT jest, zaświadczenie od kadr",
       "Umowa kredytu wraz z aneksami.": "",
@@ -56,13 +56,13 @@ export const MATERIAL_SAMPLES: Record<string, MaterialSample> = {
   "inwentaryzacja-majatku": {
     fields: {
       "Forma prawna (JDG, spółka cywilna, spółka z o.o., inna) i kto jest właścicielem / wspólnikiem:":
-        "JDG — prowadzi M.",
+        "JDG, prowadzi M.",
       "Data założenia (przed ślubem / w trakcie małżeństwa):": "2019, w trakcie małżeństwa",
-      "Udziały / akcje — liczba i szacowana wartość:": "brak (JDG)",
+      "Udziały / akcje: liczba i szacowana wartość:": "brak (JDG)",
       "Środki trwałe (sprzęt, pojazdy firmowe, lokal):": "laptop, drukarka, auto w leasingu",
       "Środki na rachunkach firmowych na dzień …:": "ok. 18 000 zł na 31.10",
       "Zobowiązania firmy (kredyty, leasingi, zaległości):": "leasing auta, ok. 900 zł/mc",
-      "Czy w firmę inwestowano środki wspólne lub osobiste — jakie i kiedy:":
+      "Czy w firmę inwestowano środki wspólne lub osobiste (jakie i kiedy):":
         "ok. 15 000 zł ze wspólnych oszczędności, 2019?",
       "Łączna szacunkowa wartość majątku wspólnego / współwłasności:": "ok. 640 000 zł (mieszkanie + auto)",
       "Łączna kwota długów wspólnych:": "kredyt ok. 310 000 zł",
@@ -86,14 +86,14 @@ export const MATERIAL_SAMPLES: Record<string, MaterialSample> = {
       "Co zmieni się dla dziecka (dom, grafik, szkoła):": "dwa domy, co drugi weekend u taty",
       "Co zostaje bez zmian:": "szkoła, basen we wtorki, babcia",
       "Kiedy i gdzie porozmawiamy:": "sobota 21.11 rano, w domu",
-      "Kto zacznie rozmowę, kto odpowie na pytania praktyczne:": "zaczynam ja, plan tygodnia — K.",
+      "Kto zacznie rozmowę, kto odpowie na pytania praktyczne:": "zaczynam ja, plan tygodnia K.",
       "Pytania, których się spodziewamy, i nasze odpowiedzi:":
-        "„Czy to przeze mnie?” — nie, to decyzja dorosłych",
+        "„Czy to przeze mnie?” Nie, to decyzja dorosłych",
       "Jak będziemy się informować o reakcjach dziecka w kolejnych tygodniach:":
         "krótki SMS w niedzielę wieczorem",
     },
     ticks: {
-      "Uzgodnijcie z drugim rodzicem wspólną, prostą wersję wyjaśnienia — bez szczegółów o winie.":
+      "Uzgodnijcie z drugim rodzicem wspólną, prostą wersję wyjaśnienia, bez szczegółów o winie.":
         "ustalone 10.11",
       "Ustalcie, co konkretnie zmieni się dla dziecka: gdzie będzie mieszkać, kiedy będzie z każdym z rodziców, co zostaje bez zmian (szkoła, przyjaciele, zajęcia).":
         "",
@@ -114,10 +114,10 @@ export const MATERIAL_SAMPLES: Record<string, MaterialSample> = {
     fields: {
       "Co jest dla mojego dziecka w świętach najważniejsze (osoby, tradycje, miejsca)?":
         "ubieranie choinki, babcia, pierogi",
-      "Co jest najważniejsze dla mnie — i z czego mogę w tym roku zrezygnować?":
+      "Co jest najważniejsze dla mnie i z czego mogę w tym roku zrezygnować?":
         "spokojna Wigilia; odpuszczam 12 potraw",
       "Czy mamy już jakieś ustalenia (wyrok, ugoda, porozumienie) dotyczące świąt?":
-        "jeszcze nie — rozmowa do 30.11",
+        "jeszcze nie, rozmowa do 30.11",
       "Jakie są plany dalszej rodziny (dziadkowie, wyjazdy), o których wiem?":
         "dziadkowie K. jadą w góry 26.12",
       "Wybrany model (naprzemiennie / podział dni / podwójne święta)": "podział dni",
@@ -126,16 +126,16 @@ export const MATERIAL_SAMPLES: Record<string, MaterialSample> = {
       "Pierwszy dzień świąt 25 grudnia: u kogo, godziny": "u taty, od 10:00",
       "Drugi dzień świąt 26 grudnia: u kogo, godziny": "u taty, powrót 18:00",
       "Kontakt telefoniczny lub wideo z drugim rodzicem: kiedy": "wideo 24.12 o 19:00",
-      "Spotkania z dziadkami i dalszą rodziną": "moi rodzice — Wigilia, K. — 25.12",
+      "Spotkania z dziadkami i dalszą rodziną": "moi rodzice: Wigilia, K.: 25.12",
       "Jak będzie w przyszłym roku (zamiana?)": "tak, zamiana",
       "Lista życzeń dziecka": "klocki, łyżwy, książka o kosmosie",
       "Kupuje rodzic A": "łyżwy",
       "Kupuje rodzic B": "klocki",
-      "Wspólny prezent (jeśli jest) i podział kosztów": "rower — po 50%, ok. 400 zł każde",
+      "Wspólny prezent (jeśli jest) i podział kosztów": "rower, po 50%, ok. 400 zł każde",
       "Ustalenia z dziadkami": "książki i ubrania, bez elektroniki",
-      "24 grudnia — co robię, z kim": "Wigilia z dziećmi, potem rodzice",
-      "25 grudnia — co robię, z kim": "obiad u siostry",
-      "26 grudnia — co robię, z kim": "spacer z A., kino wieczorem",
+      "24 grudnia: co robię, z kim": "Wigilia z dziećmi, potem rodzice",
+      "25 grudnia: co robię, z kim": "obiad u siostry",
+      "26 grudnia: co robię, z kim": "spacer z A., kino wieczorem",
       "Do kogo mogę zadzwonić, gdy będzie trudno": "siostra, A., 116 123",
       "Sylwester / Nowy Rok: u kogo dziecko, godziny": "u mnie, do 1.01 g. 12:00",
       "Termin ferii w naszym województwie": "sprawdzić na gov.pl",
@@ -153,12 +153,12 @@ export const MATERIAL_SAMPLES: Record<string, MaterialSample> = {
 
   "przygotowanie-do-konsultacji": {
     fields: {
-      "Czy któraś ze stron proponowała już mediację lub inne polubowne rozwiązanie? Kiedy, w jakiej formie i z jaką odpowiedzią?": "ja — mailem 2.11, brak odpowiedzi",
+      "Czy któraś ze stron proponowała już mediację lub inne polubowne rozwiązanie? Kiedy, w jakiej formie i z jaką odpowiedzią?": "ja, mailem 2.11, brak odpowiedzi",
       "Data zawarcia małżeństwa i miejsce (USC)": "06.2014, USC w Poznaniu",
       "Ustrój majątkowy: wspólność ustawowa / rozdzielność / inny": "wspólność ustawowa",
       "Dzieci: imiona (lub inicjały) i wiek": "O. (8 l.), J. (5 l.)",
       "Z kim obecnie mieszkają dzieci i jak wyglądają kontakty z drugim rodzicem":
-        "ze mną; tata — śr. i co drugi weekend",
+        "ze mną; tata: śr. i co drugi weekend",
       "Od kiedy mieszkacie osobno (jeśli tak)": "od września 2026",
       "Najważniejsze składniki majątku (nieruchomości, samochody, oszczędności, firma)":
         "mieszkanie (kredyt), auto, ok. 20 tys. oszczędności",
@@ -173,7 +173,7 @@ export const MATERIAL_SAMPLES: Record<string, MaterialSample> = {
         "mec. W., 450 zł, dużo żargonu",
       "Specjalista 3: imię i nazwisko, koszt, sposób pracy, moje wrażenie":
         "online, 300 zł, szybko, ale pośpiesznie",
-      "Kto najlepiej wyjaśnił moje opcje prostym językiem?": "B. — narysowała mi schemat",
+      "Kto najlepiej wyjaśnił moje opcje prostym językiem?": "B., narysowała mi schemat",
       "Z kim czuję się bezpiecznie i swobodnie?": "z B.",
       "Trzy najważniejsze rzeczy, które usłyszałem/usłyszałam":
         "spisać ustalenia; nie wyprowadzać się pochopnie; mediacja ma sens",
@@ -183,7 +183,7 @@ export const MATERIAL_SAMPLES: Record<string, MaterialSample> = {
     },
     ticks: {
       "Dokument tożsamości": "",
-      "Odpis aktu małżeństwa (jeśli masz)": "mam — skan w chmurze",
+      "Odpis aktu małżeństwa (jeśli masz)": "mam, skan w chmurze",
       "Odpisy aktów urodzenia dzieci (jeśli masz)": "",
       "Dokumenty dotyczące nieruchomości: numer księgi wieczystej, akt notarialny": "nr KW w notesie",
       "Umowy kredytowe i aktualne harmonogramy spłat": "",
@@ -197,35 +197,35 @@ export const MATERIAL_SAMPLES: Record<string, MaterialSample> = {
 
   "przygotowanie-do-mediacji": {
     fields: {
-      "Data wysłania wniosku o mediację:": "4.11.2026",
-      "Mediator lub ośrodek mediacyjny (imię i nazwisko / nazwa, kontakt):": "ośrodek przy ul. Długiej — p. K.",
-      "Jak i kiedy wniosek został doręczony drugiej stronie (list polecony, e-mail, przez mediatora):": "list polecony 5.11, zwrotka jest",
-      "Odpowiedź drugiej strony (data, treść w skrócie):": "12.11 — na razie odmowa",
-      "Przebieg lub wynik (spotkania, ugoda, częściowe ustalenia, brak zgody):": "mediator wyśle info na piśmie",
-      "Dokumenty, które zachowuję (kopia wniosku, dowód doręczenia, korespondencja, informacja od mediatora):": "kopia wniosku, zwrotka, maile",
+      "Data wysłania zaproszenia do mediacji:": "4.11.2026",
+      "Mediator lub ośrodek mediacyjny (imię i nazwisko / nazwa, kontakt):": "ośrodek przy ul. Długiej, p. K.",
+      "Kto i jak wysłał zaproszenie (ja, mediator; e-mail, list, telefon):": "mediator, e-mail 5.11",
+      "Odpowiedź drugiej strony (data, treść w skrócie):": "12.11, na razie odmowa",
+      "Przebieg lub wynik (spotkania, ugoda, częściowe ustalenia, brak zgody):": "mediator potwierdzi odmowę na piśmie",
+      "Dokumenty, które zachowuję (zaproszenie, odpowiedź, korespondencja, potwierdzenie od mediatora):": "zaproszenie, odpowiedź, maile",
       "Gdzie je przechowuję (folder, skany w chmurze):": "teczka „rozwód” + skany",
       "Trzy najważniejsze dla mnie sprawy (w kolejności):": "1. czas z dziećmi 2. mieszkanie 3. alimenty",
-      "Dlaczego każda z nich jest dla mnie ważna (jaka potrzeba za nią stoi — bezpieczeństwo, stabilność, czas z dziećmi, spokój finansowy):":
+      "Dlaczego każda z nich jest dla mnie ważna (jaka potrzeba za nią stoi: bezpieczeństwo, stabilność, czas z dziećmi, spokój finansowy):":
         "stabilność dla dzieci, spokój finansowy",
       "Jak będzie wyglądało moje życie za rok, jeśli porozumienie się uda:":
         "stały grafik, mniej nerwów, spokojne przekazania",
       "Imię i wiek dziecka:": "Ola, 8 lat",
       "Co daje mu poczucie bezpieczeństwa (rytuały, osoby, miejsca):": "czytanie przed snem, babcia, jej pokój",
-      "Szkoła/przedszkole, zajęcia, przyjaciele — co powinno zostać bez zmian:":
+      "Szkoła/przedszkole, zajęcia, przyjaciele: co powinno zostać bez zmian:":
         "ta sama szkoła, basen we wtorki",
-      "Szczególne potrzeby (zdrowie, terapia, nauka):": "alergia — leki zawsze w plecaku",
+      "Szczególne potrzeby (zdrowie, terapia, nauka):": "alergia, leki zawsze w plecaku",
       "Jak dziecko znosi zmiany i przejścia między domami:": "w niedzielę wieczorem marudna, potem OK",
-      "Co dziecko mówiło o rozstaniu (bez wypytywania — to, co samo powiedziało):":
+      "Co dziecko mówiło o rozstaniu (bez wypytywania, to, co samo powiedziało):":
         "„czy kot może być w obu domach?”",
       "Czego dziecko potrzebuje od każdego z rodziców:": "przewidywalności i żeby się nie kłócili",
       "Moja najlepsza realna alternatywa bez porozumienia (np. sprawa w sądzie, osobne ustalenia z pomocą prawnika):":
         "sprawa w sądzie z pełnomocnikiem",
-      "Ile może mnie to kosztować — czasu, pieniędzy, emocji, relacji z dziećmi:":
+      "Ile może mnie to kosztować (czasu, pieniędzy, emocji, relacji z dziećmi):":
         "dużo czasu i nerwów, kilka tys. zł",
       "Czego realnie mogę się spodziewać w sądzie (najlepiej omówione z prawnikiem):":
-        "omówić z mec. B. — termin 26.11",
+        "omówić z mec. B., termin 26.11",
       "Jaka propozycja byłaby dla mnie lepsza niż ta alternatywa:": "grafik 2-2-5-5 i stała kwota na dzieci",
-      "Poniżej czego nie zejdę — i dlaczego:": "dzieci zostają w tej samej szkole",
+      "Poniżej czego nie zejdę i dlaczego:": "dzieci zostają w tej samej szkole",
       "Co mogę zaproponować, żeby druga strona też zyskała:": "elastyczne weekendy, dłuższe wakacje u K.",
     },
     ticks: {
@@ -240,12 +240,12 @@ export const MATERIAL_SAMPLES: Record<string, MaterialSample> = {
 
   "rozmowa-z-bankiem": {
     fields: {
-      "Opcja, którą preferuję — i dlaczego": "przejmuję kredyt — zdolność OK wg doradcy",
+      "Opcja, którą preferuję, i dlaczego": "przejmuję kredyt, zdolność OK wg doradcy",
       "Opcja, którą mogę zaakceptować awaryjnie": "sprzedaż i spłata, podział nadwyżki",
       "Czego nie zaakceptuję (moja granica)": "wspólny kredyt bez terminu",
-      "Co już uzgodniliśmy (i gdzie to zapisaliśmy)": "raty po połowie do marca — mail 10.11",
+      "Co już uzgodniliśmy (i gdzie to zapisaliśmy)": "raty po połowie do marca, mail 10.11",
       "Sprawy do omówienia z mediatorem lub prawnikiem": "rozliczenie wkładu własnego",
-      "Numer umowy kredytu i data zawarcia": "z umowy — podpisana 03.2018",
+      "Numer umowy kredytu i data zawarcia": "z umowy, podpisana 03.2018",
       "Kredytobiorcy wpisani w umowie": "oboje (ja i K.)",
       "Aktualne saldo zadłużenia (kapitał do spłaty)": "ok. 310 000 zł",
       "Wysokość bieżącej raty i dzień płatności": "2 450 zł, 10. dnia miesiąca",
@@ -261,8 +261,8 @@ export const MATERIAL_SAMPLES: Record<string, MaterialSample> = {
       "Inne stałe zobowiązania (raty, limity na kartach, leasing)": "karta, limit 3 000 zł",
       "Stałe koszty życia (czynsz, media, dojazdy)": "ok. 1 400 zł",
       "Wydatki na dzieci i ewentualne alimenty (płacone lub otrzymywane)": "ok. 2 000 zł, alimenty do ustalenia",
-      "Ile wyniesie spłata drugiej osoby i skąd będą na nią środki?": "ok. 145 tys. zł? — pomoc rodziców + oszczędności",
-      "Ile zostaje miesięcznie po opłaceniu raty i kosztów?": "ok. 900 zł — mało, policzyć jeszcze raz",
+      "Ile wyniesie spłata drugiej osoby i skąd będą na nią środki?": "ok. 145 tys. zł? pomoc rodziców + oszczędności",
+      "Ile zostaje miesięcznie po opłaceniu raty i kosztów?": "ok. 900 zł, mało, policzyć jeszcze raz",
       "Data, godzina, forma kontaktu (telefon / oddział / czat)": "12.11, 14:30, oddział",
       "Imię i stanowisko osoby z banku": "p. Ania, doradca kredytowy",
       "Opcje, które bank uznał za możliwe do rozważenia": "zwolnienie K. po ocenie mojej zdolności",
@@ -272,13 +272,13 @@ export const MATERIAL_SAMPLES: Record<string, MaterialSample> = {
     },
     ticks: {
       "Dokument tożsamości każdej osoby, której dotyczy zmiana": "",
-      "Umowa kredytu z aneksami i aktualny harmonogram spłat": "mam — skan w chmurze",
+      "Umowa kredytu z aneksami i aktualny harmonogram spłat": "mam, skan w chmurze",
       "Zaświadczenie o dochodach lub inne dokumenty potwierdzające dochód (np. wyciągi z konta, PIT)":
         "z kadr do 19.11",
       "Odpis księgi wieczystej lub jej numer": "",
       "Polisy ubezpieczeniowe powiązane z kredytem": "",
       "Czy bank w ogóle rozpatruje wnioski o zwolnienie współkredytobiorcy? Jakie są kryteria?":
-        "tak — ocena zdolności",
+        "tak, ocena zdolności",
       "Jakie są koszty aneksu i innych czynności?": "",
     },
   },
@@ -287,7 +287,7 @@ export const MATERIAL_SAMPLES: Record<string, MaterialSample> = {
     fields: {
       "Czy oboje chcemy rozwodu bez orzekania o winie? (tak / nie / do rozmowy)": "tak",
       "Miejsce zamieszkania dzieci i plan kontaktów:": "u mnie; tata śr. + co drugi weekend",
-      "Proponowana wysokość alimentów i sposób płatności:": "do rozmowy — przelew do 10. dnia",
+      "Proponowana wysokość alimentów i sposób płatności:": "do rozmowy, przelew do 10. dnia",
       "Kto zostaje w mieszkaniu, kto płaci rachunki:": "ja z dziećmi, rachunki płacę ja",
       "Co robimy z kredytem i wspólnymi kontami:": "pytam w banku 12.11; konto wspólne zamknąć",
       "Majątek: dzielimy teraz / później / w jaki sposób:": "później, umownie",
@@ -296,7 +296,7 @@ export const MATERIAL_SAMPLES: Record<string, MaterialSample> = {
     ticks: {
       "Gdzie będą mieszkać dzieci i jak będą wyglądały kontakty z drugim rodzicem (dni powszednie, weekendy, wakacje, święta).":
         "wstępnie ustalone",
-      "Kto zostaje w mieszkaniu i do kiedy — oraz kto pokrywa bieżące opłaty.": "",
+      "Kto zostaje w mieszkaniu i do kiedy oraz kto pokrywa bieżące opłaty.": "",
       "Czy chcecie dzielić majątek od razu, czy później.": "później",
       "Czy oboje zgadzacie się na rozwód bez orzekania o winie.": "",
       "Odpis aktu małżeństwa (z urzędu stanu cywilnego; można zamówić online przez gov.pl).": "zamówione 3.11",

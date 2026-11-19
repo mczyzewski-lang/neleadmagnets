@@ -32,22 +32,46 @@ describe("pozew-rozwodowy-checklista", () => {
     expect(g[0].id).toBe("before");
     expect(g[0].items.map((i) => i.id)).toEqual(["b1", "b2", "b3", "b4"]);
     const b4 = g[0].items.find((i) => i.id === "b4")!;
-    expect(b4.text).toMatch(/zaproponuj mediację na piśmie/i);
-    expect(b4.note).toMatch(/187 § 1 pkt 3 KPC/);
-    expect(b4.note).toMatch(/103 KPC/);
+    expect(b4.text).toMatch(/zaproszenie do mediacji/i);
+    expect(b4.note).toMatch(/mediator może to potwierdzić na piśmie/);
     expect(b4.note).toMatch(/dobrowolna/);
+    expect(b4.note).not.toMatch(/doręcz/);
   });
   it("odmowa drugiej strony: dokumenty próby jako załącznik i informacja w pozwie", () => {
     const g = buildChecklist({ mediation: "refused" });
     const items = g.flatMap((x) => x.items);
     expect(items.find((i) => i.id === "u3")?.text).toMatch(/braku zgody drugiej strony/);
     expect(items.some((i) => i.id === "a6")).toBe(true);
-    expect(items.find((i) => i.id === "b4")?.note).toMatch(/103 KPC/);
+    expect(items.find((i) => i.id === "b4")?.note).toMatch(/koszty/);
   });
   it("brak bezpieczeństwa: nie namawia do mediacji, wymaga wyjaśnienia w pozwie", () => {
     const items = buildChecklist({ mediation: "unsafe" }).flatMap((x) => x.items);
     expect(items.find((i) => i.id === "b4")?.text).toMatch(/nie musisz proponować mediacji/);
     expect(items.find((i) => i.id === "u3")?.text).toMatch(/wyjaśnieniem przyczyn/);
     expect(items.some((i) => i.id === "a6")).toBe(false);
+  });
+
+  const all = (a: Parameters<typeof buildChecklist>[0]) => buildChecklist(a).flatMap((g) => g.items);
+  const text = (a: Parameters<typeof buildChecklist>[0]) => all(a).map((i) => `${i.text} ${i.note ?? ""}`).join(" ");
+  it("bez myślników i przepisów w treści", () => {
+    const t = text({ children: "minor", agreement: "maybe", mediation: "refused", fault: "fault", alimony: "request", flat: "yes", property: "together" }) + text({ mediation: "unsafe", children: "adult", property: "later" });
+    expect(t).not.toMatch(/—| – /);
+    expect(t).not.toMatch(/art\.|§|KPC|KRO/);
+  });
+  it("brak dzieci: nic o dzieciach w żądaniach i uzasadnieniu", () => {
+    const t = text({ children: "none", alimony: "request" });
+    expect(t).not.toMatch(/małoletni|kontakty z dziećmi|alimenty na dzieci/i);
+    expect(all({ children: "none" }).find((i) => i.id === "u1")?.text).toMatch(/nie macie wspólnych dzieci/);
+  });
+  it("pełnoletnie dziecko: roszczenie we własnym imieniu", () => {
+    expect(all({ children: "adult" }).find((i) => i.id === "k6")?.text).toMatch(/we własnym imieniu/);
+  });
+  it("odpowiedzi o mieszkaniu i majątku zmieniają listę", () => {
+    expect(all({ flat: "no", property: "none" }).some((i) => i.id.startsWith("p"))).toBe(false);
+    expect(all({ flat: "yes" }).some((i) => i.id === "p1")).toBe(true);
+    expect(all({ property: "later" }).some((i) => i.id === "p3")).toBe(true);
+  });
+  it("porozumienie rodzicielskie: terminologia", () => {
+    expect(text({ children: "minor", agreement: "no" })).toMatch(/porozumienie rodzicielskie/);
   });
 });

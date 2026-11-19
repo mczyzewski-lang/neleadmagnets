@@ -3,7 +3,7 @@ import type { AdSet } from "./types";
 // Na podstawie MARKETING/ADS.md
 export const ads: AdSet = {
   "slug": "komunikacja-z-drugim-rodzicem",
-  "angle": "Mniej emocji, więcej konkretu — gotowe szablony wiadomości.",
+  "angle": "Mniej emocji, więcej konkretu: gotowe szablony wiadomości.",
   "targeting": "Kontekstowe i tematyczne: treści o finansach osobistych, prawie, rodzinie i poradnikach; Search: frazy informacyjne. Demografia szeroka (25–60). Bez remarketingu, list klientów, podobnych odbiorców i segmentów opartych na wnioskowaniu o kryzysie w związku.",
   "meta": {
     "primaryTexts": [
@@ -39,7 +39,7 @@ export const ads: AdSet = {
     ],
     "descriptions": [
       "Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych.",
-      "Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna.",
+      "Wypełniasz online, a podsumowanie masz od razu. To informacja, nie porada prawna.",
       "24 szablony wiadomości: odbiór dziecka, wakacje, święta, wydatki, szkoła, choroba."
     ],
     "cta": "Dowiedz się więcej",
@@ -63,7 +63,7 @@ export const ads: AdSet = {
       "Krótko i rzeczowo",
       "Zmiana odbioru, wakacje",
       "Szablony do skopiowania",
-      "Nowy Etap — poradnia",
+      "Nowy Etap, poradnia",
       "Materiał od Nowego Etapu",
       "Otwórz od razu",
       "Bezpłatnie, bez logowania"
@@ -72,7 +72,7 @@ export const ads: AdSet = {
       "24 szablony wiadomości: odbiór dziecka, wakacje, święta, wydatki, szkoła, choroba.",
       "Metoda 4K: Krótko, Konkretnie, Kulturalnie, Kończ propozycją. Co pisać, czego unikać.",
       "Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych.",
-      "Kiedy przerwać bezpośredni kontakt i gdzie szukać pomocy — także o tym piszemy."
+      "Piszemy też, kiedy przerwać bezpośredni kontakt i gdzie szukać pomocy."
     ],
     "paths": [
       "szablony",

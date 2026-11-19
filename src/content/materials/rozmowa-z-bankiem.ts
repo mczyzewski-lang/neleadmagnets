@@ -7,53 +7,49 @@ export const material: Material = {
   coverSubtitle: "Jak przygotować rozmowę z bankiem",
   coverTone: "dark",
   h1: "Kredyt po rozstaniu: jak przygotować rozmowę z bankiem",
-  h2: "Skrypt rozmowy, lista dokumentów, pytania i arkusz liczb — żebyś do banku szedł z planem, a nie z nadzieją.",
+  h2: "Skrypt rozmowy, lista dokumentów, pytania i arkusz liczb. Idziesz do banku z planem.",
   promise:
-    "Przygotujesz się do rozmowy z bankiem o wspólnym kredycie hipotecznym: wiesz, o co zapytać, co mieć przy sobie i czego nie robić.",
+    "Przygotujesz rozmowę z bankiem o wspólnym kredycie: wiesz, o co zapytać, co zabrać i czego nie robić.",
   forWho: [
-    "Masz wspólny kredyt hipoteczny z osobą, z którą się rozstajesz lub rozwodzisz.",
+    "Masz wspólny kredyt hipoteczny z osobą, z którą się rozstajesz.",
     "Zastanawiasz się, czy jedno z was może zostać w mieszkaniu i przejąć kredyt.",
-    "Chcesz wiedzieć, jakie rozwiązania w ogóle można omówić z bankiem, zanim zaczniecie ustalać podział majątku.",
-    "Boisz się rozmowy z doradcą i chcesz mieć gotowe sformułowania.",
+    "Chcesz poznać opcje w banku, zanim zaczniecie ustalać podział majątku.",
+    "Chcesz mieć gotowe sformułowania na rozmowę z doradcą.",
   ],
   inside: [
-    "Wyjaśnienie, dlaczego rozwód nie zmienia umowy kredytu i co oznacza solidarna odpowiedzialność.",
-    "Przegląd opcji, o które możesz zapytać bank — bez obietnic, z plusami i minusami.",
-    "Arkusz liczb: saldo, rata, okres, oprocentowanie, wartość nieruchomości, LTV.",
+    "Dlaczego rozwód nie zmienia umowy kredytu.",
+    "Opcje, o które możesz zapytać bank, z plusami i minusami.",
+    "Arkusz liczb: saldo, rata, okres, oprocentowanie, wartość mieszkania, LTV.",
     "Listę dokumentów, o które bank może poprosić.",
-    "Skrypt rozmowy telefonicznej i spotkania w oddziale.",
-    "Listę pytań do doradcy, miejsce na notatki i arkusz opcji do uzgodnienia z drugim kredytobiorcą — zanim sprawa trafi do sądu.",
-    "Ostrzeżenie przed wstrzymaniem spłat i jego możliwymi konsekwencjami.",
+    "Skrypt telefonu i spotkania z doradcą.",
+    "Pytania do doradcy, notatkę z rozmowy i arkusz opcji do uzgodnienia z drugim kredytobiorcą.",
+    "Ostrzeżenie przed wstrzymaniem spłat.",
   ],
-  time: "25 min",
+  time: "20 min",
   faq: [
     {
       q: "Czy po rozwodzie bank automatycznie wykreśli mnie z kredytu?",
-      a: "Nie. Rozwód ani podział majątku nie zmieniają umowy kredytu. Dopóki bank nie zgodzi się na zmianę (np. aneksem), oboje kredytobiorcy odpowiadają za cały dług.",
-    },
-    {
-      q: "Czy wyrok rozwodowy lub umowa o podział majątku wiąże bank?",
-      a: "Ustalenia między wami regulują wasze wzajemne rozliczenia, ale bez zgody banku nie zmieniają tego, kto jest jego dłużnikiem. Dlatego rozmowę z bankiem warto przeprowadzić przed podpisaniem ostatecznych ustaleń.",
+      a: "Nie. Ani rozwód, ani wyrok czy umowa o podział majątku nie zmieniają umowy kredytu. Dopóki bank nie zgodzi się na zmianę, oboje odpowiadacie za cały dług.",
     },
     {
       q: "Czy bank musi się zgodzić na zwolnienie jednego z nas?",
-      a: "Nie ma takiego obowiązku. Zgoda zależy zwykle od oceny zdolności kredytowej osoby, która ma zostać z kredytem, i od wewnętrznych zasad banku. Warto zapytać, jakie warunki trzeba spełnić.",
+      a: "Nie. Zwykle ocenia zdolność kredytową osoby, która zostaje z kredytem.",
     },
     {
       q: "Co jeśli nie stać mnie na połowę raty po wyprowadzce?",
-      a: "Nie przestawaj płacić bez rozmowy. Skontaktuj się z bankiem jak najwcześniej i zapytaj o dostępne rozwiązania. Zaległości mogą trafić do BIK i skutkować wypowiedzeniem umowy.",
+      a: "Nie przestawaj płacić bez rozmowy. Skontaktuj się z bankiem jak najwcześniej. Zaległości mogą trafić do BIK i skończyć się wypowiedzeniem umowy.",
     },
     {
-      q: "Dlaczego najpierw liczby i bank, potem ustalenia, a dopiero na końcu pozew?",
-      a: "Bo bank nie jest związany waszymi ustaleniami, dopóki się na nie nie zgodzi. Jeśli najpierw sprawdzisz liczby i to, co bank jest gotów rozważyć, możecie uzgodnić realne rozwiązanie — samodzielnie albo z mediatorem. Każde takie uzgodnienie to jedna sprawa mniej dla sądu, a pozew pisany na gotowych ustaleniach jest konkretny. Gdy nie ma sporu o mieszkanie (a także o winę i dzieci), sprawa rozwodowa często kończy się na jednej rozprawie.",
+      q: "Dlaczego najpierw bank, potem ustalenia, a pozew na końcu?",
+      a: "Bo bank nie jest związany waszymi ustaleniami. Znając jego stanowisko, uzgodnicie realne rozwiązanie, a sąd rozstrzygnie tylko resztę.",
     },
     {
       q: "Co, jeśli drugi kredytobiorca nie chce rozmawiać o kredycie?",
-      a: "Zaproponuj rozmowę na piśmie, a jeśli to nie pomoże — mediację. Jeśli sprawa trafi do sądu, pozew musi zawierać informację, czy strony próbowały mediacji lub innego polubownego rozwiązania sporu (art. 187 § 1 pkt 3 KPC). Udokumentowana próba pokazuje twoją dobrą wolę, a sąd może obciążyć kosztami stronę, która w sposób oczywiście nieuzasadniony odmówiła mediacji (art. 103 KPC). Nie ma tu gwarancji wyniku. Mediacja jest dobrowolna — przy przemocy, groźbach lub kontroli finansowej nie musisz jej proponować.",
+      a: "Zaproponuj rozmowę na piśmie, a potem mediację: zaproszenie możesz wysłać sam albo przez wybranego mediatora. Udokumentowana próba pokazuje twoją dobrą wolę, ale nie gwarantuje wyniku. Przy przemocy lub kontroli finansowej nie musisz proponować mediacji.",
     },
     {
       q: "Czy ten materiał zastępuje poradę prawną lub finansową?",
-      a: "Nie. To materiał informacyjny, który pomaga przygotować się do rozmów. Decyzje zależą od twojej umowy, sytuacji i zasad konkretnego banku — warto skonsultować je z prawnikiem lub doradcą.",
+      a: "Nie. To materiał informacyjny. Decyzje skonsultuj z prawnikiem lub doradcą.",
     },
   ],
   sources: [
@@ -91,44 +87,34 @@ export const material: Material = {
   sections: [
     {
       heading: "Najpierw fakt, który porządkuje wszystko",
-      intro:
-        "Wiele osób zakłada, że skoro sąd orzeknie rozwód albo podzielicie majątek, to kredyt „podzieli się” razem z nim. Tak nie jest.",
+      intro: "Rozwód ani podział majątku nie „dzielą” kredytu.",
       blocks: [
         {
           type: "path",
           current: 1,
-          note: "Ten materiał to część planu: zbierasz liczby i sprawdzasz, co bank jest gotów rozważyć. Z tą wiedzą łatwiej uzgodnić kredyt z drugą osobą (etap ustaleń), a pozew — jeśli będzie potrzebny — obejmie już tylko to, czego nie udało się ustalić.",
+          note: "To część planu: zbierasz liczby i sprawdzasz, co bank jest gotów rozważyć. Z tą wiedzą łatwiej uzgodnić kredyt z drugą osobą.",
         },
         {
           type: "p",
-          text: "Umowa kredytu to umowa między wami a bankiem. Rozstanie, separacja ani rozwód jej nie zmieniają. Jeśli podpisaliście umowę jako współkredytobiorcy, zwykle odpowiadacie solidarnie. Oznacza to, że bank może żądać spłaty całej zaległości od każdego z was — od jednego, od drugiego albo od obojga (art. 366 Kodeksu cywilnego).",
+          text: "Umowa kredytu łączy was z bankiem i rozstanie jej nie zmienia. Bank może zwykle żądać całej zaległości od każdego z was.",
         },
         {
           type: "p",
-          text: "Zmiana dłużnika — np. zwolnienie jednej osoby z kredytu albo przejęcie długu przez drugą — wymaga zgody banku (art. 519 Kodeksu cywilnego). W praktyce bank zwykle sprawdza wtedy, czy osoba, która ma zostać z kredytem, sama ma wystarczającą zdolność kredytową.",
-        },
-        {
-          type: "callout",
-          tone: "info",
-          title: "Co z tego wynika w praktyce",
-          text: "Ustalenia między wami (kto zostaje w mieszkaniu, kto spłaca) są ważne, ale bank nie jest nimi związany, dopóki się na nie nie zgodzi. Dlatego dobrze jest najpierw sprawdzić, co bank jest gotów rozważyć, a dopiero potem zamykać ustalenia majątkowe.",
+          text: "Zwolnienie jednej osoby lub przejęcie długu wymaga zgody banku. Bank sprawdza wtedy zdolność kredytową osoby, która zostaje.",
         },
         {
           type: "list",
           items: [
-            "Dopóki bank nie podpisze zmian, oboje odpowiadacie za cały kredyt.",
-            "Wyprowadzka z mieszkania nie zwalnia z obowiązku spłaty.",
-            "Hipoteka obciąża nieruchomość niezależnie od tego, kto w niej mieszka.",
-            "Rozmowa z bankiem to rozpoznanie możliwości, a nie od razu decyzja.",
-            "Kolejność ma znaczenie: najpierw liczby i rozpoznanie w banku, potem ustalenia między wami, a dopiero na końcu pozew i ewentualny podział majątku w sądzie.",
+            "Wyprowadzka nie zwalnia ze spłaty.",
+            "Hipoteka obciąża mieszkanie niezależnie od tego, kto w nim mieszka.",
+            "Pierwsza rozmowa z bankiem to rozpoznanie, nie decyzja.",
           ],
         },
       ],
     },
     {
       heading: "Opcje, o które możesz zapytać",
-      intro:
-        "Poniżej rozwiązania, które warto omówić z bankiem lub doradcą. Żadne z nich nie jest gwarantowane — bank ocenia każdy wniosek indywidualnie, a dostępność zależy od jego zasad.",
+      intro: "Żadna z nich nie jest gwarantowana. Bank ocenia każdy wniosek osobno.",
       blocks: [
         {
           type: "table",
@@ -136,49 +122,48 @@ export const material: Material = {
           rows: [
             [
               "Aneks i zwolnienie współkredytobiorcy",
-              "Jedna osoba zostaje z kredytem, druga zostaje zwolniona z długu za zgodą banku.",
-              "Zwykle wymaga oceny zdolności kredytowej osoby, która zostaje. Zapytaj o opłaty i czas rozpatrzenia.",
+              "Jedna osoba zostaje z kredytem, druga zostaje zwolniona za zgodą banku.",
+              "Zapytaj o warunki, opłaty i czas.",
             ],
             [
               "Przejęcie długu",
               "Jedna osoba przejmuje zobowiązanie, bank zgadza się na zmianę dłużnika.",
-              "Bez zgody banku przejęcie długu jest wobec niego bezskuteczne.",
+              "Bez zgody banku nie działa wobec banku.",
             ],
             [
               "Refinansowanie w innym banku",
-              "Osoba, która zostaje z nieruchomością, zaciąga nowy kredyt i spłaca dotychczasowy.",
-              "Nowy bank ocenia zdolność od zera. Uwzględnij koszty: prowizje, wycenę, ubezpieczenia, opłaty sądowe za wpisy.",
+              "Osoba, która zostaje w mieszkaniu, bierze nowy kredyt i spłaca stary.",
+              "Nowa ocena zdolności. Policz prowizje, wycenę i opłaty.",
             ],
             [
-              "Sprzedaż nieruchomości i spłata kredytu",
-              "Sprzedajecie mieszkanie, spłacacie bank, dzielicie ewentualną nadwyżkę.",
-              "Zapytaj o procedurę wcześniejszej spłaty i zwolnienia hipoteki. Gdy cena nie pokrywa salda, trzeba ustalić, kto pokrywa różnicę.",
+              "Sprzedaż i spłata kredytu",
+              "Sprzedajecie mieszkanie, spłacacie bank, dzielicie nadwyżkę.",
+              "Ustalcie, kto pokrywa ewentualny niedobór.",
             ],
             [
-              "Dodanie poręczyciela lub innego zabezpieczenia",
-              "Do kredytu dołącza inna osoba lub zabezpieczenie, które poprawia ocenę ryzyka.",
-              "To duże zobowiązanie dla tej osoby. Omówcie je spokojnie, bez presji.",
+              "Poręczyciel lub inne zabezpieczenie",
+              "Dołącza inna osoba lub zabezpieczenie.",
+              "To duże zobowiązanie dla tej osoby. Bez presji.",
             ],
             [
-              "Przejściowe zmiany warunków spłaty",
-              "Np. wydłużenie okresu kredytowania lub inne rozwiązanie łagodzące ratę.",
-              "Zapytaj, co bank oferuje i jaki ma to wpływ na całkowity koszt kredytu.",
+              "Zmiana warunków spłaty",
+              "Np. dłuższy okres kredytowania i niższa rata.",
+              "Zapytaj, ile to zmienia w całkowitym koszcie.",
             ],
           ],
-          caption: "Traktuj tabelę jako listę tematów do rozmowy, a nie listę gotowych rozwiązań.",
+          caption: "To lista tematów do rozmowy, nie gotowe rozwiązania.",
         },
         {
           type: "callout",
           tone: "warning",
           title: "Nie podpisuj ustaleń majątkowych w ciemno",
-          text: "Jeśli umówicie się, że jedno z was spłaci drugie i przejmie kredyt, a bank potem odmówi zwolnienia drugiej osoby, oboje nadal będziecie dłużnikami. Warto, by prawnik spojrzał na to, jak zapisać takie ustalenia i co się stanie, gdy bank się nie zgodzi.",
+          text: "Jeśli bank odmówi zwolnienia, oboje zostajecie dłużnikami mimo waszej umowy. Niech prawnik sprawdzi, jak zapisać ustalenia na wypadek odmowy.",
         },
       ],
     },
     {
       heading: "Arkusz liczb: zbierz dane przed rozmową",
-      intro:
-        "Rozmowa z bankiem jest znacznie łatwiejsza, gdy znasz swoje liczby. Większość danych znajdziesz w umowie, harmonogramie spłat i bankowości elektronicznej.",
+      intro: "Większość danych znajdziesz w umowie, harmonogramie spłat i bankowości elektronicznej.",
       blocks: [
         {
           type: "worksheet",
@@ -199,7 +184,7 @@ export const material: Material = {
         },
         {
           type: "p",
-          text: "LTV (loan to value) pokazuje, jaką część wartości nieruchomości stanowi kredyt. Przykład wyłącznie poglądowy: przy saldzie 300 000 zł i wartości mieszkania 500 000 zł LTV wynosi 60%. Im niższe LTV, tym zwykle łatwiej rozmawiać o refinansowaniu, choć ostateczna decyzja zależy od banku.",
+          text: "Przykład LTV: saldo 300 000 zł przy wartości 500 000 zł to 60%. Niższe LTV zwykle ułatwia refinansowanie.",
         },
         {
           type: "worksheet",
@@ -217,8 +202,7 @@ export const material: Material = {
     },
     {
       heading: "Dokumenty, o które bank może poprosić",
-      intro:
-        "Każdy bank ma własną listę. Zapytaj o nią na początku rozmowy, żeby nie składać wniosku kilka razy.",
+      intro: "Każdy bank ma własną listę. Poproś o nią na początku. Na pierwszą rozmowę nie musisz mieć wszystkiego.",
       blocks: [
         {
           type: "checklist",
@@ -229,23 +213,17 @@ export const material: Material = {
             "Informacje o innych zobowiązaniach finansowych",
             "Odpis księgi wieczystej lub jej numer",
             "Aktualna wycena nieruchomości (operat szacunkowy), jeśli bank jej wymaga",
-            "Wyrok rozwodowy, orzeczenie o separacji lub umowa / orzeczenie o podziale majątku — jeśli już są",
+            "Wyrok rozwodowy, orzeczenie o separacji, umowa lub orzeczenie o podziale majątku (jeśli już są)",
             "Dokument potwierdzający ustrój majątkowy (np. umowa majątkowa), jeśli dotyczy",
             "Pisemna zgoda drugiego kredytobiorcy na proponowaną zmianę, jeśli bank jej wymaga",
             "Polisy ubezpieczeniowe powiązane z kredytem",
           ],
         },
-        {
-          type: "callout",
-          tone: "info",
-          text: "Na tym etapie nie musisz mieć wszystkiego. Pierwsza rozmowa może służyć tylko temu, by dowiedzieć się, co będzie potrzebne i w jakiej kolejności.",
-        },
       ],
     },
     {
       heading: "Skrypt rozmowy z bankiem",
-      intro:
-        "Możesz zacząć od telefonu na infolinię albo umówić spotkanie z doradcą kredytowym. Poniżej sformułowania, które pomagają zachować spokój i konkret.",
+      intro: "Nie musisz mówić o przyczynach rozstania. Wystarczy rzeczowa informacja, że chcecie uporządkować kredyt.",
       blocks: [
         {
           type: "script",
@@ -253,19 +231,19 @@ export const material: Material = {
           lines: [
             {
               label: "Otwarcie",
-              text: "Dzień dobry, jestem współkredytobiorcą kredytu hipotecznego nr [numer umowy]. Jesteśmy w trakcie rozstania i chcę dowiedzieć się, jakie rozwiązania bank może rozważyć w takiej sytuacji.",
+              text: "Dzień dobry, jestem współkredytobiorcą kredytu hipotecznego nr [numer umowy]. Rozstajemy się i chcę poznać rozwiązania, które bank może rozważyć.",
             },
             {
               label: "Cel",
-              text: "Na razie nie składam wniosku. Chcę poznać możliwe opcje, warunki i listę dokumentów.",
+              text: "Na razie nie składam wniosku. Chcę poznać opcje, warunki i listę dokumentów.",
             },
             {
               label: "Prośba",
-              text: "Czy mogę umówić rozmowę z doradcą, który zajmuje się zmianami w umowach kredytowych? Czy drugi kredytobiorca musi być obecny?",
+              text: "Czy mogę umówić rozmowę z doradcą od zmian w umowach kredytowych? Czy drugi kredytobiorca musi być obecny?",
             },
             {
               label: "Zamknięcie",
-              text: "Czy mogę otrzymać listę potrzebnych dokumentów mailowo lub w bankowości elektronicznej? Dziękuję.",
+              text: "Czy mogę dostać listę dokumentów mailem lub w bankowości elektronicznej? Dziękuję.",
             },
           ],
         },
@@ -275,31 +253,25 @@ export const material: Material = {
           lines: [
             {
               label: "Sytuacja",
-              text: "Rozstajemy się. Rozważamy, że [ja / druga osoba] zostanie w mieszkaniu i będzie dalej spłacać kredyt. Chcemy sprawdzić, czy to realne, zanim podpiszemy ustalenia majątkowe.",
+              text: "Rozstajemy się. Rozważamy, że [ja / druga osoba] zostanie w mieszkaniu i będzie spłacać kredyt. Chcemy sprawdzić, czy to realne, zanim podpiszemy ustalenia.",
             },
             {
               label: "Pytanie główne",
-              text: "Jakie warunki trzeba spełnić, żeby bank zwolnił jednego z kredytobiorców z umowy? Jak wygląda ocena zdolności kredytowej osoby, która zostaje?",
+              text: "Jakie warunki trzeba spełnić, żeby bank zwolnił jednego kredytobiorcę? Jak ocenia zdolność osoby, która zostaje?",
             },
             {
               label: "Alternatywy",
-              text: "Jeśli to nie będzie możliwe, jakie inne rozwiązania bank widzi? Czy możemy omówić wydłużenie okresu, dodanie poręczyciela albo zasady wcześniejszej spłaty przy sprzedaży?",
+              text: "Jeśli to niemożliwe, co bank może zaproponować? Dłuższy okres, poręczyciela, wcześniejszą spłatę przy sprzedaży?",
             },
             {
               label: "Koszty i czas",
-              text: "Jakie są opłaty za aneks, wycenę i inne czynności? Ile trwa rozpatrzenie wniosku?",
+              text: "Ile kosztuje aneks, wycena i inne czynności? Ile trwa rozpatrzenie wniosku?",
             },
             {
               label: "Podsumowanie",
-              text: "Czy mogę prosić o podsumowanie dzisiejszych informacji na piśmie lub mailem? Chcę spokojnie omówić je z drugą osobą i prawnikiem.",
+              text: "Czy mogę dostać podsumowanie tych informacji mailem? Chcę je spokojnie omówić z drugą osobą i prawnikiem.",
             },
           ],
-        },
-        {
-          type: "callout",
-          tone: "info",
-          title: "Wskazówka",
-          text: "Nie musisz opowiadać doradcy o przyczynach rozstania. Wystarczy rzeczowa informacja, że zmienia się wasza sytuacja i chcecie uporządkować kredyt.",
         },
       ],
     },
@@ -336,26 +308,25 @@ export const material: Material = {
       ],
     },
     {
-      heading: "Ustalcie kredyt między sobą — zanim zajmie się nim sąd",
-      intro:
-        "Gdy znasz już liczby i odpowiedź banku, czas na rozmowę z drugim kredytobiorcą. Nie musicie od razu zgodzić się co do wszystkiego — już wspólna lista realnych opcji porządkuje dalsze kroki. Dlaczego przed pozwem? Bo uzgodnione rozwiązanie bank może ocenić z wyprzedzeniem, a sąd rozstrzyga tylko to, czego nie udało się ustalić.",
+      heading: "Ustalcie kredyt między sobą, zanim zajmie się nim sąd",
+      intro: "Gdy znasz liczby i odpowiedź banku, porozmawiaj z drugim kredytobiorcą.",
       blocks: [
         {
           type: "list",
           ordered: true,
           items: [
-            "Podzielcie się informacjami z banku — najlepiej tym samym podsumowaniem na piśmie.",
-            "Wypiszcie opcje, które są realne dla was obojga (np. zwolnienie jednej osoby, refinansowanie, sprzedaż).",
-            "Ustalcie, kto płaci ratę do czasu decyzji banku, i zapiszcie to.",
-            "Jeśli rozmowa utknie, zaproponujcie mediację — mediator pomoże rozmawiać o mieszkaniu i kredycie bez eskalacji.",
-            "Zanim podpiszecie ostateczne ustalenia majątkowe, pokażcie je prawnikowi i upewnijcie się, co bank jest gotów zaakceptować.",
+            "Podzielcie się podsumowaniem z banku.",
+            "Wypiszcie opcje realne dla was obojga.",
+            "Ustalcie na piśmie, kto płaci ratę do decyzji banku.",
+            "Jeśli rozmowa utknie, zaproponujcie mediację.",
+            "Ostateczne ustalenia pokażcie prawnikowi.",
           ],
         },
         {
           type: "worksheet",
           title: "Opcje do omówienia z drugim kredytobiorcą",
           fields: [
-            "Opcja, którą preferuję — i dlaczego",
+            "Opcja, którą preferuję, i dlaczego",
             "Opcja, którą mogę zaakceptować awaryjnie",
             "Czego nie zaakceptuję (moja granica)",
             "Co już uzgodniliśmy (i gdzie to zapisaliśmy)",
@@ -366,21 +337,20 @@ export const material: Material = {
       ],
     },
     {
-      heading: "Zanim przestaniesz płacić — przeczytaj to",
+      heading: "Zanim przestaniesz płacić, przeczytaj to",
       blocks: [
         {
           type: "callout",
           tone: "warning",
           title: "Wstrzymanie spłat szkodzi wam obojgu",
-          text: "Gdy jedna osoba przestaje płacić „swoją połowę”, bank i tak może żądać całej raty od drugiej. Zaległości mogą zostać odnotowane w BIK, co utrudni wam obojgu przyszłe kredyty, a dłuższe opóźnienia mogą prowadzić do wypowiedzenia umowy i egzekucji z nieruchomości.",
+          text: "Bank może żądać całej raty od osoby, która płaci. Zaległości trafiają do BIK, a dłuższe grożą wypowiedzeniem umowy i egzekucją.",
         },
         {
           type: "list",
           items: [
-            "Ustalcie na piśmie, kto i z jakiego konta płaci ratę do czasu decyzji banku.",
-            "Zachowuj potwierdzenia przelewów — przydadzą się przy rozliczeniach.",
-            "Jeśli spłata staje się trudna, kontaktuj się z bankiem wcześnie, a nie po pierwszej zaległości.",
-            "Zapytaj prawnika, jak rozliczyć raty płacone po rozstaniu w ramach podziału majątku.",
+            "Zachowuj potwierdzenia przelewów.",
+            "Gdy spłata staje się trudna, dzwoń do banku przed pierwszą zaległością.",
+            "Zapytaj prawnika, jak rozliczyć raty płacone po rozstaniu.",
           ],
         },
       ],
@@ -390,11 +360,7 @@ export const material: Material = {
       blocks: [
         {
           type: "p",
-          text: "Rozmowa z bankiem to jeden z elementów większej układanki: mieszkania, podziału majątku, kosztów życia i — jeśli macie dzieci — ich codzienności. Najlepiej, gdy te elementy są ustalane razem i w odpowiedniej kolejności: najpierw plan (liczby, opcje, priorytety), potem ustalenia z drugą stroną, a dopiero na końcu pozew.",
-        },
-        {
-          type: "p",
-          text: "W Nowym Etapie pomagamy przygotować Plan Rozwodu: uporządkować liczby, opcje i pytania, zanim padną decyzje. Jeśli rozmowy z drugą stroną są trudne, możemy pomóc w mediacji. Najpierw plan i ustalenia — dopiero potem pozew. Możesz skorzystać, kiedy poczujesz, że to dobry moment.",
+          text: "Kredyt to jeden element układanki. Nowy Etap pomoże przygotować Plan Rozwodu, a gdy rozmowy są trudne, mediację. Najpierw plan i ustalenia, potem pozew.",
         },
       ],
     },

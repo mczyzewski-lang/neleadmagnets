@@ -3,11 +3,11 @@ import type { AdSet } from "./types";
 // Na podstawie MARKETING/ADS.md
 export const ads: AdSet = {
   "slug": "separacja-czy-rozwod",
-  "angle": "Neutralne porównanie dwóch dróg — bez podpowiadania, co wybrać.",
+  "angle": "Neutralne porównanie dwóch dróg. Bez podpowiadania, co wybrać.",
   "targeting": "Kontekstowe i tematyczne: treści o finansach osobistych, prawie, rodzinie i poradnikach; Search: frazy informacyjne. Demografia szeroka (25–60). Bez remarketingu, list klientów, podobnych odbiorców i segmentów opartych na wnioskowaniu o kryzysie w związku.",
   "meta": {
     "primaryTexts": [
-      "Separacja i rozwód różnią się skutkami prawnymi. Zobacz porównanie w jednej tabeli — bez podpowiadania wyboru.",
+      "Separacja i rozwód różnią się skutkami prawnymi. Zobacz porównanie w jednej tabeli, bez podpowiadania wyboru.",
       "Nazwisko, majątek, dziedziczenie, powrót do wspólnego życia. Porównaj obie drogi w 3 minuty.",
       "Czym w praktyce różni się separacja od rozwodu? Przejrzyste zestawienie i pytania do specjalisty."
     ],
@@ -63,7 +63,7 @@ export const ads: AdSet = {
       "Nazwisko, majątek, spadek",
       "Porównanie bez podpowiadania",
       "Pytania do specjalisty",
-      "Nowy Etap — poradnia",
+      "Nowy Etap, poradnia",
       "Bezpłatnie, bez logowania",
       "Wynik do pobrania (PDF)",
       "Stan prawny 11.2026"
@@ -72,7 +72,7 @@ export const ads: AdSet = {
       "Porównaj separację i rozwód: status małżeństwa, majątek, dzieci, koszty, nazwisko.",
       "Indywidualna tabela i pytania do specjalisty. Bez podpowiadania, co wybrać.",
       "Treści oparte na aktualnych polskich przepisach. Bezpłatnie, bez logowania.",
-      "Możliwość zniesienia separacji, dziedziczenie, nowy związek — wszystko w jednym widoku."
+      "Możliwość zniesienia separacji, dziedziczenie, nowy związek: wszystko w jednym widoku."
     ],
     "paths": [
       "separacja",

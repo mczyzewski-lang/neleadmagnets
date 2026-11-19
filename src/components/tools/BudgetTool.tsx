@@ -19,15 +19,15 @@ import {
 
 const TOOL = "budzet-po-rozstaniu";
 const GROUPS: { cat: BudgetCategory; hint?: string }[] = [
-  { cat: "income", hint: "Twoje dochody netto. „Teraz” — to, czym dysponujesz obecnie; „Po rozstaniu” — czego się spodziewasz." },
-  { cat: "housing", hint: "„Teraz” — Twoja obecna część kosztów; „Po rozstaniu” — koszt Twojego osobnego mieszkania." },
+  { cat: "income", hint: "Dochody netto. „Teraz”: czym dysponujesz obecnie. „Po rozstaniu”: czego się spodziewasz." },
+  { cat: "housing", hint: "„Teraz”: Twoja obecna część kosztów. „Po rozstaniu”: koszt Twojego osobnego mieszkania." },
   { cat: "bills" },
   { cat: "food" },
   { cat: "transport" },
-  { cat: "children", hint: "Wydatki na dzieci, które będziesz ponosić. Szczegółowe zestawienie przygotujesz w kalkulatorze kosztów utrzymania dziecka." },
+  { cat: "children", hint: "Wydatki na dzieci, które będziesz ponosić. Szczegóły policzysz w kalkulatorze kosztów utrzymania dziecka." },
   { cat: "debts" },
   { cat: "other" },
-  { cat: "oneoff", hint: "Wydatki, które pojawią się raz — liczymy je osobno, nie w budżecie miesięcznym." },
+  { cat: "oneoff", hint: "Wydatki, które pojawią się raz. Liczymy je osobno, poza budżetem miesięcznym." },
 ];
 
 function freqLabel(f: Frequency) {
@@ -78,15 +78,17 @@ export function BudgetTool() {
     requestAnimationFrame(() => resultRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }));
   };
 
+  const noSavings = !state.savings;
   const cushionText = (v: (typeof variants)[number]) => {
+    if (noSavings && v.oneOff === 0) return "nie podano oszczędności";
     if (v.monthsUntilEmpty !== null) return `wystarczy na ok. ${formatNum(v.monthsUntilEmpty)} mies. deficytu`;
     if (v.monthsOfExpenses !== null) return `pokrywa ok. ${formatNum(v.monthsOfExpenses)} mies. wydatków`;
-    return "—";
+    return "brak danych";
   };
 
   const report = (): Report => ({
-    title: "Budżet po rozstaniu — moje zestawienie",
-    intro: `Zestawienie przygotowane ${todayPL()} na podstawie moich kwot. Warianty to moje dane skorygowane o założenia opisane niżej.`,
+    title: "Budżet po rozstaniu: moje zestawienie",
+    intro: `Zestawienie z ${todayPL()} na podstawie moich kwot. Warianty to moje kwoty zmienione o założenia opisane niżej. To szacunek, nie prognoza.`,
     sections: [
       { heading: "Budżet obecny (miesięcznie)", items: [`Dochody: ${formatPLN(now.income)}`, `Wydatki: ${formatPLN(now.expenses)}`, `Saldo: ${formatPLN(now.balance)}`] },
       ...variants.map((v) => ({
@@ -98,7 +100,7 @@ export function BudgetTool() {
         ],
       })),
       { heading: "Największe obciążenia (wariant bazowy)", items: burdens.map((b) => `${b.label}: ${formatPLN(b.monthly)} / mies.`) },
-      { heading: "Pozycje budżetu", items: state.lines.filter((l) => l.now || l.after).map((l) => `${CATEGORY_LABELS[l.category].split(" (")[0]} — ${l.label || "pozycja"}: teraz ${formatPLN(l.now ?? 0)}, po rozstaniu ${formatPLN(l.after ?? 0)} (${freqLabel(l.freq)})`) },
+      { heading: "Pozycje budżetu", items: state.lines.filter((l) => l.now || l.after).map((l) => `${CATEGORY_LABELS[l.category].split(" (")[0]}, ${l.label || "pozycja"}: teraz ${formatPLN(l.now ?? 0)}, po rozstaniu ${formatPLN(l.after ?? 0)} (${freqLabel(l.freq)})`) },
       ...(state.alimonyIn || state.alimonyOut ? [{ heading: "Moje założenia dotyczące alimentów (nie prognoza)", items: [`Otrzymywane: ${formatPLN(state.alimonyIn ?? 0)} / mies.`, `Płacone: ${formatPLN(state.alimonyOut ?? 0)} / mies.`] }] : []),
       { heading: "Kwestie finansowe do uporządkowania", items: todo },
     ],
@@ -120,7 +122,7 @@ export function BudgetTool() {
         <div className="tool-frame__body">
           <h3 className="step-title" style={{ marginTop: 0 }}>Wpisz swoje dochody i wydatki</h3>
           <p className="step-help">
-            Dla każdej pozycji podaj kwotę <strong>teraz</strong> (Twoja część obecnego budżetu) i <strong>po rozstaniu</strong> (Twoje osobne gospodarstwo). Wystarczą przybliżenia, puste pola liczymy jako 0. Wydatki nieregularne przeliczymy na miesięczny ekwiwalent.
+            Przy każdej pozycji podaj kwotę <strong>teraz</strong> (Twoja część obecnego budżetu) i <strong>po rozstaniu</strong> (Twoje osobne gospodarstwo). Wystarczą przybliżenia. Puste pola liczymy jako 0, a wydatki nieregularne przeliczamy na kwotę miesięczną.
           </p>
           <div className="btn-row" style={{ marginBottom: 16 }}>
             <button type="button" className="btn btn--ghost btn--sm" onClick={copyNowToAfter}><Icon name="arrowRight" width={16} /> Skopiuj „teraz” do pustych pól „po rozstaniu”</button>
@@ -163,12 +165,12 @@ export function BudgetTool() {
                       {!isOneOff && (
                         <div>
                           <label>Teraz</label>
-                          <AmountInput label={`${l.label || "Pozycja"} — teraz`} value={l.now} onChange={(v) => updateLine(l.id, { now: v })} />
+                          <AmountInput label={`${l.label || "Pozycja"}: teraz`} value={l.now} onChange={(v) => updateLine(l.id, { now: v })} />
                         </div>
                       )}
                       <div>
                         <label>{isOneOff ? "Kwota" : "Po rozstaniu"}</label>
-                        <AmountInput label={`${l.label || "Pozycja"} — ${isOneOff ? "kwota" : "po rozstaniu"}`} value={l.after} onChange={(v) => updateLine(l.id, { after: v })} />
+                        <AmountInput label={`${l.label || "Pozycja"}: ${isOneOff ? "kwota" : "po rozstaniu"}`} value={l.after} onChange={(v) => updateLine(l.id, { after: v })} />
                       </div>
                     </div>
                     <button type="button" className="calc-row__remove" onClick={() => removeLine(l.id)} aria-label={`Usuń pozycję: ${l.label || "nowa pozycja"}`}><Icon name="x" width={18} /></button>
@@ -183,10 +185,10 @@ export function BudgetTool() {
 
           <section className="card card--sand calc-cat" aria-labelledby="cat-savings">
             <h4 id="cat-savings" style={{ marginBottom: 12 }}>Oszczędności i Twoje założenia</h4>
-            <MoneyField label="Oszczędności, którymi będziesz dysponować" value={state.savings} onChange={(v) => { touch(); setState((s) => ({ ...s, savings: v })); }} hint="Np. Twoja część oszczędności. Posłuży do policzenia poduszki finansowej." />
+            <MoneyField label="Oszczędności, którymi będziesz dysponować" value={state.savings} onChange={(v) => { touch(); setState((s) => ({ ...s, savings: v })); }} hint="Np. Twoja część wspólnych oszczędności. Posłuży do policzenia poduszki finansowej." />
             <details>
               <summary className="small" style={{ cursor: "pointer", fontWeight: 600, marginBottom: 8 }}>Opcjonalnie: uwzględnij alimenty jako własne założenie</summary>
-              <Alert tone="warn"><p>Kalkulator <strong>nie przewiduje</strong> wysokości alimentów. Wysokość alimentów zależy m.in. od usprawiedliwionych potrzeb uprawnionego oraz możliwości zarobkowych i majątkowych zobowiązanego, a w razie sporu ustala ją sąd. Jeśli wpiszesz kwotę, potraktujemy ją wyłącznie jako Twoje założenie.</p></Alert>
+              <Alert tone="warn"><p>Kalkulator <strong>nie przewiduje</strong> alimentów. Ich wysokość zależy m.in. od usprawiedliwionych potrzeb uprawnionego oraz możliwości zarobkowych i majątkowych zobowiązanego. W razie sporu ustala ją sąd. Wpisana kwota to tylko Twoje założenie.</p></Alert>
               <div className="grid grid--2 mt">
                 <MoneyField label="Alimenty, które zakładasz otrzymywać (mies.)" value={state.alimonyIn} onChange={(v) => setState((s) => ({ ...s, alimonyIn: v }))} />
                 <MoneyField label="Alimenty, które zakładasz płacić (mies.)" value={state.alimonyOut} onChange={(v) => setState((s) => ({ ...s, alimonyOut: v }))} />
@@ -210,7 +212,7 @@ export function BudgetTool() {
           <div className="result-head">
             <span className="eyebrow">Twój wynik</span>
             <h2 style={{ fontSize: "var(--fs-2xl)" }}>Twoje finanse teraz i po rozstaniu</h2>
-            <p>Wynik aktualizuje się na bieżąco — zmieniaj kwoty powyżej lub założenia wariantów poniżej.</p>
+            <p>Wynik zmienia się na bieżąco, gdy poprawiasz kwoty powyżej lub założenia poniżej. To szacunek na podstawie Twoich danych.</p>
             <div className="kpis kpis--4">
               <div className={`kpi ${now.balance < 0 ? "kpi--neg" : ""}`}><span className="kpi__label">Saldo teraz</span><span className="kpi__value">{formatPLN(now.balance)}</span><span className="kpi__note">miesięcznie</span></div>
               <div className={`kpi ${base.balance < 0 ? "kpi--neg" : ""}`}><span className="kpi__label">Saldo po rozstaniu</span><span className="kpi__value">{formatPLN(base.balance)}</span><span className="kpi__note">wariant bazowy</span></div>
@@ -226,15 +228,15 @@ export function BudgetTool() {
               series={[{ key: "inc", label: "Dochody", color: "var(--green-700)" }, { key: "exp", label: "Wydatki", color: "var(--gold-500)" }]}
               groups={[{ label: "Teraz", values: { inc: now.income, exp: now.expenses } }, ...variants.map((v) => ({ label: v.label, values: { inc: v.income, exp: v.expenses } }))]}
             />
-            <div tabIndex={0} role="region" aria-label="Tabela — przewiń w poziomie, jeśli nie mieści się na ekranie" className="table-wrap mt">
+            <div tabIndex={0} role="region" aria-label="Tabela. Można ją przewinąć w poziomie." className="table-wrap mt">
               <table className="table">
                 <thead><tr><th scope="col">Miesięcznie</th><th className="num" scope="col">Teraz</th>{variants.map((v) => <th key={v.key} className="num" scope="col">{v.label}</th>)}</tr></thead>
                 <tbody>
                   <tr><th scope="row">Dochody</th><td className="num">{formatPLN(now.income)}</td>{variants.map((v) => <td key={v.key} className="num">{formatPLN(v.income)}</td>)}</tr>
                   <tr><th scope="row">Wydatki</th><td className="num">{formatPLN(now.expenses)}</td>{variants.map((v) => <td key={v.key} className="num">{formatPLN(v.expenses)}</td>)}</tr>
                   <tr><th scope="row">Saldo</th><td className={`num ${now.balance < 0 ? "num-neg" : "num-pos"}`}><strong>{formatPLN(now.balance)}</strong></td>{variants.map((v) => <td key={v.key} className={`num ${v.balance < 0 ? "num-neg" : "num-pos"}`}><strong>{formatPLN(v.balance)}</strong></td>)}</tr>
-                  <tr><th scope="row">Jednorazowo</th><td className="num">—</td>{variants.map((v) => <td key={v.key} className="num">{formatPLN(v.oneOff)}</td>)}</tr>
-                  <tr><th scope="row">Poduszka</th><td className="num">—</td>{variants.map((v) => <td key={v.key} className={`num ${v.cushionAfterOneOff < 0 ? "num-neg" : ""}`}>{formatPLN(v.cushionAfterOneOff)}</td>)}</tr>
+                  <tr><th scope="row">Jednorazowo</th><td className="num"><span aria-label="nie dotyczy">–</span></td>{variants.map((v) => <td key={v.key} className="num">{formatPLN(v.oneOff)}</td>)}</tr>
+                  <tr><th scope="row">Poduszka</th><td className="num"><span aria-label="nie dotyczy">–</span></td>{variants.map((v) => <td key={v.key} className={`num ${v.cushionAfterOneOff < 0 ? "num-neg" : ""}`}>{formatPLN(v.cushionAfterOneOff)}</td>)}</tr>
                 </tbody>
               </table>
             </div>
@@ -242,8 +244,8 @@ export function BudgetTool() {
 
           <div className="result-section">
             <h3><Icon name="edit" width={22} /> Założenia wariantów</h3>
-            <p className="small muted">Wariant bazowy to dokładnie Twoje kwoty „po rozstaniu”. Pozostałe to Twoje kwoty zmienione o poniższe procenty — to przykładowe założenia, nie prognozy. Dopasuj je do swojej sytuacji.</p>
-            <div tabIndex={0} role="region" aria-label="Tabela — przewiń w poziomie, jeśli nie mieści się na ekranie" className="table-wrap">
+            <p className="small muted">Wariant bazowy to dokładnie Twoje kwoty „po rozstaniu”. Pozostałe to te same kwoty zmienione o poniższe procenty. To przykładowe założenia, nie prognozy. Dopasuj je do siebie.</p>
+            <div tabIndex={0} role="region" aria-label="Tabela. Można ją przewinąć w poziomie." className="table-wrap">
               <table className="table calc-assump">
                 <thead><tr><th scope="col">Zmiana względem Twoich kwot</th>{(Object.keys(VARIANT_LABELS) as VariantKey[]).map((k) => <th key={k} className="num" scope="col">{VARIANT_LABELS[k]}</th>)}</tr></thead>
                 <tbody>
@@ -252,7 +254,7 @@ export function BudgetTool() {
                       <th scope="row">{lbl}</th>
                       {(Object.keys(VARIANT_LABELS) as VariantKey[]).map((k) => (
                         <td key={k} className="num">
-                          <input type="number" step={1} min={-90} max={300} value={state.assumptions[k][field]} aria-label={`${lbl} — wariant ${VARIANT_LABELS[k]}, zmiana w %`}
+                          <input type="number" step={1} min={-90} max={300} value={state.assumptions[k][field]} aria-label={`${lbl}, wariant ${VARIANT_LABELS[k]}, zmiana w %`}
                             onChange={(e) => setAssumption(k, field, Math.max(-90, Math.min(300, Number(e.target.value) || 0)))} /> %
                         </td>
                       ))}
@@ -283,7 +285,7 @@ export function BudgetTool() {
               </div>
               <div>
                 <h3><Icon name="split" width={22} /> Jak zmienią się koszty</h3>
-                <div tabIndex={0} role="region" aria-label="Tabela — przewiń w poziomie, jeśli nie mieści się na ekranie" className="table-wrap">
+                <div tabIndex={0} role="region" aria-label="Tabela. Można ją przewinąć w poziomie." className="table-wrap">
                   <table className="table">
                     <thead><tr><th scope="col">Kategoria</th><th className="num" scope="col">Teraz</th><th className="num" scope="col">Po</th><th className="num" scope="col">Zmiana</th></tr></thead>
                     <tbody>{changes.map((r) => (
@@ -298,7 +300,7 @@ export function BudgetTool() {
           {base.monthsUntilEmpty !== null && (
             <div className="result-section" style={{ paddingTop: 0, borderTop: 0 }}>
               <Alert tone="warn" title="W wariancie bazowym brakuje pieniędzy każdego miesiąca">
-                <p>Deficyt wynosi ok. {formatPLN(-base.balance)} miesięcznie. Przy obecnych oszczędnościach (po kosztach jednorazowych) wystarczy to na ok. {formatNum(base.monthsUntilEmpty)} {plural(Math.round(base.monthsUntilEmpty), "miesiąc", "miesiące", "miesięcy")}. To sygnał, by wcześniej zaplanować źródła finansowania lub zmiany kosztów.</p>
+                <p>Brakuje ok. {formatPLN(-base.balance)} miesięcznie. Oszczędności (po kosztach jednorazowych) wystarczą na ok. {formatNum(base.monthsUntilEmpty)} {plural(Math.round(base.monthsUntilEmpty), "miesiąc", "miesiące", "miesięcy")}. Warto wcześniej zaplanować źródła pieniędzy lub zmiany kosztów.</p>
               </Alert>
             </div>
           )}
@@ -315,10 +317,10 @@ export function BudgetTool() {
           <div className="result-section" style={{ background: "var(--cream)" }}>
             <NextStep
               toolId={TOOL}
-              intro="Spokojniej planuje się finanse, gdy wiadomo, co z mieszkaniem, kosztami dzieci i wspólnymi zobowiązaniami."
+              intro="Finanse planuje się spokojniej, gdy wiadomo, co z mieszkaniem, kosztami dzieci i wspólnymi długami."
               offers={[
-                { key: "plan-rozwodu", cta: "Zobacz, jakie ustalenia finansowe warto przygotować przed rozwodem", why: "Bezpłatny Plan Rozwodu pokazuje, które sprawy finansowe warto uzgodnić przed pozwem — i jak możemy w tym pomóc." },
-                { key: "materialy", href: "/narzedzia/koszty-utrzymania-dziecka", cta: "Policz koszty utrzymania dziecka", why: "Szczegółowe zestawienie wydatków na dziecko — miesięcznie i rocznie, z porównaniem scenariuszy." },
+                { key: "plan-rozwodu", cta: "Zobacz, jakie ustalenia finansowe warto przygotować przed rozwodem", why: "Bezpłatny Plan Rozwodu pokazuje, które sprawy finansowe warto uzgodnić przed pozwem i jak możemy w tym pomóc." },
+                { key: "materialy", href: "/narzedzia/koszty-utrzymania-dziecka", cta: "Policz koszty utrzymania dziecka", why: "Wydatki na każde dziecko osobno, miesięcznie i rocznie, z porównaniem scenariuszy." },
               ]}
             />
           </div>

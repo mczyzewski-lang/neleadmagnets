@@ -6,11 +6,11 @@ import { metaFor } from "@/lib/toolMetadata";
 export const metadata = metaFor(meta, "/przed-decyzja/pozew-rozwodowy-checklista");
 
 function Preview() {
-  const items: [string, boolean][] = [["Plan i ustalenia przed pozwem", true], ["Próba mediacji — udokumentowana", true], ["Żądanie rozwodu bez orzekania o winie", false], ["Władza rodzicielska, kontakty, alimenty", false], ["Odpis aktu małżeństwa, opłata 600 zł", false]];
+  const items: [string, boolean][] = [["Plan i ustalenia przed pozwem", true], ["Próba mediacji: dowody zachowane", true], ["Żądanie rozwodu bez orzekania o winie", false], ["Władza rodzicielska, kontakty, alimenty", false], ["Odpis aktu małżeństwa, opłata 600 zł", false]];
   return (
     <div>
       <div style={{ border: "1.5px solid var(--green-700)", background: "var(--green-50)", borderRadius: 10, padding: 10, margin: "6px 0 10px", fontSize: 13 }}>
-        <span className="xsmall muted" style={{ fontWeight: 600 }}>WŁAŚCIWY SĄD · ART. 41 KPC</span>
+        <span className="xsmall muted" style={{ fontWeight: 600 }}>WŁAŚCIWY SĄD</span>
         <div style={{ fontWeight: 700, color: "var(--green-800)" }}>Sąd Okręgowy ostatniego wspólnego miejsca zamieszkania</div>
       </div>
       {items.map(([t, c]) => (

@@ -10,14 +10,14 @@ import { Icon } from "@/components/ui/Icon";
 import { track } from "@/lib/analytics";
 import { todayPL } from "@/lib/format";
 import type { Report } from "@/lib/report";
-import { PRIORITIES, buildRows, considerations, lawyerQuestions, type FaultAnswers } from "@/lib/decision/wina-czy-bez-winy";
+import { prioritiesFor, buildRows, considerations, lawyerQuestions, type FaultAnswers } from "@/lib/decision/wina-czy-bez-winy";
 
 const TOOL = "wina-czy-bez-winy";
 type O = { value: string; label: string; desc?: string }[];
 const OPT = {
   safety: [{ value: "no", label: "Nie" }, { value: "yes", label: "Tak" }, { value: "skip", label: "Wolę nie odpowiadać" }] as O,
   children: [{ value: "minor", label: "Tak, małoletnie" }, { value: "adult", label: "Tak, pełnoletnie" }, { value: "none", label: "Nie mamy wspólnych dzieci" }] as O,
-  consent: [{ value: "yes", label: "Raczej tak" }, { value: "no", label: "Raczej nie — będzie chciała ustalenia winy" }, { value: "unsure", label: "Nie wiem" }] as O,
+  consent: [{ value: "yes", label: "Raczej tak" }, { value: "no", label: "Raczej nie, będzie chciała ustalenia winy" }, { value: "unsure", label: "Nie wiem" }] as O,
   hardship: [
     { value: "me", label: "Tak, ja mógłbym/mogłabym", desc: "Np. brak lub niskie dochody, opieka nad dziećmi" },
     { value: "partner", label: "Tak, druga strona mogłaby" },
@@ -52,8 +52,8 @@ const steps: WizardStep<FaultAnswers>[] = [
   },
   {
     id: "priorities", title: "Co jest dla Ciebie najważniejsze?", help: "Zaznacz dowolną liczbę. Te kwestie wyróżnimy w tabeli.",
-    valid: (a) => (a.priorities?.length ? true : "Zaznacz co najmniej jedną kwestię."), summary: (a) => labelOf(PRIORITIES, a.priorities || []),
-    render: (a, set) => <MultiChoice legend="Priorytety" options={PRIORITIES} value={a.priorities || []} onChange={(v) => set({ priorities: v })} />,
+    valid: (a) => ((a.priorities || []).some((p) => prioritiesFor(a).some((o) => o.value === p)) ? true : "Zaznacz co najmniej jedną kwestię."), summary: (a) => labelOf(prioritiesFor(a), a.priorities || []),
+    render: (a, set) => <MultiChoice legend="Priorytety" options={prioritiesFor(a)} value={(a.priorities || []).filter((p) => prioritiesFor(a).some((o) => o.value === p))} onChange={(v) => set({ priorities: v })} />,
   },
 ];
 
@@ -73,10 +73,10 @@ export function FaultTool() {
   const reset = () => { setAnswers({}); setDone(false); setEditStep(undefined); setKey((k) => k + 1); };
 
   const report = (): Report => ({
-    title: "Rozwód z orzekaniem o winie czy bez? — moje porównanie",
+    title: "Rozwód z orzekaniem o winie czy bez? Moje porównanie",
     intro: `Zestawienie z ${todayPL()}. Narzędzie nie rekomenduje żadnego wariantu.`,
     sections: [
-      ...rows.map((r) => ({ heading: `${r.highlight ? "★ " : ""}${r.topic} (${r.basis}${r.verify ? ", do weryfikacji" : ""})`, items: [`Bez orzekania o winie: ${r.noFault}`, `Z orzekaniem o winie: ${r.withFault}`] })),
+      ...rows.map((r) => ({ heading: `${r.highlight ? "★ " : ""}${r.topic}${r.verify ? " (do weryfikacji)" : ""}`, items: [`Bez orzekania o winie: ${r.noFault}`, `Z orzekaniem o winie: ${r.withFault}`] })),
       { heading: "Co warto przemyśleć", items: cons },
       { heading: "Pytania do prawnika", items: qs },
     ],
@@ -89,7 +89,7 @@ export function FaultTool() {
     <div ref={ref} className="tool-frame" style={{ scrollMarginTop: 70 }}>
       <div className="result-head">
         <span className="eyebrow">Twoje porównanie</span>
-        <h2 style={{ fontSize: "var(--fs-2xl)" }}>Z orzekaniem o winie czy bez — różnice w Twojej sytuacji</h2>
+        <h2 style={{ fontSize: "var(--fs-2xl)" }}>Z orzekaniem o winie czy bez: różnice w Twojej sytuacji</h2>
         <p>To porównanie skutków, nie rekomendacja. Wyróżniliśmy {hl} z {rows.length} kwestii, które wynikają z Twoich odpowiedzi.</p>
         <div className="kpis kpis--3">
           <div className="kpi"><span className="kpi__label">Opłata od pozwu</span><span className="kpi__value">600 zł</span><span className="kpi__note">w obu wariantach</span></div>
@@ -102,7 +102,7 @@ export function FaultTool() {
         <AnswersSummary steps={steps} answers={answers} onEdit={edit} />
         {safety && (
           <Alert tone="safety" className="mt" title="Twoje bezpieczeństwo jest najważniejsze">
-            <p>W sytuacji zagrożenia dzwoń pod <strong>112</strong>. Wsparcie: <strong>Niebieska Linia 800 120 002</strong> (<Link href="/pomoc">więcej numerów</Link>). Przemoc może mieć znaczenie dla oceny winy i dla spraw dzieci — skonsultuj swoją sytuację indywidualnie z prawnikiem, zanim podejmiesz rozmowy z drugą stroną.</p>
+            <p>W sytuacji zagrożenia dzwoń pod <strong>112</strong>. Wsparcie: <strong>Niebieska Linia 800 120 002</strong> (<Link href="/pomoc">więcej numerów</Link>). Przemoc może mieć znaczenie dla oceny winy{answers.children === "minor" ? " i dla spraw dzieci" : ""}. Zanim zaczniesz rozmowy z drugą stroną, omów sytuację z prawnikiem.</p>
           </Alert>
         )}
       </div>
@@ -118,7 +118,6 @@ export function FaultTool() {
                 <tr key={r.id} className={r.highlight ? "cmp-row--hl" : undefined}>
                   <th scope="row">
                     {r.topic}
-                    <span className="xsmall muted" style={{ display: "block", fontWeight: 400 }}>{r.basis}</span>
                     {r.highlight && <span className="tag tag--ok" style={{ marginTop: 6 }}>ważne dla Ciebie</span>}
                     {r.verify && <span className="tag tag--warn" style={{ marginTop: 6 }}>do weryfikacji przez prawnika</span>}
                   </th>
@@ -136,7 +135,6 @@ export function FaultTool() {
               <div className="btn-row" style={{ gap: 6, marginBottom: 8 }}>
                 {r.highlight && <span className="tag tag--ok">ważne dla Ciebie</span>}
                 {r.verify && <span className="tag tag--warn">do weryfikacji</span>}
-                <span className="tag">{r.basis}</span>
               </div>
               <dl>
                 <div><dt>Bez orzekania o winie</dt><dd>{r.noFault}</dd></div>
@@ -169,8 +167,8 @@ export function FaultTool() {
         <NextStep
           toolId={TOOL}
           offers={safety
-            ? [{ key: "konsultacja", cta: "Poproś o indywidualną rozmowę", why: "Porozmawiaj o swojej sytuacji indywidualnie — bez kontaktu z drugą stroną." }, { key: "materialy", href: "/pomoc", cta: "Zobacz, gdzie szukać pilnej pomocy", why: "Numery pomocowe i informacje o indywidualnej pomocy prawnej." }]
-            : [{ key: "plan-rozwodu", cta: "Sprawdź koszt i odbierz bezpłatny Plan Rozwodu", why: "Plan Rozwodu pomaga ustalić, które sprawy da się uzgodnić przed pozwem — także stanowisko co do winy." }, { key: "konsultacja", cta: "Porozmawiaj o swojej sytuacji", why: "Jeśli forma wyroku może wpłynąć na alimenty lub inne sprawy, warto omówić to indywidualnie." }]}
+            ? [{ key: "konsultacja", cta: "Poproś o indywidualną rozmowę", why: "Porozmawiaj o swojej sytuacji indywidualnie, bez kontaktu z drugą stroną." }, { key: "materialy", href: "/pomoc", cta: "Zobacz, gdzie szukać pilnej pomocy", why: "Numery pomocowe i informacje o indywidualnej pomocy prawnej." }]
+            : [{ key: "plan-rozwodu", cta: "Sprawdź koszt i odbierz bezpłatny Plan Rozwodu", why: "Plan Rozwodu pomaga ustalić, które sprawy da się uzgodnić przed pozwem, także stanowisko co do winy." }, { key: "konsultacja", cta: "Porozmawiaj o swojej sytuacji", why: "Jeśli forma wyroku może wpłynąć na alimenty lub inne sprawy, warto omówić to indywidualnie." }]}
         />
       </div>
     </div>

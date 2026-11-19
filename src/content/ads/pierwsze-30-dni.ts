@@ -57,13 +57,13 @@ export const ads: AdSet = {
       "rozstanie co dalej"
     ],
     "headlines": [
-      "Pierwsze 30 dni — checklista",
+      "Pierwsze 30 dni: checklista",
       "Co zrobić najpierw?",
       "Plan na 4 tygodnie",
       "Dokumenty, finanse, dzieci",
       "Odhaczaj i pobierz PDF",
       "Spokojnie, krok po kroku",
-      "Nowy Etap — poradnia",
+      "Nowy Etap, poradnia",
       "Bezpłatnie, bez logowania",
       "Wynik do pobrania (PDF)",
       "Najpierw plan"

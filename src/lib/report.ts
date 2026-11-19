@@ -8,7 +8,7 @@ export const REPORT_DISCLAIMER =
 
 export function reportToText(r: Report): string {
   const date = new Date().toLocaleDateString("pl-PL");
-  const lines: string[] = [r.title.toUpperCase(), `${SITE.name} — ${SITE.tagline} · wygenerowano ${date}`, ""];
+  const lines: string[] = [r.title.toUpperCase(), `${SITE.name}, ${SITE.tagline} · wygenerowano ${date}`, ""];
   if (r.intro) lines.push(r.intro, "");
   for (const s of r.sections) {
     if (!s.items.length) continue;

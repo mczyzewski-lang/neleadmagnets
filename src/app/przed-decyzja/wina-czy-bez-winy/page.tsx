@@ -7,7 +7,7 @@ export const metadata = metaFor(meta, "/przed-decyzja/wina-czy-bez-winy");
 
 function Preview() {
   const rows: [string, string, string, boolean][] = [
-    ["Alimenty między byłymi", "Przy niedostatku, zwykle do 5 lat", "Niewinny od wyłącznie winnego — szerzej", true],
+    ["Alimenty między byłymi", "Przy niedostatku, zwykle do 5 lat", "Niewinny od wyłącznie winnego: szerzej", true],
     ["Dowody i prywatność", "Zwykle mniej czynności", "Świadkowie, dokumenty", true],
     ["Dzieci w wyroku", "Według dobra dziecka", "Według dobra dziecka", false],
     ["Opłata od pozwu", "600 zł, możliwy zwrot 300 zł", "600 zł", false],
@@ -27,7 +27,7 @@ function Preview() {
           </div>
         ))}
       </div>
-      <p className="xsmall" style={{ margin: "10px 0 0", color: "var(--ink-3)" }}>Porównanie, nie rekomendacja — decyzja należy do Ciebie.</p>
+      <p className="xsmall" style={{ margin: "10px 0 0", color: "var(--ink-3)" }}>Porównanie, nie rekomendacja. Decyzja należy do Ciebie.</p>
     </div>
   );
 }

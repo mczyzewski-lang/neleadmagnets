@@ -16,7 +16,7 @@ export function BarCompare({ groups, series, title, height = 220 }: { groups: Ba
   const plotH = H - padT - padB;
   const groupW = (W - padL - padR) / groups.length;
   const barW = Math.min(40, (groupW * 0.7) / series.length);
-  const label = `${title}: ` + groups.map((g) => `${g.label} — ${series.map((s) => `${s.label} ${formatPLN(g.values[s.key])}`).join(", ")}`).join("; ");
+  const label = `${title}: ` + groups.map((g) => `${g.label}: ${series.map((s) => `${s.label} ${formatPLN(g.values[s.key])}`).join(", ")}`).join("; ");
   return (
     <figure style={{ margin: 0 }}>
       <svg className="bc" viewBox={`0 0 ${W} ${H}`} role="img" aria-label={label}>

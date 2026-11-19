@@ -62,7 +62,7 @@ export function MaterialLandingView({ m }: { m: Material; demo?: boolean }) {
             <div>
               <span className="eyebrow">Zajrzyj do środka</span>
               <h2>Tak wygląda {m.format.toLowerCase()} w użyciu</h2>
-              <p className="muted">Poniżej fragment z przykładowymi wpisami — tak, jak mógłby go wypełnić ktoś w podobnej sytuacji. Ty uzupełnisz go po swojemu — online, tutaj na stronie.</p>
+              <p className="muted">Poniżej fragment z przykładowymi wpisami, tak jak mógłby go wypełnić ktoś w podobnej sytuacji. Ty uzupełnisz go po swojemu, online, tutaj na stronie.</p>
               <div className="btn-row">
                 <a href="#wypelnij" className="btn">Wypełnij online</a>
               </div>
@@ -75,8 +75,8 @@ export function MaterialLandingView({ m }: { m: Material; demo?: boolean }) {
       <section className="section section--sand" id="wypelnij" style={{ scrollMarginTop: 72 }}>
         <div className="container container--narrow">
           <span className="eyebrow">Wersja online</span>
-          <h2>Wypełnij materiał tutaj — podsumowanie ułoży się samo</h2>
-          <p className="muted">Odhaczaj punkty i wpisuj notatki. Na końcu dostaniesz podsumowanie: co już masz, co zostało do zrobienia i Twoje notatki Bez pobierania i drukowania — wszystko dzieje się tutaj.</p>
+          <h2>Wypełnij materiał tutaj, a podsumowanie ułoży się samo</h2>
+          <p className="muted">Odhaczaj punkty i wpisuj notatki. Na końcu zobaczysz, co już masz, co zostało do zrobienia i Twoje notatki. Bez pobierania i drukowania.</p>
           <Workbook m={m} />
         </div>
       </section>

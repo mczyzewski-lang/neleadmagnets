@@ -6,50 +6,50 @@ export const material: Material = {
   coverTitle: "Pierwsze święta po rozstaniu",
   coverSubtitle: "Planer dla rodziców",
   coverTone: "gold",
-  h1: "Pierwsze święta po rozstaniu — planer dla rodziców",
-  h2: "Modele podziału świąt, arkusz ustaleń, logistyka, prezenty, emocje dzieci i plan na Sylwestra oraz ferie.",
+  h1: "Pierwsze święta po rozstaniu: planer dla rodziców",
+  h2: "Modele podziału świąt, arkusz ustaleń, logistyka, prezenty, emocje dzieci, Sylwester i ferie.",
   promise:
-    "Ułożysz z drugim rodzicem spokojny plan świąt, w którym dziecko wie, gdzie i z kim będzie — a ty masz plan także dla siebie.",
+    "Ułożysz z drugim rodzicem spokojny plan świąt: dziecko wie, gdzie i z kim będzie, a ty masz plan także dla siebie.",
   forWho: [
-    "To wasze pierwsze Boże Narodzenie lub inne święta po rozstaniu.",
+    "To wasze pierwsze święta po rozstaniu.",
     "Nie wiecie jeszcze, jak podzielić Wigilię i dni świąteczne.",
-    "Chcesz ograniczyć napięcie, wyjazdy na ostatnią chwilę i rywalizację prezentami.",
-    "Obawiasz się samotności w dniach, gdy dziecko będzie u drugiego rodzica.",
+    "Chcesz uniknąć napięcia, zmian na ostatnią chwilę i rywalizacji prezentami.",
+    "Obawiasz się samotności w dniach bez dziecka.",
   ],
   inside: [
     "Trzy modele podziału świąt z plusami i minusami.",
-    "Arkusz do ustalenia planu z drugim rodzicem.",
-    "Tabelę logistyki przejazdów i przekazań.",
+    "Arkusz planu do ustalenia z drugim rodzicem.",
+    "Tabelę przejazdów i przekazań.",
     "Zasady koordynacji prezentów.",
-    "Przewodnik po emocjach dzieci w różnym wieku.",
-    "Plan dbania o siebie w dniach bez dziecka i propozycję na Sylwestra oraz ferie.",
-    "Gotową wiadomość z propozycją planu, informację, co robić, gdy brak porozumienia, i dlaczego warto udokumentować próbę mediacji.",
+    "Emocje dzieci w różnym wieku.",
+    "Plan na dni bez dziecka, Sylwestra i ferie.",
+    "Gotową wiadomość z propozycją planu i co robić, gdy brak porozumienia.",
   ],
-  time: "30 min",
+  time: "20 min",
   faq: [
     {
-      q: "Dlaczego najpierw moje punkty wyjścia, potem rozmowa, a sąd dopiero na końcu?",
-      a: "Bo z jasnym planem — co jest ważne dla dziecka i dla ciebie, z czego możesz zrezygnować — rozmawia się spokojniej i trudniej zgodzić się na coś pod presją. Ustalenia między rodzicami są szybsze niż spór i oszczędzają dziecku bycia „przedmiotem sporu”. Sąd rozstrzyga tylko to, czego nie udało się ustalić — a na sprawę sądową przed świętami zwykle i tak jest za mało czasu.",
+      q: "Dlaczego najpierw moje punkty wyjścia, potem rozmowa, a sąd na końcu?",
+      a: "Gdy wiesz, co jest ważne, rozmawiasz spokojniej. A na sprawę sądową przed świętami zwykle jest za mało czasu.",
     },
     {
       q: "Kiedy zacząć rozmowę o świętach?",
-      a: "Najlepiej kilka tygodni wcześniej — w listopadzie lub na początku grudnia. Im więcej czasu, tym mniej presji i tym łatwiej uwzględnić plany rodzin i wyjazdy.",
+      a: "W listopadzie lub na początku grudnia. Im wcześniej, tym mniej presji.",
     },
     {
       q: "Czy dziecko powinno decydować, gdzie spędzi Wigilię?",
-      a: "Warto wysłuchać zdania dziecka, szczególnie starszego, ale odpowiedzialność za decyzję powinna zostać po stronie rodziców. Wybór między rodzicami to dla dziecka duży ciężar.",
+      a: "Wysłuchaj jego zdania, ale decyzję podejmują rodzice. Wybór między rodzicami to dla dziecka duży ciężar.",
     },
     {
       q: "Co, jeśli mamy już ustalenia w wyroku lub ugodzie?",
-      a: "Jeśli sąd lub ugoda określiły kontakty w święta, punktem wyjścia są te ustalenia. Możecie się wspólnie umówić inaczej, ale warto taką zmianę potwierdzić na piśmie. W razie wątpliwości zapytaj prawnika.",
+      a: "To one są punktem wyjścia. Zmianę potwierdźcie na piśmie, a w razie wątpliwości zapytaj prawnika.",
     },
     {
       q: "Co zrobić, jeśli nie możemy się porozumieć?",
-      a: "Możesz zaproponować mediację, która pozwala ustalić plan przy wsparciu neutralnej osoby. Jeśli porozumienie nie jest możliwe, o kontaktach z dzieckiem w razie sporu rozstrzyga sąd (art. 113 i nast. KRO). Na sprawę sądową przed świętami zwykle jest już za mało czasu, więc warto zacząć rozmowy wcześnie.",
+      a: "Zaproś drugiego rodzica do mediacji. Jeśli porozumienie jest niemożliwe, o kontaktach rozstrzyga sąd.",
     },
     {
       q: "Czy warto proponować mediację, jeśli drugi rodzic pewnie odmówi?",
-      a: "Często tak. Jeśli sprawa kiedyś trafi do sądu, pozew musi zawierać informację, czy strony próbowały mediacji lub innego polubownego rozwiązania sporu (art. 187 § 1 pkt 3 KPC). Udokumentowana próba pokazuje twoją dobrą wolę i gotowość do porozumienia — to bywa istotne, gdy sąd ocenia postawę rodziców w sprawach dzieci. Nie gwarantuje to konkretnego rozstrzygnięcia. Mediacja jest dobrowolna — przy przemocy, groźbach lub kontroli nie musisz jej proponować.",
+      a: "Często tak. Udokumentowana próba pokazuje twoją gotowość do porozumienia, ale nie gwarantuje wyniku. Przy przemocy nie musisz jej proponować.",
     },
   ],
   sources: [
@@ -78,7 +78,7 @@ export const material: Material = {
   stage: 2,
   ctaLabel: "Ustalcie plan świąt i kontaktów w mediacji",
   seo: {
-    title: "Pierwsze święta po rozstaniu — planer | Nowy Etap",
+    title: "Pierwsze święta po rozstaniu: planer | Nowy Etap",
     description:
       "Jak podzielić Wigilię i święta po rozstaniu? Modele planu, arkusz ustaleń, logistyka, prezenty, emocje dzieci i gotowa wiadomość do drugiego rodzica.",
   },
@@ -86,21 +86,20 @@ export const material: Material = {
     "Photorealistic 3D render of a standing spiral-bound planner at a slight angle on a warm off-white (#FCF9F8) background with a soft natural shadow. Cover in warm gold (#C79B59) tones with deep green (#295550) typography and a dark green (#263D3A) band. Minimalist premium typography. Small wordmark text at the top: \"NOWY ETAP · PORADNIA ROZWODOWA\". Exact cover title: \"Pierwsze święta po rozstaniu\". Exact subtitle: \"Planer dla rodziców\". Small label \"PLANER\". A subtle thin staircase line motif in dark green with a single tiny gold star at its top step, evoking a calm winter season. No gavels, no paragraph symbols, no people, no wedding rings, no Santa or cartoon decorations. Square 1:1 composition, high detail, keep text minimal and exactly as written.",
   sections: [
     {
-      heading: "Zanim zaczniecie: trzy pytania",
-      intro:
-        "Pierwsze święta po rozstaniu rzadko są „takie jak zawsze”. Nie muszą być idealne — wystarczy, że będą przewidywalne i spokojne dla dziecka.",
+      heading: "Zanim zaczniecie: punkty wyjścia",
+      intro: "Święta nie muszą być idealne. Mają być przewidywalne dla dziecka.",
       blocks: [
         {
           type: "path",
           current: 2,
-          note: "Planer służy ustaleniom z drugim rodzicem — ale zaczyna się od małego planu: co ważne dla dziecka i dla ciebie. Z tym łatwiej się dogadać, a sąd jest potrzebny tylko w tym, czego nie uda się ustalić.",
+          note: "Planer służy ustaleniom z drugim rodzicem. Zaczynasz od tego, co ważne dla dziecka i dla ciebie.",
         },
         {
           type: "worksheet",
           title: "Moje punkty wyjścia",
           fields: [
             "Co jest dla mojego dziecka w świętach najważniejsze (osoby, tradycje, miejsca)?",
-            "Co jest najważniejsze dla mnie — i z czego mogę w tym roku zrezygnować?",
+            "Co jest najważniejsze dla mnie i z czego mogę w tym roku zrezygnować?",
             "Czy mamy już jakieś ustalenia (wyrok, ugoda, porozumienie) dotyczące świąt?",
             "Jakie są plany dalszej rodziny (dziadkowie, wyjazdy), o których wiem?",
           ],
@@ -109,7 +108,7 @@ export const material: Material = {
           type: "callout",
           tone: "info",
           title: "Zasada nadrzędna",
-          text: "Plan świąt ma służyć dziecku, nie wyrównywaniu rachunków między dorosłymi. Jeśli w danym punkcie nie możecie się zgodzić, zapytajcie siebie: co będzie łatwiejsze dla dziecka?",
+          text: "Gdy się nie zgadzacie, zapytajcie: co będzie łatwiejsze dla dziecka?",
         },
       ],
     },
@@ -122,34 +121,34 @@ export const material: Material = {
           rows: [
             [
               "Naprzemiennie co rok",
-              "W tym roku Wigilia i święta u jednego rodzica, w przyszłym u drugiego.",
-              "Mniej przejazdów, spokojne święta w jednym miejscu.",
-              "Rodzic „bez świąt” w danym roku potrzebuje dobrego planu dla siebie i zastępczego terminu.",
+              "W tym roku święta u jednego rodzica, w przyszłym u drugiego.",
+              "Mniej przejazdów, święta w jednym miejscu.",
+              "Rodzic „bez świąt” potrzebuje planu dla siebie.",
             ],
             [
               "Podział dni",
-              "Np. Wigilia u jednego rodzica, pierwszy dzień świąt u drugiego, drugi dzień według ustaleń. Co roku zamiana.",
-              "Dziecko co roku spędza czas z obojgiem rodziców.",
-              "Więcej przekazań i podróży; trzeba ustalić dokładne godziny.",
+              "Np. Wigilia u jednego, pierwszy dzień świąt u drugiego. Co roku zamiana.",
+              "Dziecko co roku jest z obojgiem rodziców.",
+              "Więcej przekazań; trzeba ustalić dokładne godziny.",
             ],
             [
               "Podwójne święta",
-              "Każdy rodzic organizuje „swoje” święta w innym terminie, np. Wigilia 24 grudnia u jednego, druga kolacja świąteczna 26 lub 27 grudnia u drugiego.",
-              "Dziecko ma pełne święta w obu domach.",
-              "Może być męczące dla dziecka; dobrze sprawdza się, gdy domy są blisko.",
+              "Wigilia 24 grudnia u jednego, świąteczna kolacja 26 lub 27 grudnia u drugiego.",
+              "Pełne święta w obu domach.",
+              "Może męczyć dziecko; sprawdza się, gdy domy są blisko.",
             ],
           ],
-          caption: "Żaden model nie jest „właściwy” — liczy się to, co działa dla waszej rodziny.",
+          caption: "Liczy się to, co działa dla waszej rodziny.",
         },
         {
           type: "p",
-          text: "Niektórzy rodzice przy niskim poziomie konfliktu decydują się na wspólną Wigilię lub wspólne wręczenie prezentów. To może być dobre rozwiązanie, ale tylko wtedy, gdy oboje czujecie się z tym komfortowo i nie ma ryzyka kłótni przy dziecku. Nie musicie tego robić.",
+          text: "Przy niskim konflikcie możecie spędzić Wigilię razem, jeśli oboje tego chcecie i nie grozi kłótnia. Nie musicie.",
         },
       ],
     },
     {
       heading: "Arkusz ustaleń i logistyka",
-      intro: "Wypełnij arkusz przed rozmową, a potem uzupełnijcie go wspólnie. Na koniec potwierdźcie ustalenia na piśmie.",
+      intro: "Wypełnij arkusz przed rozmową, uzupełnijcie go razem i potwierdźcie na piśmie.",
       blocks: [
         {
           type: "worksheet",
@@ -174,7 +173,7 @@ export const material: Material = {
             ["", "", "", "", ""],
             ["", "", "", "", ""],
           ],
-          caption: "Logistyka przejazdów i przekazań. Uwzględnij pogodę, korki i rozkład pociągów w okresie świątecznym.",
+          caption: "Przejazdy i przekazania.",
         },
         {
           type: "checklist",
@@ -194,12 +193,10 @@ export const material: Material = {
         {
           type: "list",
           items: [
-            "Ustalcie orientacyjny budżet lub zakres prezentów, żeby nie licytować się na hojność.",
-            "Wymieńcie się listą życzeń dziecka i podzielcie, kto kupuje co — unikniecie dubli.",
-            "Rozważcie jeden większy prezent „od obojga rodziców”, jeśli to dla was możliwe.",
-            "Pomóż młodszemu dziecku przygotować drobny prezent lub laurkę dla drugiego rodzica.",
-            "Poinformuj dziadków o ustaleniach, żeby nie było przykrych niespodzianek.",
-            "Prezenty należą do dziecka — może je zabrać do drugiego domu.",
+            "Ustalcie budżet, żeby nie licytować się na hojność.",
+            "Rozważcie jeden większy prezent „od obojga”.",
+            "Pomóż młodszemu dziecku zrobić laurkę dla drugiego rodzica.",
+            "Prezenty należą do dziecka i może je zabrać do drugiego domu.",
           ],
         },
         {
@@ -217,31 +214,29 @@ export const material: Material = {
     },
     {
       heading: "Emocje dziecka w zależności od wieku",
-      intro:
-        "Dzieci przeżywają pierwsze święta po rozstaniu różnie. Poniższa tabela to ogólne wskazówki — każde dziecko jest inne. Jeśli niepokój dziecka jest silny lub długotrwały, warto skonsultować się z psychologiem dziecięcym.",
+      intro: "Każde dziecko jest inne. Przy silnym lub długim niepokoju skonsultuj się z psychologiem dziecięcym.",
       blocks: [
         {
           type: "table",
           head: ["Wiek", "Co może się pojawić", "Jak możesz pomóc"],
           rows: [
-            ["0–3 lata", "Rozdrażnienie, trudności ze snem przy zmianie miejsca.", "Stały rytm dnia, znane rzeczy (kocyk, przytulanka), krótkie i spokojne przekazania."],
-            ["4–6 lat", "Pytania „dlaczego tata/mama nie będzie z nami?”, myślenie magiczne, poczucie winy.", "Proste wyjaśnienia, zapewnienie, że oboje rodzice je kochają, plan pokazany na kalendarzu z obrazkami."],
-            ["7–12 lat", "Smutek, tęsknota za dawnymi tradycjami, lojalność wobec obojga rodziców.", "Pozwolenie na tęsknotę, wspólne tworzenie nowych tradycji, brak pytań o to, jak było u drugiego rodzica."],
-            ["13+ lat", "Wycofanie, złość, chęć spędzenia świąt z rówieśnikami, własne zdanie.", "Rozmowa i uwzględnienie zdania nastolatka, ale bez przerzucania na niego decyzji między rodzicami."],
+            ["0–3 lata", "Rozdrażnienie, kłopoty ze snem.", "Stały rytm, znane rzeczy, krótkie przekazania."],
+            ["4–6 lat", "Pytania „dlaczego”, poczucie winy.", "Proste wyjaśnienia, plan na kalendarzu z obrazkami."],
+            ["7–12 lat", "Smutek, tęsknota, rozdarcie lojalności.", "Zgoda na tęsknotę, nowe tradycje."],
+            ["13+ lat", "Wycofanie, złość, własne plany.", "Uwzględnij jego zdanie, ale nie przerzucaj decyzji."],
           ],
         },
         {
           type: "callout",
           tone: "info",
           title: "Czego unikać przy dziecku",
-          text: "Krytykowania drugiego rodzica, wypytywania o szczegóły świąt w drugim domu i pokazywania, że jest ci przykro, gdy dziecko dobrze się tam bawi. Dziecko ma prawo cieszyć się świętami w obu domach.",
+          text: "Krytykowania drugiego rodzica i wypytywania o drugi dom. Dziecko ma prawo cieszyć się świętami w obu domach.",
         },
       ],
     },
     {
       heading: "Gdy jesteś sam: plan dla siebie",
-      intro:
-        "Dni świąteczne bez dziecka bywają najtrudniejszą częścią. Warto zaplanować je równie starannie jak czas z dzieckiem.",
+      intro: "Dni bez dziecka bywają najtrudniejsze. Zaplanuj je równie starannie.",
       blocks: [
         {
           type: "checklist",
@@ -249,8 +244,8 @@ export const material: Material = {
             "Zaplanuj, z kim spędzisz Wigilię lub dzień świąt (rodzina, przyjaciele, inne osoby w podobnej sytuacji).",
             "Przygotuj coś, na co możesz czekać: spacer, film, wyjazd, wolontariat.",
             "Umów się na wideorozmowę z dzieckiem o stałej porze.",
-            "Ogranicz media społecznościowe, jeśli porównania z „idealnymi” świętami cię przygnębiają.",
-            "Daj sobie prawo do smutku — i do radości.",
+            "Ogranicz media społecznościowe, jeśli porównania cię przygnębiają.",
+            "Daj sobie prawo do smutku i do radości.",
             "Zapisz numer wsparcia: 116 123 (telefon dla dorosłych w kryzysie emocjonalnym).",
           ],
         },
@@ -258,9 +253,9 @@ export const material: Material = {
           type: "worksheet",
           title: "Mój plan na dni bez dziecka",
           fields: [
-            "24 grudnia — co robię, z kim",
-            "25 grudnia — co robię, z kim",
-            "26 grudnia — co robię, z kim",
+            "24 grudnia: co robię, z kim",
+            "25 grudnia: co robię, z kim",
+            "26 grudnia: co robię, z kim",
             "Do kogo mogę zadzwonić, gdy będzie trudno",
           ],
         },
@@ -268,11 +263,8 @@ export const material: Material = {
     },
     {
       heading: "Sylwester, ferie i gotowa wiadomość",
+      intro: "Rodzic bez dziecka w Wigilię często ma je w Sylwestra lub dłużej w ferie.",
       blocks: [
-        {
-          type: "p",
-          text: "Ustalając święta, od razu zaplanujcie Sylwestra i ferie zimowe. Częstą praktyką jest „wyrównanie”: rodzic, który nie ma dziecka w Wigilię, spędza z nim Sylwestra lub większą część ferii. Termin ferii zależy od województwa — sprawdź aktualny kalendarz roku szkolnego.",
-        },
         {
           type: "worksheet",
           title: "Sylwester i ferie",
@@ -289,19 +281,19 @@ export const material: Material = {
           lines: [
             {
               label: "Wstęp",
-              text: "Cześć, chciał(a)bym, żebyśmy spokojnie i z wyprzedzeniem ustalili święta, żeby [imię dziecka] wiedział, czego się spodziewać.",
+              text: "Cześć, chciał(a)bym z wyprzedzeniem ustalić święta, żeby [imię dziecka] wiedział, czego się spodziewać.",
             },
             {
               label: "Propozycja",
-              text: "Proponuję: Wigilia u mnie do 20:00, potem przywożę go do ciebie; pierwszy i drugi dzień świąt u ciebie; Sylwester u mnie. W przyszłym roku zamieniamy się.",
+              text: "Proponuję: Wigilia u mnie do 20:00, potem przywożę go do ciebie; pierwszy i drugi dzień świąt u ciebie; Sylwester u mnie. W przyszłym roku zamiana.",
             },
             {
               label: "Otwartość",
-              text: "Jeśli masz inny pomysł albo plany rodzinne, o których powinienem wiedzieć, napisz — chętnie to uwzględnię.",
+              text: "Jeśli masz inny pomysł albo plany rodzinne, napisz. Chętnie to uwzględnię.",
             },
             {
               label: "Termin",
-              text: "Czy możesz odpowiedzieć do [data]? Potem potwierdzę ustalenia jednym mailem.",
+              text: "Odpowiesz do [data]? Potem potwierdzę ustalenia jednym mailem.",
             },
           ],
         },
@@ -309,7 +301,7 @@ export const material: Material = {
           type: "callout",
           tone: "warning",
           title: "Gdy nie ma porozumienia",
-          text: "Zaproponuj mediację — najlepiej na piśmie — to dobrowolna rozmowa z neutralnym mediatorem, która często pozwala szybciej ustalić plan niż spór. Jeśli porozumienie nie jest możliwe, o kontaktach z dzieckiem w razie sporu rozstrzyga sąd (art. 113 i nast. KRO). Jeśli w relacji występuje przemoc, nie negocjuj sam: w zagrożeniu dzwoń pod 112, wsparcie oferuje Niebieska Linia 800 120 002.",
+          text: "Zaproś drugiego rodzica do mediacji na piśmie. Przy przemocy nie negocjuj sam: w zagrożeniu 112, Niebieska Linia 800 120 002.",
         },
       ],
     },
@@ -318,12 +310,12 @@ export const material: Material = {
       blocks: [
         {
           type: "p",
-          text: "Plan na pierwsze święta to dobry moment, by pomyśleć o ustaleniach na dłużej: kalendarzu kontaktów, wakacjach, świętach w kolejnych latach i kosztach utrzymania dziecka. Takie ustalenia możecie spisać jako porozumienie o wychowaniu dzieci — sąd może je uwzględnić w wyroku, więc zostaje mniej kwestii do udowadniania.",
+          text: "Ustalenia na dłużej (kontakty, wakacje, koszty) możecie spisać jako porozumienie rodzicielskie. Sąd może je uwzględnić w wyroku.",
         },
         { type: "mediationAttempt" },
         {
           type: "p",
-          text: "Nowy Etap może pomóc wam ustalić to w mediacji albo przygotować Plan Rozwodu z porozumieniem dotyczącym dzieci, zanim trafi on do sądu. Najpierw plan i ustalenia — dopiero potem pozew. Spokojnych świąt — takich, na jakie was teraz stać.",
+          text: "Nowy Etap może pomóc w mediacji albo w Planie Rozwodu. Spokojnych świąt.",
         },
       ],
     },

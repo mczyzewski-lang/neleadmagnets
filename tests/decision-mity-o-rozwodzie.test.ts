@@ -25,4 +25,14 @@ describe("mity-o-rozwodzie", () => {
     expect(get("bez-winy").answer).toBe("fakt");
     expect(get("nazwisko").explanation).toMatch(/roku/);
   });
+  it("bez myślników i numerów przepisów w treści", () => {
+    const t = STATEMENTS.map((s) => `${s.text} ${s.explanation} ${s.source}`).join(" ");
+    expect(t).not.toMatch(/—| – /);
+    expect(t).not.toMatch(/art\.|§|KPC|KRO/);
+  });
+  it("mediacja: zaczyna się od zaproszenia, odmowę może potwierdzić mediator", () => {
+    const m = STATEMENTS.find((s) => s.id === "mediacja")!.explanation;
+    expect(m).toMatch(/zaproszenie/);
+    expect(m).toMatch(/mediator może to potwierdzić na piśmie/);
+  });
 });

@@ -3,7 +3,7 @@ import type { AdSet } from "./types";
 // Na podstawie MARKETING/ADS.md
 export const ads: AdSet = {
   "slug": "rozmowa-z-bankiem",
-  "angle": "Fakt o kredycie + praktyczny skrypt — przygotowanie zamiast stresu.",
+  "angle": "Fakt o kredycie + praktyczny skrypt: przygotowanie zamiast stresu.",
   "targeting": "Kontekstowe i tematyczne: treści o finansach osobistych, prawie, rodzinie i poradnikach; Search: frazy informacyjne. Demografia szeroka (25–60). Bez remarketingu, list klientów, podobnych odbiorców i segmentów opartych na wnioskowaniu o kryzysie w związku.",
   "meta": {
     "primaryTexts": [
@@ -39,7 +39,7 @@ export const ads: AdSet = {
     ],
     "descriptions": [
       "Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych.",
-      "Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna.",
+      "Wypełniasz online, a podsumowanie masz od razu. To informacja, nie porada prawna.",
       "Rozwód nie zwalnia z kredytu. Skrypt rozmowy z bankiem, lista pytań i dokumentów."
     ],
     "cta": "Dowiedz się więcej",
@@ -63,7 +63,7 @@ export const ads: AdSet = {
       "Pytania do banku",
       "Dokumenty dla banku",
       "Skrypt rozmowy online",
-      "Nowy Etap — poradnia",
+      "Nowy Etap, poradnia",
       "Materiał od Nowego Etapu",
       "Otwórz od razu",
       "Bezpłatnie, bez logowania"

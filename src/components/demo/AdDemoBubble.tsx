@@ -127,7 +127,7 @@ export function AdDemoBubble({ ads, landingPath, title }: { ads: AdSet; landingP
             <p>{ads.targeting}</p>
             <div className="alert alert--warn" style={{ marginTop: 10 }}>
               <div>
-                <p style={{ marginBottom: 4 }}><strong>Zasady:</strong> bez sugerowania, że odbiorca się rozstaje (Meta — atrybuty osobiste); bez remarketingu, list klientów i podobnych odbiorców (Google — kategoria wrażliwa); do pikseli trafiają tylko zdarzenia bez treści odpowiedzi.</p>
+                <p style={{ marginBottom: 4 }}><strong>Zasady:</strong> bez sugerowania, że odbiorca się rozstaje (Meta: atrybuty osobiste); bez remarketingu, list klientów i podobnych odbiorców (Google: kategoria wrażliwa); do pikseli trafiają tylko zdarzenia bez treści odpowiedzi.</p>
                 {ads.notes?.map((n) => <p key={n} style={{ marginBottom: 4 }}>{n}</p>)}
               </div>
             </div>

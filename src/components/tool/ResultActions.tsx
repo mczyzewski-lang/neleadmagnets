@@ -80,7 +80,7 @@ function EmailSummaryForm({ toolId, report }: { toolId: string; report: () => Re
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { setErr("Wpisz poprawny adres e-mail."); return; }
-    if (!delivery) { setErr("Zaznacz zgodę na wysłanie podsumowania — bez niej nie możemy go dostarczyć."); return; }
+    if (!delivery) { setErr("Zaznacz zgodę na wysłanie podsumowania. Bez niej nie możemy go dostarczyć."); return; }
     setErr(null);
     setState("sending");
     track("email_request", { tool: toolId });

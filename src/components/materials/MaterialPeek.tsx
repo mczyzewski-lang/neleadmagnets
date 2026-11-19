@@ -57,7 +57,7 @@ export function MaterialPeek({ m, fillHref }: { m: Material; fillHref: string })
                       <span>
                         {it}
                         {on && <span className="visually-hidden"> (odhaczone)</span>}
-                        {note && <span className="hand peek__note"> — {note}</span>}
+                        {note && <span className="hand peek__note"> ({note})</span>}
                       </span>
                     </li>
                   );

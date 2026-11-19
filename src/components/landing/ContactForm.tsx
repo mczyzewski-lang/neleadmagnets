@@ -11,7 +11,7 @@ const TYPES = [
   { value: "plan_rozwodu", label: "Bezpłatny Plan Rozwodu", desc: "Lista spraw do ustalenia przed pozwem + informacja o kosztach" },
   { value: "wycena", label: "Informacja o koszcie pomocy", desc: "Ile kosztowałaby pomoc w mojej sytuacji" },
   { value: "mediacja", label: "Informacje o mediacji" },
-  { value: "duo", label: "Ścieżka DUO — razem z drugą osobą" },
+  { value: "duo", label: "Ścieżka DUO: razem z drugą osobą" },
   { value: "konsultacja", label: "Indywidualna rozmowa" },
 ];
 
@@ -62,8 +62,8 @@ export function ContactForm({ defaultType = "plan_rozwodu" }: { defaultType?: st
 
   if (state === "sent")
     return (
-      <Alert tone="ok" title="Dziękujemy — zgłoszenie dotarło">
-        <p>Odezwiemy się {channel === "phone" ? "telefonicznie" : "e-mailem"} w sprawie, o którą prosisz. Nie przekazaliśmy żadnych odpowiedzi z narzędzi — tylko dane z tego formularza.</p>
+      <Alert tone="ok" title="Dziękujemy, zgłoszenie dotarło">
+        <p>Odezwiemy się {channel === "phone" ? "telefonicznie" : "e-mailem"} w sprawie, o którą prosisz. Przekazaliśmy tylko dane z tego formularza, bez odpowiedzi z narzędzi.</p>
       </Alert>
     );
 
@@ -82,7 +82,7 @@ export function ContactForm({ defaultType = "plan_rozwodu" }: { defaultType?: st
           <button type="button" aria-pressed={channel === "phone"} onClick={() => setChannel("phone")}>Wolę telefon</button>
         </div>
       )}
-      <p className="xsmall muted">Nie opisuj tu szczegółów swojej sytuacji — porozmawiamy o nich, gdy się skontaktujemy.</p>
+      <p className="xsmall muted">Nie opisuj tu szczegółów sytuacji. Porozmawiamy o nich przy kontakcie.</p>
       <div style={{ position: "absolute", left: "-9999px" }} aria-hidden="true"><input tabIndex={-1} autoComplete="off" value={hp} onChange={(e) => setHp(e.target.value)} /></div>
       <label className="check"><input type="checkbox" checked={contact} onChange={(e) => setContact(e.target.checked)} /><span><strong>Wymagane:</strong> proszę o kontakt w sprawie mojego zgłoszenia na podany adres e-mail. <Link href="/polityka-prywatnosci">Jak przetwarzamy dane</Link></span></label>
       {phone && <label className="check"><input type="checkbox" checked={phoneOk} onChange={(e) => setPhoneOk(e.target.checked)} /><span>Zgadzam się na kontakt telefoniczny w sprawie mojego zgłoszenia.</span></label>}

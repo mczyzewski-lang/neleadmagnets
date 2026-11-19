@@ -39,7 +39,7 @@ export const ads: AdSet = {
     ],
     "descriptions": [
       "Bezpłatny materiał Nowego Etapu. Otworzysz go od razu, bez podawania danych.",
-      "Wypełniasz online, a podsumowanie masz od razu. Informacyjnie — nie porada prawna.",
+      "Wypełniasz online, a podsumowanie masz od razu. To informacja, nie porada prawna.",
       "Spisz nieruchomości, pojazdy, konta, oszczędności, firmę i długi w jednym arkuszu."
     ],
     "cta": "Dowiedz się więcej",
@@ -63,7 +63,7 @@ export const ads: AdSet = {
       "Nieruchomości, auta, konta",
       "Długi i kredyty",
       "Arkusz do wypełnienia online",
-      "Nowy Etap — poradnia",
+      "Nowy Etap, poradnia",
       "Materiał od Nowego Etapu",
       "Otwórz od razu",
       "Bezpłatnie, bez logowania"
@@ -72,7 +72,7 @@ export const ads: AdSet = {
       "Spisz nieruchomości, pojazdy, konta, oszczędności, firmę i długi w jednym arkuszu.",
       "Oznacz, co przed ślubem, w trakcie, z darowizny lub spadku. Wyjaśniamy podstawy.",
       "Bezpłatny arkusz Nowego Etapu do wypełnienia online. Informacyjnie, nie porada prawna.",
-      "Związek nieformalny? Wyjaśniamy różnicę — współwłasność według Kodeksu cywilnego."
+      "Związek nieformalny? Wyjaśniamy, czym różni się zwykła współwłasność."
     ],
     "paths": [
       "majatek",

@@ -9,7 +9,6 @@
 .cmp__k { display: block; font-size: var(--fs-xs); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; }
 .cmp__k--sep { color: var(--green-700); }
 .cmp__k--div { color: var(--gold-text); }
-.cmp__basis { padding: 0 14px 10px; font-size: var(--fs-xs); color: var(--ink-3); }
 .cmp__cols { display: none; }
 @media (min-width: 640px) {
   .cmp__cells { grid-template-columns: 1fr 1fr; }

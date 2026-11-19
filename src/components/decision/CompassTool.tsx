@@ -9,7 +9,7 @@ import { Icon } from "@/components/ui/Icon";
 import { track } from "@/lib/analytics";
 import { todayPL } from "@/lib/format";
 import type { Report } from "@/lib/report";
-import { ASPECTS, VALUES, aspectsList, buildPaths, infoToGather, isSafety, reflectionQuestions, sevenDayPlan, type CompassAnswers, type AspectKey } from "@/lib/decision/kompas-decyzji";
+import { ASPECTS, MISSING, VALUES, aspectsList, buildPaths, infoToGather, isSafety, missingFor, valuesFor, reflectionQuestions, sevenDayPlan, type CompassAnswers, type AspectKey } from "@/lib/decision/kompas-decyzji";
 import "./kompas-decyzji.css";
 
 const TOOL = "kompas-decyzji";
@@ -22,12 +22,14 @@ const O: Record<string, Option[]> = {
     { value: "time-apart", label: "Czas osobno" },
     { value: "nothing", label: "Jeszcze nic z tych rzeczy" },
   ],
-  missing: [
-    { value: "finances", label: "Finanse — jak sobie poradzę" },
-    { value: "housing", label: "Mieszkanie — gdzie będę mieszkać" },
-    { value: "children", label: "Dzieci — jak zorganizować opiekę" },
-    { value: "law", label: "Prawo — jakie są procedury i skutki" },
-    { value: "emotions", label: "Emocje — czego naprawdę chcę" },
+  relation: [
+    { value: "married", label: "Jesteśmy małżeństwem" },
+    { value: "informal", label: "Jesteśmy w związku nieformalnym" },
+  ],
+  kids: [
+    { value: "minor", label: "Tak, małoletnie" },
+    { value: "adult", label: "Tak, tylko pełnoletnie" },
+    { value: "none", label: "Nie mamy wspólnych dzieci" },
   ],
   time: [
     { value: "urgent", label: "Czuję presję, sprawa jest pilna" },
@@ -61,10 +63,13 @@ function AspectScale({ value, onChange }: { value: CompassAnswers["aspects"]; on
           </div>
         </fieldset>
       ))}
-      <p className="xsmall muted" style={{ margin: 0 }}>1 — bardzo źle · 3 — różnie · 5 — bardzo dobrze</p>
+      <p className="xsmall muted" style={{ margin: 0 }}>1: bardzo źle · 3: różnie · 5: bardzo dobrze</p>
     </div>
   );
 }
+
+/** Zostawia tylko zaznaczenia, które pasują do aktualnych opcji (np. po zmianie odpowiedzi o dzieciach) */
+const pickValid = (v: string[] | undefined, opts: { value: string }[]) => (v || []).filter((x) => opts.some((o) => o.value === x));
 
 const steps: WizardStep<CompassAnswers>[] = [
   {
@@ -78,15 +83,26 @@ const steps: WizardStep<CompassAnswers>[] = [
       </>
     ),
   },
+  {
+    id: "situation", title: "Wasza sytuacja", help: "Od tego zależy, które drogi i informacje pokażemy.",
+    valid: (a) => (a.relation && a.kids ? true : "Odpowiedz na oba pytania."),
+    summary: (a) => [labelOf(O.relation, a.relation), labelOf(O.kids, a.kids)].filter(Boolean).join(", "),
+    render: (a, set) => (
+      <>
+        <SingleChoice legend="Czy jesteście małżeństwem?" options={O.relation} value={a.relation} onChange={(v) => set({ relation: v as CompassAnswers["relation"] })} />
+        <div className="mt"><SingleChoice legend="Czy macie wspólne dzieci?" options={O.kids} value={a.kids} onChange={(v) => set({ kids: v as CompassAnswers["kids"] })} /></div>
+      </>
+    ),
+  },
   { id: "tried", title: "Co już próbowaliście?", help: "Zaznacz wszystko, co pasuje.", valid: (a) => ((a.tried || []).length ? true : "Zaznacz co najmniej jedną odpowiedź."), summary: (a) => labelOf(O.tried, a.tried || []), render: (a, set) => <MultiChoice legend="Co próbowaliście" options={O.tried} value={a.tried || []} onChange={(v) => set({ tried: v })} exclusive="nothing" /> },
-  { id: "values", title: "Co jest dla Ciebie teraz najważniejsze?", help: "Wybierz do 4 wartości.", valid: (a) => ((a.values || []).length ? ((a.values || []).length <= 4 ? true : "Wybierz maksymalnie 4.") : "Wybierz co najmniej jedną wartość."), summary: (a) => labelOf(VALUES, a.values || []), render: (a, set) => <MultiChoice legend="Wartości" options={VALUES} value={a.values || []} onChange={(v) => set({ values: v.slice(0, 4) })} columns={2} /> },
+  { id: "values", title: "Co jest dla Ciebie teraz najważniejsze?", help: "Wybierz do 4 wartości.", valid: (a) => { const n = pickValid(a.values, valuesFor(a)).length; return n ? (n <= 4 ? true : "Wybierz maksymalnie 4.") : "Wybierz co najmniej jedną wartość."; }, summary: (a) => labelOf(VALUES, pickValid(a.values, valuesFor(a))), render: (a, set) => <MultiChoice legend="Wartości" options={valuesFor(a)} value={pickValid(a.values, valuesFor(a))} onChange={(v) => set({ values: v.slice(0, 4) })} columns={2} /> },
   {
     id: "aspects", title: "Jak oceniasz dziś te obszary Waszej relacji?", help: "Nie ma dobrych ani złych odpowiedzi. To nie jest test.",
-    valid: (a) => (ASPECTS.every((x) => a.aspects?.[x.key]) ? true : "Oceń wszystkie obszary (możesz wybrać „3 — różnie”)."),
-    summary: (a) => ASPECTS.map((x) => `${x.label}: ${a.aspects?.[x.key] ?? "—"}`).join(", "),
+    valid: (a) => (ASPECTS.every((x) => a.aspects?.[x.key]) ? true : "Oceń wszystkie obszary (możesz wybrać „3: różnie”)."),
+    summary: (a) => ASPECTS.map((x) => `${x.label}: ${a.aspects?.[x.key] ?? "brak"}`).join(", "),
     render: (a, set) => <AspectScale value={a.aspects} onChange={(k, v) => set({ aspects: { ...(a.aspects || {}), [k]: v } })} />,
   },
-  { id: "missing", title: "Jakich informacji najbardziej Ci brakuje?", valid: (a) => ((a.missing || []).length ? true : "Zaznacz co najmniej jedną odpowiedź."), summary: (a) => labelOf(O.missing, a.missing || []), render: (a, set) => <MultiChoice legend="Brakujące informacje" options={O.missing} value={a.missing || []} onChange={(v) => set({ missing: v })} /> },
+  { id: "missing", title: "Jakich informacji najbardziej Ci brakuje?", valid: (a) => (pickValid(a.missing, missingFor(a)).length ? true : "Zaznacz co najmniej jedną odpowiedź."), summary: (a) => labelOf(MISSING, pickValid(a.missing, missingFor(a))), render: (a, set) => <MultiChoice legend="Brakujące informacje" options={missingFor(a)} value={pickValid(a.missing, missingFor(a))} onChange={(v) => set({ missing: v })} /> },
   { id: "time", title: "Ile masz czasu na decyzję?", valid: (a) => !!a.time, summary: (a) => labelOf(O.time, a.time), render: (a, set) => <SingleChoice legend="Czas" options={O.time} value={a.time} onChange={(v) => set({ time: v as CompassAnswers["time"] })} /> },
 ];
 
@@ -109,14 +125,14 @@ export function CompassTool() {
   const reset = () => { setAnswers({}); setDone(false); setEditStep(undefined); setWizardKey((k) => k + 1); };
 
   const report = (): Report => ({
-    title: "Kompas decyzji — mój obraz sytuacji",
-    intro: `Zestawienie z ${todayPL()}. To nie jest ocena ani rekomendacja — tylko uporządkowanie moich odpowiedzi.`,
+    title: "Kompas decyzji: mój obraz sytuacji",
+    intro: `Zestawienie z ${todayPL()}. To nie jest ocena ani rekomendacja, tylko uporządkowanie moich odpowiedzi.`,
     sections: [
-      { heading: "Co jest dla mnie ważne", items: labelOf(VALUES, answers.values || [])?.split(", ") || [] },
-      { heading: "Mój obraz sytuacji dziś (1–5)", items: aspects.map((x) => `${x.label}: ${x.value ?? "—"}`) },
+      { heading: "Co jest dla mnie ważne", items: labelOf(VALUES, pickValid(answers.values, valuesFor(answers)))?.split(", ") || [] },
+      { heading: "Mój obraz sytuacji dziś (1–5)", items: aspects.map((x) => `${x.label}: ${x.value ?? "brak"}`) },
       ...paths.map((p) => ({ heading: `Droga: ${p.title}`, items: [p.what, ...p.mayHelp.map((x) => `Może pomóc: ${x}`), ...p.consider.map((x) => `Warto wziąć pod uwagę: ${x}`), ...p.infoNeeded.map((x) => `Do sprawdzenia: ${x}`)] })),
       { heading: "Pytania do refleksji", items: questions },
-      { heading: "Informacje, które warto zdobyć", items: info.map((i) => `${i.label} — ${i.why}`) },
+      { heading: "Informacje, które warto zdobyć", items: info.map((i) => `${i.label}: ${i.why}`) },
       { heading: "Plan małych kroków na 7 dni", items: days },
     ],
   });
@@ -128,7 +144,7 @@ export function CompassTool() {
       <div className="result-head">
         <span className="eyebrow">Twój kompas</span>
         <h2 style={{ fontSize: "var(--fs-2xl)" }}>Twój obraz sytuacji i możliwe drogi</h2>
-        <p style={{ marginBottom: 0 }}>Nie wyliczamy wyniku i nie podpowiadamy, co wybrać. To uporządkowanie Twoich odpowiedzi — decyzja należy do Ciebie.</p>
+        <p style={{ marginBottom: 0 }}>Nie wyliczamy wyniku i nie podpowiadamy, co wybrać. To uporządkowanie Twoich odpowiedzi. Decyzja należy do Ciebie.</p>
       </div>
       <div className="result-section"><AnswersSummary steps={steps} answers={answers} onEdit={edit} /></div>
       {safety && (
@@ -146,21 +162,21 @@ export function CompassTool() {
             <div key={x.key} className="hbar__row">
               <span>{x.label}</span>
               <div className="hbar__track"><div className="hbar__fill" style={{ width: `${((x.value || 0) / 5) * 100}%`, background: (x.value || 0) <= 2 ? "var(--gold-500)" : "var(--green-700)" }} /></div>
-              <span className="hbar__val">{x.value ?? "—"}/5</span>
+              <span className="hbar__val">{x.value ?? "brak"}/5</span>
             </div>
           ))}
         </div>
-        {(answers.values || []).length > 0 && (
+        {pickValid(answers.values, valuesFor(answers)).length > 0 && (
           <div className="btn-row mt" style={{ gap: 8 }}>
             <span className="xsmall muted" style={{ fontWeight: 600 }}>WAŻNE DLA CIEBIE:</span>
-            {(answers.values || []).map((v) => <span key={v} className="tag tag--gold">{labelOf(VALUES, v)}</span>)}
+            {pickValid(answers.values, valuesFor(answers)).map((v) => <span key={v} className="tag tag--gold">{labelOf(VALUES, v)}</span>)}
           </div>
         )}
       </div>
 
       <div className="result-section">
         <h3><Icon name="map" width={22} /> Mapa możliwych dróg</h3>
-        <p className="small muted">Kolejność nie jest rankingiem. Oznaczyliśmy drogi związane z informacjami, których — jak piszesz — Ci brakuje.</p>
+        <p className="small muted">Kolejność nie jest rankingiem. Oznaczyliśmy drogi związane z informacjami, których Ci brakuje.</p>
         <div className="grid grid--2">
           {paths.map((p) => {
             const hidden = safety && (p.id === "talk" || p.id === "mediation");
@@ -168,7 +184,7 @@ export function CompassTool() {
               <article key={p.id} className={`scenario ${p.relevant ? "scenario--fit" : ""}`}>
                 <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
                   {p.relevant && <span className="tag tag--ok">Związane z Twoimi pytaniami</span>}
-                  {hidden && <span className="tag tag--warn">Przy zagrożeniu — tylko po konsultacji</span>}
+                  {hidden && <span className="tag tag--warn">Przy zagrożeniu tylko po konsultacji</span>}
                 </div>
                 <h4>{p.title}</h4>
                 <p className="small" style={{ margin: 0 }}>{p.what}</p>
@@ -207,7 +223,7 @@ export function CompassTool() {
       <div className="result-section">
         <h3><Icon name="calendar" width={22} /> Plan małych kroków na 7 dni</h3>
         <ul className="list-check">{days.map((d) => <li key={d}>{d}</li>)}</ul>
-        <p className="xsmall muted">Jeśli czujesz, że sobie nie radzisz — kryzysowy telefon zaufania dla dorosłych: 116 123.</p>
+        <p className="xsmall muted">Jeśli czujesz, że sobie nie radzisz, zadzwoń pod kryzysowy telefon zaufania dla dorosłych: 116 123.</p>
       </div>
 
       <div className="result-section"><ResultActions toolId={TOOL} report={report} filename="kompas-decyzji" onReset={reset} /></div>

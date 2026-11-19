@@ -108,7 +108,7 @@ export function AnswersSummary<A>({ steps, answers, onEdit }: { steps: WizardSte
   const vis = visibleSteps(steps, answers).filter((s) => s.summary);
   return (
     <details className="card card--sand no-print" style={{ padding: 16 }}>
-      <summary style={{ cursor: "pointer", fontWeight: 600 }}>Twoje odpowiedzi ({vis.length}) — kliknij, aby poprawić</summary>
+      <summary style={{ cursor: "pointer", fontWeight: 600 }}>Twoje odpowiedzi ({vis.length}): kliknij, aby poprawić</summary>
       <dl style={{ margin: "12px 0 0", display: "grid", gap: 8 }}>
         {vis.map((s) => (
           <div key={s.id} style={{ display: "flex", justifyContent: "space-between", gap: 12, alignItems: "baseline", borderBottom: "1px solid var(--line)", paddingBottom: 8 }}>

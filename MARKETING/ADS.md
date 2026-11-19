@@ -1,4 +1,4 @@
-# Nowy Etap — poradnia rozwodowa · Materiały reklamowe
+# Nowy Etap, poradnia rozwodowa · Materiały reklamowe
 
 > **Najpierw plan i ustalenia. Dopiero potem pozew.**
 >
@@ -132,7 +132,7 @@ Przykład:
 ### 1.2. Nagłówki artykułów edukacyjnych
 
 1. Kredyt hipoteczny po rozwodzie: czy można wyjść z kredytu i od czego zacząć
-2. Podział mieszkania przy rozwodzie: sprzedaż, spłata czy współwłasność — porównanie
+2. Podział mieszkania przy rozwodzie: sprzedaż, spłata czy współwłasność? Porównanie
 3. Jak obliczyć spłatę za mieszkanie z kredytem przy rozstaniu? Prosty przykład
 
 ### 1.3. Warianty H1 landing page
@@ -186,12 +186,12 @@ Drobny napis w scenach z liczbami: „Przykładowe dane. Narzędzie informacyjne
 | 2 | Jeden dom, dwa gospodarstwa. Zobacz miesięczne saldo i koszty jednorazowe przed decyzją. | Jeden dom, dwa budżety |
 | 3 | Na ile miesięcy wystarczy poduszka finansowa? Policz to spokojnie, w kilka minut. | Na ile wystarczy poduszka? |
 | 4 | Kaucja, przeprowadzka, nowe sprzęty. Koszty jednorazowe też warto mieć na liście. | Koszty, o których łatwo zapomnieć |
-| 5 | Plan finansowy przed rozmową o rozstaniu. Wykres, saldo i warianty — bezpłatnie. | Najpierw plan finansowy |
+| 5 | Plan finansowy przed rozmową o rozstaniu. Wykres, saldo i warianty. Bezpłatnie. | Najpierw plan finansowy |
 
 ### 2.2. Nagłówki artykułów edukacyjnych
 
 1. Budżet po rozwodzie: jak policzyć koszty życia w dwóch gospodarstwach domowych
-2. Ile pieniędzy odłożyć przed wyprowadzką? Koszty jednorazowe po rozstaniu — lista
+2. Ile pieniędzy odłożyć przed wyprowadzką? Lista kosztów jednorazowych po rozstaniu
 3. Poduszka finansowa po rozstaniu: jak obliczyć, na ile miesięcy wystarczy
 
 ### 2.3. Warianty H1 landing page
@@ -233,7 +233,7 @@ Drobny napis w scenach z liczbami: „Przykładowe dane. Narzędzie informacyjne
 ## 3. Plan opieki nad dzieckiem
 
 `/narzedzia/plan-opieki-nad-dzieckiem` · slug: `plan-opieki-nad-dzieckiem`
-**Wynik:** kalendarz tygodniowy i miesięczny, święta i ferie, punkty otwarte, propozycja do wydruku jako podstawa rozmowy.
+**Wynik:** kalendarz tygodniowy i miesięczny (gotowy model, własny układ lub gniazdowanie), święta w latach parzystych i nieparzystych, ferie, punkty otwarte, propozycja do wydruku jako podstawa rozmowy.
 
 ### 3.1. Hooki Demand Gen
 
@@ -241,7 +241,7 @@ Drobny napis w scenach z liczbami: „Przykładowe dane. Narzędzie informacyjne
 |---|---|---|
 | 1 | Jak może wyglądać tydzień dziecka w dwóch domach? Ułóż kalendarz i zobacz go na ekranie. | Tydzień dziecka w dwóch domach |
 | 2 | Kalendarz opieki: tydzień, miesiąc, święta i ferie. Propozycja do spokojnej rozmowy. | Kalendarz opieki do rozmowy |
-| 3 | Wigilia, ferie, urodziny. Plan opieki pomaga ustalić to wcześniej, nie w ostatniej chwili. | Święta i ferie — ustalcie wcześniej |
+| 3 | Wigilia, ferie, urodziny. Plan opieki pomaga ustalić to wcześniej, nie w ostatniej chwili. | Święta i ferie: ustalcie wcześniej |
 | 4 | Punkty otwarte w jednym miejscu: co już ustalone, a co jeszcze do omówienia. | Co ustalone, co do omówienia |
 | 5 | Wydrukuj propozycję planu opieki i potraktuj ją jako punkt wyjścia do rozmowy. Bezpłatnie. | Plan opieki do wydruku |
 
@@ -306,7 +306,7 @@ Drobny napis w scenach z liczbami: „Przykładowe dane. Narzędzie informacyjne
 
 1. Skutki prawne rozwodu: co zmienia się w sprawach dzieci, majątku i nazwiska
 2. Co po rozwodzie z majątkiem wspólnym, mieszkaniem i kredytem? Przegląd tematów
-3. Rozwód a dokumenty: co trzeba zaktualizować po rozstaniu — lista
+3. Rozwód a dokumenty: lista spraw do aktualizacji po rozstaniu
 
 ### 4.3. Warianty H1 landing page
 
@@ -407,14 +407,14 @@ Drobny napis: „Narzędzie informacyjne. Nie stanowi porady prawnej.”
 ## 6. Koszty utrzymania dziecka
 
 `/narzedzia/koszty-utrzymania-dziecka` · slug: `koszty-utrzymania-dziecka`
-**Wynik:** miesięczne i roczne zestawienie kosztów, wykres, porównanie scenariuszy.
+**Wynik:** miesięczne i roczne zestawienie kosztów (także dla kilkorga dzieci, każde w swoim wieku), wykres, porównanie scenariuszy.
 **Ważne:** to **nie jest kalkulator alimentów**. Mówimy to wprost w reklamie, na landingu i w wyniku. Nie używamy słowa „alimenty” w hookach jako obietnicy wyniku. Jeśli pojawia się w Search, to wyłącznie z zaprzeczeniem („to nie kalkulator alimentów”).
 
 ### 6.1. Hooki Demand Gen
 
 | # | Hook (≤90 znaków) | Nagłówek (≤40 znaków) |
 |---|---|---|
-| 1 | Ile naprawdę kosztuje miesiąc życia dziecka? Jedzenie, szkoła, zajęcia, zdrowie — policz. | Ile kosztuje miesiąc dziecka? |
+| 1 | Ile kosztuje miesiąc życia dziecka? Jedzenie, szkoła, zajęcia, zdrowie. Policz to. | Ile kosztuje miesiąc dziecka? |
 | 2 | Miesięczne i roczne koszty dziecka na jednym wykresie. To nie kalkulator alimentów. | Koszty dziecka: miesiąc i rok |
 | 3 | Porównaj scenariusze kosztów dziecka i przygotuj rzeczową listę do rozmowy. | Porównaj scenariusze kosztów |
 | 4 | Ferie, wyprawka, dentysta. Roczne koszty dziecka łatwiej omówić, gdy są policzone. | Policz też koszty roczne |
@@ -424,7 +424,7 @@ Drobny napis: „Narzędzie informacyjne. Nie stanowi porady prawnej.”
 
 1. Ile kosztuje utrzymanie dziecka miesięcznie? Lista wydatków do policzenia
 2. Koszty utrzymania dziecka: jak przygotować zestawienie wydatków krok po kroku
-3. Roczne wydatki na dziecko: ferie, wyprawka, zdrowie — o czym łatwo zapomnieć
+3. Roczne wydatki na dziecko: ferie, wyprawka, zdrowie. O czym łatwo zapomnieć
 
 ### 6.3. Warianty H1 landing page
 
@@ -484,7 +484,7 @@ Pod każdym H1 obowiązkowo: *„Narzędzie pomaga zestawić rzeczywiste wydatki
 
 1. Separacja a rozwód: różnice, skutki prawne i najczęstsze pytania
 2. Separacja prawna w Polsce: na czym polega i czym różni się od rozwodu
-3. Separacja czy rozwód — o co zapytać prawnika przed decyzją
+3. Separacja czy rozwód: o co zapytać prawnika przed decyzją
 
 ### 7.3. Warianty H1 landing page
 
@@ -540,7 +540,7 @@ Pod każdym H1 obowiązkowo: *„Narzędzie pomaga zestawić rzeczywiste wydatki
 
 1. Pierwsze kroki po decyzji o rozwodzie: co zrobić w pierwszym miesiącu
 2. Od czego zacząć rozstanie? Checklista na pierwsze 30 dni
-3. Dokumenty, konto, dzieci: co uporządkować na początku rozstania — lista
+3. Dokumenty, konto, dzieci: lista spraw na początek rozstania
 
 ### 8.3. Warianty H1 landing page
 
@@ -581,7 +581,7 @@ Pod każdym H1 obowiązkowo: *„Narzędzie pomaga zestawić rzeczywiste wydatki
 ## 9. Materiały do wypełnienia online
 
 Format skrócony: 3 hooki, 1 CTA, 1 koncepcja grafiki 1:1. Hooki ≤90 znaków, wspólne dla Google i Meta.
-Materiały wypełnia się **online** na ich stronie (`/materialy/<slug>`): checklisty do odhaczania, pola do wpisania i automatyczne podsumowanie na końcu (co zrobione, co zostało, notatki). Odpowiedzi zostają tylko w karcie przeglądarki. Bez pobierania i drukowania, bez konta i bez e-maila — nie obiecujemy PDF ani wydruku.
+Materiały wypełnia się **online** na ich stronie (`/materialy/<slug>`): checklisty do odhaczania, pola do wpisania i automatyczne podsumowanie na końcu (co zrobione, co zostało, notatki). Odpowiedzi zostają tylko w karcie przeglądarki. Bez pobierania i drukowania, bez konta i bez e-maila. Nie obiecujemy PDF ani wydruku.
 Wspólny motyw wizualny: **ekran materiału na telefonie lub laptopie** (odhaczone pozycje, wypełnione pola, fragment podsumowania) w realistycznym, płaskim mockupie z lekkim cieniem. Tło `#FCF9F8` lub `#263D3A`, akcent złoty. Bez renderów 3D „książki w powietrzu”.
 `utm_campaign`: `ne_guide_{slug}_{rrrrmm}`.
 
@@ -647,7 +647,7 @@ Wspólny motyw wizualny: **ekran materiału na telefonie lub laptopie** (odhaczo
 
 ### 9.7. Bezpieczeństwo cyfrowe i finansowe w czasie rozstania · `bezpieczenstwo-cyfrowe-i-finansowe`
 
-**Uwaga:** komunikujemy higienę cyfrową i porządek finansowy. **Nie** sugerujemy inwigilacji drugiej osoby ani zagrożenia („ktoś czyta Twoje wiadomości”). Nie obiecujemy ochrony. Na landingu i w materiale warto dodać spokojną informację: *„Jeśli czujesz się zagrożona lub zagrożony — zadzwoń pod 112. Wsparcie oferuje też Niebieska Linia: 800 120 002.”*
+**Uwaga:** komunikujemy higienę cyfrową i porządek finansowy. **Nie** sugerujemy inwigilacji drugiej osoby ani zagrożenia („ktoś czyta Twoje wiadomości”). Nie obiecujemy ochrony. Na landingu i w materiale warto dodać spokojną informację: *„Jeśli czujesz się zagrożona lub zagrożony, zadzwoń pod 112. Wsparcie oferuje też Niebieska Linia: 800 120 002.”*
 
 **Hooki**
 1. Hasła, wspólne konta, dostęp do aplikacji. Spokojne kroki porządkujące sprawy cyfrowe.
@@ -657,7 +657,7 @@ Wspólny motyw wizualny: **ekran materiału na telefonie lub laptopie** (odhaczo
 **CTA:** Odhacz checklistę online
 **Grafika 1:1:** płaska ilustracja liniowa (nie AI, prosta ikonografia): kłódka, karta płatnicza, telefon, połączone cienką złotą linią na tle `#295550`. Obok ekran checklisty z odhaczonymi pozycjami. Tekst: „Bezpieczeństwo cyfrowe i finansowe” · „Praktyczna checklista”.
 
-### 9.8. Rzeczowe wiadomości do drugiego rodzica — szablony · `komunikacja-z-drugim-rodzicem`
+### 9.8. Rzeczowe wiadomości do drugiego rodzica: szablony · `komunikacja-z-drugim-rodzicem`
 
 **Hooki**
 1. Krótko, rzeczowo, o dziecku. Szablony wiadomości do drugiego rodzica do skopiowania.
@@ -667,7 +667,7 @@ Wspólny motyw wizualny: **ekran materiału na telefonie lub laptopie** (odhaczo
 **CTA:** Zobacz szablony wiadomości
 **Grafika 1:1:** telefon z ekranem komunikatora (neutralny, bez marek), dymek z przykładową wiadomością: „Cześć, w piątek odbiorę Zosię o 16:00 zamiast 17:00. Daj znać, czy pasuje.” Tekst nad telefonem: „Rzeczowe wiadomości do drugiego rodzica” · „Szablony do skopiowania”. Tło `#FCF9F8`, dymek `#295550` z tekstem w złamanej bieli.
 
-### 9.9. Pierwsze święta po rozstaniu — planer rodzica · `pierwsze-swieta-po-rozstaniu`
+### 9.9. Pierwsze święta po rozstaniu: planer rodzica · `pierwsze-swieta-po-rozstaniu`
 
 **Kampania sezonowa: start od razu (listopad 2026), główny budżet do ok. 20 grudnia, wygaszenie po 6 stycznia.** Grafiki z delikatnym zimowym akcentem (gałązka świerku, ciepłe światło). Bez czerwieni i bombek, kolory marki zostają.
 
@@ -677,7 +677,7 @@ Wspólny motyw wizualny: **ekran materiału na telefonie lub laptopie** (odhaczo
 3. Planer pierwszych świąt po rozstaniu: kalendarz, ustalenia i pomysły na nowe tradycje.
 
 **CTA:** Wypełnij planer online
-**Grafika 1:1:** planer online na ekranie laptopa przy oknie z zimowym światłem, gałązka świerku, kubek. Na ekranie kalendarz 24–26 grudnia z dwoma kolorami (zieleń / złoto). Tekst: „Pierwsze święta po rozstaniu” · „Planer rodzica — bezpłatnie”. Tło `#263D3A`, tytuł `#FCF9F8`, akcent złoty.
+**Grafika 1:1:** planer online na ekranie laptopa przy oknie z zimowym światłem, gałązka świerku, kubek. Na ekranie kalendarz 24–26 grudnia z dwoma kolorami (zieleń / złoto). Tekst: „Pierwsze święta po rozstaniu” · „Bezpłatny planer rodzica”. Tło `#263D3A`, tytuł `#FCF9F8`, akcent złoty.
 
 ### 9.10. Jak przygotować się do pierwszej konsultacji z prawnikiem · `przygotowanie-do-konsultacji`
 

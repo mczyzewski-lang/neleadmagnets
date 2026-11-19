@@ -45,10 +45,10 @@ export function AssetsTool() {
   const sepRegime = regime === "rozdzielnosc-od-poczatku";
 
   const report = (): Report => ({
-    title: "Majątek wspólny czy osobisty — moje zestawienie",
+    title: "Majątek wspólny czy osobisty: moje zestawienie",
     intro: `Zestawienie z ${todayPL()}. ${isMarriage ? "Małżeństwo" : "Związek nieformalny"}. Statusy są wstępne i wymagają weryfikacji.`,
     sections: [
-      { heading: "Składniki", items: res.results.map((r) => `${name(r)}${r.value ? ` (${formatPLN(r.value)})` : ""}: ${STATUS_LABEL[r.status]} — ${r.reason} [${r.basis}]`) },
+      { heading: "Składniki", items: res.results.map((r) => `${name(r)}${r.value ? ` (${formatPLN(r.value)})` : ""}: ${STATUS_LABEL[r.status]}. ${r.reason}`) },
       ...(res.nakłady.length ? [{ heading: "Nakłady do rozważenia", items: res.nakłady }] : []),
       { heading: "Dokumenty do zebrania", items: [...new Set(res.results.flatMap((r) => r.docs))] },
       { heading: "Pytania do prawnika", items: questions },
@@ -62,7 +62,7 @@ export function AssetsTool() {
         <div className="tool-frame__body">
           <div className="card card--sand dc-card">
             <h3><Icon name="scale" width={20} /> Podstawy</h3>
-            <Seg label="Czy jesteście małżeństwem?" value={relation} onChange={(v) => { touch(); setRelation(v); }} options={[{ value: "marriage", label: "Tak" }, { value: "informal", label: "Nie — związek nieformalny" }]} />
+            <Seg label="Czy jesteście małżeństwem?" value={relation} onChange={(v) => { touch(); setRelation(v); }} options={[{ value: "marriage", label: "Tak" }, { value: "informal", label: "Nie, związek nieformalny" }]} />
             {isMarriage ? (
               <Seg label="Jaki ustrój majątkowy obowiązuje?" value={regime} onChange={(v) => { touch(); setRegime(v); }}
                 options={[{ value: "wspolnosc", label: "Wspólność (brak intercyzy)" }, { value: "rozdzielnosc-w-trakcie", label: "Rozdzielność od jakiegoś momentu" }, { value: "rozdzielnosc-od-poczatku", label: "Rozdzielność od ślubu" }, { value: "nie-wiem", label: "Nie wiem" }]}
@@ -95,7 +95,7 @@ export function AssetsTool() {
                   <div className="field"><span className="field__label">{a.type === "dlug" ? "Saldo (opcjonalnie)" : "Orientacyjna wartość (opcjonalnie)"}</span><AmountInput label={`Wartość: ${name(a)}`} value={a.value} onChange={(v) => upd(a.id, { value: v })} /></div>
                 </div>
                 {!isMarriage ? (
-                  <Seg label="Kto jest właścicielem?" value={a.owner || ("" as never)} onChange={(v) => upd(a.id, { owner: v })} options={[{ value: "razem", label: "Kupiliśmy razem" }, { value: "ja", label: "Ja" }, { value: "partner", label: "Partner/ka" }, { value: "nie-wiem", label: "Nie wiem" }]} />
+                  <Seg label={a.type === "dlug" ? "Kto zaciągnął dług?" : "Kto jest właścicielem?"} value={a.owner || ("" as never)} onChange={(v) => upd(a.id, { owner: v })} options={[{ value: "razem", label: a.type === "dlug" ? "Razem" : "Kupiliśmy razem" }, { value: "ja", label: "Ja" }, { value: "partner", label: "Partner/ka" }, { value: "nie-wiem", label: "Nie wiem" }]} />
                 ) : a.type !== "dlug" && (
                   <>
                     {!sepRegime && <Seg label="Kiedy nabyty?" value={a.when || ("" as never)} onChange={(v) => upd(a.id, { when: v })} options={[{ value: "przed", label: "Przed ślubem" }, { value: "w-trakcie", label: "W trakcie wspólności" }, { value: "po", label: "Po ustaniu wspólności" }]} />}
@@ -110,7 +110,7 @@ export function AssetsTool() {
                     )}
                   </>
                 )}
-                <p className="xsmall muted" style={{ margin: 0 }}>{c.reason} <em>({c.basis})</em></p>
+                <p className="xsmall muted" style={{ margin: 0 }}>{c.reason}</p>
               </div>
             );
           })}
@@ -126,23 +126,23 @@ export function AssetsTool() {
         <div ref={resultRef} className="tool-frame mt-lg" style={{ scrollMarginTop: 70 }} aria-live="polite">
           <div className="result-head">
             <span className="eyebrow">Twoje zestawienie</span>
-            <h2 style={{ fontSize: "var(--fs-2xl)" }}>{items.length} {items.length === 1 ? "składnik" : items.length < 5 ? "składniki" : "składników"} — wstępna mapa majątku</h2>
-            <p>Statusy są prawdopodobne, nie przesądzone. Zmieniaj odpowiedzi powyżej — wynik zaktualizuje się od razu.</p>
+            <h2 style={{ fontSize: "var(--fs-2xl)" }}>{items.length} {items.length === 1 ? "składnik" : items.length < 5 ? "składniki" : "składników"}: wstępna mapa majątku</h2>
+            <p>Statusy są prawdopodobne, nie przesądzone. Zmieniaj odpowiedzi powyżej, a wynik zaktualizuje się od razu.</p>
             <div className="kpis kpis--4">
               {(isMarriage ? (["wspolny", "osobisty", "mieszany", "analiza"] as Status[]) : (["wspolwlasnosc", "osobisty", "analiza"] as Status[])).map((s) => (
-                <div key={s} className="kpi"><span className="kpi__label">{SHORT[s]}</span><span className="kpi__value">{res.counts[s]}</span><span className="kpi__note">{res.totals[s] ? formatPLN(res.totals[s]) : "—"}</span></div>
+                <div key={s} className="kpi"><span className="kpi__label">{SHORT[s]}</span><span className="kpi__value">{res.counts[s]}</span><span className="kpi__note">{res.totals[s] ? formatPLN(res.totals[s]) : "bez kwoty"}</span></div>
               ))}
             </div>
           </div>
 
           <div className="result-section">
             <h3><Icon name="doc" width={22} /> Składniki i ich prawdopodobny status</h3>
-            <div tabIndex={0} role="region" aria-label="Tabela — przewiń w poziomie, jeśli nie mieści się na ekranie" className="table-wrap">
+            <div tabIndex={0} role="region" aria-label="Tabela, przewiń w poziomie, jeśli nie mieści się na ekranie" className="table-wrap">
               <table className="table">
                 <thead><tr><th>Składnik</th><th>Status</th><th>Dlaczego</th><th className="num">Wartość</th></tr></thead>
                 <tbody>
                   {res.results.map((r) => (
-                    <tr key={r.id}><td><strong>{name(r)}</strong></td><td><span className={`dc-status dc-status--${r.status}`}>{STATUS_LABEL[r.status]}</span></td><td>{r.reason}<span className="task__meta">{r.basis}</span></td><td className="num">{r.value ? formatPLN(r.value) : "—"}</td></tr>
+                    <tr key={r.id}><td><strong>{name(r)}</strong></td><td><span className={`dc-status dc-status--${r.status}`}>{STATUS_LABEL[r.status]}</span></td><td>{r.reason}</td><td className="num">{r.value ? formatPLN(r.value) : "brak"}</td></tr>
                   ))}
                 </tbody>
               </table>
@@ -153,12 +153,12 @@ export function AssetsTool() {
                   slices={(Object.keys(res.totals) as Status[]).map((s) => ({ label: STATUS_LABEL[s], value: res.totals[s], color: STATUS_COLOR[s] }))} />
               </div>
             )}
-            {res.debts > 0 && <p className="small mt">Długi i kredyty łącznie: <strong>{formatPLN(res.debts)}</strong> — nie odejmujemy ich automatycznie, bo odpowiedzialność za długi wymaga osobnej analizy.</p>}
+            {res.debts > 0 && <p className="small mt">Długi i kredyty łącznie: <strong>{formatPLN(res.debts)}</strong>. Nie odejmujemy ich automatycznie, bo odpowiedzialność za długi wymaga osobnej analizy.</p>}
           </div>
 
           {res.nakłady.length > 0 && (
             <div className="result-section">
-              <h3><Icon name="split" width={22} /> Nakłady do rozważenia (art. 45 KRO)</h3>
+              <h3><Icon name="split" width={22} /> Nakłady do rozważenia</h3>
               <ul className="list-dot">{res.nakłady.map((x) => <li key={x}>{x}</li>)}</ul>
             </div>
           )}
@@ -169,14 +169,20 @@ export function AssetsTool() {
               <div><h3><Icon name="message" width={22} /> Pytania do prawnika</h3><ul className="list-dot list-q">{questions.map((q) => <li key={q}>{q}</li>)}</ul></div>
             </div>
             <Alert tone="warn" className="mt">
-              <p><strong>Ważne:</strong> długi zaciągnięte przez jednego małżonka nie zawsze obciążają majątek wspólny — zależy to m.in. od zgody drugiego małżonka i celu zadłużenia. {isMarriage && "Jeśli zawarliście umowę o rozdzielności, znaczenie ma jej data. "}Udziały w majątku wspólnym są co do zasady równe, ale z ważnych powodów sąd może ustalić je inaczej (art. 43 KRO).</p>
+              {isMarriage ? (
+                <p><strong>Ważne:</strong> {res.results.some((r) => r.type === "dlug") && "Dług zaciągnięty przez jednego małżonka nie zawsze obciąża majątek wspólny. Zależy to m.in. od zgody drugiego małżonka i celu zadłużenia. "}{regime === "rozdzielnosc-w-trakcie" && "Przy umowie o rozdzielności znaczenie ma jej data. "}{sepRegime ? "Przy rozdzielności od ślubu nie ma majątku wspólnego do podziału. Rozlicza się tylko rzeczy kupione wspólnie." : "Udziały w majątku wspólnym są zwykle równe. Z ważnych powodów sąd może ustalić je inaczej."}</p>
+              ) : (
+                <p><strong>Ważne:</strong> między partnerami nie ma majątku wspólnego ani podziału majątku jak po rozwodzie. Rzeczy kupione razem rozlicza się jak współwłasność: umową albo w sądzie.{res.results.some((r) => r.type === "dlug") && " Wspólny kredyt trwa, dopóki bank nie zgodzi się na zmianę."}</p>
+              )}
             </Alert>
           </div>
 
           <div className="result-section"><ResultActions toolId={TOOL} report={report} filename="majatek-wspolny-czy-osobisty" onReset={reset} /></div>
           <div className="result-section" style={{ background: "var(--cream)" }}>
             <NextStep toolId={TOOL} offers={[
-              { key: "plan-rozwodu", cta: "Sprawdź, jakie kwestie majątkowe ustalić przed pozwem", why: "Plan Rozwodu porządkuje majątek, mieszkanie i kredyt — razem z możliwą drogą podziału: umową, w wyroku albo osobno." },
+              isMarriage
+                ? { key: "plan-rozwodu", cta: "Sprawdź, jakie kwestie majątkowe ustalić przed pozwem", why: "Plan Rozwodu porządkuje majątek, mieszkanie i kredyt oraz drogę podziału: umową, w wyroku albo osobno." }
+                : { key: "konsultacja", cta: "Porozmawiaj o rozliczeniu wspólnych rzeczy", why: "Omów, jak rozliczyć współwłasność, wpłaty i wspólne zobowiązania." },
               { key: "materialy", href: "/materialy/inwentaryzacja-majatku", cta: "Pobierz arkusz: majątek i długi", why: "Arkusz do spisania wszystkich składników, długów i nakładów." },
             ]} />
           </div>
