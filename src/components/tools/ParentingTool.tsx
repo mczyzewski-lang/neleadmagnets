@@ -63,6 +63,8 @@ function WeekView({ a, editable }: { a: ParentingAnswers; editable?: boolean }) 
   const cycle = buildCycle(a);
   const { A, B } = names(a);
   const nameOf = (p: Parent) => (p === "A" ? A : B);
+  // Litera do kalendarza: pierwsza litera imienia, a gdy obie są takie same (np. „Rodzic A/B”), oznaczenie A/B
+  const ini = (p: Parent) => (A.trim()[0]?.toUpperCase() !== B.trim()[0]?.toUpperCase() ? nameOf(p).trim()[0]?.toUpperCase() : p);
   const nest = a.form === "nesting";
   return (
     <div aria-hidden={editable ? true : undefined}>
@@ -74,7 +76,7 @@ function WeekView({ a, editable }: { a: ParentingAnswers; editable?: boolean }) 
               <div key={i} role={editable ? undefined : "listitem"} className={`week__day ${d.night === "A" ? "parent-a" : "parent-b"}`} aria-label={editable ? undefined : `${DAYS_LONG[i]}: ${nest ? "z dzieckiem" : "noc u"} ${nameOf(d.night)}${d.visit ? `, popołudnie z: ${nameOf(d.visit)}` : ""}`}>
                 <span>{DAYS_SHORT[i]}</span>
                 <span className="pp-who">{nameOf(d.night)}</span>
-                {d.visit && <span className="pp-visit">+{nameOf(d.visit).slice(0, 1)}</span>}
+                {d.visit && <span className="pp-visit">+{ini(d.visit)}</span>}
               </div>
             ))}
           </div>
@@ -363,6 +365,8 @@ export function ParentingTool() {
   const proposal = proposalSections(answers);
   const { A, B } = names(answers);
   const nameOf = (p: Parent) => (p === "A" ? A : B);
+  // Litera do kalendarza: pierwsza litera imienia, a gdy obie są takie same (np. „Rodzic A/B”), oznaczenie A/B
+  const ini = (p: Parent) => (A.trim()[0]?.toUpperCase() !== B.trim()[0]?.toUpperCase() ? nameOf(p).trim()[0]?.toUpperCase() : p);
   const sched = hasSchedule(answers);
   const nest = answers.form === "nesting";
   const ts = sched ? transitions(answers.grid) : [];
@@ -460,11 +464,11 @@ export function ParentingTool() {
             {DAYS_SHORT.map((d) => <div key={d} className="month__h">{d}</div>)}
             {month.map((c, i) => c ? (
               <div key={i} className={`month__d ${c.night === "A" ? "parent-a" : "parent-b"}`} title={`${c.day}: ${nest ? "z dzieckiem" : "noc u"} ${nameOf(c.night)}`}>
-                {c.day}<span className="pp-mwho" aria-hidden="true">{nameOf(c.night).slice(0, 1)}</span>{c.visit && <span className="pp-dot" aria-hidden="true" />}
+                {c.day}<span className="pp-mwho" aria-hidden="true">{ini(c.night)}</span>{c.visit && <span className="pp-dot" aria-hidden="true" />}
               </div>
             ) : <div key={i} className="month__d month__d--empty" />)}
           </div>
-          <p className="small muted" style={{ marginTop: 10 }}>W tym miesiącu: {A}: {mN.A} {nest ? "dni" : "nocy"}, {B}: {mN.B} {nest ? "dni" : "nocy"}. Litera w dniu to pierwsza litera nazwy rodzica. Święta i wakacje mają pierwszeństwo przed rytmem tygodniowym.</p>
+          <p className="small muted" style={{ marginTop: 10 }}>W tym miesiącu: {A}: {mN.A} {nest ? "dni" : "nocy"}, {B}: {mN.B} {nest ? "dni" : "nocy"}. Litera w dniu oznacza rodzica (A lub B, a po wpisaniu imion ich pierwsze litery). Święta i wakacje mają pierwszeństwo przed rytmem tygodniowym.</p>
         </div>
       )}
 

@@ -28,4 +28,24 @@ describe("porozumienie-przejsciowe", () => {
   it("zawsze ostrzega przed jednostronnym opróżnianiem kont", () => {
     expect(buildDocument({ account: "keep" }).sections.flatMap((s) => s.items).join(" ")).toMatch(/jednostronnie/);
   });
+  it("osobne mieszkanie: bez zasad o gościach we wspólnym mieszkaniu", () => {
+    const d = buildDocument({ together: "no", housing: "settled", guests: "free" });
+    expect(d.open.some((o) => o.startsWith("Goście"))).toBe(false);
+    expect(d.sections.flatMap((s) => s.items).join(" ")).not.toMatch(/gości/);
+    expect(buildDocument({ together: "yes", housing: "rooms" }).open.some((o) => o.startsWith("Goście"))).toBe(true);
+  });
+  it("częściowo razem zmienia sekcję mieszkania", () => {
+    const h = (together: "yes" | "partly") => buildDocument({ together, housing: "rooms" }).sections.find((s) => s.heading === "Mieszkanie")!.items.join(" ");
+    expect(h("partly")).not.toBe(h("yes"));
+  });
+  it("nagłówek sekcji rzeczy zależy od samochodu i zwierząt", () => {
+    const heads = (car: "none" | "me", pets: "none" | "me") => buildDocument({ car, pets }).sections.map((s) => s.heading);
+    expect(heads("none", "none")).toContain("Rzeczy");
+    expect(heads("me", "none")).toContain("Samochód i rzeczy");
+    expect(heads("me", "me")).toContain("Samochód, zwierzęta i rzeczy");
+  });
+  it("bez myślników w dokumencie", () => {
+    const d = buildDocument({ children: "yes", childDaily: "me", childContact: "fixed", tellKids: "later", split: "half", account: "close", car: "shared", pets: "me", channel: "msg", guests: "notice" });
+    expect(d.sections.flatMap((s) => s.items).join(" ") + d.open.join(" ")).not.toMatch(/—| – /);
+  });
 });

@@ -15,7 +15,7 @@ function Preview() {
         <li>Zaplanuj czas dla siebie po rozmowie</li>
         <li>Umów kolejną rozmowę w ciągu 72 h</li>
       </ul>
-      <div className="btn-row" style={{ gap: 6 }}><span className="tag tag--gold">Mieszkanie — na później</span><span className="tag tag--gold">Pieniądze — na później</span></div>
+      <div className="btn-row" style={{ gap: 6 }}><span className="tag tag--gold">Mieszkanie: na później</span><span className="tag tag--gold">Pieniądze: na później</span></div>
     </div>
   );
 }

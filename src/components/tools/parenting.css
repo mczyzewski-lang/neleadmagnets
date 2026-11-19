@@ -19,7 +19,7 @@
 
 /* Edycja siatki: lista dni z natywnym <select> */
 .pp-grid-edit { display: grid; gap: 12px; margin-top: 12px; }
-.pp-row { display: grid; grid-template-columns: 7.5em 1fr; align-items: center; gap: 8px; margin-bottom: 6px; }
+.pp-row { display: grid; grid-template-columns: 8em minmax(0, 1fr); align-items: center; gap: 8px; margin-bottom: 6px; }
 .pp-row__label { font-size: var(--fs-sm); font-weight: 600; text-transform: capitalize; }
 .pp-row .select { min-height: 44px; padding: 8px 10px; }
 
@@ -32,8 +32,10 @@
   .pp-holiday > .field:last-child { grid-column: 1 / -1; }
 }
 @media (min-width: 900px) {
-  .pp-grid-edit { grid-template-columns: 1fr 1fr; }
+  .pp-grid-edit { grid-template-columns: 1fr; }
 }
 @media print {
   .week__day, .month__d, .legend i { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
+@media (min-width: 1100px) { .pp-grid-edit { grid-template-columns: 1fr 1fr; } .pp-row { grid-template-columns: 6.5em minmax(0, 1fr); } }
+.pp-row .select { width: 100%; padding-right: 32px; }

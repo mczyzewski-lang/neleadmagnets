@@ -26,8 +26,8 @@ export const meta: ToolMeta = {
     { q: "Dlaczego porównanie ścieżek jest tylko ilustracją?", a: "Bo opiera się na Twoich założeniach. Rzeczywiste koszty zależą od przebiegu sprawy, liczby rozpraw, dowodów i decyzji stron." },
   ],
   sources: [
-    { ...SRC.uksc, label: "Ustawa o kosztach sądowych w sprawach cywilnych — art. 26, 38, 79" },
-    { ...SRC.kro, label: "Kodeks rodzinny i opiekuńczy — art. 57, 58" },
-    { ...SRC.kpc, label: "Kodeks postępowania cywilnego — art. 103, mediacja (art. 183¹ i n.), art. 187 § 1 pkt 3" },
+    { ...SRC.uksc, label: "Ustawa o kosztach sądowych w sprawach cywilnych: art. 26, 38, 79" },
+    { ...SRC.kro, label: "Kodeks rodzinny i opiekuńczy: art. 57, 58" },
+    { ...SRC.kpc, label: "Kodeks postępowania cywilnego: art. 103, mediacja (art. 183¹ i n.), art. 187 § 1 pkt 3" },
   ],
 };

@@ -8,7 +8,7 @@ import { Icon } from "@/components/ui/Icon";
 import { track } from "@/lib/analytics";
 import { todayPL } from "@/lib/format";
 import type { Report } from "@/lib/report";
-import { buildTalkPlan, isSafetyMode, type TalkAnswers } from "@/lib/decision/rozmowa-o-rozstaniu";
+import { buildTalkPlan, goalsFor, isSafetyMode, topicsFor, type TalkAnswers } from "@/lib/decision/rozmowa-o-rozstaniu";
 import type { OfferKey } from "@/content/types";
 
 const TOOL = "rozmowa-o-rozstaniu";
@@ -67,6 +67,9 @@ const O: Record<string, Option[]> = {
 };
 
 const notSafety = (a: TalkAnswers) => !isSafetyMode(a);
+const goalOpts = (a: TalkAnswers) => O.goal.filter((o) => (goalsFor(a) as readonly string[]).includes(o.value));
+const topicOpts = (a: TalkAnswers) => O.topics.filter((o) => o.value === "none" || topicsFor(a).includes(o.value));
+const topicVals = (a: TalkAnswers) => (a.topics || []).filter((t) => topicOpts(a).some((o) => o.value === t));
 
 const steps: WizardStep<TalkAnswers>[] = [
   {
@@ -85,18 +88,18 @@ const steps: WizardStep<TalkAnswers>[] = [
     ),
   },
   { id: "stage", title: "O czym chcesz porozmawiać?", valid: (a) => !!a.stage, summary: (a) => labelOf(O.stage, a.stage), render: (a, set) => <SingleChoice legend="Etap" options={O.stage} value={a.stage} onChange={(v) => set({ stage: v as TalkAnswers["stage"] })} /> },
-  { id: "children", title: "Czy macie dzieci?", help: "Nie pytamy o imiona — tylko o przedział wieku najmłodszego dziecka.", valid: (a) => !!a.children, summary: (a) => labelOf(O.children, a.children), render: (a, set) => <SingleChoice legend="Dzieci" options={O.children} value={a.children} onChange={(v) => set({ children: v as TalkAnswers["children"] })} /> },
+  { id: "children", title: "Czy macie dzieci?", help: "Nie pytamy o imiona, tylko o wiek najmłodszego dziecka.", valid: (a) => !!a.children, summary: (a) => labelOf(O.children, a.children), render: (a, set) => <SingleChoice legend="Dzieci" options={O.children} value={a.children} onChange={(v) => set({ children: v as TalkAnswers["children"] })} /> },
   { id: "expects", title: "Czy druga osoba spodziewa się takiej rozmowy?", when: notSafety, valid: (a) => !!a.expects, summary: (a) => labelOf(O.expects, a.expects), render: (a, set) => <SingleChoice legend="Oczekiwania" options={O.expects} value={a.expects} onChange={(v) => set({ expects: v as TalkAnswers["expects"] })} /> },
-  { id: "goal", title: "Jaki jest Twój główny cel tej rozmowy?", when: notSafety, valid: (a) => !!a.goal, summary: (a) => labelOf(O.goal, a.goal), render: (a, set) => <SingleChoice legend="Cel" options={O.goal} value={a.goal} onChange={(v) => set({ goal: v as TalkAnswers["goal"] })} /> },
+  { id: "goal", title: "Jaki jest Twój główny cel tej rozmowy?", when: notSafety, valid: (a) => (a.goal && goalOpts(a).some((o) => o.value === a.goal) ? true : "Wybierz cel rozmowy."), summary: (a) => labelOf(O.goal, a.goal), render: (a, set) => <SingleChoice legend="Cel" options={goalOpts(a)} value={goalOpts(a).some((o) => o.value === a.goal) ? a.goal : undefined} onChange={(v) => set({ goal: v as TalkAnswers["goal"] })} /> },
   {
     id: "topics", title: "Które tematy mogą być najtrudniejsze?", help: "Zaznacz dowolne. Nie musisz niczego opisywać.",
-    valid: (a) => ((a.topics || []).length ? true : "Zaznacz co najmniej jedną odpowiedź."), summary: (a) => labelOf(O.topics, a.topics || []),
-    render: (a, set) => <MultiChoice legend="Trudne tematy" options={O.topics} value={a.topics || []} onChange={(v) => set({ topics: v })} exclusive="none" columns={2} />,
+    valid: (a) => (topicVals(a).length ? true : "Zaznacz co najmniej jedną odpowiedź."), summary: (a) => labelOf(O.topics, topicVals(a)),
+    render: (a, set) => <MultiChoice legend="Trudne tematy" options={topicOpts(a)} value={topicVals(a)} onChange={(v) => set({ topics: v })} exclusive="none" columns={2} />,
   },
   { id: "place", title: "Gdzie i jak chcesz porozmawiać?", when: notSafety, valid: (a) => !!a.place, summary: (a) => labelOf(O.place, a.place), render: (a, set) => <SingleChoice legend="Miejsce" options={O.place} value={a.place} onChange={(v) => set({ place: v as TalkAnswers["place"] })} /> },
   {
     id: "emotions", title: "Co czujesz, myśląc o tej rozmowie?", help: "Wszystkie emocje są w porządku. Wybierz dowolne.", optional: true,
-    summary: (a) => labelOf(O.emotions, a.emotions || []) || "—",
+    summary: (a) => labelOf(O.emotions, a.emotions || []) || "brak",
     render: (a, set) => <MultiChoice legend="Emocje" options={O.emotions} value={a.emotions || []} onChange={(v) => set({ emotions: v })} columns={2} />,
   },
 ];
@@ -115,7 +118,7 @@ export function TalkTool() {
 
   const report = (): Report => ({
     title: plan.headline,
-    intro: `Plan przygotowany ${todayPL()} na podstawie moich odpowiedzi. To propozycja — dopasuj ją do siebie.`,
+    intro: `Plan przygotowany ${todayPL()} na podstawie moich odpowiedzi. To propozycja, dopasuj ją do siebie.`,
     sections: [
       { heading: plan.mode === "safety" ? "Bezpieczne przygotowanie" : "Przygotowanie", items: plan.prepare },
       { heading: "Przykładowe otwarcie", items: plan.openings.map((o) => `${o.label}: „${o.text}”`) },
@@ -135,9 +138,9 @@ export function TalkTool() {
   const safe = plan.mode === "safety";
   const hasKids = !!answers.children && answers.children !== "none";
   const offers: { key: OfferKey; cta?: string; why?: string; href?: string }[] = safe
-    ? [{ key: "konsultacja", cta: "Poproś o indywidualną rozmowę", why: "Porozmawiaj o swojej sytuacji indywidualnie — bez kontaktu z drugą stroną." }, { key: "materialy", href: "/materialy/bezpieczenstwo-cyfrowe-i-finansowe", cta: "Przewodnik: bezpieczeństwo cyfrowe i finansowe" }]
+    ? [{ key: "konsultacja", cta: "Poproś o indywidualną rozmowę", why: "Porozmawiaj o swojej sytuacji indywidualnie, bez kontaktu z drugą stroną." }, { key: "materialy", href: "/materialy/bezpieczenstwo-cyfrowe-i-finansowe", cta: "Przewodnik: bezpieczeństwo cyfrowe i finansowe" }]
     : answers.stage === "decided"
-      ? [{ key: "plan-rozwodu", cta: "Sprawdź, jak przygotować kolejne kroki", why: "Bezpłatny Plan Rozwodu pomoże uporządkować sprawy do ustalenia po rozmowie — zanim padną decyzje o pozwie." }, hasKids ? { key: "materialy", href: "/materialy/komunikacja-z-drugim-rodzicem", cta: "Szablony rzeczowych wiadomości do drugiego rodzica" } : { key: "materialy", href: "/przed-decyzja/plan-wsparcia", cta: "Przygotuj swój plan wsparcia" }]
+      ? [{ key: "plan-rozwodu", cta: "Sprawdź, jak przygotować kolejne kroki", why: "Bezpłatny Plan Rozwodu pomoże uporządkować sprawy do ustalenia po rozmowie, zanim padną decyzje o pozwie." }, hasKids ? { key: "materialy", href: "/materialy/komunikacja-z-drugim-rodzicem", cta: "Szablony rzeczowych wiadomości do drugiego rodzica" } : { key: "materialy", href: "/przed-decyzja/plan-wsparcia", cta: "Przygotuj swój plan wsparcia" }]
       : [{ key: "konsultacja", cta: "Porozmawiaj o swojej sytuacji", why: "Jeśli potrzebujesz uporządkować myśli przed rozmową, możesz porozmawiać z nami indywidualnie." }, hasKids ? { key: "materialy", href: "/materialy/komunikacja-z-drugim-rodzicem", cta: "Szablony rzeczowych wiadomości do drugiego rodzica" } : { key: "materialy", href: "/przed-decyzja/kompas-decyzji", cta: "Kompas decyzji: uporządkuj myśli" }];
 
   const Section = ({ icon, title, items, kind = "check" }: { icon: Parameters<typeof Icon>[0]["name"]; title: string; items: string[]; kind?: "check" | "dot" }) =>
@@ -153,7 +156,7 @@ export function TalkTool() {
       <div className="result-head" style={safe ? { background: "#5b2621" } : undefined}>
         <span className="eyebrow">Twój plan</span>
         <h2 style={{ fontSize: "var(--fs-2xl)" }}>{plan.headline}</h2>
-        <p style={{ marginBottom: 0 }}>{safe ? "Nie proponujemy rozmowy w cztery oczy. Poniżej znajdziesz, jak zadbać o siebie i gdzie szukać pomocy." : "To propozycja — nie scenariusz do odegrania. Mów własnymi słowami i dostosuj plan do siebie."}</p>
+        <p style={{ marginBottom: 0 }}>{safe ? "Nie proponujemy rozmowy w cztery oczy. Poniżej znajdziesz, jak zadbać o siebie i gdzie szukać pomocy." : "To propozycja, nie scenariusz do odegrania. Mów własnymi słowami i dostosuj plan do siebie."}</p>
       </div>
       <div className="result-section">
         <AnswersSummary steps={steps} answers={answers} onEdit={edit} />
@@ -192,7 +195,7 @@ export function TalkTool() {
       <Section icon="sparkle" title="Dla Ciebie" items={plan.selfCare} kind="dot" />
       {!safe && (
         <div className="result-section">
-          <p className="xsmall muted" style={{ margin: 0 }}>Jeśli w trakcie rozmowy poczujesz zagrożenie — przerwij ją i dzwoń pod 112. Wsparcie: Niebieska Linia 800 120 002, kryzysowy telefon zaufania 116 123.</p>
+          <p className="xsmall muted" style={{ margin: 0 }}>Jeśli w trakcie rozmowy poczujesz zagrożenie, przerwij ją i dzwoń pod 112. Wsparcie: Niebieska Linia 800 120 002, kryzysowy telefon zaufania 116 123.</p>
         </div>
       )}
       <div className="result-section">

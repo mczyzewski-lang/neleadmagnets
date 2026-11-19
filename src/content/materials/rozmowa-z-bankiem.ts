@@ -64,12 +64,12 @@ export const material: Material = {
       verified: "2026-11-10",
     },
     {
-      label: "Kodeks postępowania cywilnego — art. 103, art. 183¹ i nast. (mediacja), art. 187 § 1 pkt 3",
+      label: "Kodeks postępowania cywilnego: art. 103, art. 183¹ i nast. (mediacja), art. 187 § 1 pkt 3",
       url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19640430296",
       verified: "2026-11-16",
     },
     {
-      label: "Mediacje — gov.pl",
+      label: "Mediacje: gov.pl",
       url: "https://www.gov.pl/web/gov/rozwiaz-spor-przez-mediacje",
       verified: "2026-11-10",
     },

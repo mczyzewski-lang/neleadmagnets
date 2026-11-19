@@ -25,9 +25,9 @@ export const meta: ToolMeta = {
     { q: "Czy zapisujecie moje odpowiedzi?", a: "Nie. Quiz działa w Twojej przeglądarce. Odpowiedzi nie trafiają do nas ani do narzędzi analitycznych." },
   ],
   sources: [
-    { ...SRC.kro, label: "Kodeks rodzinny i opiekuńczy — art. 56–61⁴, 95" },
-    { ...SRC.kc, label: "Kodeks cywilny — art. 195, 366, 519" },
-    { ...SRC.kpc, label: "Kodeks postępowania cywilnego — art. 17, 103, 183¹, 183⁸, 187 § 1 pkt 3" },
-    { ...SRC.uksc, label: "Ustawa o kosztach sądowych w sprawach cywilnych — art. 26" },
+    { ...SRC.kro, label: "Kodeks rodzinny i opiekuńczy: art. 56–61⁴, 95" },
+    { ...SRC.kc, label: "Kodeks cywilny: art. 195, 366, 519" },
+    { ...SRC.kpc, label: "Kodeks postępowania cywilnego: art. 17, 103, 183¹, 183⁸, 187 § 1 pkt 3" },
+    { ...SRC.uksc, label: "Ustawa o kosztach sądowych w sprawach cywilnych: art. 26" },
   ],
 };

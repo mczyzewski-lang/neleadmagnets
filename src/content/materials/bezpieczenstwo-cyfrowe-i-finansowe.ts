@@ -58,7 +58,7 @@ export const material: Material = {
   ],
   sources: [
     {
-      label: "Zastrzeżenie numeru PESEL — gov.pl",
+      label: "Zastrzeżenie numeru PESEL: gov.pl",
       url: "https://www.gov.pl/web/gov/zastrzez-swoj-numer-pesel",
       verified: "2026-11-10",
     },
@@ -73,7 +73,7 @@ export const material: Material = {
       verified: "2026-11-10",
     },
     {
-      label: "Kodeks postępowania cywilnego — art. 183¹ i nast. (mediacja), art. 187 § 1 pkt 3",
+      label: "Kodeks postępowania cywilnego: art. 183¹ i nast. (mediacja), art. 187 § 1 pkt 3",
       url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19640430296",
       verified: "2026-11-16",
     },

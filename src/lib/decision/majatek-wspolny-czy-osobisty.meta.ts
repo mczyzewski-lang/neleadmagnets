@@ -26,7 +26,7 @@ export const meta: ToolMeta = {
     { q: "Nie jesteśmy małżeństwem. Czy narzędzie ma sens?", a: "Tak, ale działa inaczej: między partnerami nie ma wspólności majątkowej ani intercyzy. Rzeczy kupione razem są zwykle współwłasnością na zasadach ogólnych." },
   ],
   sources: [
-    { ...SRC.kro, label: "Kodeks rodzinny i opiekuńczy — art. 31, 33, 41, 43, 45, 51, 54" },
-    { ...SRC.kc, label: "Kodeks cywilny — art. 195 i n. (współwłasność), art. 366" },
+    { ...SRC.kro, label: "Kodeks rodzinny i opiekuńczy: art. 31, 33, 41, 43, 45, 51, 54" },
+    { ...SRC.kc, label: "Kodeks cywilny: art. 195 i n. (współwłasność), art. 366" },
   ],
 };

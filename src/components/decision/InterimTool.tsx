@@ -27,7 +27,7 @@ const OPT = {
   split: [{ value: "half", label: "Po połowie" }, { value: "proportional", label: "Proporcjonalnie do dochodów" }, { value: "me", label: "Tymczasowo płacę ja" }, { value: "partner", label: "Tymczasowo płaci druga osoba" }, TBD] as O,
   account: [{ value: "keep", label: "Zostaje na wspólne wydatki" }, { value: "limits", label: "Ustalamy limity i zasady wypłat" }, { value: "close", label: "Zamkniemy po rozliczeniu" }, { value: "none", label: "Nie mamy wspólnego konta" }, TBD] as O,
   who: [{ value: "none", label: "Nie dotyczy" }, { value: "me", label: "Ja" }, { value: "partner", label: "Druga osoba" }, { value: "shared", label: "Wspólnie, według grafiku" }, TBD] as O,
-  channel: [{ value: "msg", label: "Na piśmie — wiadomości lub e-mail" }, { value: "talk", label: "Rozmowa raz w tygodniu" }, TBD] as O,
+  channel: [{ value: "msg", label: "Na piśmie: wiadomości lub e-mail" }, { value: "talk", label: "Rozmowa raz w tygodniu" }, TBD] as O,
   guests: [{ value: "notice", label: "Uprzedzamy się o wizytach" }, { value: "noOvernight", label: "Bez gości na noc we wspólnym mieszkaniu" }, { value: "free", label: "Swobodnie, z szacunkiem dla wspólnej przestrzeni" }, TBD] as O,
   review: [{ value: "2", label: "Za 2 tygodnie" }, { value: "4", label: "Za 4 tygodnie" }, { value: "8", label: "Za 8 tygodni" }, { value: "12", label: "Za 12 tygodni" }] as O,
 };
@@ -65,13 +65,13 @@ const steps: WizardStep<InterimAnswers>[] = [
   { id: "tellKids", title: "Jak i kiedy porozmawiacie z dziećmi?", when: (a) => notSafe(a) && a.children === "yes", valid: (a) => !!a.tellKids, summary: (a) => labelOf(OPT.tellKids, a.tellKids), render: pick("tellKids", OPT.tellKids, "Rozmowa z dziećmi") },
   { id: "split", title: "Jak chcecie dzielić wspólne rachunki?", when: notSafe, valid: (a) => !!a.split, summary: (a) => labelOf(OPT.split, a.split), render: pick("split", OPT.split, "Podział rachunków") },
   {
-    id: "incomes", title: "Orientacyjne dochody netto", help: "Potrzebne tylko do policzenia proporcji. Możesz pominąć — przyjmiemy podział po połowie.", optional: true,
+    id: "incomes", title: "Orientacyjne dochody netto", help: "Potrzebne tylko do policzenia proporcji. Możesz pominąć, wtedy przyjmiemy podział po połowie.", optional: true,
     when: (a) => notSafe(a) && a.split === "proportional",
     summary: (a) => (a.incomeMe && a.incomePartner !== undefined ? `${formatPLN(a.incomeMe)} / ${formatPLN(a.incomePartner)}` : "nie podano"),
     render: (a, set) => (<><MoneyField label="Mój dochód netto / mies." value={a.incomeMe} onChange={(v) => set({ incomeMe: v })} /><MoneyField label="Dochód drugiej osoby netto / mies." value={a.incomePartner} onChange={(v) => set({ incomePartner: v })} /></>),
   },
   {
-    id: "bills", title: "Wspólne rachunki i raty", help: "Wpisz kwoty, które chcecie dzielić — policzymy, ile przypada na każde z Was. Możesz pominąć.", optional: true,
+    id: "bills", title: "Wspólne rachunki i raty", help: "Wpisz kwoty, które chcecie dzielić. Policzymy, ile przypada na każde z Was. Możesz pominąć.", optional: true,
     when: (a) => notSafe(a) && !!a.split && a.split !== "tbd",
     summary: (a) => `${(a.bills || []).filter((b) => (b.amount ?? 0) > 0).length} pozycji`,
     render: (a, set) => <BillsEditor bills={a.bills || DEFAULT_BILLS} onChange={(b) => set({ bills: b })} />,
@@ -80,7 +80,7 @@ const steps: WizardStep<InterimAnswers>[] = [
   {
     id: "things", title: "Kto korzysta z samochodu i opiekuje się zwierzętami?", when: notSafe,
     valid: (a) => (a.car && a.pets ? true : "Wybierz odpowiedź w obu pytaniach (lub „Nie dotyczy”)."),
-    summary: (a) => `Samochód: ${labelOf(OPT.who, a.car) ?? "—"}; zwierzęta: ${labelOf(OPT.who, a.pets) ?? "—"}`,
+    summary: (a) => `Samochód: ${labelOf(OPT.who, a.car) ?? "brak"}; zwierzęta: ${labelOf(OPT.who, a.pets) ?? "brak"}`,
     render: (a, set) => (<><p className="field__label">Samochód</p><SingleChoice legend="Samochód" options={OPT.who} value={a.car} onChange={(v) => set({ car: v as InterimAnswers["car"] })} columns={2} /><p className="field__label mt">Zwierzęta</p><SingleChoice legend="Zwierzęta" options={OPT.who} value={a.pets} onChange={(v) => set({ pets: v as InterimAnswers["pets"] })} columns={2} /></>),
   },
   { id: "channel", title: "Jak będziecie ustalać sprawy organizacyjne?", when: notSafe, valid: (a) => !!a.channel, summary: (a) => labelOf(OPT.channel, a.channel), render: pick("channel", OPT.channel, "Komunikacja") },
@@ -104,7 +104,7 @@ export function InterimTool() {
   const review = reviewDate(answers.reviewWeeks ?? 4).toLocaleDateString("pl-PL", { day: "numeric", month: "long", year: "numeric" });
 
   const report = (): Report => safety
-    ? { title: "Okres przejściowy — moje bezpieczeństwo i kolejne kroki", intro: `Przygotowano ${todayPL()}.`, sections: [{ heading: "Bezpieczeństwo", items: ["W sytuacji zagrożenia: 112.", "Niebieska Linia: 800 120 002.", "Skonsultuj sytuację indywidualnie z prawnikiem lub ośrodkiem pomocy przed rozmowami z drugą stroną."] }] }
+    ? { title: "Okres przejściowy: moje bezpieczeństwo i kolejne kroki", intro: `Przygotowano ${todayPL()}.`, sections: [{ heading: "Bezpieczeństwo", items: ["W sytuacji zagrożenia: 112.", "Niebieska Linia: 800 120 002.", "Skonsultuj sytuację indywidualnie z prawnikiem lub ośrodkiem pomocy przed rozmowami z drugą stroną."] }] }
     : {
         title: "Propozycja zasad na czas przejściowy",
         intro: `Przygotowano ${todayPL()}. To propozycja do rozmowy, nie umowa. Nie przesądza o podziale majątku ani rozstrzygnięciach sądu. Przegląd ustaleń: ${review}.`,
@@ -132,7 +132,7 @@ export function InterimTool() {
           <h3 className="mt">Co możesz zrobić we własnym zakresie</h3>
           <ul className="list-check">
             <li>Przygotuj w bezpiecznym miejscu dokumenty, leki, klucze, ładowarkę i kontakty alarmowe.</li>
-            <li>Skonsultuj swoją sytuację indywidualnie — z prawnikiem, ośrodkiem interwencji kryzysowej lub organizacją pomocową.</li>
+            <li>Skonsultuj swoją sytuację indywidualnie: z prawnikiem, ośrodkiem interwencji kryzysowej lub organizacją pomocową.</li>
             <li>Zadbaj o bezpieczeństwo cyfrowe: hasła, udostępnianie lokalizacji, wspólne konta w chmurze.</li>
             <li>Rozważ, kto z bliskich może Cię wesprzeć i gdzie możesz się zatrzymać, jeśli zajdzie potrzeba.</li>
           </ul>
@@ -140,7 +140,7 @@ export function InterimTool() {
         </div>
         <div className="result-section"><ResultActions toolId={TOOL} report={report} filename="okres-przejsciowy-bezpieczenstwo" onReset={reset} /></div>
         <div className="result-section" style={{ background: "var(--cream)" }}>
-          <NextStep toolId={TOOL} offers={[{ key: "konsultacja", cta: "Poproś o indywidualną rozmowę", why: "Rozmowa o Twojej sytuacji — bez kontaktu z drugą stroną." }, { key: "materialy", href: "/materialy/bezpieczenstwo-cyfrowe-i-finansowe", cta: "Przewodnik: bezpieczeństwo cyfrowe i finansowe" }]} />
+          <NextStep toolId={TOOL} offers={[{ key: "konsultacja", cta: "Poproś o indywidualną rozmowę", why: "Rozmowa o Twojej sytuacji, bez kontaktu z drugą stroną." }, { key: "materialy", href: "/materialy/bezpieczenstwo-cyfrowe-i-finansowe", cta: "Przewodnik: bezpieczeństwo cyfrowe i finansowe" }]} />
         </div>
       </div>
     );
@@ -151,7 +151,7 @@ export function InterimTool() {
       <div className="result-head">
         <span className="eyebrow">Twoja propozycja</span>
         <h2 style={{ fontSize: "var(--fs-2xl)" }}>Propozycja zasad na czas przejściowy</h2>
-        <p>Gotowa do omówienia z drugą osobą. To nie jest umowa — możecie ją dowolnie zmieniać.</p>
+        <p>Gotowa do omówienia z drugą osobą. To nie jest umowa, możecie ją dowolnie zmieniać.</p>
         <div className="kpis kpis--3">
           <div className="kpi"><span className="kpi__label">Ustalone obszary</span><span className="kpi__value">{doc.sections.length}</span></div>
           <div className="kpi"><span className="kpi__label">Do ustalenia</span><span className="kpi__value">{doc.open.length}</span></div>
@@ -179,7 +179,7 @@ export function InterimTool() {
           <h3><Icon name="coins" width={22} /> Podział rachunków</h3>
           {bills.note && <Alert tone="warn"><p>{bills.note}</p></Alert>}
           {bills.rows.length ? (
-            <div tabIndex={0} role="region" aria-label="Tabela — przewiń w poziomie, jeśli nie mieści się na ekranie" className="table-wrap mt">
+            <div tabIndex={0} role="region" aria-label="Tabela, przewiń w poziomie, jeśli nie mieści się na ekranie" className="table-wrap mt">
               <table className="table">
                 <caption className="visually-hidden">Podział wspólnych rachunków</caption>
                 <thead><tr><th scope="col">Wydatek</th><th scope="col" className="num">Kwota</th><th scope="col" className="num">Ja ({bills.pctMe}%)</th><th scope="col" className="num">Druga osoba ({bills.pctPartner}%)</th></tr></thead>
@@ -190,7 +190,7 @@ export function InterimTool() {
           ) : (
             <p className="small muted">Nie wpisano kwot. Podział: ja {bills.pctMe}% / druga osoba {bills.pctPartner}%. <button type="button" className="btn btn--link btn--sm" onClick={() => edit("bills")}>Dodaj kwoty</button></p>
           )}
-          <p className="xsmall muted mt">Za wspólny kredyt oboje odpowiadacie wobec banku, niezależnie od tego podziału.</p>
+          <p className="xsmall muted mt">Jeśli macie wspólny kredyt, oboje odpowiadacie za niego wobec banku, niezależnie od tego podziału.</p>
         </div>
       )}
 
@@ -203,10 +203,10 @@ export function InterimTool() {
 
       <div className="result-section">
         <ResultActions toolId={TOOL} report={report} filename="zasady-na-czas-przejsciowy" onReset={reset} />
-        <p className="small mt">Jak rozmawiać o tych zasadach rzeczowo? Zobacz <Link href="/materialy/komunikacja-z-drugim-rodzicem">szablony wiadomości do drugiego rodzica</Link>.</p>
+        {answers.children === "yes" && <p className="small mt">Jak rozmawiać o tych zasadach rzeczowo? Zobacz <Link href="/materialy/komunikacja-z-drugim-rodzicem">szablony wiadomości do drugiego rodzica</Link>.</p>}
       </div>
       <div className="result-section" style={{ background: "var(--cream)" }}>
-        <NextStep toolId={TOOL} intro="Zasady przejściowe to już etap ustaleń. Jeśli zdecydujecie się na rozwód, kolejne sprawy (dzieci, mieszkanie, majątek) warto uzgodnić — samodzielnie lub z mediatorem — zanim ktoś złoży pozew. Każde uzgodnienie to jedna sprawa mniej dla sądu." offers={[
+        <NextStep toolId={TOOL} intro={`Zasady przejściowe to już etap ustaleń. Jeśli zdecydujecie się na rozwód, kolejne sprawy (${answers.children === "yes" ? "dzieci, mieszkanie, majątek" : "mieszkanie, majątek"}) warto uzgodnić przed pozwem: w rozmowach albo z mediatorem. Każde uzgodnienie to jedna sprawa mniej dla sądu.`} offers={[
           { key: "mediacja", cta: "Dowiedz się, jak może pomóc mediacja", why: "Jeśli rozmowa o zasadach jest trudna, neutralny mediator może pomóc je wspólnie ustalić. Mediacja jest dobrowolna." },
           { key: "plan-rozwodu", cta: "Odbierz bezpłatny Plan Rozwodu", why: "Zasady przejściowe to pierwszy krok. Plan Rozwodu porządkuje sprawy do ustalenia przed pozwem." },
         ]} />

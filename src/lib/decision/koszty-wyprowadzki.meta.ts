@@ -24,5 +24,5 @@ export const meta: ToolMeta = {
     { q: "Kto płaci za dotychczasowe mieszkanie po wyprowadzce?", a: "To zależy od umów (najem, kredyt) i Waszych ustaleń. Wyprowadzka nie zwalnia z umowy kredytu ani najmu, której jesteś stroną. Warto spisać zasady na okres przejściowy." },
     { q: "Czy dane są gdzieś zapisywane?", a: "Nie. Obliczenia wykonuje Twoja przeglądarka. Możesz pobrać zestawienie lub wysłać je sobie e-mailem." },
   ],
-  sources: [{ ...SRC.kro, label: "Kodeks rodzinny i opiekuńczy — art. 27 (przyczynianie się do potrzeb rodziny), art. 58 § 2" }, { ...SRC.kc, label: "Kodeks cywilny — art. 366 (odpowiedzialność solidarna)" }],
+  sources: [{ ...SRC.kro, label: "Kodeks rodzinny i opiekuńczy: art. 27 (przyczynianie się do potrzeb rodziny), art. 58 § 2" }, { ...SRC.kc, label: "Kodeks cywilny: art. 366 (odpowiedzialność solidarna)" }],
 };

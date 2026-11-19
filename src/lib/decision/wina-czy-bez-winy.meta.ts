@@ -26,9 +26,9 @@ export const meta: ToolMeta = {
     { q: "Czy narzędzie podpowie, który wariant wybrać?", a: "Nie. Decyzja należy do Ciebie. Narzędzie porządkuje różnice i pokazuje, które mogą mieć znaczenie w Twojej sytuacji. Nie ocenia przesłanek rozwodu i nie zastępuje konsultacji z prawnikiem." },
   ],
   sources: [
-    { ...SRC.kro, label: "Kodeks rodzinny i opiekuńczy — art. 56, 57, 58, 59, 60" },
-    { ...SRC.kc, label: "Kodeks cywilny — art. 940 (wyłączenie małżonka od dziedziczenia)" },
-    { ...SRC.uksc, label: "Ustawa o kosztach sądowych w sprawach cywilnych — art. 26, 79" },
-    { ...SRC.kpc, label: "Kodeks postępowania cywilnego — art. 103, art. 187 § 1 pkt 3 (próba mediacji)" },
+    { ...SRC.kro, label: "Kodeks rodzinny i opiekuńczy: art. 56, 57, 58, 59, 60" },
+    { ...SRC.kc, label: "Kodeks cywilny: art. 940 (wyłączenie małżonka od dziedziczenia)" },
+    { ...SRC.uksc, label: "Ustawa o kosztach sądowych w sprawach cywilnych: art. 26, 79" },
+    { ...SRC.kpc, label: "Kodeks postępowania cywilnego: art. 103, art. 187 § 1 pkt 3 (próba mediacji)" },
   ],
 };

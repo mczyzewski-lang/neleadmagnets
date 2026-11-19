@@ -25,5 +25,5 @@ export const meta: ToolMeta = {
     { q: "Nie jesteśmy małżeństwem. Czy kompas to uwzględnia?", a: "Tak. Pary niebędące małżeństwem nie widzą separacji ani rozwodu, bo ich nie dotyczą. Zamiast tego pokazujemy, jak wygląda rozstanie w związku nieformalnym." },
     { q: "Co, jeśli czuję się zagrożony/zagrożona?", a: "Twoje bezpieczeństwo jest najważniejsze. W sytuacji zagrożenia dzwoń pod 112. Wsparcie: Niebieska Linia 800 120 002, kryzysowy telefon zaufania 116 123." },
   ],
-  sources: [{ ...SRC.kro, label: "Kodeks rodzinny i opiekuńczy — art. 54, 56, 61¹ i n." }, SRC.mediacjeGov, SRC.niebieskaLinia],
+  sources: [{ ...SRC.kro, label: "Kodeks rodzinny i opiekuńczy: art. 54, 56, 61¹ i n." }, SRC.mediacjeGov, SRC.niebieskaLinia],
 };

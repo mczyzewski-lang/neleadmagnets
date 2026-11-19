@@ -1,5 +1,5 @@
 /**
- * Przed decyzją — Zasady na czas przejściowy.
+ * Przed decyzją: Zasady na czas przejściowy.
  * Generuje PROPOZYCJĘ do rozmowy (nie umowę). Nie przesądza o podziale majątku ani rozstrzygnięciach sądu.
  */
 export type Bill = { id: string; name: string; amount?: number };
@@ -46,7 +46,7 @@ export function shares(a: InterimAnswers): { me: number; partner: number; note?:
       const m = a.incomeMe ?? 0;
       const p = a.incomePartner ?? 0;
       if (m > 0 && p >= 0 && m + p > 0 && a.incomePartner !== undefined) return { me: m / (m + p), partner: p / (m + p) };
-      return { me: 0.5, partner: 0.5, note: "Nie podano obu dochodów — tymczasowo przyjęto podział po połowie. Uzupełnij dochody, aby policzyć proporcję." };
+      return { me: 0.5, partner: 0.5, note: "Nie podano obu dochodów, więc tymczasowo przyjęto podział po połowie. Uzupełnij dochody, aby policzyć proporcję." };
     }
     default:
       return null;
@@ -85,6 +85,7 @@ export function buildDocument(a: InterimAnswers): { sections: DocSection[]; open
   if (a.housing === "meMove") home.push("Wyprowadzam się tymczasowo. Ustalamy termin, zabranie rzeczy osobistych i to, że wyprowadzka nie przesądza o prawach do mieszkania.");
   if (a.housing === "partnerMove") home.push("Druga osoba wyprowadza się tymczasowo. Ustalamy termin, zabranie rzeczy osobistych i to, że wyprowadzka nie przesądza o prawach do mieszkania.");
   if (a.housing === "settled") home.push("Mieszkamy już osobno. Ustalamy, jak odbieramy korespondencję i rzeczy pozostawione w dawnym mieszkaniu.");
+  if (a.together === "partly" && a.housing !== "settled") home.push("Część czasu mieszkamy osobno. Ustalamy, kto i kiedy korzysta z mieszkania.");
   if (a.housing === "tbd" || !a.housing) tbd("Mieszkanie", "kto gdzie mieszka w okresie przejściowym");
   home.push("Żadne z nas nie zmienia zamków ani nie ogranicza drugiej osobie dostępu do mieszkania bez wcześniejszego uzgodnienia (o ile oboje mamy do niego prawo).");
   sections.push({ heading: "Mieszkanie", items: home });
@@ -101,7 +102,7 @@ export function buildDocument(a: InterimAnswers): { sections: DocSection[]; open
     }
     if (a.tellKids === "together") k.push("O zmianach rozmawiamy z dziećmi wspólnie, spokojnie i w sposób dostosowany do ich wieku. Nie obarczamy dzieci winą ani sprawami dorosłych.");
     if (a.tellKids === "done") k.push("Dzieci wiedzą o zmianach. Przekazujemy im spójne informacje i nie angażujemy ich w nasze rozmowy.");
-    if (a.tellKids === "later") k.push("Rozmowę z dziećmi odkładamy do czasu, gdy będziemy znali podstawowe ustalenia — do tego czasu utrzymujemy ich codzienny rytm.");
+    if (a.tellKids === "later") k.push("Rozmowę z dziećmi odkładamy, aż poznamy podstawowe ustalenia. Do tego czasu utrzymujemy ich codzienny rytm.");
     if (!a.tellKids || a.tellKids === "tbd") tbd("Dzieci", "kiedy i jak porozmawiamy z dziećmi");
     k.push("Nie przekazujemy wiadomości przez dzieci i nie rozmawiamy przy nich o sporach.");
     sections.push({ heading: "Dzieci", items: k });
@@ -111,8 +112,8 @@ export function buildDocument(a: InterimAnswers): { sections: DocSection[]; open
   const f: string[] = [];
   const splitText = { half: "Wspólne rachunki dzielimy po połowie.", proportional: "Wspólne rachunki dzielimy proporcjonalnie do dochodów.", me: "Wspólne rachunki tymczasowo pokrywam ja.", partner: "Wspólne rachunki tymczasowo pokrywa druga osoba.", tbd: "" }[a.split || "tbd"];
   if (splitText) f.push(splitText); else tbd("Rachunki", "jak dzielimy wspólne koszty");
-  f.push("Raty wspólnych zobowiązań płacimy terminowo — za kredyt odpowiadamy wobec banku oboje, niezależnie od naszych ustaleń.");
-  const acc = { keep: "Wspólne konto zostaje na wspólne wydatki; większe wypłaty (np. powyżej ustalonej kwoty) uzgadniamy wcześniej.", limits: "Na wspólnym koncie ustalamy limity i zasady wypłat; każde z nas ma też własne konto na swoje dochody.", close: "Wspólne konto zamkniemy po rozliczeniu bieżących płatności — wspólnie i w uzgodnionym terminie.", none: "Nie mamy wspólnego konta.", tbd: "" }[a.account || "tbd"];
+  f.push("Raty wspólnych zobowiązań płacimy terminowo. Za wspólny kredyt oboje odpowiadamy wobec banku, niezależnie od naszych ustaleń.");
+  const acc = { keep: "Wspólne konto zostaje na wspólne wydatki. Większe wypłaty (np. powyżej ustalonej kwoty) uzgadniamy wcześniej.", limits: "Na wspólnym koncie ustalamy limity i zasady wypłat. Każde z nas ma też własne konto na swoje dochody.", close: "Wspólne konto zamkniemy po rozliczeniu bieżących płatności, wspólnie i w uzgodnionym terminie.", none: "Nie mamy wspólnego konta.", tbd: "" }[a.account || "tbd"];
   if (acc) f.push(acc); else tbd("Wspólne konto", "zasady korzystania lub zamknięcia");
   if (a.account !== "none") f.push("Żadne z nas nie wypłaca jednostronnie środków ze wspólnych kont ani nie zaciąga nowych wspólnych zobowiązań bez zgody drugiej osoby.");
   sections.push({ heading: "Finanse i rachunki", items: f });
@@ -128,7 +129,9 @@ export function buildDocument(a: InterimAnswers): { sections: DocSection[]; open
     else r.push(`Opiekę nad zwierzętami sprawuje: ${who(a.pets)}. Koszty weterynarza i karmy rozliczamy według ustaleń.`);
   }
   r.push("Ustalenia dotyczące rzeczy nie przesądzają o podziale majątku.");
-  sections.push({ heading: "Samochód, zwierzęta i rzeczy", items: r });
+  const car = !!a.car && a.car !== "none";
+  const pets = !!a.pets && a.pets !== "none";
+  sections.push({ heading: car && pets ? "Samochód, zwierzęta i rzeczy" : car ? "Samochód i rzeczy" : pets ? "Zwierzęta i rzeczy" : "Rzeczy", items: r });
 
   // Komunikacja
   const c: string[] = [];
@@ -136,11 +139,13 @@ export function buildDocument(a: InterimAnswers): { sections: DocSection[]; open
   if (a.channel === "talk") c.push("Raz w tygodniu, w ustalonym terminie, rozmawiamy o sprawach organizacyjnych. Ustalenia zapisujemy.");
   if (!a.channel || a.channel === "tbd") tbd("Komunikacja", "kanał i częstotliwość rozmów o sprawach organizacyjnych");
   c.push("Jeśli rozmowa robi się trudna, robimy przerwę i wracamy do tematu później. Możemy skorzystać z pomocy mediatora.");
-  if (a.guests === "notice") c.push("O wizytach gości w mieszkaniu uprzedzamy się wcześniej.");
-  if (a.guests === "noOvernight") c.push("W okresie przejściowym nie zapraszamy gości na noc do wspólnego mieszkania.");
-  if (a.guests === "free") c.push("Każde z nas swobodnie przyjmuje gości, z poszanowaniem wspólnej przestrzeni.");
-  if (!a.guests || a.guests === "tbd") tbd("Goście i nowe relacje", "zasady w okresie przejściowym");
-  sections.push({ heading: "Komunikacja i wspólna przestrzeń", items: c });
+  const apart = a.together === "no";
+  // Przy osobnym mieszkaniu nie ma zasad dotyczących gości we wspólnym mieszkaniu
+  if (!apart && a.guests === "notice") c.push("O wizytach gości w mieszkaniu uprzedzamy się wcześniej.");
+  if (!apart && a.guests === "noOvernight") c.push("W okresie przejściowym nie zapraszamy gości na noc do wspólnego mieszkania.");
+  if (!apart && a.guests === "free") c.push("Każde z nas swobodnie przyjmuje gości, z poszanowaniem wspólnej przestrzeni.");
+  if (!apart && (!a.guests || a.guests === "tbd")) tbd("Goście i nowe relacje", "zasady w okresie przejściowym");
+  sections.push({ heading: apart ? "Komunikacja" : "Komunikacja i wspólna przestrzeń", items: c });
 
   // Przegląd
   const weeks = a.reviewWeeks ?? 4;

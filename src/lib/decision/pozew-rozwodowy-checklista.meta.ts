@@ -27,8 +27,8 @@ export const meta: ToolMeta = {
     { q: "Co, jeśli druga strona mieszka za granicą?", a: "Wtedy kluczowe jest, czy sąd polski może rozpoznać sprawę. Decydują o tym m.in. przepisy unijne. Skonsultuj to przed złożeniem pozwu." },
   ],
   sources: [
-    { ...SRC.kpc, label: "Kodeks postępowania cywilnego — art. 17 pkt 1, art. 41, art. 103, art. 187 § 1 pkt 3" },
-    { ...SRC.kro, label: "Kodeks rodzinny i opiekuńczy — art. 56–58, 60" },
-    { ...SRC.uksc, label: "Ustawa o kosztach sądowych w sprawach cywilnych — art. 26, 38, 79" },
+    { ...SRC.kpc, label: "Kodeks postępowania cywilnego: art. 17 pkt 1, art. 41, art. 103, art. 187 § 1 pkt 3" },
+    { ...SRC.kro, label: "Kodeks rodzinny i opiekuńczy: art. 56–58, 60" },
+    { ...SRC.uksc, label: "Ustawa o kosztach sądowych w sprawach cywilnych: art. 26, 38, 79" },
   ],
 };

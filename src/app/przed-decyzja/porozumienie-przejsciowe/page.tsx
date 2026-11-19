@@ -14,7 +14,7 @@ function Preview() {
         <p style={{ margin: "2px 0 8px" }}>Do czasu decyzji mieszkamy razem, w osobnych pokojach.</p>
         <strong style={{ color: "var(--green-800)" }}>Dzieci</strong>
         <p style={{ margin: "2px 0 8px" }}>Na co dzień oboje, według wspólnego grafiku tygodnia.</p>
-        <strong style={{ color: "var(--green-800)" }}>Rachunki — proporcjonalnie</strong>
+        <strong style={{ color: "var(--green-800)" }}>Rachunki: proporcjonalnie</strong>
         <div style={{ display: "flex", justifyContent: "space-between", marginTop: 4 }}><span>Ja (58%)</span><b>1 856 zł</b></div>
         <div style={{ display: "flex", justifyContent: "space-between" }}><span>Druga osoba (42%)</span><b>1 344 zł</b></div>
       </div>

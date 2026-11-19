@@ -96,7 +96,7 @@ export async function POST(req: NextRequest) {
         "Materiał otworzysz pod poniższym linkiem. Możesz go wydrukować lub zapisać jako PDF (opcja „Drukuj” → „Zapisz jako PDF”).",
         "Materiał ma charakter informacyjny i nie stanowi porady prawnej.",
       ], { href: link, label: "Otwórz materiał" });
-      await sendEmail(email, `${m.format}: ${m.coverTitle} — Nowy Etap`, html, text);
+      await sendEmail(email, `${m.format}: ${m.coverTitle} | Nowy Etap`, html, text);
     } catch {
       return bad("Nie udało się wysłać wiadomości. Materiał możesz otworzyć od razu na stronie.", 502);
     }
@@ -146,9 +146,9 @@ export async function POST(req: NextRequest) {
       try {
         const { html, text } = renderSimpleEmail("Otrzymaliśmy Twoje zgłoszenie", [
           "Dziękujemy. Odezwiemy się w sprawie, o którą prosisz, wybranym kanałem kontaktu.",
-          "Jeśli zgłoszenie zostało wysłane przez pomyłkę, odpisz na tę wiadomość — usuniemy dane.",
+          "Jeśli zgłoszenie zostało wysłane przez pomyłkę, odpisz na tę wiadomość, a usuniemy dane.",
         ]);
-        await sendEmail(email, "Nowy Etap — potwierdzenie zgłoszenia", html, text);
+        await sendEmail(email, "Nowy Etap: potwierdzenie zgłoszenia", html, text);
       } catch {}
     }
     return NextResponse.json({ ok: true, id: lead.id });
