@@ -43,6 +43,7 @@ export const TOOLS: ToolMeta[] = [
     faq: [
       { q: "Czy rozwód zwalnia mnie ze wspólnego kredytu?", a: "Nie. Rozwód ani podział majątku nie zmieniają umowy kredytowej. Wszyscy kredytobiorcy odpowiadają wobec banku solidarnie, dopóki bank nie zgodzi się na zmianę, np. aneks albo refinansowanie. Bank zwykle sprawdza wtedy zdolność kredytową osoby, która zostaje z kredytem." },
       { q: "Czy wyliczona kwota to moja część mieszkania?", a: "Nie. To tylko orientacyjna różnica między wartością mieszkania a saldem kredytu. Rzeczywisty podział zależy m.in. od tego, czy mieszkanie jest w majątku wspólnym, od nakładów, kosztów sprzedaży oraz ustaleń stron lub decyzji sądu." },
+      { q: "Co oznacza LTV?", a: "To saldo kredytu podzielone przez orientacyjną wartość mieszkania. Banki liczą je od własnej wyceny i mają różne zasady, więc wynik to szacunek do sprawdzenia w banku lub u doradcy kredytowego." },
       { q: "Mieszkanie kupiłem/kupiłam przed ślubem. Czy jest tylko moje?", a: "Zwykle tak, bo to, co kupiono przed ślubem, należy do majątku osobistego. Jeśli jednak kredyt spłacaliście ze wspólnych pieniędzy, może być do rozliczenia nakład. To wymaga indywidualnej analizy." },
       { q: "Nie jesteśmy małżeństwem. Czy to coś zmienia?", a: "Tak. Partnerów nie łączy wspólność majątkowa małżeńska. Jeśli oboje jesteście właścicielami, zwykle jest to zwykła współwłasność, a jej zniesienie odbywa się według przepisów cywilnych." },
       { q: "Czy zapisujecie moje odpowiedzi?", a: "Nie. Wynik liczy Twoja przeglądarka i nie trafia do naszej bazy. Znika po zamknięciu strony, chyba że go pobierzesz lub wyślesz na e-mail." },
@@ -246,6 +247,7 @@ export const TOOLS: ToolMeta[] = [
     primaryOffer: "plan-rozwodu",
     how: ["Odpowiedz na 7 krótkich pytań", "Otrzymaj plan na 4 tygodnie", "Odhaczaj, edytuj i pobierz PDF"],
     faq: [
+      { q: "Co oznacza „pilne”?", a: "Zadania pilne są na górze każdego etapu. Możesz też sam(a) oznaczyć zadanie jako pilne." },
       { q: "Czy muszę zrobić wszystko w 30 dni?", a: "Nie. To propozycja kolejności. Tempo zależy od Twojej sytuacji i możliwości. Zadania, które Cię nie dotyczą, możesz usunąć." },
       { q: "Czy plan zapisuje się automatycznie?", a: "Nie, ze względu na bezpieczeństwo na wspólnych urządzeniach. Możesz go pobrać, wysłać na e-mail albo świadomie zapisać w przeglądarce i w każdej chwili usunąć." },
       { q: "Co, jeśli czuję się zagrożony/zagrożona?", a: "Bezpieczeństwo jest pierwsze. W zagrożeniu dzwoń pod 112. Wsparcie daje m.in. Niebieska Linia: 800 120 002." },

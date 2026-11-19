@@ -1,5 +1,6 @@
 /**
- * Przed decyzją — Mój plan wsparcia na czas rozstania.
+ * Przed decyzją: Mój plan wsparcia na czas rozstania.
+ * Bez dzieci nie pokazujemy pomocy przy dzieciach, psychologa dziecięcego ani przekazywania dzieci.
  * Narzędzie niekliniczne: porządkuje źródła wsparcia i strategie. Nie zastępuje terapii.
  */
 export type HelpType = "emotional" | "children" | "practical" | "financial" | "crisis";
@@ -85,8 +86,14 @@ export function roleName(a: SupportAnswers, role: string) {
 }
 
 export type SupportRow = { help: string; who: string[] };
+const noKids = (a: SupportAnswers) => a.children === "no";
+export const helpTypesFor = (a: SupportAnswers) => (noKids(a) ? HELP_TYPES.filter((h) => h.key !== "children") : HELP_TYPES);
+export const specialistsFor = (a: SupportAnswers) => (noKids(a) ? SPECIALISTS.filter((s) => s.value !== "childpsych") : SPECIALISTS);
+export const triggersFor = (a: SupportAnswers) => (noKids(a) ? TRIGGERS.filter((t) => t.value !== "handover") : TRIGGERS);
+const allowed = (list: { value: string }[], v: string) => list.some((x) => x.value === v);
+
 export function supportMatrix(a: SupportAnswers): SupportRow[] {
-  return HELP_TYPES.map((h) => ({ help: h.label, who: (a.help?.[h.key] || []).filter((r) => r !== "none").map((r) => roleName(a, r)) }));
+  return helpTypesFor(a).map((h) => ({ help: h.label, who: (a.help?.[h.key] || []).filter((r) => r !== "none").map((r) => roleName(a, r)) }));
 }
 
 export function gaps(a: SupportAnswers): string[] {
@@ -94,32 +101,32 @@ export function gaps(a: SupportAnswers): string[] {
 }
 
 const STRATEGY_FOR_SIGNAL: Record<string, string> = {
-  sleep: "Stałe pory snu, bez ekranu godzinę przed snem; jeśli problem trwa ponad 2 tygodnie — porozmawiaj z lekarzem.",
+  sleep: "Stałe pory snu, bez ekranu godzinę przed snem. Jeśli problem trwa ponad 2 tygodnie, porozmawiaj z lekarzem.",
   isolation: "Umów jedno krótkie spotkanie lub rozmowę telefoniczną w tym tygodniu.",
-  irritability: "Zrób przerwę przed odpowiedzią na trudną wiadomość — wróć do niej po kilku godzinach.",
-  appetite: "Zaplanuj proste, regularne posiłki — nawet małe.",
+  irritability: "Zrób przerwę przed odpowiedzią na trudną wiadomość. Wróć do niej po kilku godzinach.",
+  appetite: "Zaplanuj proste, regularne posiłki, nawet małe.",
   focus: "Rozbij zadania na małe kroki i rób jedną rzecz naraz.",
   rumination: "Zapisz myśli na kartce i odłóż je do „czasu na zamartwianie się” (np. 15 minut dziennie).",
-  alcohol: "Zwróć uwagę, kiedy i dlaczego sięgasz po alkohol; rozważ rozmowę ze specjalistą.",
-  hopeless: "Porozmawiaj z kimś dziś. Jeśli pojawiają się myśli o zrobieniu sobie krzywdy — dzwoń pod 116 123, 800 70 2222 lub 112.",
+  alcohol: "Zwróć uwagę, kiedy i dlaczego sięgasz po alkohol. Rozważ rozmowę ze specjalistą.",
+  hopeless: "Porozmawiaj z kimś dziś. Jeśli pojawiają się myśli o zrobieniu sobie krzywdy, dzwoń pod 116 123, 800 70 2222 lub 112.",
 };
 
 const STRATEGY_FOR_TRIGGER: Record<string, string> = {
   contact: "Ustal stałe pory i kanał kontaktu (np. tylko wiadomości pisemne w sprawach organizacyjnych).",
-  handover: "Zaplanuj krótkie, przewidywalne przekazania; po nich — coś dla siebie.",
+  handover: "Zaplanuj krótkie, przewidywalne przekazania. Po nich zrób coś dla siebie.",
   evenings: "Zaplanuj wieczory z wyprzedzeniem: telefon do bliskiej osoby, spacer, hobby.",
   holidays: "Zaplanuj trudne daty z wyprzedzeniem i zdecyduj, z kim je spędzisz.",
   money: "Sprawy finansowe załatwiaj w ustalonym czasie, z listą do odhaczenia.",
   family: "Przygotuj jedno zdanie na pytania: „Dziękuję, nie chcę teraz o tym rozmawiać”.",
   social: "Wycisz lub ogranicz konta, które wywołują napięcie.",
-  legal: "Pisma otwieraj, gdy masz czas i wsparcie; zapisz pytania do specjalisty.",
+  legal: "Pisma otwieraj, gdy masz czas i wsparcie. Zapisz pytania do specjalisty.",
 };
 
 export type IfThen = { when: string; then: string };
 export function ifThenPlan(a: SupportAnswers): IfThen[] {
   const rows: IfThen[] = [];
   for (const s of a.signals || []) if (STRATEGY_FOR_SIGNAL[s]) rows.push({ when: `Zauważam: ${labelOf(SIGNALS, s).toLowerCase()}`, then: STRATEGY_FOR_SIGNAL[s] });
-  for (const t of a.triggers || []) if (STRATEGY_FOR_TRIGGER[t]) rows.push({ when: `Trudna sytuacja: ${labelOf(TRIGGERS, t).toLowerCase()}`, then: STRATEGY_FOR_TRIGGER[t] });
+  for (const t of a.triggers || []) if (STRATEGY_FOR_TRIGGER[t] && allowed(triggersFor(a), t)) rows.push({ when: `Trudna sytuacja: ${labelOf(TRIGGERS, t).toLowerCase()}`, then: STRATEGY_FOR_TRIGGER[t] });
   return rows;
 }
 
@@ -135,7 +142,7 @@ export function hardDayPlan(a: SupportAnswers): string[] {
     strategies.length ? `Sięgnij po jedną ze swoich strategii: ${strategies.slice(0, 3).join(", ").toLowerCase()}.` : "Wybierz jedną małą rzecz, która zwykle Ci pomaga (spacer, prysznic, herbata).",
     crisis.length ? `Odezwij się do: ${crisis.join(", ")}.` : "Zadzwoń do kogoś zaufanego lub na kryzysowy telefon zaufania 116 123.",
     "Odłóż ważne decyzje i trudne wiadomości na jutro.",
-    "Jeśli czujesz, że nie dajesz rady albo grozi Ci niebezpieczeństwo — dzwoń pod 112.",
+    "Jeśli czujesz, że nie dajesz rady albo grozi Ci niebezpieczeństwo, dzwoń pod 112.",
   ];
   return plan;
 }
@@ -160,12 +167,12 @@ export const WEEKLY_CHECKIN = [
 ];
 
 export const HELPLINES = [
-  { n: "112", t: "Numer alarmowy — zagrożenie życia lub zdrowia" },
+  { n: "112", t: "Numer alarmowy: zagrożenie życia lub zdrowia" },
   { n: "116 123", t: "Kryzysowy telefon zaufania dla dorosłych" },
   { n: "800 70 2222", t: "Centrum Wsparcia dla osób w stanie kryzysu psychicznego" },
-  { n: "800 120 002", t: "Niebieska Linia — pomoc dla osób doznających przemocy domowej" },
+  { n: "800 120 002", t: "Niebieska Linia: pomoc dla osób doznających przemocy domowej" },
 ];
 
 export function specialistsList(a: SupportAnswers) {
-  return (a.specialists || []).map((s) => labelOf(SPECIALISTS, s));
+  return (a.specialists || []).filter((s) => allowed(specialistsFor(a), s)).map((s) => labelOf(SPECIALISTS, s));
 }
